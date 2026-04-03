@@ -1,35 +1,38 @@
-
 import pandas as pd
-import os
-from datetime import datetime
+import requests
 
-st.title("⚽ Pro Analiz Paneli")
+def fetch_with_api():
+    # Senin verdiğin özel API Key
+    api_key = "2fb7b594f09acd4b3521ddf50fa227e9"
+    headers = {'X-Auth-Token': api_key}
+    
+    # Premier Lig, La Liga, Bundesliga, Serie A, Ligue 1
+    leagues = ['PL', 'PD', 'BL1', 'SA', 'FL1'] 
+    all_matches = []
 
-if os.path.exists("all_leagues_data.csv"):
-    df = pd.read_csv("all_leagues_data.csv")
-    df['Date'] = pd.to_datetime(df['Date']) # HATA ÇÖZÜLDÜ: 'Date' artık büyük harf.
+    for league in leagues:
+        url = f"https://api.football-data.org/v4/competitions/{league}/matches"
+        try:
+            r = requests.get(url, headers=headers, timeout=15)
+            if r.status_code == 200:
+                data = r.json()
+                for m in data['matches']:
+                    all_matches.append({
+                        'Date': m['utcDate'], # Baş harfi büyük 'Date'
+                        'League': data['competition']['name'],
+                        'HomeTeam': m['homeTeam']['name'],
+                        'AwayTeam': m['awayTeam']['name'],
+                        'FTHG': m['score']['fullTime']['home'],
+                        'FTAG': m['score']['fullTime']['away']
+                    })
+        except: continue
 
-    # 1. KUTUCUK: TARİH
-    secilen_tarih = st.date_input("Analiz Tarihi:", datetime.now().date())
+    if all_matches:
+        df = pd.DataFrame(all_matches)
+        # Tarih formatını temizle ve saat dilimini kaldır
+        df['Date'] = pd.to_datetime(df['Date']).dt.tz_localize(None)
+        df.to_csv("all_leagues_data.csv", index=False)
+        print(f"✅ Bülten Başarıyla Güncellendi: {len(df)} maç.")
 
-    # 2. KUTUCUK: LİG
-    ligler = sorted(df['League'].unique())
-    secilen_lig = st.selectbox("Lig Seç:", ligler)
-
-    # 3. KUTUCUK: MAÇ
-    mask = (df['Date'].dt.date == secilen_tarih) & (df['League'] == secilen_lig)
-    gunun_maclari = df[mask]
-
-    if not gunun_maclari.empty:
-        mac_adi = gunun_maclari['HomeTeam'] + " - " + gunun_maclari['AwayTeam']
-        secilen_mac = st.selectbox("Maç Seç:", mac_adi)
-        
-        # 4. EN ALT: ALGORİTMA
-        st.divider()
-        st.subheader("🧠 Oran Algoritması")
-        # Burada seçilen maçın analizi yapılacak
-        st.write(f"Seçilen Maç: {secilen_mac} için veriler hesaplanıyor...")
-    else:
-        st.warning("Bu tarihte seçili lig için maç bulunamadı.")
-else:
-    st.error("Veri dosyası henüz oluşmadı. GitHub Actions'ı çalıştırın.")
+if __name__ == "__main__":
+    fetch_with_api()
