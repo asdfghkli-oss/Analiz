@@ -3,61 +3,39 @@ import pandas as pd
 import os
 from datetime import datetime
 
-st.set_page_config(page_title="Tahmin Algoritması", layout="centered")
+st.set_page_config(page_title="Pro Analiz", layout="wide")
+st.title("⚽ Profesyonel Maç Analiz Sistemi")
 
 # Dosya kontrolü
-if not os.path.exists("all_leagues_data.csv"):
-    st.error("⚠️ Veri dosyası (all_leagues_data.csv) GitHub'da henüz oluşmamış.")
-    st.info("Lütfen GitHub'da Actions sekmesine gidip 'Run workflow' butonuna basın.")
-else:
+if os.path.exists("all_leagues_data.csv"):
     df = pd.read_csv("all_leagues_data.csv")
+    # Sütun ismini büyük harf 'Date' olarak eşitle
     df['Date'] = pd.to_datetime(df['Date'])
 
-    st.title("⚽ Profesyonel Analiz Sistemi")
-
-    # --- 1. KUTUCUK: TARİH ---
-    st.subheader("📅 1. Tarih Seçimi")
-    secilen_tarih = st.date_input("Analiz günü:", datetime.now().date())
-
-    # --- 2. KUTUCUK: LİG ---
-    st.subheader("🌍 2. Lig Seçimi")
-    lig_listesi = sorted(df['League'].unique()) if not df.empty else []
+    # --- KUTUCUKLAR ---
+    col1, col2 = st.columns(2)
     
-    if lig_listesi:
-        secilen_lig = st.selectbox("Lig seçin:", lig_listesi)
+    with col1:
+        st.info("📅 1. TARİH SEÇİMİ")
+        secilen_tarih = st.date_input("Analiz günü:", datetime.now().date())
 
-        # --- 3. KUTUCUK: KARŞILAŞMA ---
-        st.subheader("🏟️ 3. Karşılaşma")
-        mask = (df['Date'].dt.date == secilen_tarih) & (df['League'] == secilen_lig)
-        gunun_maclari = df[mask].copy()
+    with col2:
+        st.info("🌍 2. LİG SEÇİMİ")
+        ligler = sorted(df['League'].unique())
+        secilen_lig = st.selectbox("Bir lig seçin:", ligler)
 
-        if not gunun_maclari.empty:
-            gunun_maclari['Match'] = gunun_maclari['HomeTeam'] + " - " + gunun_maclari['AwayTeam']
-            secilen_mac = st.selectbox("Maç listesi:", gunun_maclari['Match'])
-            
-            mac_verisi = gunun_maclari[gunun_maclari['Match'] == secilen_mac].iloc[0]
-            ev = mac_verisi['HomeTeam']
-            dep = mac_verisi['AwayTeam']
+    # --- MAÇ LİSTESİ ---
+    st.divider()
+    mask = (df['Date'].dt.date == secilen_tarih) & (df['League'] == secilen_lig)
+    gunun_maclari = df[mask].copy()
 
-            # --- 4. EN ALT: ALGORİTMALAR ---
-            st.divider()
-            st.subheader("🧠 Algoritma Sonuçları")
-            
-            # Arşivden geçmiş maçları çek (Oynanmış olanlar)
-            arsiv = df.dropna(subset=['FTHG'])
-            gecmis = arsiv[(arsiv['HomeTeam'] == ev) | (arsiv['AwayTeam'] == ev)].tail(10)
-            
-            if not gecmis.empty:
-                ust_yuzde = (len(gecmis[(gecmis['FTHG'] + gecmis['FTAG']) > 2.5]) / len(gecmis)) * 100
-                kg_yuzde = (len(gecmis[(gecmis['FTHG'] > 0) & (gecmis['FTAG'] > 0)]) / len(gecmis)) * 100
-                
-                c1, c2 = st.columns(2)
-                c1.metric("2.5 Üst Olasılığı", f"%{round(ust_yuzde, 1)}")
-                c2.metric("KG Var Olasılığı", f"%{round(kg_yuzde, 1)}")
-                st.success(f"💡 Algoritma: {ev} son 10 maçında %{int(ust_yuzde)} oranında 2.5 Üst bitirdi.")
-            else:
-                st.warning("Bu maç için yeterli geçmiş veri bulunamadı.")
-        else:
-            st.warning("Seçilen tarihte bu lig için maç bulunamadı.")
+    if not gunun_maclari.empty:
+        gunun_maclari['MatchName'] = gunun_maclari['HomeTeam'] + " - " + gunun_maclari['AwayTeam']
+        secilen_mac = st.selectbox("🤝 3. KARŞILAŞMA SEÇİN:", gunun_maclari['MatchName'])
+        
+        # Algoritma Gösterimi
+        st.success(f"🔍 {secilen_mac} için analizler hazırlanıyor...")
     else:
-        st.error("Dosya içinde hiç lig verisi bulunamadı. Lütfen update_data.py dosyasını kontrol edin.")
+        st.warning(f"Seçilen tarihte ({secilen_tarih}) {secilen_lig} bülteni bulunamadı.")
+else:
+    st.error("⚠️ Veri henüz çekilmemiş. Lütfen GitHub Actions üzerinden 'Run workflow' yapın.")
