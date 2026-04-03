@@ -2,55 +2,64 @@ import streamlit as st
 import pandas as pd
 import os
 
-st.set_page_config(page_title="Akıllı Analiz Paneli", layout="wide")
-st.title("🏟️ Akıllı Analiz Paneli")
+st.set_page_config(page_title="Pro Analiz Arşivi", layout="wide")
+st.title("🏟️ 20+ Lig Geniş Analiz Paneli")
 
 DATA_FILE = "all_leagues_data.csv"
 
 if not os.path.exists(DATA_FILE):
-    st.warning("⚠️ Veri dosyası henüz oluşmadı. GitHub Actions üzerinden 'Run workflow' yapın.")
+    st.info("🔄 Veritabanı oluşturuluyor... Lütfen GitHub Actions sekmesinden işlemi başlatın veya bitmesini bekleyin.")
 else:
     df = pd.read_csv(DATA_FILE)
     
-    # Tarih formatını zorla düzelt (Kritik hata buradaydı)
+    # Küçük harf standardı uygula
+    df.columns = [c.lower().strip() for c in df.columns]
+    
+    # Tarih dönüşümü
     if 'date' in df.columns:
         df['date'] = pd.to_datetime(df['date'], errors='coerce')
         df = df.dropna(subset=['date'])
         df['tarih_str'] = df['date'].dt.strftime('%Y-%m-%d')
-    
+
+    # Arayüz
     col1, col2 = st.columns(2)
     with col1:
-        ligler = sorted(df['league'].unique())
-        secilen_lig = st.selectbox("1️⃣ Ligi Seçin", ligler)
+        # LİGLER ARTIK BURADA DOLU GELECEK
+        lig_listesi = sorted(df['league'].unique())
+        secilen_lig = st.selectbox("1️⃣ Analiz Edilecek Ligi Seçin", lig_listesi)
     
     with col2:
         bugun = pd.Timestamp.now().normalize()
-        # Bülten: Bugün ve sonrası
         bulten = df[(df['league'] == secilen_lig) & (df['date'] >= bugun)].copy()
         
         if not bulten.empty:
+            # Maç seçimi için isim oluştur
             bulten['mac_adi'] = bulten['hometeam'] + " - " + bulten['awayteam']
-            secilen_mac = st.selectbox("2️⃣ Maç Seçin", bulten['mac_adi'].unique())
+            secilen_mac = st.selectbox("2️⃣ Güncel Bülten Maçı", bulten['mac_adi'].unique())
             m = bulten[bulten['mac_adi'] == secilen_mac].iloc[0]
         else:
-            st.info("Bu ligde yakında maç görünmüyor.")
+            st.warning("Bu ligde yakında maç bulunmuyor.")
             m = None
 
     if m is not None:
         st.divider()
-        st.subheader(f"📊 {secilen_mac} | {m['roundnumber']}. Hafta Analizi")
+        # HAFTA ANALİZİ
+        hafta = m['roundnumber']
+        st.subheader(f"📊 {secilen_mac} | {hafta}. Hafta Döngüsü")
         
-        # ANALİZ: Aynı hafta döngüsündeki geçmiş maçlar
+        # Geçmiş maçları bul
         gecmis = df[(df['league'] == secilen_lig) & 
                     (df['homescore'].notnull()) & 
-                    (df['roundnumber'] == m['roundnumber'])].copy()
+                    (df['roundnumber'] == hafta)].copy()
         
         if not gecmis.empty:
             gecmis['skor'] = gecmis['homescore'].astype(int).astype(str) + "-" + gecmis['awayscore'].astype(int).astype(str)
-            st.write(f"🔍 {secilen_lig} Geçmiş {m['roundnumber']}. Hafta Skorları:")
+            st.write(f"🔍 {secilen_lig} geçmişindeki {hafta}. hafta sonuçları:")
             st.table(gecmis[['tarih_str', 'hometeam', 'awayteam', 'skor']])
             
-            en_cok = gecmis['skor'].value_counts().idxmax()
-            st.success(f"💡 Bu hafta döngüsünde en sık biten skor: **{en_cok}**")
+            # En çok çıkan skor
+            skor_ozet = gecmis['skor'].value_counts()
+            en_cok = skor_ozet.idxmax()
+            st.success(f"📌 İstatistik: Bu döngüde en sık alınan skor: **{en_cok}**")
         else:
-            st.info("Bu haftaya ait geçmiş sonuç bulunamadı.")
+            st.info("Bu hafta döngüsüne ait geçmiş maç sonucu henüz veritabanında yok.")
