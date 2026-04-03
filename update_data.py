@@ -2,45 +2,50 @@ import pandas as pd
 import requests
 from datetime import datetime
 
-def fetch_sofascore_data():
-    # Bugünün tarihini al (YYYY-MM-DD formatında)
+def fetch_api_sports_data():
+    # Bugünün tarihini al
     bugun = datetime.now().strftime('%Y-%m-%d')
-    url = f"https://sportapi7.p.rapidapi.com/api/v1/sport/football/scheduled-events/{bugun}"
+    url = "https://api-football-v1.p.rapidapi.com/v3/fixtures"
     
+    # Senin RapidAPI Anahtarın
     headers = {
         "x-rapidapi-key": "3484137886mshefa3b568477dba7p10423fjsn346dc68691f0",
-        "x-rapidapi-host": "sportapi7.p.rapidapi.com"
+        "x-rapidapi-host": "api-football-v1.p.rapidapi.com"
     }
 
-    print(f"🚀 {bugun} tarihli tüm maçlar çekiliyor...")
+    # Bugünün tüm maçlarını sorgula
+    querystring = {"date": bugun}
+
+    print(f"🚀 API-Sports üzerinden {bugun} maçları çekiliyor...")
     
     try:
-        response = requests.get(url, headers=headers, timeout=20)
+        response = requests.get(url, headers=headers, params=querystring, timeout=20)
         if response.status_code == 200:
             data = response.json()
             all_matches = []
             
-            for event in data.get('events', []):
+            for item in data.get('response', []):
                 all_matches.append({
-                    'Date': datetime.fromtimestamp(event.get('startTimestamp')).strftime('%Y-%m-%d %H:%M'),
-                    'League': event.get('tournament', {}).get('name'),
-                    'HomeTeam': event.get('homeTeam', {}).get('name'),
-                    'AwayTeam': event.get('awayTeam', {}).get('name'),
-                    'HomeScore': event.get('homeScore', {}).get('current'),
-                    'AwayScore': event.get('awayScore', {}).get('current')
+                    'Date': item['fixture']['date'],
+                    'League': item['league']['name'],
+                    'Country': item['league']['country'],
+                    'HomeTeam': item['teams']['home']['name'],
+                    'AwayTeam': item['teams']['away']['name'],
+                    'Status': item['fixture']['status']['long']
                 })
             
             if all_matches:
                 df = pd.DataFrame(all_matches)
-                # Streamlit'in okuması için kaydet
+                # Saat dilimini temizle
+                df['Date'] = pd.to_datetime(df['Date']).dt.tz_localize(None)
                 df.to_csv("all_leagues_data.csv", index=False)
                 print(f"✅ {len(df)} maç başarıyla kaydedildi!")
             else:
-                print("⚠️ Bugün için maç bulunamadı.")
+                print("⚠️ Bugün için bülten boş döndü.")
         else:
             print(f"❌ API Hatası: {response.status_code}")
     except Exception as e:
         print(f"🛑 Bağlantı Hatası: {e}")
 
 if __name__ == "__main__":
-    fetch_sofascore_data()
+    fetch_api_sports_data()
