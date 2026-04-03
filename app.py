@@ -2,100 +2,104 @@ import streamlit as st
 import sqlite3
 import pandas as pd
 
-# Sayfa Yapılandırması
-st.set_page_config(page_title="Pro Analiz Paneli", layout="wide")
-
-def get_connection():
-    return sqlite3.connect('football.db', check_same_thread=False)
-
-# 1. VERİ ÇEKME FONKSİYONLARI
-def bulten_getir(tarih):
-    conn = get_connection()
-    # Seçilen tarihteki maçları veritabanından çeker
-    query = f"SELECT home_team, away_team, league, week FROM matches WHERE date = '{tarih}'"
-    df = pd.read_sql(query, conn)
-    conn.close()
-    return df
-
-def gecmis_verileri_sorgula(takim, hafta, lig):
-    conn = get_connection()
-    # Son 5 yıl, aynı lig, aynı hafta verisi
-    query = f"""
-    SELECT * FROM matches 
-    WHERE (home_team = '{takim}' OR away_team = '{takim}') 
-    AND week = {hafta} AND league = '{lig}'
-    ORDER BY date DESC LIMIT 50
-    """
-    df = pd.read_sql(query, conn)
-    conn.close()
-    return df
-
-# --- ARAYÜZ BAŞLANGICI ---
+# Sayfa Genişliği ve Başlık
+st.set_page_config(page_title="Yapay Zeka Analiz", layout="wide")
 st.title("🏟️ Yapay Zeka Destekli Analiz")
 
-# Üst Filtreler
+# Veritabanı Bağlantı Fonksiyonu
+def get_connection():
+    try:
+        return sqlite3.connect('football.db', check_same_thread=False)
+    except:
+        st.error("Veritabanı (football.db) bulunamadı! Lütfen GitHub'a yüklediğinizden emin olun.")
+        return None
+
+# 1. BÜLTEN GETİRME
+def bulten_cek(tarih):
+    conn = get_connection()
+    if conn:
+        # Tarih formatını veritabanına göre ayarlar (YYYY-MM-DD)
+        query = f"SELECT home_team, away_team, league, week FROM matches WHERE date = '{tarih}'"
+        df = pd.read_sql(query, conn)
+        conn.close()
+        return df
+    return pd.DataFrame()
+
+# 2. HAFTALIK DÖNGÜ ANALİZİ
+def analiz_motoru(takim, hafta, lig):
+    conn = get_connection()
+    if conn:
+        # Takımın geçmiş 5 yıldaki aynı hafta maçları
+        query = f"""
+        SELECT * FROM matches 
+        WHERE (home_team = '{takim}' OR away_team = '{takim}') 
+        AND week = '{hafta}' AND league = '{lig}'
+        """
+        df = pd.read_sql(query, conn)
+        conn.close()
+        return df
+    return pd.DataFrame()
+
+# --- ARAYÜZ (FİLTRELER) ---
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    secilen_tarih = st.date_input("Tarih Seç", value=pd.to_datetime("today"))
+    tarih_input = st.date_input("Tarih Seç", value=pd.to_datetime("today"))
+    tarih_str = tarih_input.strftime('%Y-%m-%d')
 
-# Bülteni Yükle
-df_bulten = bulten_getir(secilen_tarih.strftime('%Y-%m-%d'))
+# Bülten Yükleme
+bulten = bulten_cek(tarih_str)
 
 with col2:
-    if not df_bulten.empty:
-        df_bulten['mac_adi'] = df_bulten['home_team'] + " - " + df_bulten['away_team']
-        secilen_mac = st.selectbox("Günün Bülteni", df_bulten['mac_adi'].tolist())
-        # Seçilen maçın bilgilerini ayıkla
-        mac_info = df_bulten[df_bulten['mac_adi'] == secilen_mac].iloc[0]
+    if not bulten.empty:
+        bulten['mac'] = bulten['home_team'] + " - " + bulten['away_team']
+        secilen_mac = st.selectbox("Günün Bülteni", bulten['mac'].tolist())
+        m_info = bulten[bulten['mac'] == secilen_mac].iloc[0]
     else:
-        st.warning("Bu tarihte bülten bulunamadı.")
+        st.warning("Bu tarihte maç bulunamadı.")
         secilen_mac = None
 
 with col3:
-    algoritma = st.selectbox("Algoritma Seçin", 
-                            ["İY/MS Algoritması (Sürpriz)", "Skor Algoritması", "Toplam Gol Algoritması", "KG Var (İki Yarı)"])
+    algoritma = st.selectbox("Algoritma Türü", 
+                            ["İY/MS Sürpriz", "Skor Analizi", "Toplam Gol", "KG Var Analizi"])
 
 st.divider()
 
+# --- ANALİZ SONUÇLARI ---
 if secilen_mac:
-    # Analiz Başlat
-    hist_data = gecmis_verileri_sorgula(mac_info['home_team'], mac_info['week'], mac_info['league'])
+    res = analiz_motoru(m_info['home_team'], m_info['week'], m_info['league'])
     
-    if not hist_data.empty:
-        st.subheader(f"🔍 {secilen_mac} Analizi ({mac_info['week']}. Hafta Döngüsü)")
+    if not res.empty:
+        st.subheader(f"🔍 {secilen_mac} ({m_info['week']}. Hafta Analizi)")
         
-        # --- ALGORİTMA MANTIKLARI ---
-        
-        if algoritma == "İY/MS Algoritması (Sürpriz)":
-            st.info("🎯 İY/MS Sürpriz Sonuçlar (2/1, 1/2, 1/0, 2/0)")
-            surprizler = hist_data[hist_data['iy_ms'].isin(['2/1', '1/2', '1/0', '2/0'])]
-            if not surprizler.empty:
-                st.write(surprizler[['date', 'home_team', 'away_team', 'iy_skor', 'ms_skor', 'iy_ms']])
+        # KUTUCUKLU GÖRÜNÜM MANTIĞI
+        if algoritma == "İY/MS Sürpriz":
+            st.info("🌟 Geçmişteki Sürpriz Sonuçlar (2/1, 1/2, 1/0, 2/0)")
+            surpriz = res[res['iy_ms'].isin(['2/1', '1/2', '1/0', '2/0'])]
+            if not surpriz.empty:
+                st.dataframe(surpriz[['date', 'iy_skor', 'ms_skor', 'iy_ms']], use_container_width=True)
             else:
-                st.write("Geçmişte bu hafta sürpriz sonuçlanmamış.")
+                st.write("Bu haftada geçmişte sürpriz sonuç bulunamadı.")
 
-        elif algoritma == "Skor Algoritması":
-            st.success("⚽ En Çok Çıkan Skorlar")
-            skor_counts = hist_data['ms_skor'].value_counts().head(4)
-            c1, c2, c3, c4 = st.columns(4)
-            cols = [c1, c2, c3, c4]
-            for i, (skor, count) in enumerate(skor_counts.items()):
-                yuzde = (count / len(hist_data)) * 100
-                cols[i].metric(label=f"Skor: {skor}", value=f"{count} Kere", delta=f"%{yuzde:.1f}")
+        elif algoritma == "Skor Analizi":
+            skorlar = res['ms_skor'].value_counts()
+            cols = st.columns(3)
+            for i, (skor, count) in enumerate(skorlar.head(6).items()):
+                yuzde = (count / len(res)) * 100
+                cols[i % 3].success(f"**{skor}** \n %{yuzde:.1f} ({count} Kere)")
 
-        elif algoritma == "Toplam Gol Algoritması":
-            st.warning("🥅 Toplam Gol Dağılımı")
+        elif algoritma == "Toplam Gol":
             # 2-3, 4-5, 6+ Gruplama
-            hist_data['gol_grubu'] = pd.cut(hist_data['toplam_gol'], bins=[-1, 1, 3, 5, 100], labels=['0-1', '2-3', '4-5', '6+'])
-            gol_counts = hist_data['gol_grubu'].value_counts()
-            st.bar_chart(gol_counts)
+            res['gol_araligi'] = pd.cut(res['toplam_gol'].astype(int), bins=[-1, 1, 3, 5, 100], labels=['0-1', '2-3', '4-5', '6+'])
+            gol_counts = res['gol_araligi'].value_counts()
+            cols = st.columns(2)
+            for i, (aralik, count) in enumerate(gol_counts.items()):
+                cols[i % 2].warning(f"**{aralik} Gol** \n {count} Maç")
 
-        elif algoritma == "KG Var (İki Yarı)":
-            st.error("🔄 Her İki Yarıda Gol Var Analizi")
-            iki_yari_gol = hist_data[(hist_data['iy_toplam_gol'] > 0) & (hist_data['ikinci_yari_gol'] > 0)]
-            oran = (len(iki_yari_gol) / len(hist_data)) * 100
-            st.metric("İki Yarıda da Gol Olma Olasılığı", f"%{oran:.1f}", f"{len(iki_yari_gol)} Maç")
-
+        elif algoritma == "KG Var Analizi":
+            kg_var_maçlar = res[res['kg'] == 'Var']
+            oran = (len(kg_var_maçlar) / len(res)) * 100
+            st.metric("Karşılıklı Gol Var Olasılığı", f"%{oran:.1f}", f"Toplam {len(res)} Maçta")
+            
     else:
-        st.error("Seçili takımın geçmiş yıllarda bu haftasına ait veri bulunamadı.")
+        st.error("Bu maçın geçmişine dair veritabanında kayıtlı hafta döngüsü bulunamadı.")
