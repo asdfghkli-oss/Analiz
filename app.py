@@ -3,25 +3,35 @@ import sqlite3
 import pandas as pd
 
 # Sayfa ayarları
-st.set_page_config(page_title="Pro Analiz Botu", layout="centered")
+st.set_page_config(page_title="Analiz Botu Pro", layout="centered")
 
-# --- VERİTABANI BAĞLANTISI ---
+# --- VERİTABANI ---
 def query_db(sql):
     try:
         with sqlite3.connect("football.db") as conn:
             return pd.read_sql_query(sql, conn)
     except: return pd.DataFrame()
 
-# --- TEMA & STİL ---
+# --- TEMA & STİL (Kutucuk ve Oklar İçin Özel Tasarım) ---
 if 'theme' not in st.session_state: st.session_state.theme = 'Light'
 
 st.markdown(f"""
     <style>
     .stApp {{ background-color: {'#ffffff' if st.session_state.theme == 'Light' else '#17212b'}; }}
     header {{visibility: hidden;}}
-    .main .block-container {{padding-top: 1rem;}}
+    .main .block-container {{padding-top: 1.5rem;}}
     
-    /* Analiz Kutusu */
+    /* Butonları Hizala */
+    div.stButton > button {{
+        width: 100%;
+        height: 45px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        background-color: transparent;
+        font-weight: bold;
+    }}
+
+    /* Analiz Tablosu */
     .analysis-container {{
         background-color: {'#ffffff' if st.session_state.theme == 'Light' else '#1e2c3a'};
         border-radius: 12px;
@@ -50,43 +60,48 @@ st.markdown(f"""
         width: 50px;
         text-align: center;
     }}
-    .bg-supriz {{ background-color: #ff0000; color: white; }}
-    .bg-draw {{ background-color: #f39c12; color: white; }}
-    .bg-normal {{ background-color: #dee2e6; color: #495057; }}
+    .bg-supriz {{ background-color: #ff0000 !important; color: white !important; }}
+    .bg-draw {{ background-color: #f39c12 !important; color: white !important; }}
+    .bg-normal {{ background-color: #dee2e6 !important; color: #495057 !important; }}
     </style>
     """, unsafe_allow_html=True)
 
-# --- PANEL AYARLARI ---
 with st.sidebar:
     st.session_state.theme = st.radio("Görünüm", ['Light', 'Dark'])
 
-# 1. LİG SEÇİMİ
+# --- 1. LİG VE HAFTA ---
 ligler_df = query_db("SELECT DISTINCT league FROM matches ORDER BY league")
 ligler = ligler_df['league'].tolist() if not ligler_df.empty else []
-secilen_lig = st.selectbox("🏆 LİG SEÇİN", ligler)
 
-# 2. HAFTA SEÇİMİ
-hafta = st.number_input("🔢 ANALİZ HAFTASI", 1, 45, 30)
+c_lig, c_hafta = st.columns([2, 1])
+with c_lig:
+    secilen_lig = st.selectbox("🏆 LİG", ligler)
+with c_hafta:
+    hafta = st.number_input("🔢 HAFTA", 1, 45, 30)
 
-# 3. TAKIM SEÇİMİ (Kutulu ve Ok Tuşlu)
+# --- 2. TAKIM SEÇİMİ (TEK SATIRDA OKLAR VE KUTUCUK) ---
 takimlar_df = query_db(f"SELECT DISTINCT home_team FROM matches WHERE league='{secilen_lig}' ORDER BY home_team")
 takimlar = takimlar_df['home_team'].tolist() if not takimlar_df.empty else []
 
 if 't_idx' not in st.session_state: st.session_state.t_idx = 0
 
-# Ok Tuşları ve Takım İsmi
-col1, col2, col3 = st.columns([1, 4, 1])
+st.write("⚽ **TAKIM**")
+# [Ok] [Kutucuk] [Ok] Düzeni
+col_left, col_mid, col_right = st.columns([1, 6, 1])
 
-with col1:
-    if st.button(" < "):
+with col_left:
+    if st.button("<", key="prev"):
         st.session_state.t_idx = (st.session_state.t_idx - 1) % len(takimlar)
-with col3:
-    if st.button(" > "):
+        st.rerun()
+
+with col_right:
+    if st.button(">", key="next"):
         st.session_state.t_idx = (st.session_state.t_idx + 1) % len(takimlar)
-with col2:
-    # Hem kutucuktan seçebilmek hem de okla değiştirebilmek için:
-    current_takim = st.selectbox("⚽ TAKIM", takimlar, index=st.session_state.t_idx, key="takim_box")
-    # Kutucuktan seçim yapılırsa indeksi güncelle
+        st.rerun()
+
+with col_mid:
+    # Kutucuk ok tuşlarıyla senkronize çalışır
+    current_takim = st.selectbox("Takim_Box", takimlar, index=st.session_state.t_idx, label_visibility="collapsed")
     st.session_state.t_idx = takimlar.index(current_takim)
 
 # --- ANALİZ MOTORU ---
@@ -103,8 +118,6 @@ def get_iyms(h1, a1, h2, a2):
     iy = "1" if h1 > a1 else ("2" if h1 < a1 else "0")
     ms = "1" if h2 > a2 else ("2" if h2 < a2 else "0")
     return f"{iy}/{ms}"
-
-st.markdown("---")
 
 if not df.empty:
     st.markdown('<div class="analysis-container">', unsafe_allow_html=True)
