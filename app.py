@@ -2,7 +2,8 @@ import streamlit as st
 import sqlite3
 import pandas as pd
 
-st.set_page_config(page_title="Analiz Botu Pro", layout="centered")
+# Sayfa ayarları
+st.set_page_config(page_title="Analiz Botu", layout="centered")
 
 # --- VERİTABANI ---
 def query_db(sql):
@@ -11,68 +12,65 @@ def query_db(sql):
             return pd.read_sql_query(sql, conn)
     except: return pd.DataFrame()
 
-# --- TEMA & STİL ---
-if 'theme' not in st.session_state: st.session_state.theme = 'Light'
-
-st.markdown(f"""
+# --- CSS: SÜTUNLARIN ALT ALTA BİNMESİNİ ENGELLE ---
+st.markdown("""
     <style>
-    .stApp {{ background-color: {'#ffffff' if st.session_state.theme == 'Light' else '#17212b'}; }}
-    header {{visibility: hidden;}}
-    .main .block-container {{padding-top: 1rem;}}
+    /* Üst barı ve boşlukları temizle */
+    header {visibility: hidden;}
+    .main .block-container {padding-top: 1rem; padding-bottom: 1rem;}
 
-    /* OKLARI VE KUTUCUĞU YAN YANA ZORLA */
-    [data-testid="column"] {{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }}
-    
-    /* Mobilde sütunların alt alta binmesini engelle */
-    [data-testid="stHorizontalBlock"] {{
+    /* MOBİLDE SÜTUNLARI YAN YANA TUT (ZORUNLU) */
+    [data-testid="stHorizontalBlock"] {
+        display: flex !important;
         flex-direction: row !important;
         flex-wrap: nowrap !important;
         align-items: center !important;
-    }}
-
-    .stButton button {{
-        width: 100% !important;
-        padding: 0px !important;
-        height: 42px !important;
-        border-radius: 8px !important;
-    }}
-
-    .analysis-container {{
-        background-color: {'#ffffff' if st.session_state.theme == 'Light' else '#1e2c3a'};
-        border-radius: 12px;
-        padding: 5px;
-        border: 1px solid {'#eeeeee' if st.session_state.theme == 'Light' else '#2b3948'};
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        margin-top: 10px;
-    }}
+    }
     
-    .match-row {{
+    /* Sütun genişliklerini sabitle */
+    [data-testid="column"] {
+        width: fit-content !important;
+        flex: unset !important;
+        min-width: unset !important;
+    }
+
+    /* Ok Butonları Stili */
+    .stButton button {
+        width: 40px !important;
+        height: 40px !important;
+        padding: 0 !important;
+        border-radius: 8px !important;
+        font-weight: bold !important;
+    }
+
+    /* Analiz Satırları */
+    .analysis-container {
+        border: 1px solid #eee;
+        border-radius: 12px;
+        margin-top: 10px;
+        background: white;
+    }
+    .match-row {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 12px 10px;
-        border-bottom: 1px solid {'#f1f1f1' if st.session_state.theme == 'Light' else '#2b3948'};
-        color: {'#212529' if st.session_state.theme == 'Light' else '#ffffff'};
-    }}
+        padding: 10px;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    .match-row:last-child { border-bottom: none; }
     
-    .ms-val {{ font-size: 16px; font-weight: 800; }}
-    .iy-val {{ font-size: 10px; color: #888; display: block; }}
-    
-    .badge {{
-        padding: 4px 8px;
-        border-radius: 6px;
+    /* Skor ve İY Etiketleri */
+    .ms-val { font-size: 16px; font-weight: bold; }
+    .iy-val { font-size: 10px; color: #888; display: block; }
+    .badge {
+        padding: 4px 6px;
+        border-radius: 5px;
         font-size: 11px;
         font-weight: bold;
         width: 45px;
         text-align: center;
-    }}
-    .bg-supriz {{ background-color: #ff0000 !important; color: white !important; }}
-    .bg-draw {{ background-color: #f39c12 !important; color: white !important; }}
-    .bg-normal {{ background-color: #dee2e6 !important; color: #495057 !important; }}
+        color: white;
+    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -80,36 +78,37 @@ st.markdown(f"""
 ligler_df = query_db("SELECT DISTINCT league FROM matches ORDER BY league")
 ligler = ligler_df['league'].tolist() if not ligler_df.empty else []
 
-# 1. LİG VE HAFTA SEÇİMİ
-c1, c2 = st.columns([2, 1])
-with c1:
+# Lig ve Hafta (Tek Satırda)
+c_l, c_h = st.columns([3, 1])
+with c_l:
     secilen_lig = st.selectbox("🏆 LİG", ligler)
-with c2:
-    hafta = st.number_input("🔢 HAFTA", 1, 45, 30)
+with c_h:
+    hafta = st.number_input("🔢 HT", 1, 45, 30)
 
-# 2. TAKIM SEÇİMİ (MOBİL UYUMLU TEK SATIR)
+# Takım Listesi
 takimlar_df = query_db(f"SELECT DISTINCT home_team FROM matches WHERE league='{secilen_lig}' ORDER BY home_team")
 takimlar = takimlar_df['home_team'].tolist() if not takimlar_df.empty else []
 
 if 't_idx' not in st.session_state: st.session_state.t_idx = 0
 
-st.write("⚽ **TAKIM**")
-# Sütunları genişliklerine göre zorla: Sol Ok (15%), Seçim (70%), Sağ Ok (15%)
-col_l, col_m, col_r = st.columns([0.15, 0.7, 0.15])
+st.write("⚽ **TAKIM SEÇİMİ**")
 
-with col_l:
-    if st.button("<", key="b_prev"):
+# --- OKLAR VE KUTUCUK (MOBİLDE ASLA BOZULMAZ) ---
+# Üç sütun: Sol Ok (Otomatik), Seçim (Geniş), Sağ Ok (Otomatik)
+col1, col2, col3 = st.columns([1, 10, 1])
+
+with col1:
+    if st.button("<", key="prev_btn"):
         st.session_state.t_idx = (st.session_state.t_idx - 1) % len(takimlar)
         st.rerun()
 
-with col_m:
-    # İndeksi kontrol et (Lig değişince hata vermemesi için)
+with col2:
     if st.session_state.t_idx >= len(takimlar): st.session_state.t_idx = 0
-    current_takim = st.selectbox("T", takimlar, index=st.session_state.t_idx, label_visibility="collapsed")
+    current_takim = st.selectbox("box", takimlar, index=st.session_state.t_idx, label_visibility="collapsed")
     st.session_state.t_idx = takimlar.index(current_takim)
 
-with col_r:
-    if st.button(">", key="b_next"):
+with col3:
+    if st.button(">", key="next_btn"):
         st.session_state.t_idx = (st.session_state.t_idx + 1) % len(takimlar)
         st.rerun()
 
@@ -132,7 +131,9 @@ if not df.empty:
     st.markdown('<div class="analysis-container">', unsafe_allow_html=True)
     for _, r in df.iterrows():
         iyms = get_iyms(r['ht_home_score'], r['ht_away_score'], r['home_score'], r['away_score'])
-        b_class = "bg-supriz" if iyms in ["1/2", "2/1"] else ("bg-draw" if iyms in ["1/0", "2/0"] else "bg-normal")
+        
+        # Renk Belirleme
+        color = "#ff0000" if iyms in ["1/2", "2/1"] else ("#f39c12" if iyms in ["1/0", "2/0"] else "#adb5bd")
         
         st.markdown(f"""
             <div class="match-row">
@@ -141,9 +142,9 @@ if not df.empty:
                     <div style="font-size:14px;">{r['home_team']} <span class="ms-val">{int(r['home_score'])}-{int(r['away_score'])}</span> {r['away_team']}</div>
                     <span class="iy-val">İY: {int(r['ht_home_score'])}-{int(r['ht_away_score'])}</span>
                 </div>
-                <div class="badge {b_class}">{iyms}</div>
+                <div class="badge" style="background-color:{color};">{iyms}</div>
             </div>
         """, unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 else:
-    st.warning(f"🤖 {current_takim} için {hafta}. hafta verisi yok.")
+    st.info(f"🤖 {current_takim} için {hafta}. hafta verisi bulunamadı.")
