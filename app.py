@@ -2,90 +2,80 @@ import streamlit as st
 import pandas as pd
 import os
 
-st.set_page_config(page_title="Karşılaştırmalı Analiz", layout="wide")
+st.set_page_config(page_title="Analiz Paneli", layout="wide")
 
-# Görsel Stil Ayarları
-st.markdown("""
-    <style>
-    .main { background-color: #0e1117; }
-    div[data-testid="stTable"] { border-radius: 10px; overflow: hidden; }
-    </style>
-    """, unsafe_allow_html=True)
-
+# Veri Yükleme
 @st.cache_data
-def veri_yukle():
+def load_my_data():
     if os.path.exists("all_leagues_data.csv"):
         data = pd.read_csv("all_leagues_data.csv")
-        # Sütun isimlerindeki olası boşlukları temizle
         data.columns = [str(c).strip() for c in data.columns]
         return data
     return None
 
-df = veri_yukle()
+df = load_my_data()
 
-st.title("⚽ Takım Karşılaştırmalı Döngü Analizi")
+st.title("⚽ Takım Karşılaştırmalı Analiz")
 
 if df is not None and not df.empty:
-    # --- ÜST SEÇİM PANELİ ---
-    col_lig, col_hafta = st.columns([3, 1])
-    
-    with col_lig:
-        lig_listesi = sorted(df['League'].unique().astype(str))
-        secilen_lig = st.selectbox("🏆 Analiz Edilecek Ligi Seçin", lig_listesi)
-    
-    with col_hafta:
-        # FBref'te hafta 'Wk' olarak geçer, eğer yoksa sayı girişi yaptırır
-        hafta_no = st.number_input("📅 Lig Haftası (Döngü)", 1, 45, 30)
+    # 1. SEÇİMLER
+    col_l, col_h = st.columns([3, 1])
+    with col_l:
+        lig_list = sorted(df['League'].unique().astype(str))
+        secilen_lig = st.selectbox("🏆 Ligi Seçin", lig_list)
+    with col_h:
+        hafta_no = st.number_input("📅 Lig Haftası", 1, 45, 30)
 
-    # Seçilen ligdeki takımları filtrele
+    # Lig Filtresi
     lig_df = df[df['League'] == secilen_lig]
-    tum_takimlar = sorted(pd.concat([lig_df['HomeTeam'], lig_df['AwayTeam']]).unique().astype(str))
+    takimlar = sorted(pd.concat([lig_df['HomeTeam'], lig_df['AwayTeam']]).unique().astype(str))
 
     st.markdown("---")
     
-    # --- TAKIM SEÇİMLERİ ---
+    # Takım Seçimleri
     c1, c2 = st.columns(2)
     with c1:
-        ev_sahibi = st.selectbox("🏠 Ev Sahibi Takım", tum_takimlar)
+        ev_sahibi = st.selectbox("🏠 Ev Sahibi", takimlar)
     with c2:
-        deplasman = st.selectbox("🚀 Deplasman Takım", tum_takimlar, index=1 if len(tum_takimlar)>1 else 0)
+        deplasman = st.selectbox("🚀 Deplasman", takimlar, index=1 if len(takimlar)>1 else 0)
 
-    # --- VERİ FİLTRELEME MOTORU ---
-    # Takımların geçmişteki o haftaya (Wk) ait tüm maçlarını bul
-    def periyot_getir(takim, hafta):
-        # Wk sütunu yoksa Date'e göre son maçları getirir, varsa haftaya göre filtreler
-        mask = (df['HomeTeam'] == takim) | (df['AwayTeam'] == takim)
-        temp = df[mask]
-        if 'Wk' in df.columns:
-            return temp[temp['Wk'].astype(str) == str(hafta)].sort_values(by='Date', ascending=False)
-        return temp.sort_values(by='Date', ascending=False).head(10)
+    # 2. VERİ SÜZME (Burada hata payını sıfıra indirdik)
+    # Ev sahibi için o haftadaki tüm maçlar
+    ev_filtre = ((df['HomeTeam'] == ev_sahibi) | (df['AwayTeam'] == ev_sahibi))
+    if 'Wk' in df.columns:
+        ev_gecmis = df[ev_filtre & (df['Wk'].astype(str) == str(hafta_no))].sort_values(by='Date', ascending=False)
+    else:
+        ev_gecmis = df[ev_filtre].head(10)
 
-    ev_gecmis = periyot_getir(ev_sahibi, hafta_no)
-    dep_gecmis = periyot_getir(deplasman, hafta_no)
+    # Deplasman için o haftadaki tüm maçlar
+    dep_filtre = ((df['HomeTeam'] == deplasman) | (df['AwayTeam'] == deplasman))
+    if 'Wk' in df.columns:
+        dep_gecmis = df[dep_filtre & (df['Wk'].astype(str) == str(hafta_no))].sort_values(by='Date', ascending=False)
+    else:
+        dep_gecmis = df[dep_filtre].head(10)
 
-    # --- TABLOLARI YAN YANA GÖSTER ---
-    st.subheader(f"🏟️ {hafta_no}. Hafta Geçmiş Performansları")
+    # 3. GÖSTERİM
+    st.subheader(f"🏟️ {hafta_no}. Hafta Geçmiş Skorları")
     
-    tab_ev, tab_dep = st.columns(2)
+    t1, t2 = st.columns(2)
     
-    # İhtiyacımız olan sütunları belirleyelim
-    cols = ['Date', 'HomeTeam', 'Score', 'AwayTeam']
-    # Eğer İY (HT) skoru varsa listeye ekle
-    if 'HT' in df.columns: cols.insert(3, 'HT') 
+    # Sütunları hazırla
+    gorunur_sutunlar = ['Date', 'HomeTeam', 'Score', 'AwayTeam']
+    if 'HT' in df.columns: gorunur_sutunlar.insert(3, 'HT')
 
-    with tab_ev:
-        st.info(f"🏠 {ev_sahibi} - {hafta_no}. Hafta Maçları")
+    with t1:
+        st.info(f"🏠 {ev_sahibi} Geçmişi")
         if not ev_gecmis.empty:
-            st.table(ev_gecmis[cols])
+            st.dataframe(ev_gecmis[gorunur_sutunlar], use_container_width=True)
         else:
-            st.warning("Bu hafta için geçmiş veri bulunamadı.")
+            st.warning("Veri bulunamadı.")
 
-    with tab_dep:
-        st.info(f"🚀 {deplasman} - {hafta_no}. Hafta Maçları")
+    with t2:
+        st.info(f"🚀 {deplasman} Geçmişi")
         if not dep_gecmis.empty:
-            st.table(dep_gecmis[cols])
+            st.dataframe(dep_gecmis[gorunur_sutunlar], use_container_width=True)
         else:
-            st.warning("Bu hafta için geçmiş veri bulunamadı.")
+            st.warning("Veri bulunamadı.")
 
 else:
-    st.error("🚨 Veri dosyası okunamadı. Lütfen 'Update' işleminin bittiğinden emin olun.")
+    st.error("🚨 Veri henüz yüklenmedi. Lütfen Actions bitene kadar bekleyin.")
