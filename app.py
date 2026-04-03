@@ -3,47 +3,45 @@ import pandas as pd
 import os
 from datetime import datetime
 
-st.set_page_config(page_title="Pro Analiz", layout="wide")
-st.title("⚽ Maç Analiz Sistemi")
+st.set_page_config(page_title="FBref Analiz", layout="wide")
+st.title("⚽ FBref Canlı Maç Listesi")
 
 # Dosya kontrolü
 if os.path.exists("all_leagues_data.csv"):
     df = pd.read_csv("all_leagues_data.csv")
-    df['Date'] = pd.to_datetime(df['Date'])
+    
+    # Sütun isimlerini temizle (boşluk varsa siler)
+    df.columns = df.columns.str.strip()
 
-    # --- HATA ÖNLEYİCİ KONTROL ---
-    # Eğer 'Country' sütunu yoksa, boş bir liste oluşturur ve hata vermez
-    if 'Country' in df.columns:
-        ulkeler = sorted(df['Country'].dropna().unique().tolist())
-    else:
-        ulkeler = [] # Sütun yoksa hata verme, boş geç
-
-    # Filtreler
-    c1, c2 = st.columns(2)
-    with c1:
-        secilen_tarih = st.date_input("📅 Tarih:", datetime.now().date())
-    with c2:
-        secilen_ulke = st.selectbox("🏳️ Ülke Seçin:", ["Hepsi"] + ulkeler)
-
-    # Ligleri Seçilen Ülkeye Göre Filtrele
-    if 'Country' in df.columns and secilen_ulke != "Hepsi":
-        lig_listesi = df[df['Country'] == secilen_ulke]['League'].unique()
-    else:
-        lig_listesi = df['League'].unique() if 'League' in df.columns else []
-
-    if len(lig_listesi) > 0:
-        secilen_lig = st.selectbox("🌍 Lig Seçin:", sorted(lig_listesi))
+    # --- ESNEK FİLTRELEME ---
+    # Eğer lig verisi varsa göster
+    if 'League' in df.columns and not df.empty:
+        ligler = sorted(df['League'].dropna().unique().tolist())
         
-        # Maçları Listele
-        mask = (df['Date'].dt.date == secilen_tarih) & (df['League'] == secilen_lig)
-        gunun_maclari = df[mask].copy()
+        c1, c2 = st.columns(2)
+        with c1:
+            secilen_lig = st.selectbox("🌍 Lig Seçin:", ["Hepsi"] + ligler)
+        with c2:
+            st.info(f"📊 Toplam {len(df)} maç yüklendi.")
+
+        # Filtreleme Uygula
+        if secilen_lig != "Hepsi":
+            gunun_maclari = df[df['League'] == secilen_lig].copy()
+        else:
+            gunun_maclari = df.copy()
 
         if not gunun_maclari.empty:
+            # Maçları birleştirip göster
             gunun_maclari['Match'] = gunun_maclari['HomeTeam'] + " - " + gunun_maclari['AwayTeam']
-            st.selectbox("🏟️ Maç Seç:", gunun_maclari['Match'])
+            
+            # Tablo olarak göster (Tarih hatası olsa bile burada liste çıkar)
+            st.dataframe(gunun_maclari[['Date', 'League', 'Match']], use_container_width=True)
+            
+            secilen_mac = st.selectbox("🏟️ Detaylı Analiz İçin Seç:", gunun_maclari['Match'])
+            st.success(f"🔍 {secilen_mac} seçildi. Analiz motoru çalışıyor...")
         else:
-            st.warning("Bu seçimde maç bulunamadı.")
+            st.warning("Seçilen ligde maç bulunamadı.")
     else:
-        st.error("Lig verisi henüz yüklenmemiş.")
+        st.error("Dosya bulundu ama içinde maç verisi yok.")
 else:
-    st.error("📂 Veri dosyası bulunamadı. Lütfen GitHub Actions'ı çalıştırın.")
+    st.error("📂 Veri dosyası (CSV) henüz oluşturulmamış.")
