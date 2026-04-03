@@ -3,93 +3,93 @@ import sqlite3
 import pandas as pd
 from collections import Counter
 
-st.set_page_config(page_title="AI 5 Sezon Analiz", layout="wide")
+# Bot görünümü için daraltılmış düzen
+st.set_page_config(page_title="Analiz Botu", layout="centered")
 
-# Modern Kart Tasarımı (CSS)
+# Telegram Botu CSS Tasarımı
 st.markdown("""
     <style>
-    .card { padding: 15px; border-radius: 12px; margin: 8px; text-align: center; font-weight: bold; }
-    .green { background-color: #BBF7D0; border: 1px solid #16A34A; color: #14532D; }
-    .blue { background-color: #DBEafe; border: 1px solid #2563EB; color: #1E3A8A; }
-    .purple { background-color: #E9D5FF; border: 1px solid #7C3AED; color: #4C1D95; }
-    .yellow { background-color: #FEF08A; border: 1px solid #CA8A04; color: #713F12; }
+    .stApp { background-color: #1c2733; }
+    .bot-header { color: #5dade2; text-align: center; font-family: sans-serif; margin-bottom: 20px; }
+    .result-card {
+        background-color: #24303f;
+        padding: 15px;
+        border-radius: 15px;
+        border: 1px solid #3d4b59;
+        margin-bottom: 15px;
+    }
+    .score-pill {
+        display: inline-block;
+        width: 100%;
+        margin: 4px 0;
+        padding: 12px;
+        border-radius: 12px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        color: #1a1a1a;
+    }
+    .green { background-color: #a7f3d0; border-left: 5px solid #059669; }
+    .blue { background-color: #bfdbfe; border-left: 5px solid #2563eb; }
+    .purple { background-color: #ddd6fe; border-left: 5px solid #7c3aed; }
+    .yellow { background-color: #fef08a; border-left: 5px solid #ca8a04; }
+    label { color: #ffffff !important; }
     </style>
     """, unsafe_allow_html=True)
 
-def query_db(sql):
+def get_data(sql):
     try:
         with sqlite3.connect("football.db") as conn:
             return pd.read_sql_query(sql, conn)
-    except Exception as e:
-        st.error(f"Veritabanı Hatası: {e}")
-        return pd.DataFrame()
+    except: return pd.DataFrame()
 
-st.title("🏟️ 5 Yıllık Periyot Analizörü")
+st.markdown("<h2 class='bot-header'>📊 SKOR ANALİZ BOTU</h2>", unsafe_allow_html=True)
 
-# --- ÜST PANEL ---
-c1, c2, c3 = st.columns(3)
-with c1:
-    tarih = st.date_input("📅 Tarih Seç", value=pd.to_datetime("2026-04-03"))
-with c2:
-    ligler = query_db("SELECT DISTINCT league FROM matches ORDER BY league")
-    secilen_lig = st.selectbox("🏆 Lig Seçin", ligler['league'].tolist() if not ligler.empty else [])
-with c3:
-    takimlar = query_db(f"SELECT DISTINCT home_team FROM matches WHERE league='{secilen_lig}'")
-    secilen_takim = st.selectbox("⚽ Takım Seçin", takimlar['home_team'].tolist() if not takimlar.empty else [])
+# --- BOT GİRİŞ ALANLARI ---
+col1, col2 = st.columns(2)
+with col1:
+    ligler = get_data("SELECT DISTINCT league FROM matches ORDER BY league")
+    secilen_lig = st.selectbox("🏆 Lig", ligler['league'].tolist() if not ligler.empty else [])
+with col2:
+    takimlar = get_data(f"SELECT DISTINCT home_team FROM matches WHERE league='{secilen_lig}'")
+    secilen_takim = st.selectbox("⚽ Takım", takimlar['home_team'].tolist() if not takimlar.empty else [])
 
-c4, c5 = st.columns(2)
-with c4:
-    # DB'de sütun adı 'round' olduğu için burada 'round' üzerinden işlem yapılır
-    hafta = st.number_input("🔢 Hafta (Tur)", 1, 45, 30)
-with c5:
-    algoritma = st.selectbox("🧠 Algoritma", ["İY/MS Analizi", "ALT/ÜST Analizi", "İY/MS KG Analizi"])
+hafta = st.number_input("🔢 Analiz Haftası (Round)", 1, 45, 30)
 
-# --- 5 SEZON ANALİZ MOTORU ---
-# Sütun adı 'round' olarak güncellendi
+# --- BOT HIZLI ANALİZ MOTORU ---
+# Sütun adı 'round' olarak güncellendi, son 5 sezonu kapsar.
 sql_query = f"""
-    SELECT home_score, away_score, ht_home_score, ht_away_score 
+    SELECT home_score, away_score, ht_home_score, ht_away_score, season 
     FROM matches 
     WHERE (home_team = '{secilen_takim}' OR away_team = '{secilen_takim}')
     AND round = {hafta}
     ORDER BY season DESC
 """
-df_analiz = query_db(sql_query)
+df = get_data(sql_query)
 
-if not df_analiz.empty:
-    # Veri Hazırlama (Ondalık sayıları tam sayıya çeviriyoruz)
-    ms_skorlar = [f"{int(r['home_score'])}-{int(r['away_score'])}" for _, r in df_analiz.iterrows()]
-    iy_skorlar = [f"{int(r['ht_home_score'])}-{int(r['ht_away_score'])}" for _, r in df_analiz.iterrows()]
-    ms_goller = [f"{int(r['home_score'] + r['away_score'])} Gol" for _, r in df_analiz.iterrows()]
-    iy_goller = [f"{int(r['ht_home_score'] + r['ht_away_score'])} Gol" for _, r in df_analiz.iterrows()]
+if not df.empty:
+    st.markdown(f"<p style='color:gray; text-align:center;'>Son {len(df)} sezonun {hafta}. hafta verileri analiz edildi.</p>", unsafe_allow_html=True)
+    
+    # Veri İşleme
+    ms_skorlar = [f"{int(r['home_score'])}-{int(r['away_score'])}" for _, r in df.iterrows()]
+    iy_skorlar = [f"{int(r['ht_home_score'])}-{int(r['ht_away_score'])}" for _, r in df.iterrows()]
+    ms_goller = [f"{int(r['home_score'] + r['away_score'])} Gol" for _, r in df.iterrows()]
+    iy_goller = [f"{int(r['ht_home_score'] + r['ht_away_score'])} Gol" for _, r in df.iterrows()]
 
-    def render_cards(data, color, title, icon):
-        st.markdown(f"#### {icon} {title}")
-        counts = Counter(data)
-        total = len(data)
-        top_6 = counts.most_common(6)
-        
-        c_left, c_right = st.columns(2)
-        for i, (val, count) in enumerate(top_6):
+    def render_bot_section(title, data_list, color_class):
+        st.markdown(f"<h4 style='color:white; margin-top:20px;'>{title}</h4>", unsafe_allow_html=True)
+        counts = Counter(data_list)
+        total = len(data_list)
+        for val, count in counts.most_common(5):
             perc = int((count/total)*100)
-            html = f'<div class="card {color}">{val} ({perc}%) {count} kere</div>'
-            if i % 2 == 0: c_left.markdown(html, unsafe_allow_html=True)
-            else: c_right.markdown(html, unsafe_allow_html=True)
+            st.markdown(f'<div class="score-pill {color_class}">{val} &nbsp; | &nbsp; %{perc} ({count} Maç)</div>', unsafe_allow_html=True)
 
-    st.markdown("---")
-    
-    # 4'LÜ KART GÖRÜNÜMÜ
-    r1, r2 = st.columns(2)
-    with r1:
-        render_cards(ms_skorlar, "green", "Maç Skoru Tahminleri", "🏟️")
-    with r2:
-        render_cards(iy_skorlar, "blue", "İlk Yarı Skoru Tahminleri", "⏱️")
+    # Bot Yanıtları (Alt alta hızlı liste)
+    render_bot_section("🏠 Maç Skoru Tahminleri", ms_skorlar, "green")
+    render_bot_section("⏱️ İlk Yarı Skoru Tahminleri", iy_skorlar, "blue")
+    render_bot_section("🌟 Maç Sonu Toplam Gol", ms_goller, "purple")
+    render_bot_section("⚽ İlk Yarı Toplam Gol", iy_goller, "yellow")
 
-    st.markdown("<br>", unsafe_allow_html=True)
-    
-    r3, r4 = st.columns(2)
-    with r3:
-        render_cards(ms_goller, "purple", "Maç Sonu Gol Sayısı", "🌟")
-    with r4:
-        render_cards(iy_goller, "yellow", "İlk Yarı Gol Sayısı", "⚽")
 else:
-    st.info(f"💡 {secilen_takim} için {hafta}. haftaya (round) ait geçmiş veri bulunamadı.")
+    st.error("🤖 Bot bu takım için o haftaya ait geçmiş veri bulamadı.")
+
