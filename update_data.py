@@ -2,24 +2,26 @@ import requests
 import pandas as pd
 
 def fetch_all():
-    # Aradığın 20+ ligin listesi (Buraya ekleme yapabilirsin)
+    # FBref'teki popüler 20+ ligin karşılıkları
     ligler = {
         "Süper Lig": "turkey-super-lig", "TFF 1. Lig": "turkey-tff-1-lig",
-        "Premier League": "epl", "La Liga": "la-liga",
-        "Serie A": "serie-a", "Bundesliga": "bundesliga",
-        "Ligue 1": "ligue-1", "Eredivisie": "netherlands-eredivisie",
-        "Portekiz": "portugal-primeira-liga", "Brezilya": "brazil-serie-a"
+        "Premier League": "epl", "Championship": "england-championship",
+        "La Liga": "la-liga", "La Liga 2": "spain-la-liga-2",
+        "Serie A": "serie-a", "Serie B": "italy-serie-b",
+        "Bundesliga": "bundesliga", "2. Bundesliga": "germany-2-bundesliga",
+        "Ligue 1": "ligue-1", "Ligue 2": "france-ligue-2",
+        "Eredivisie": "netherlands-eredivisie", "Portekiz Ligi": "portugal-primeira-liga",
+        "Belçika Ligi": "belgium-pro-league", "Brezilya Seri A": "brazil-serie-a"
     }
     
     all_data = []
     for ad, kod in ligler.items():
         try:
-            # 2025 sezonu hem bülteni hem geçmişi kapsar
             url = f"https://fixturedownload.com/feed/json/{kod}-2025"
-            r = requests.get(url, timeout=15)
-            if r.status_code == 200:
+            r = requests.get(url, timeout=20)
+            if r.status_code == 200 and r.json():
                 temp_df = pd.DataFrame(r.json())
-                # SÜTUNLARI STANDARTLAŞTIR (Hataları önleyen altın kural)
+                # Sütun isimlerini zorla küçük harf yap (Hataları bitiren hamle)
                 temp_df.columns = [str(c).lower().strip() for c in temp_df.columns]
                 temp_df['league'] = ad
                 all_data.append(temp_df)
@@ -28,9 +30,9 @@ def fetch_all():
             
     if all_data:
         final_df = pd.concat(all_data, ignore_index=True)
-        # Dosyayı kaydet
+        # Dosyayı CSV olarak kaydet
         final_df.to_csv("all_leagues_data.csv", index=False)
-        print("✅ 20+ Lig Başarıyla Veritabanına Eklendi!")
+        print("✅ Veri başarıyla güncellendi!")
 
 if __name__ == "__main__":
     fetch_all()
