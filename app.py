@@ -2,49 +2,33 @@ import streamlit as st
 import pandas as pd
 import os
 
-st.set_page_config(page_title="Pro Analiz Arşivi", layout="wide")
-st.title("🏟️ 20+ Lig Akıllı Analiz")
+st.set_page_config(page_title="Pro Football Analyzer", layout="wide")
+st.title("⚽ Profesyonel Lig Analiz Arşivi")
 
-DATA_FILE = "all_leagues_data.csv"
-
-if not os.path.exists(DATA_FILE):
-    st.warning("⚠️ Veri dosyası henüz oluşmadı. GitHub Actions'dan 'Run workflow' yapın.")
+if not os.path.exists("all_leagues_data.csv"):
+    st.error("Veri dosyası bulunamadı. Lütfen Actions üzerinden veriyi çekin.")
 else:
-    df = pd.read_csv(DATA_FILE)
-    # Sütunları küçük harfe çevirerek eşleştir
-    df.columns = [str(c).lower().strip() for c in df.columns]
+    df = pd.read_csv("all_leagues_data.csv")
     
-    # Tarih kontrolü ve dönüşümü
-    if 'date' in df.columns:
-        df['date'] = pd.to_datetime(df['date'], errors='coerce')
-        df = df.dropna(subset=['date'])
-        df['tarih_str'] = df['date'].dt.strftime('%Y-%m-%d')
-    else:
-        st.error("Hata: Veri dosyasında 'date' sütunu bulunamadı!")
-        st.stop()
-
-    # Lig ve Maç Seçimi
-    ligler = sorted(df['league'].unique())
-    secilen_lig = st.selectbox("1️⃣ Lig Seçin", ligler)
+    # Tarih formatını bu kaynağa göre düzelt (dd/mm/yy)
+    df['Date'] = pd.to_datetime(df['Date'], dayfirst=True, errors='coerce')
+    df = df.dropna(subset=['Date'])
     
-    bugun = pd.Timestamp.now().normalize()
-    bulten = df[(df['league'] == secilen_lig) & (df['date'] >= bugun)].copy()
+    ligler = sorted(df['League'].unique())
+    secilen_lig = st.sidebar.selectbox("Lig Seç", ligler)
     
-    if not bulten.empty:
-        bulten['mac_adi'] = bulten['hometeam'] + " - " + bulten['awayteam']
-        secilen_mac = st.selectbox("2️⃣ Maç Seçin", bulten['mac_adi'].unique())
-        m = bulten[bulten['mac_adi'] == secilen_mac].iloc[0]
-        
-        st.divider()
-        st.subheader(f"📊 {secilen_mac} | Hafta: {m['roundnumber']}")
-        
-        # Geçmiş hafta döngüsü analizi
-        gecmis = df[(df['league'] == secilen_lig) & (df['homescore'].notnull()) & 
-                    (df['roundnumber'] == m['roundnumber'])].copy()
-        
-        if not gecmis.empty:
-            gecmis['skor'] = gecmis['homescore'].astype(int).astype(str) + "-" + gecmis['awayscore'].astype(int).astype(str)
-            st.table(gecmis[['tarih_str', 'hometeam', 'awayteam', 'skor']])
-            st.success(f"📌 En sık biten skor: {gecmis['skor'].value_counts().idxmax()}")
-        else:
-            st.info("Bu haftaya ait geçmiş sonuç yok.")
+    lig_df = df[df['League'] == secilen_lig].copy()
+    
+    # En güncel maçları (Bülten niyetine) ve geçmişi göster
+    st.subheader(f"📊 {secilen_lig} Sonuçları ve Analiz")
+    
+    # Skoru olan (oynanmış) maçları göster
+    played = lig_df.dropna(subset=['FTHG', 'FTAG'])
+    played['Score'] = played['FTHG'].astype(int).astype(str) + " - " + played['FTAG'].astype(int).astype(str)
+    
+    st.dataframe(played[['Date', 'HomeTeam', 'AwayTeam', 'Score']].sort_values(by='Date', ascending=False))
+    
+    # İstatistik: En çok biten skor
+    if not played.empty:
+        common_score = played['Score'].value_counts().idxmax()
+        st.success(f"💡 Bu ligde bu sezon en sık görülen skor: **{common_score}**")
