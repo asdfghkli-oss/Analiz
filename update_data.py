@@ -1,27 +1,18 @@
 import sqlite3
-import pandas as pd
-import requests
 
-def db_guncelle():
-    db_yolu = "football.db"
-    conn = sqlite3.connect(db_yolu)
+def check_db_integrity():
+    conn = sqlite3.connect("football.db")
     cursor = conn.cursor()
-
-    print("📡 Veritabanı bağlantısı kuruldu. Güncel bülten taranıyor...")
     
-    # Buraya FBref veya kendi veri kaynağının API/Scraper kodunu ekleyebilirsin.
-    # Örnek: Mevcut matches tablosuna yeni verileri INSERT eden bir mantık.
-    
-    # Şimdilik mevcut tabloların sağlığını kontrol edelim
+    # Tablo ve sütun yapısını doğrula
     try:
-        cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
-        tables = cursor.fetchall()
-        print(f"✅ Mevcut Tablolar: {tables}")
+        cursor.execute("SELECT * FROM matches LIMIT 1")
+        columns = [description[0] for description in cursor.description]
+        print(f"✅ Veritabanı Aktif. Sütunlar: {columns}")
     except Exception as e:
-        print(f"❌ Hata: {e}")
-    
-    conn.close()
-    print("🚀 Güncelleme işlemi tamamlandı.")
+        print(f"❌ Veritabanı Hatası: {e}")
+    finally:
+        conn.close()
 
 if __name__ == "__main__":
-    db_guncelle()
+    check_db_integrity()
