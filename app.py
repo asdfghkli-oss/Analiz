@@ -5,43 +5,56 @@ import os
 st.set_page_config(page_title="Mega Döngü Analiz", layout="wide")
 st.title("🔄 5 Yıllık Hafta & Periyot Analizörü")
 
+# Veriyi oku ve sütunları temizle
 @st.cache_data
-def veri_yukle():
+def load_data():
     if os.path.exists("all_leagues_data.csv"):
-        return pd.read_csv("all_leagues_data.csv")
+        data = pd.read_csv("all_leagues_data.csv")
+        # Sütun isimlerindeki boşlukları temizle
+        data.columns = [str(c).strip() for c in data.columns]
+        return data
     return None
 
-df = veri_yukle()
+df = load_data()
 
-if df is not None:
-    st.sidebar.success(f"Sistemde {len(df)} maç kayıtlı.")
+if df is not None and not df.empty:
+    # SÜTUN KONTROLÜ (Hata almamak için dinamik isim bulma)
+    # FBref'ten gelen olası sütun isimleri
+    lig_col = next((c for c in df.columns if 'League' in c or 'Comp' in c), df.columns[0])
+    home_col = next((c for c in df.columns if 'Home' in c), df.columns[2])
+    wk_col = next((c for c in df.columns if 'Wk' in c or 'Round' in c), df.columns[1])
     
+    st.sidebar.success(f"✅ {len(df)} maç yüklendi.")
+
     # Filtreler
     with st.sidebar:
         st.header("🔍 Analiz Filtresi")
-        ulke_listesi = sorted(df['League'].unique())
-        secilen_lig = st.selectbox("Lig Seç:", ulke_listesi)
+        ligler = sorted(df[lig_col].unique().astype(str))
+        secilen_lig = st.selectbox("Lig Seç:", ligler)
         
-        takimlar = sorted(df[df['League'] == secilen_lig]['Home'].unique())
+        # Seçilen lige göre takımları filtrele
+        lig_df = df[df[lig_col] == secilen_lig]
+        takimlar = sorted(lig_df[home_col].unique().astype(str))
         secilen_takim = st.selectbox("Takım Seç:", takimlar)
         
         hafta = st.slider("Hangi Haftayı Analiz Edelim?", 1, 42, 30)
 
     # ANALİZ MOTORU
-    # Takımın hem ev hem deplasman maçlarını, belirtilen haftada filtrele
+    # Takımın hem ev hem deplasman maçlarını bul
+    away_col = next((c for c in df.columns if 'Away' in c), df.columns[3])
+    
     analiz_df = df[
-        ((df['Home'] == secilen_takim) | (df['Away'] == secilen_takim)) & 
-        (df['Wk'].astype(str) == str(hafta))
-    ].sort_values(by="Season", ascending=False)
+        ((df[home_col] == secilen_takim) | (df[away_col] == secilen_takim)) & 
+        (df[wk_col].astype(str) == str(hafta))
+    ].sort_values(by=df.columns[0], ascending=False) # İlk sütuna (tarih/sezon) göre sırala
 
-    st.subheader(f"📊 {secilen_takim} - {hafta}. Hafta Döngüsü (Son 5 Sezon)")
+    st.subheader(f"📊 {secilen_takim} - {hafta}. Hafta Döngüsü")
     
     if not analiz_df.empty:
-        st.dataframe(analiz_df[['Season', 'League', 'Home', 'Score', 'Away']], use_container_width=True)
-        
-        # Basit İstatistik Çıkarımı
-        st.info(f"💡 {secilen_takim} son 5 sezonda {hafta}. haftalarda toplam {len(analiz_df)} maç yaptı.")
+        # İhtiyacımız olan sütunları güvenli şekilde göster
+        gosterilecek = [c for c in ['Season', lig_col, home_col, 'Score', away_col] if c in analiz_df.columns]
+        st.dataframe(analiz_df[gosterilecek], use_container_width=True)
     else:
-        st.warning("Bu kriterlere uygun maç kaydı bulunamadı.")
+        st.warning(f"⚠️ {secilen_takim} için {hafta}. haftada geçmiş veri bulunamadı.")
 else:
-    st.error("Veri dosyası bulunamadı. Lütfen GitHub Actions'ı çalıştırın.")
+    st.error("🚨 Veri dosyası boş veya hatalı çekilmiş. Lütfen Actions sekmesinden tekrar 'Run Workflow' yapın ve bitmesini bekleyin.")
