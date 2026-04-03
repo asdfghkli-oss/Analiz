@@ -1,88 +1,99 @@
 import streamlit as st
-import sqlite3
 import pandas as pd
 import requests
+from datetime import datetime
 
-st.set_page_config(page_title="Pro Analiz", layout="wide")
-st.title("🏟️ Yapay Zeka Destekli Analiz")
+# Sayfa Ayarları
+st.set_page_config(page_title="Canlı Analiz Paneli", layout="wide")
+st.title("⚽ Yapay Zeka Destekli Canlı Analiz")
 
-def get_conn():
-    return sqlite3.connect('football.db', check_same_thread=False)
+# --- VERİ ÇEKME FONKSİYONLARI ---
+@st.cache_data(ttl=3600) # Verileri 1 saat önbelleğe alarak hızı artırır
+def veri_cek(lig_kodu):
+    try:
+        url = f"https://fixturedownload.com/feed/json/{lig_kodu}-2025"
+        r = requests.get(url)
+        return pd.DataFrame(r.json())
+    except:
+        return pd.DataFrame()
 
-# --- GELİŞMİŞ BÜLTEN ÇEKİCİ ---
-def bulteni_guncelle():
-    with st.spinner('Ligler taranıyor...'):
-        try:
-            ligler = {
-                "Premier League": "epl", "Süper Lig": "turkey-super-lig",
-                "La Liga": "la-liga", "Serie A": "serie-a",
-                "Bundesliga": "bundesliga", "Ligue 1": "ligue-1"
-            }
-            conn = get_conn()
-            cursor = conn.cursor()
-            cursor.execute("DROP TABLE IF EXISTS current_bulletin")
-            cursor.execute("CREATE TABLE current_bulletin (date TEXT, home_team TEXT, away_team TEXT, league TEXT, round TEXT)")
-            
-            for lig_ad, lig_kod in ligler.items():
-                r = requests.get(f"https://fixturedownload.com/feed/json/{lig_kod}-2025")
-                if r.status_code == 200:
-                    for match in r.json():
-                        m_date = match.get('Date', '')[:10]
-                        cursor.execute("INSERT INTO current_bulletin VALUES (?, ?, ?, ?, ?)", 
-                                     (m_date, match['HomeTeam'], match['AwayTeam'], lig_ad, str(match['RoundNumber'])))
-            conn.commit()
-            conn.close()
-            st.success("✅ Bülten Güncellendi!")
-            st.rerun()
-        except Exception as e:
-            st.error(f"Hata: {e}")
+# --- LİG AYARLARI ---
+ligler = {
+    "Süper Lig": "turkey-super-lig",
+    "Premier League": "epl",
+    "La Liga": "la-liga",
+    "Serie A": "serie-a",
+    "Bundesliga": "bundesliga",
+    "Ligue 1": "ligue-1",
+    "Eredivisie": "eredivisie"
+}
 
 # --- ARAYÜZ ---
 col1, col2 = st.columns(2)
+
 with col1:
-    if st.button("🔄 Bülteni İnternetten Çek"):
-        bulteni_guncelle()
-with col2:
-    t_str = st.date_input("Tarih Seç", value=pd.to_datetime("today")).strftime('%Y-%m-%d')
+    secilen_lig_ad = st.selectbox("1️⃣ Lig Seçin", list(ligler.keys()))
+    lig_kodu = ligler[secilen_lig_ad]
 
-st.divider()
+# Veriyi İnternetten Çek
+df = veri_cek(lig_kodu)
 
-# --- VERİ OKUMA ---
-conn = get_conn()
-try:
-    bulten = pd.read_sql(f"SELECT * FROM current_bulletin WHERE date = '{t_str}'", conn)
-except:
-    bulten = pd.DataFrame()
-
-if not bulten.empty:
-    bulten['mac_gorunum'] = bulten['league'] + ": " + bulten['home_team'] + " - " + bulten['away_team']
-    secilen_mac = st.selectbox("🎯 Maç Seçin", bulten['mac_gorunum'].tolist())
-    m = bulten[bulten['mac_gorunum'] == secilen_mac].iloc[0]
+if not df.empty:
+    # Tarih formatını düzenle
+    df['Date'] = pd.to_datetime(df['Date']).dt.strftime('%Y-%m-%d')
     
-    if st.button("🚀 İY/MS ANALİZİNİ BAŞLAT"):
-        # ESNEK ARAMA: Lig ismi tam tutmasa da takım ismi ve hafta üzerinden ara
-        query = f"""
-            SELECT date, ht_home_score, ht_away_score, home_score, away_score 
-            FROM matches 
-            WHERE (home_team LIKE '%{m['home_team']}%' OR away_team LIKE '%{m['home_team']}%') 
-            AND round = '{m['round']}'
-        """
-        res = pd.read_sql(query, conn)
+    with col2:
+        # Sadece bugün ve gelecek maçları "Bülten" olarak filtrele
+        bugun = datetime.now().strftime('%Y-%m-%d')
+        bulten = df[df['Date'] >= bugun]
         
-        if not res.empty:
-            st.subheader(f"📊 {m['home_team']} Analizi (Hafta: {m['round']})")
-            res['İY'] = res['ht_home_score'].astype(str) + "-" + res['ht_away_score'].astype(str)
-            res['MS'] = res['home_score'].astype(str) + "-" + res['away_score'].astype(str)
-            
-            # Sonuçları göster
-            st.table(res[['date', 'İY', 'MS']])
-            
-            # En çok çıkan İY/MS
-            res['İYMS'] = res['İY'] + " / " + res['MS']
-            st.success(f"💡 Bu döngüdeki en yaygın sonuç: **{res['İYMS'].value_counts().idxmax()}**")
+        if not bulten.empty:
+            bulten['mac_adi'] = bulten['HomeTeam'] + " - " + bulten['AwayTeam']
+            secilen_mac = st.selectbox("2️⃣ Güncel Bülten (Maç Seçin)", bulten['mac_adi'].tolist())
+            m = bulten[bulten['mac_adi'] == secilen_mac].iloc[0]
+            hedef_takim = m['HomeTeam']
+            hedef_round = m['RoundNumber']
         else:
-            st.error(f"Veritabanında {m['home_team']} için {m['round']}. haftaya ait geçmiş kayıt bulunamadı.")
-else:
-    st.info("💡 Bu tarihte maç bulunamadı. Lütfen 'Bülteni İnternetten Çek' butonuna basmayı veya tarihi değiştirmeyi deneyin.")
+            st.warning("Bu ligde yakın zamanda maç bulunamadı.")
+            hedef_takim = None
 
-conn.close()
+    st.divider()
+
+    # --- ANALİZ MOTORU ---
+    if hedef_takim:
+        st.subheader(f"📊 {hedef_takim} - {m['AwayTeam']} ({hedef_round}. Hafta Analizi)")
+        
+        # Geçmiş maçları (Oynanmış olanları) filtrele
+        gecmis = df[df['HomeScore'].notnull()]
+        
+        # Haftalık Döngü: Geçmişte aynı haftada (RoundNumber) oynanan maçları bul
+        dongu_verisi = gecmis[gecmis['RoundNumber'] == hedef_round]
+        
+        if not dongu_verisi.empty:
+            # İY ve MS Skorlarını Oluştur (API'den gelen verilere göre)
+            # Not: Bu API genelde MS skorunu verir, eğer İY skoru yoksa MS üzerinden analiz yapar
+            dongu_verisi['Skor'] = dongu_verisi['HomeScore'].astype(int).astype(str) + " - " + dongu_verisi['AwayScore'].astype(int).astype(str)
+            
+            st.write(f"### {hedef_round}. Haftada Diğer Takımlar Ne Yapmış?")
+            
+            # Tablo Gösterimi
+            display_df = dongu_verisi[['Date', 'HomeTeam', 'AwayTeam', 'Skor']].copy()
+            display_df.columns = ['Tarih', 'Ev Sahibi', 'Deplasman', 'Maç Sonucu']
+            st.table(display_df)
+            
+            # İstatistiksel Özet
+            en_cok_skor = dongu_verisi['Skor'].value_counts().idxmax()
+            st.success(f"💡 Bu hafta döngüsünde en sık görülen skor: **{en_cok_skor}**")
+            
+            # KG ve Alt/Üst Tahmini (Basit Algoritma)
+            toplam_gol = dongu_verisi['HomeScore'].astype(int) + dongu_verisi['AwayScore'].astype(int)
+            ust_yuzde = (len(toplam_gol[toplam_gol > 2.5]) / len(toplam_gol)) * 100
+            
+            c1, c2 = st.columns(2)
+            c1.metric("2.5 Üst Olasılığı", f"%{ust_yuzde:.0f}")
+            c2.metric("Ortalama Gol", f"{toplam_gol.mean():.2f}")
+            
+        else:
+            st.info("Bu hafta numarasına ait henüz oynanmış maç verisi bulunmuyor.")
+else:
+    st.error("Veri çekilemedi. Lütfen internet bağlantınızı veya lig seçimini kontrol edin.")
