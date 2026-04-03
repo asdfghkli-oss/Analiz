@@ -1,38 +1,46 @@
 import pandas as pd
 import requests
+from datetime import datetime
 
-def fetch_with_api():
-    # Senin verdiğin özel API Key
-    api_key = "2fb7b594f09acd4b3521ddf50fa227e9"
-    headers = {'X-Auth-Token': api_key}
+def fetch_sofascore_data():
+    # Bugünün tarihini al (YYYY-MM-DD formatında)
+    bugun = datetime.now().strftime('%Y-%m-%d')
+    url = f"https://sportapi7.p.rapidapi.com/api/v1/sport/football/scheduled-events/{bugun}"
     
-    # Premier Lig, La Liga, Bundesliga, Serie A, Ligue 1
-    leagues = ['PL', 'PD', 'BL1', 'SA', 'FL1'] 
-    all_matches = []
+    headers = {
+        "x-rapidapi-key": "3484137886mshefa3b568477dba7p10423fjsn346dc68691f0",
+        "x-rapidapi-host": "sportapi7.p.rapidapi.com"
+    }
 
-    for league in leagues:
-        url = f"https://api.football-data.org/v4/competitions/{league}/matches"
-        try:
-            r = requests.get(url, headers=headers, timeout=15)
-            if r.status_code == 200:
-                data = r.json()
-                for m in data['matches']:
-                    all_matches.append({
-                        'Date': m['utcDate'], # Baş harfi büyük 'Date'
-                        'League': data['competition']['name'],
-                        'HomeTeam': m['homeTeam']['name'],
-                        'AwayTeam': m['awayTeam']['name'],
-                        'FTHG': m['score']['fullTime']['home'],
-                        'FTAG': m['score']['fullTime']['away']
-                    })
-        except: continue
-
-    if all_matches:
-        df = pd.DataFrame(all_matches)
-        # Tarih formatını temizle ve saat dilimini kaldır
-        df['Date'] = pd.to_datetime(df['Date']).dt.tz_localize(None)
-        df.to_csv("all_leagues_data.csv", index=False)
-        print(f"✅ Bülten Başarıyla Güncellendi: {len(df)} maç.")
+    print(f"🚀 {bugun} tarihli tüm maçlar çekiliyor...")
+    
+    try:
+        response = requests.get(url, headers=headers, timeout=20)
+        if response.status_code == 200:
+            data = response.json()
+            all_matches = []
+            
+            for event in data.get('events', []):
+                all_matches.append({
+                    'Date': datetime.fromtimestamp(event.get('startTimestamp')).strftime('%Y-%m-%d %H:%M'),
+                    'League': event.get('tournament', {}).get('name'),
+                    'HomeTeam': event.get('homeTeam', {}).get('name'),
+                    'AwayTeam': event.get('awayTeam', {}).get('name'),
+                    'HomeScore': event.get('homeScore', {}).get('current'),
+                    'AwayScore': event.get('awayScore', {}).get('current')
+                })
+            
+            if all_matches:
+                df = pd.DataFrame(all_matches)
+                # Streamlit'in okuması için kaydet
+                df.to_csv("all_leagues_data.csv", index=False)
+                print(f"✅ {len(df)} maç başarıyla kaydedildi!")
+            else:
+                print("⚠️ Bugün için maç bulunamadı.")
+        else:
+            print(f"❌ API Hatası: {response.status_code}")
+    except Exception as e:
+        print(f"🛑 Bağlantı Hatası: {e}")
 
 if __name__ == "__main__":
-    fetch_with_api()
+    fetch_sofascore_data()
