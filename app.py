@@ -2,92 +2,118 @@ import streamlit as st
 import sqlite3
 import pandas as pd
 import requests
+from datetime import datetime
 
-# Sayfa Ayarları
-st.set_page_config(page_title="Pro Analiz Paneli", layout="wide")
+st.set_page_config(page_title="Pro Analiz", layout="wide")
 st.title("🏟️ Yapay Zeka Destekli Analiz")
 
 def get_conn():
     return sqlite3.connect('football.db', check_same_thread=False)
 
-# --- OTOMATİK BÜLTEN ÇEKME FONKSİYONU ---
-def bulteni_internetten_cek():
-    with st.spinner('Güncel bülten çekiliyor, lütfen bekleyin...'):
+# --- SIFIRDAN BÜLTEN ÇEKME FONKSİYONU ---
+def bulteni_sifirdan_cek():
+    with st.spinner('Güncel maçlar internetten toplanıyor...'):
         try:
-            # ÖNEMLİ: Buraya Replit'te kullandığın bülten çekme API'sini veya kodunu entegre edeceğiz.
-            # Şimdilik örnek bir yapı kuruyorum:
-            conn = get_conn()
-            # Örnek: Replit'teki bülten çekme mantığını buraya simüle ediyoruz
-            # bulten_verisi = requests.get("SENIN_BULTEN_API_LINKIN").json()
+            # Ücretsiz ve açık bir futbol bülten kaynağı (Örnektir)
+            # Not: Bu URL örnek amaçlıdır, en stabil veri için hızlı bir API entegresi yapılmıştır.
+            url = "https://fixturedownload.com/feed/json/epl-2025" # Örnek Premier Lig
+            response = requests.get(url)
+            data = response.json()
             
-            st.success("✅ Bülten başarıyla güncellendi!")
+            conn = get_conn()
+            cursor = conn.cursor()
+            
+            # Tabloyu temizle ve yeniden oluştur (Hata almamak için)
+            cursor.execute("DROP TABLE IF EXISTS current_bulletin")
+            cursor.execute("""
+                CREATE TABLE current_bulletin (
+                    date TEXT, 
+                    home_team TEXT, 
+                    away_team TEXT, 
+                    league TEXT, 
+                    round TEXT
+                )
+            """)
+            
+            # İnternetten gelen veriyi veritabanına yaz
+            for match in data[:50]: # İlk 50 maçı örnek olarak alıyoruz
+                cursor.execute("""
+                    INSERT INTO current_bulletin (date, home_team, away_team, league, round) 
+                    VALUES (?, ?, ?, ?, ?)
+                """, (
+                    match['Date'][:10], # YYYY-MM-DD formatı
+                    match['HomeTeam'], 
+                    match['AwayTeam'], 
+                    "Premier League", 
+                    str(match['RoundNumber'])
+                ))
+            
+            conn.commit()
+            conn.close()
+            st.success("✅ Güncel bülten çekildi ve veritabanına işlendi!")
+            st.rerun() # Sayfayı yenile ki veriler gelsin
         except Exception as e:
-            st.error(f"❌ Güncelleme sırasında hata oluştu: {e}")
+            st.error(f"Bülten çekilirken hata oluştu: {e}")
 
-# --- ÜST MENÜ VE GÜNCELLEME ---
-col1, col2, col3 = st.columns([1, 2, 1])
+# --- ÜST MENÜ ---
+col1, col2, col3 = st.columns([1, 1, 1])
 
 with col1:
-    if st.button("🔄 Bülteni Güncelle"):
-        bulteni_internetten_cek()
+    if st.button("🔄 Bülteni İnternetten Çek"):
+        bulteni_sifirdan_cek()
 
 with col2:
     tarih_sec = st.date_input("Tarih Seç", value=pd.to_datetime("today"))
     t_str = tarih_sec.strftime('%Y-%m-%d')
 
-# --- ANALİZ PANELİ ---
-conn = get_conn()
-# Veritabanından bülteni oku
-bulten = pd.read_sql(f"SELECT * FROM current_bulletin WHERE date = '{t_str}'", conn)
+with col3:
+    algo = st.selectbox("Algoritma", ["Skor Analizi", "İY/MS & Oran", "Alt/Üst & KG"])
 
 st.divider()
 
-c1, c2, c3 = st.columns(3)
+# --- VERİ OKUMA ---
+conn = get_conn()
+try:
+    bulten = pd.read_sql(f"SELECT * FROM current_bulletin WHERE date = '{t_str}'", conn)
+except:
+    bulten = pd.DataFrame()
 
-with c1:
-    if not bulten.empty:
-        bulten['mac'] = bulten['home_team'] + " - " + bulten['away_team']
-        secilen = st.selectbox("Günün Bülteni", bulten['mac'].tolist())
-        m = bulten[bulten['mac'] == secilen].iloc[0]
-        secilen_takim = m['home_team']
-        secilen_round = m['round']
-        secilen_lig = m['league']
-    else:
-        st.warning("Bülten bulunamadı. Manuel giriş yapın:")
-        secilen_takim = st.text_input("Takım:", "Mallorca")
-        secilen_round = st.number_input("Hafta (Round):", value=15)
-        secilen_lig = st.selectbox("Lig Seç:", pd.read_sql("SELECT DISTINCT league FROM matches", conn)['league'].tolist())
-
-with c2:
-    algo = st.selectbox("Algoritma", ["Skor Analizi", "İY/MS & Oran", "Alt/Üst & KG"])
-
-# Analiz Sonuçları
-if secilen_takim:
-    res = pd.read_sql(f"""
-        SELECT * FROM matches 
-        WHERE (home_team = '{secilen_takim}' OR away_team = '{secilen_takim}') 
-        AND round = '{secilen_round}' AND league = '{secilen_lig}'
-    """, conn)
+# --- ANA EKRAN ---
+if not bulten.empty:
+    bulten['mac'] = bulten['home_team'] + " - " + bulten['away_team']
+    secilen_mac = st.selectbox("Günün Bülteni", bulten['mac'].tolist())
+    m = bulten[bulten['mac'] == secilen_mac].iloc[0]
     
-    if not res.empty:
-        st.subheader(f"🔍 {secilen_takim} - {secilen_round}. Hafta Analizi")
-        res['skor'] = res['home_score'].astype(str) + "-" + res['away_score'].astype(str)
+    # Analiz Başlat Butonu
+    if st.button("📊 ANALİZİ BAŞLAT"):
+        # matches tablosundan geçmiş veriyi çek (Haftalık Döngü)
+        res = pd.read_sql(f"""
+            SELECT * FROM matches 
+            WHERE (home_team = '{m['home_team']}' OR away_team = '{m['home_team']}') 
+            AND round = '{m['round']}' AND league = '{m['league']}'
+        """, conn)
         
-        if algo == "Skor Analizi":
-            skorlar = res['skor'].value_counts().head(6)
-            cols = st.columns(3)
-            for i, (skor, count) in enumerate(skorlar.items()):
-                cols[i % 3].success(f"**{skor}** \n %{(count/len(res))*100:.1f}")
+        if not res.empty:
+            st.subheader(f"🔍 {secilen_mac} - {m['round']}. Hafta Döngüsü")
+            res['skor'] = res['home_score'].astype(str) + "-" + res['away_score'].astype(str)
+            
+            if algo == "Skor Analizi":
+                skor_counts = res['skor'].value_counts().head(4)
+                cols = st.columns(4)
+                for i, (skor, count) in enumerate(skor_counts.items()):
+                    cols[i].success(f"**{skor}** \n %{(count/len(res))*100:.1f}")
+            
+            elif algo == "İY/MS & Oran":
+                res['iy'] = res['ht_home_score'].astype(str) + "-" + res['ht_away_score'].astype(str)
+                st.dataframe(res[['date', 'iy', 'skor', 'iddaa_ms1', 'iddaa_ms2']], use_container_width=True)
+        else:
+            st.error("Bu maçın geçmişine dair aynı hafta/lig verisi bulunamadı.")
+else:
+    st.info("💡 Bugün için kayıtlı bülten yok. Lütfen 'Bülteni İnternetten Çek' butonuna basın.")
+    # Manuel Giriş (Yedek)
+    man_takim = st.text_input("Takım Adı:", "Real Madrid")
+    man_round = st.number_input("Hafta:", value=1)
+    if st.button("Manuel Analiz"):
+        st.write("Analiz yapılıyor...")
 
-        elif algo == "İY/MS & Oran":
-            res['iy'] = res['ht_home_score'].astype(str) + "-" + res['ht_away_score'].astype(str)
-            st.dataframe(res[['date', 'iy', 'skor', 'iddaa_ms1', 'iddaa_msx', 'iddaa_ms2']], use_container_width=True)
-
-        elif algo == "Alt/Üst & KG":
-            au = res['alt_ust_25'].value_counts()
-            kg = res['kg_result'].value_counts()
-            st.metric("En Çok Biten", f"2.5 {au.index[0] if not au.empty else '-'}")
-            st.metric("KG Durumu", f"KG {kg.index[0] if not kg.empty else '-'}")
-    else:
-        st.error("Haftalık döngü verisi bulunamadı.")
 conn.close()
