@@ -1,50 +1,39 @@
 import pandas as pd
 import requests
-from datetime import datetime
 
-def fetch_data():
-    # Senin RapidAPI Anahtarın
-    headers = {
-        "x-rapidapi-key": "3484137886mshefa3b568477dba7p10423fjsn346dc68691f0",
-        "x-rapidapi-host": "api-football-v1.p.rapidapi.com"
-    }
+def fetch_free_data():
+    # API KEY GEREKTİRMEYEN AÇIK KAYNAK (Football Data JSON)
+    # Örnek olarak İngiltere Premier Lig verisini çekiyoruz
+    url = "https://raw.githubusercontent.com/statsbomb/open-data/master/data/matches/11/90.json"
     
-    # Bugünün tarihini al (Format: YYYY-MM-DD)
-    bugun = datetime.now().strftime('%Y-%m-%d')
-    url = "https://api-football-v1.p.rapidapi.com/v3/fixtures"
-    params = {"date": bugun}
-
-    print(f"🚀 {bugun} tarihi için veri çekiliyor...")
-
+    print("🚀 Ücretsiz açık kaynak verisi çekiliyor...")
+    
     try:
-        r = requests.get(url, headers=headers, params=params, timeout=20)
+        r = requests.get(url, timeout=20)
         if r.status_code == 200:
             data = r.json()
-            results = data.get('results', 0)
-            print(f"📊 API'den gelen toplam maç sayısı: {results}")
-
             all_matches = []
-            for item in data.get('response', []):
+            
+            for item in data:
                 all_matches.append({
-                    'Date': item['fixture']['date'],
-                    'League': item['league']['name'],
-                    'Country': item['league']['country'],
-                    'HomeTeam': item['teams']['home']['name'],
-                    'AwayTeam': item['teams']['away']['name']
+                    'Date': item['match_date'],
+                    'League': "Premier League",
+                    'HomeTeam': item['home_team']['home_team_name'],
+                    'AwayTeam': item['away_team']['away_team_name'],
+                    'HomeScore': item['home_score'],
+                    'AwayScore': item['away_score']
                 })
             
             if all_matches:
                 df = pd.DataFrame(all_matches)
-                # UTC'den temizleme
-                df['Date'] = pd.to_datetime(df['Date']).dt.tz_localize(None)
                 df.to_csv("all_leagues_data.csv", index=False)
-                print(f"✅ DOSYA DOLDURULDU: {len(df)} maç kaydedildi.")
+                print(f"✅ BAŞARILI: {len(df)} maç açık kaynaktan çekildi.")
             else:
-                print("⚠️ UYARI: API bağlantısı başarılı ama bugün için hiç maç dönmedi!")
+                print("⚠️ Veri boş döndü.")
         else:
-            print(f"❌ API HATASI: Durum kodu {r.status_code}")
+            print(f"❌ Bağlantı Hatası: {r.status_code}")
     except Exception as e:
-        print(f"🛑 KRİTİK HATA: {e}")
+        print(f"🛑 Hata: {e}")
 
 if __name__ == "__main__":
-    fetch_data()
+    fetch_free_data()
