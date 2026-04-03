@@ -1,0 +1,1753 @@
+MatchNumber,RoundNumber,DateUtc,Location,HomeTeam,AwayTeam,Group,HomeTeamScore,AwayTeamScore,League
+1,1,2025-08-15 19:00:00Z,Anfield,Liverpool,Bournemouth,,4.0,2.0,Premier League
+2,1,2025-08-16 11:30:00Z,Villa Park,Aston Villa,Newcastle,,0.0,0.0,Premier League
+3,1,2025-08-16 14:00:00Z,American Express Stadium,Brighton,Fulham,,1.0,1.0,Premier League
+5,1,2025-08-16 14:00:00Z,Stadium of Light,Sunderland,West Ham,,3.0,0.0,Premier League
+6,1,2025-08-16 14:00:00Z,Tottenham Hotspur Stadium,Spurs,Burnley,,3.0,0.0,Premier League
+7,1,2025-08-16 16:30:00Z,Molineux Stadium,Wolves,Man City,,0.0,4.0,Premier League
+4,1,2025-08-17 13:00:00Z,The City Ground,Nott'm Forest,Brentford,,3.0,1.0,Premier League
+8,1,2025-08-17 13:00:00Z,Stamford Bridge,Chelsea,Crystal Palace,,0.0,0.0,Premier League
+9,1,2025-08-17 15:30:00Z,Old Trafford,Man Utd,Arsenal,,0.0,1.0,Premier League
+10,1,2025-08-18 19:00:00Z,Elland Road,Leeds,Everton,,1.0,0.0,Premier League
+20,2,2025-08-22 19:00:00Z,London Stadium,West Ham,Chelsea,,1.0,5.0,Premier League
+18,2,2025-08-23 11:30:00Z,Etihad Stadium,Man City,Spurs,,0.0,2.0,Premier League
+12,2,2025-08-23 14:00:00Z,Vitality Stadium,Bournemouth,Wolves,,1.0,0.0,Premier League
+13,2,2025-08-23 14:00:00Z,Gtech Community Stadium,Brentford,Aston Villa,,1.0,0.0,Premier League
+14,2,2025-08-23 14:00:00Z,Turf Moor,Burnley,Sunderland,,2.0,0.0,Premier League
+11,2,2025-08-23 16:30:00Z,Emirates Stadium,Arsenal,Leeds,,5.0,0.0,Premier League
+15,2,2025-08-24 13:00:00Z,Selhurst Park,Crystal Palace,Nott'm Forest,,1.0,1.0,Premier League
+16,2,2025-08-24 13:00:00Z,Hill Dickinson Stadium,Everton,Brighton,,2.0,0.0,Premier League
+17,2,2025-08-24 15:30:00Z,Craven Cottage,Fulham,Man Utd,,1.0,1.0,Premier League
+19,2,2025-08-25 19:00:00Z,St. James' Park,Newcastle,Liverpool,,2.0,3.0,Premier League
+23,3,2025-08-30 11:30:00Z,Stamford Bridge,Chelsea,Fulham,,2.0,0.0,Premier League
+26,3,2025-08-30 14:00:00Z,Old Trafford,Man Utd,Burnley,,3.0,2.0,Premier League
+28,3,2025-08-30 14:00:00Z,Stadium of Light,Sunderland,Brentford,,2.0,1.0,Premier League
+29,3,2025-08-30 14:00:00Z,Tottenham Hotspur Stadium,Spurs,Bournemouth,,0.0,1.0,Premier League
+30,3,2025-08-30 14:00:00Z,Molineux Stadium,Wolves,Everton,,2.0,3.0,Premier League
+24,3,2025-08-30 16:30:00Z,Elland Road,Leeds,Newcastle,,0.0,0.0,Premier League
+22,3,2025-08-31 13:00:00Z,American Express Stadium,Brighton,Man City,,2.0,1.0,Premier League
+27,3,2025-08-31 13:00:00Z,The City Ground,Nott'm Forest,West Ham,,0.0,3.0,Premier League
+25,3,2025-08-31 15:30:00Z,Anfield,Liverpool,Arsenal,,1.0,0.0,Premier League
+21,3,2025-08-31 18:00:00Z,Villa Park,Aston Villa,Crystal Palace,,0.0,3.0,Premier League
+31,4,2025-09-13 11:30:00Z,Emirates Stadium,Arsenal,Nott'm Forest,,3.0,0.0,Premier League
+32,4,2025-09-13 14:00:00Z,Vitality Stadium,Bournemouth,Brighton,,2.0,1.0,Premier League
+35,4,2025-09-13 14:00:00Z,Selhurst Park,Crystal Palace,Sunderland,,0.0,0.0,Premier League
+36,4,2025-09-13 14:00:00Z,Hill Dickinson Stadium,Everton,Aston Villa,,0.0,0.0,Premier League
+37,4,2025-09-13 14:00:00Z,Craven Cottage,Fulham,Leeds,,1.0,0.0,Premier League
+39,4,2025-09-13 14:00:00Z,St. James' Park,Newcastle,Wolves,,1.0,0.0,Premier League
+40,4,2025-09-13 16:30:00Z,London Stadium,West Ham,Spurs,,0.0,3.0,Premier League
+33,4,2025-09-13 19:00:00Z,Gtech Community Stadium,Brentford,Chelsea,,2.0,2.0,Premier League
+34,4,2025-09-14 13:00:00Z,Turf Moor,Burnley,Liverpool,,0.0,1.0,Premier League
+38,4,2025-09-14 15:30:00Z,Etihad Stadium,Man City,Man Utd,,3.0,0.0,Premier League
+46,5,2025-09-20 11:30:00Z,Anfield,Liverpool,Everton,,2.0,1.0,Premier League
+43,5,2025-09-20 14:00:00Z,American Express Stadium,Brighton,Spurs,,2.0,2.0,Premier League
+44,5,2025-09-20 14:00:00Z,Turf Moor,Burnley,Nott'm Forest,,1.0,1.0,Premier League
+49,5,2025-09-20 14:00:00Z,London Stadium,West Ham,Crystal Palace,,1.0,2.0,Premier League
+50,5,2025-09-20 14:00:00Z,Molineux Stadium,Wolves,Leeds,,1.0,3.0,Premier League
+47,5,2025-09-20 16:30:00Z,Old Trafford,Man Utd,Chelsea,,2.0,1.0,Premier League
+45,5,2025-09-20 19:00:00Z,Craven Cottage,Fulham,Brentford,,3.0,1.0,Premier League
+42,5,2025-09-21 13:00:00Z,Vitality Stadium,Bournemouth,Newcastle,,0.0,0.0,Premier League
+48,5,2025-09-21 13:00:00Z,Stadium of Light,Sunderland,Aston Villa,,1.0,1.0,Premier League
+41,5,2025-09-21 15:30:00Z,Emirates Stadium,Arsenal,Man City,,1.0,1.0,Premier League
+52,6,2025-09-27 11:30:00Z,Gtech Community Stadium,Brentford,Man Utd,,3.0,1.0,Premier League
+53,6,2025-09-27 14:00:00Z,Stamford Bridge,Chelsea,Brighton,,1.0,3.0,Premier League
+54,6,2025-09-27 14:00:00Z,Selhurst Park,Crystal Palace,Liverpool,,2.0,1.0,Premier League
+56,6,2025-09-27 14:00:00Z,Elland Road,Leeds,Bournemouth,,2.0,2.0,Premier League
+57,6,2025-09-27 14:00:00Z,Etihad Stadium,Man City,Burnley,,5.0,1.0,Premier League
+59,6,2025-09-27 16:30:00Z,The City Ground,Nott'm Forest,Sunderland,,0.0,1.0,Premier League
+60,6,2025-09-27 19:00:00Z,Tottenham Hotspur Stadium,Spurs,Wolves,,1.0,1.0,Premier League
+51,6,2025-09-28 13:00:00Z,Villa Park,Aston Villa,Fulham,,3.0,1.0,Premier League
+58,6,2025-09-28 15:30:00Z,St. James' Park,Newcastle,Arsenal,,1.0,2.0,Premier League
+55,6,2025-09-29 19:00:00Z,Hill Dickinson Stadium,Everton,West Ham,,1.0,1.0,Premier League
+63,7,2025-10-03 19:00:00Z,Vitality Stadium,Bournemouth,Fulham,,3.0,1.0,Premier League
+67,7,2025-10-04 11:30:00Z,Elland Road,Leeds,Spurs,,1.0,2.0,Premier League
+61,7,2025-10-04 14:00:00Z,Emirates Stadium,Arsenal,West Ham,,2.0,0.0,Premier League
+68,7,2025-10-04 14:00:00Z,Old Trafford,Man Utd,Sunderland,,2.0,0.0,Premier League
+65,7,2025-10-04 16:30:00Z,Stamford Bridge,Chelsea,Liverpool,,2.0,1.0,Premier League
+62,7,2025-10-05 13:00:00Z,Villa Park,Aston Villa,Burnley,,2.0,1.0,Premier League
+66,7,2025-10-05 13:00:00Z,Hill Dickinson Stadium,Everton,Crystal Palace,,2.0,1.0,Premier League
+69,7,2025-10-05 13:00:00Z,St. James' Park,Newcastle,Nott'm Forest,,2.0,0.0,Premier League
+70,7,2025-10-05 13:00:00Z,Molineux Stadium,Wolves,Brighton,,1.0,1.0,Premier League
+64,7,2025-10-05 15:30:00Z,Gtech Community Stadium,Brentford,Man City,,0.0,1.0,Premier League
+77,8,2025-10-18 11:30:00Z,The City Ground,Nott'm Forest,Chelsea,,0.0,3.0,Premier League
+71,8,2025-10-18 14:00:00Z,American Express Stadium,Brighton,Newcastle,,2.0,1.0,Premier League
+72,8,2025-10-18 14:00:00Z,Turf Moor,Burnley,Leeds,,2.0,0.0,Premier League
+73,8,2025-10-18 14:00:00Z,Selhurst Park,Crystal Palace,Bournemouth,,3.0,3.0,Premier League
+76,8,2025-10-18 14:00:00Z,Etihad Stadium,Man City,Everton,,2.0,0.0,Premier League
+78,8,2025-10-18 14:00:00Z,Stadium of Light,Sunderland,Wolves,,2.0,0.0,Premier League
+74,8,2025-10-18 16:30:00Z,Craven Cottage,Fulham,Arsenal,,0.0,1.0,Premier League
+79,8,2025-10-19 13:00:00Z,Tottenham Hotspur Stadium,Spurs,Aston Villa,,1.0,2.0,Premier League
+75,8,2025-10-19 15:30:00Z,Anfield,Liverpool,Man Utd,,1.0,2.0,Premier League
+80,8,2025-10-20 19:00:00Z,London Stadium,West Ham,Brentford,,0.0,2.0,Premier League
+87,9,2025-10-24 19:00:00Z,Elland Road,Leeds,West Ham,,2.0,1.0,Premier League
+85,9,2025-10-25 14:00:00Z,Stamford Bridge,Chelsea,Sunderland,,1.0,2.0,Premier League
+89,9,2025-10-25 14:00:00Z,St. James' Park,Newcastle,Fulham,,2.0,1.0,Premier League
+88,9,2025-10-25 16:30:00Z,Old Trafford,Man Utd,Brighton,,4.0,2.0,Premier League
+84,9,2025-10-25 19:00:00Z,Gtech Community Stadium,Brentford,Liverpool,,3.0,2.0,Premier League
+81,9,2025-10-26 14:00:00Z,Emirates Stadium,Arsenal,Crystal Palace,,1.0,0.0,Premier League
+82,9,2025-10-26 14:00:00Z,Villa Park,Aston Villa,Man City,,1.0,0.0,Premier League
+90,9,2025-10-26 14:00:00Z,Molineux Stadium,Wolves,Burnley,,2.0,3.0,Premier League
+83,9,2025-10-26 16:00:00Z,Vitality Stadium,Bournemouth,Nott'm Forest,,2.0,0.0,Premier League
+86,9,2025-10-26 16:30:00Z,Hill Dickinson Stadium,Everton,Spurs,,0.0,3.0,Premier League
+91,10,2025-11-01 15:00:00Z,American Express Stadium,Brighton,Leeds,,3.0,0.0,Premier League
+92,10,2025-11-01 15:00:00Z,Turf Moor,Burnley,Arsenal,,0.0,2.0,Premier League
+93,10,2025-11-01 15:00:00Z,Selhurst Park,Crystal Palace,Brentford,,2.0,0.0,Premier League
+94,10,2025-11-01 15:00:00Z,Craven Cottage,Fulham,Wolves,,3.0,0.0,Premier League
+97,10,2025-11-01 15:00:00Z,The City Ground,Nott'm Forest,Man Utd,,2.0,2.0,Premier League
+99,10,2025-11-01 17:30:00Z,Tottenham Hotspur Stadium,Spurs,Chelsea,,0.0,1.0,Premier League
+95,10,2025-11-01 20:00:00Z,Anfield,Liverpool,Aston Villa,,2.0,0.0,Premier League
+100,10,2025-11-02 14:00:00Z,London Stadium,West Ham,Newcastle,,3.0,1.0,Premier League
+96,10,2025-11-02 16:30:00Z,Etihad Stadium,Man City,Bournemouth,,3.0,1.0,Premier League
+98,10,2025-11-03 20:00:00Z,Stadium of Light,Sunderland,Everton,,1.0,1.0,Premier League
+109,11,2025-11-08 12:30:00Z,Tottenham Hotspur Stadium,Spurs,Man Utd,,2.0,2.0,Premier League
+105,11,2025-11-08 15:00:00Z,Hill Dickinson Stadium,Everton,Fulham,,2.0,0.0,Premier League
+110,11,2025-11-08 15:00:00Z,London Stadium,West Ham,Burnley,,3.0,2.0,Premier League
+108,11,2025-11-08 17:30:00Z,Stadium of Light,Sunderland,Arsenal,,2.0,2.0,Premier League
+103,11,2025-11-08 20:00:00Z,Stamford Bridge,Chelsea,Wolves,,3.0,0.0,Premier League
+101,11,2025-11-09 14:00:00Z,Villa Park,Aston Villa,Bournemouth,,4.0,0.0,Premier League
+102,11,2025-11-09 14:00:00Z,Gtech Community Stadium,Brentford,Newcastle,,3.0,1.0,Premier League
+104,11,2025-11-09 14:00:00Z,Selhurst Park,Crystal Palace,Brighton,,0.0,0.0,Premier League
+107,11,2025-11-09 14:00:00Z,The City Ground,Nott'm Forest,Leeds,,3.0,1.0,Premier League
+106,11,2025-11-09 16:30:00Z,Etihad Stadium,Man City,Liverpool,,3.0,0.0,Premier League
+114,12,2025-11-22 12:30:00Z,Turf Moor,Burnley,Chelsea,,0.0,2.0,Premier League
+112,12,2025-11-22 15:00:00Z,Vitality Stadium,Bournemouth,West Ham,,2.0,2.0,Premier League
+113,12,2025-11-22 15:00:00Z,American Express Stadium,Brighton,Brentford,,2.0,1.0,Premier League
+115,12,2025-11-22 15:00:00Z,Craven Cottage,Fulham,Sunderland,,1.0,0.0,Premier League
+117,12,2025-11-22 15:00:00Z,Anfield,Liverpool,Nott'm Forest,,0.0,3.0,Premier League
+120,12,2025-11-22 15:00:00Z,Molineux Stadium,Wolves,Crystal Palace,,0.0,2.0,Premier League
+119,12,2025-11-22 17:30:00Z,St. James' Park,Newcastle,Man City,,2.0,1.0,Premier League
+116,12,2025-11-23 14:00:00Z,Elland Road,Leeds,Aston Villa,,1.0,2.0,Premier League
+111,12,2025-11-23 16:30:00Z,Emirates Stadium,Arsenal,Spurs,,4.0,1.0,Premier League
+118,12,2025-11-24 20:00:00Z,Old Trafford,Man Utd,Everton,,0.0,1.0,Premier League
+122,13,2025-11-29 15:00:00Z,Gtech Community Stadium,Brentford,Burnley,,3.0,1.0,Premier League
+126,13,2025-11-29 15:00:00Z,Etihad Stadium,Man City,Leeds,,3.0,2.0,Premier League
+128,13,2025-11-29 15:00:00Z,Stadium of Light,Sunderland,Bournemouth,,3.0,2.0,Premier League
+125,13,2025-11-29 17:30:00Z,Hill Dickinson Stadium,Everton,Newcastle,,1.0,4.0,Premier League
+129,13,2025-11-29 20:00:00Z,Tottenham Hotspur Stadium,Spurs,Fulham,,1.0,2.0,Premier League
+124,13,2025-11-30 12:00:00Z,Selhurst Park,Crystal Palace,Man Utd,,1.0,2.0,Premier League
+121,13,2025-11-30 14:05:00Z,Villa Park,Aston Villa,Wolves,,1.0,0.0,Premier League
+127,13,2025-11-30 14:05:00Z,The City Ground,Nott'm Forest,Brighton,,0.0,2.0,Premier League
+130,13,2025-11-30 14:05:00Z,London Stadium,West Ham,Liverpool,,0.0,2.0,Premier League
+123,13,2025-11-30 16:30:00Z,Stamford Bridge,Chelsea,Arsenal,,1.0,1.0,Premier League
+132,14,2025-12-02 19:30:00Z,Vitality Stadium,Bournemouth,Everton,,0.0,1.0,Premier League
+135,14,2025-12-02 19:30:00Z,Craven Cottage,Fulham,Man City,,4.0,5.0,Premier League
+139,14,2025-12-02 20:15:00Z,St. James' Park,Newcastle,Spurs,,2.0,2.0,Premier League
+131,14,2025-12-03 19:30:00Z,Emirates Stadium,Arsenal,Brentford,,2.0,0.0,Premier League
+133,14,2025-12-03 19:30:00Z,American Express Stadium,Brighton,Aston Villa,,3.0,4.0,Premier League
+134,14,2025-12-03 19:30:00Z,Turf Moor,Burnley,Crystal Palace,,0.0,1.0,Premier League
+140,14,2025-12-03 19:30:00Z,Molineux Stadium,Wolves,Nott'm Forest,,0.0,1.0,Premier League
+136,14,2025-12-03 20:15:00Z,Elland Road,Leeds,Chelsea,,3.0,1.0,Premier League
+137,14,2025-12-03 20:15:00Z,Anfield,Liverpool,Sunderland,,1.0,1.0,Premier League
+138,14,2025-12-04 20:00:00Z,Old Trafford,Man Utd,West Ham,,1.0,1.0,Premier League
+141,15,2025-12-06 12:30:00Z,Villa Park,Aston Villa,Arsenal,,2.0,1.0,Premier League
+142,15,2025-12-06 15:00:00Z,Vitality Stadium,Bournemouth,Chelsea,,0.0,0.0,Premier League
+144,15,2025-12-06 15:00:00Z,Hill Dickinson Stadium,Everton,Nott'm Forest,,3.0,0.0,Premier League
+147,15,2025-12-06 15:00:00Z,Etihad Stadium,Man City,Sunderland,,3.0,0.0,Premier League
+148,15,2025-12-06 15:00:00Z,St. James' Park,Newcastle,Burnley,,2.0,1.0,Premier League
+149,15,2025-12-06 15:00:00Z,Tottenham Hotspur Stadium,Spurs,Brentford,,2.0,0.0,Premier League
+146,15,2025-12-06 17:30:00Z,Elland Road,Leeds,Liverpool,,3.0,3.0,Premier League
+143,15,2025-12-07 14:00:00Z,American Express Stadium,Brighton,West Ham,,1.0,1.0,Premier League
+145,15,2025-12-07 16:30:00Z,Craven Cottage,Fulham,Crystal Palace,,1.0,2.0,Premier League
+150,15,2025-12-08 20:00:00Z,Molineux Stadium,Wolves,Man Utd,,1.0,4.0,Premier League
+154,16,2025-12-13 15:00:00Z,Stamford Bridge,Chelsea,Everton,,2.0,0.0,Premier League
+156,16,2025-12-13 15:00:00Z,Anfield,Liverpool,Brighton,,2.0,0.0,Premier League
+153,16,2025-12-13 17:30:00Z,Turf Moor,Burnley,Fulham,,2.0,3.0,Premier League
+151,16,2025-12-13 20:00:00Z,Emirates Stadium,Arsenal,Wolves,,2.0,1.0,Premier League
+155,16,2025-12-14 14:00:00Z,Selhurst Park,Crystal Palace,Man City,,0.0,3.0,Premier League
+158,16,2025-12-14 14:00:00Z,The City Ground,Nott'm Forest,Spurs,,3.0,0.0,Premier League
+159,16,2025-12-14 14:00:00Z,Stadium of Light,Sunderland,Newcastle,,1.0,0.0,Premier League
+160,16,2025-12-14 14:00:00Z,London Stadium,West Ham,Aston Villa,,2.0,3.0,Premier League
+152,16,2025-12-14 16:30:00Z,Gtech Community Stadium,Brentford,Leeds,,1.0,1.0,Premier League
+157,16,2025-12-15 20:00:00Z,Old Trafford,Man Utd,Bournemouth,,4.0,4.0,Premier League
+168,17,2025-12-20 12:30:00Z,St. James' Park,Newcastle,Chelsea,,2.0,2.0,Premier League
+162,17,2025-12-20 15:00:00Z,Vitality Stadium,Bournemouth,Burnley,,1.0,1.0,Premier League
+163,17,2025-12-20 15:00:00Z,American Express Stadium,Brighton,Sunderland,,0.0,0.0,Premier League
+167,17,2025-12-20 15:00:00Z,Etihad Stadium,Man City,West Ham,,3.0,0.0,Premier League
+170,17,2025-12-20 15:00:00Z,Molineux Stadium,Wolves,Brentford,,0.0,2.0,Premier League
+169,17,2025-12-20 17:30:00Z,Tottenham Hotspur Stadium,Spurs,Liverpool,,1.0,2.0,Premier League
+164,17,2025-12-20 20:00:00Z,Hill Dickinson Stadium,Everton,Arsenal,,0.0,1.0,Premier League
+166,17,2025-12-20 20:00:00Z,Elland Road,Leeds,Crystal Palace,,4.0,1.0,Premier League
+161,17,2025-12-21 16:30:00Z,Villa Park,Aston Villa,Man Utd,,2.0,1.0,Premier League
+165,17,2025-12-22 20:00:00Z,Craven Cottage,Fulham,Nott'm Forest,,1.0,0.0,Premier League
+177,18,2025-12-26 20:00:00Z,Old Trafford,Man Utd,Newcastle,,1.0,0.0,Premier League
+178,18,2025-12-27 12:30:00Z,The City Ground,Nott'm Forest,Man City,,1.0,2.0,Premier League
+171,18,2025-12-27 15:00:00Z,Emirates Stadium,Arsenal,Brighton,,2.0,1.0,Premier League
+172,18,2025-12-27 15:00:00Z,Gtech Community Stadium,Brentford,Bournemouth,,4.0,1.0,Premier League
+173,18,2025-12-27 15:00:00Z,Turf Moor,Burnley,Everton,,0.0,0.0,Premier League
+176,18,2025-12-27 15:00:00Z,Anfield,Liverpool,Wolves,,2.0,1.0,Premier League
+180,18,2025-12-27 15:00:00Z,London Stadium,West Ham,Fulham,,0.0,1.0,Premier League
+174,18,2025-12-27 17:30:00Z,Stamford Bridge,Chelsea,Aston Villa,,1.0,2.0,Premier League
+179,18,2025-12-28 14:00:00Z,Stadium of Light,Sunderland,Leeds,,1.0,1.0,Premier League
+175,18,2025-12-28 16:30:00Z,Selhurst Park,Crystal Palace,Spurs,,0.0,1.0,Premier League
+183,19,2025-12-30 19:30:00Z,Turf Moor,Burnley,Newcastle,,1.0,3.0,Premier League
+184,19,2025-12-30 19:30:00Z,Stamford Bridge,Chelsea,Bournemouth,,2.0,2.0,Premier League
+188,19,2025-12-30 19:30:00Z,The City Ground,Nott'm Forest,Everton,,0.0,2.0,Premier League
+190,19,2025-12-30 19:30:00Z,London Stadium,West Ham,Brighton,,2.0,2.0,Premier League
+181,19,2025-12-30 20:15:00Z,Emirates Stadium,Arsenal,Aston Villa,,4.0,1.0,Premier League
+187,19,2025-12-30 20:15:00Z,Old Trafford,Man Utd,Wolves,,1.0,1.0,Premier League
+185,19,2026-01-01 17:30:00Z,Selhurst Park,Crystal Palace,Fulham,,1.0,1.0,Premier League
+186,19,2026-01-01 17:30:00Z,Anfield,Liverpool,Leeds,,0.0,0.0,Premier League
+182,19,2026-01-01 20:00:00Z,Gtech Community Stadium,Brentford,Spurs,,0.0,0.0,Premier League
+189,19,2026-01-01 20:00:00Z,Stadium of Light,Sunderland,Man City,,0.0,0.0,Premier League
+191,20,2026-01-03 12:30:00Z,Villa Park,Aston Villa,Nott'm Forest,,3.0,1.0,Premier League
+193,20,2026-01-03 15:00:00Z,American Express Stadium,Brighton,Burnley,,2.0,0.0,Premier League
+200,20,2026-01-03 15:00:00Z,Molineux Stadium,Wolves,West Ham,,3.0,0.0,Premier League
+192,20,2026-01-03 17:30:00Z,Vitality Stadium,Bournemouth,Arsenal,,2.0,3.0,Premier League
+196,20,2026-01-04 12:30:00Z,Elland Road,Leeds,Man Utd,,1.0,1.0,Premier League
+194,20,2026-01-04 15:00:00Z,Hill Dickinson Stadium,Everton,Brentford,,2.0,4.0,Premier League
+198,20,2026-01-04 15:00:00Z,St. James' Park,Newcastle,Crystal Palace,,2.0,0.0,Premier League
+199,20,2026-01-04 15:00:00Z,Tottenham Hotspur Stadium,Spurs,Sunderland,,1.0,1.0,Premier League
+195,20,2026-01-04 15:15:00Z,Craven Cottage,Fulham,Liverpool,,2.0,2.0,Premier League
+197,20,2026-01-04 17:30:00Z,Etihad Stadium,Man City,Chelsea,,1.0,1.0,Premier League
+210,21,2026-01-06 20:00:00Z,London Stadium,West Ham,Nott'm Forest,,1.0,2.0,Premier League
+202,21,2026-01-07 19:30:00Z,Vitality Stadium,Bournemouth,Spurs,,3.0,2.0,Premier League
+203,21,2026-01-07 19:30:00Z,Gtech Community Stadium,Brentford,Sunderland,,3.0,0.0,Premier League
+205,21,2026-01-07 19:30:00Z,Selhurst Park,Crystal Palace,Aston Villa,,0.0,0.0,Premier League
+206,21,2026-01-07 19:30:00Z,Hill Dickinson Stadium,Everton,Wolves,,1.0,1.0,Premier League
+207,21,2026-01-07 19:30:00Z,Craven Cottage,Fulham,Chelsea,,2.0,1.0,Premier League
+208,21,2026-01-07 19:30:00Z,Etihad Stadium,Man City,Brighton,,1.0,1.0,Premier League
+204,21,2026-01-07 20:15:00Z,Turf Moor,Burnley,Man Utd,,2.0,2.0,Premier League
+209,21,2026-01-07 20:15:00Z,St. James' Park,Newcastle,Leeds,,4.0,3.0,Premier League
+201,21,2026-01-08 20:00:00Z,Emirates Stadium,Arsenal,Liverpool,,0.0,0.0,Premier League
+216,22,2026-01-17 12:30:00Z,Old Trafford,Man Utd,Man City,,2.0,0.0,Premier League
+213,22,2026-01-17 15:00:00Z,Stamford Bridge,Chelsea,Brentford,,2.0,0.0,Premier League
+214,22,2026-01-17 15:00:00Z,Elland Road,Leeds,Fulham,,1.0,0.0,Premier League
+215,22,2026-01-17 15:00:00Z,Anfield,Liverpool,Burnley,,1.0,1.0,Premier League
+218,22,2026-01-17 15:00:00Z,Stadium of Light,Sunderland,Crystal Palace,,2.0,1.0,Premier League
+219,22,2026-01-17 15:00:00Z,Tottenham Hotspur Stadium,Spurs,West Ham,,1.0,2.0,Premier League
+217,22,2026-01-17 17:30:00Z,The City Ground,Nott'm Forest,Arsenal,,0.0,0.0,Premier League
+220,22,2026-01-18 14:00:00Z,Molineux Stadium,Wolves,Newcastle,,0.0,0.0,Premier League
+211,22,2026-01-18 16:30:00Z,Villa Park,Aston Villa,Everton,,0.0,1.0,Premier League
+212,22,2026-01-19 20:00:00Z,American Express Stadium,Brighton,Bournemouth,,1.0,1.0,Premier League
+230,23,2026-01-24 12:30:00Z,London Stadium,West Ham,Sunderland,,3.0,1.0,Premier League
+224,23,2026-01-24 15:00:00Z,Turf Moor,Burnley,Spurs,,2.0,2.0,Premier League
+227,23,2026-01-24 15:00:00Z,Craven Cottage,Fulham,Brighton,,2.0,1.0,Premier League
+228,23,2026-01-24 15:00:00Z,Etihad Stadium,Man City,Wolves,,2.0,0.0,Premier League
+222,23,2026-01-24 17:30:00Z,Vitality Stadium,Bournemouth,Liverpool,,3.0,2.0,Premier League
+223,23,2026-01-25 14:00:00Z,Gtech Community Stadium,Brentford,Nott'm Forest,,0.0,2.0,Premier League
+225,23,2026-01-25 14:00:00Z,Selhurst Park,Crystal Palace,Chelsea,,1.0,3.0,Premier League
+229,23,2026-01-25 14:00:00Z,St. James' Park,Newcastle,Aston Villa,,0.0,2.0,Premier League
+221,23,2026-01-25 16:30:00Z,Emirates Stadium,Arsenal,Man Utd,,2.0,3.0,Premier League
+226,23,2026-01-26 20:00:00Z,Hill Dickinson Stadium,Everton,Leeds,,1.0,1.0,Premier League
+232,24,2026-01-31 15:00:00Z,American Express Stadium,Brighton,Everton,,1.0,1.0,Premier League
+234,24,2026-01-31 15:00:00Z,Elland Road,Leeds,Arsenal,,0.0,4.0,Premier League
+240,24,2026-01-31 15:00:00Z,Molineux Stadium,Wolves,Bournemouth,,0.0,2.0,Premier League
+233,24,2026-01-31 17:30:00Z,Stamford Bridge,Chelsea,West Ham,,3.0,2.0,Premier League
+235,24,2026-01-31 20:00:00Z,Anfield,Liverpool,Newcastle,,4.0,1.0,Premier League
+231,24,2026-02-01 14:00:00Z,Villa Park,Aston Villa,Brentford,,0.0,1.0,Premier League
+236,24,2026-02-01 14:00:00Z,Old Trafford,Man Utd,Fulham,,3.0,2.0,Premier League
+237,24,2026-02-01 14:00:00Z,The City Ground,Nott'm Forest,Crystal Palace,,1.0,1.0,Premier League
+239,24,2026-02-01 16:30:00Z,Tottenham Hotspur Stadium,Spurs,Man City,,2.0,2.0,Premier League
+238,24,2026-02-02 20:00:00Z,Stadium of Light,Sunderland,Burnley,,3.0,0.0,Premier League
+246,25,2026-02-06 20:00:00Z,Elland Road,Leeds,Nott'm Forest,,3.0,1.0,Premier League
+248,25,2026-02-07 12:30:00Z,Old Trafford,Man Utd,Spurs,,2.0,0.0,Premier League
+241,25,2026-02-07 15:00:00Z,Emirates Stadium,Arsenal,Sunderland,,3.0,0.0,Premier League
+242,25,2026-02-07 15:00:00Z,Vitality Stadium,Bournemouth,Aston Villa,,1.0,1.0,Premier League
+244,25,2026-02-07 15:00:00Z,Turf Moor,Burnley,West Ham,,0.0,2.0,Premier League
+245,25,2026-02-07 15:00:00Z,Craven Cottage,Fulham,Everton,,1.0,2.0,Premier League
+250,25,2026-02-07 15:00:00Z,Molineux Stadium,Wolves,Chelsea,,1.0,3.0,Premier League
+249,25,2026-02-07 17:30:00Z,St. James' Park,Newcastle,Brentford,,2.0,3.0,Premier League
+243,25,2026-02-08 14:00:00Z,American Express Stadium,Brighton,Crystal Palace,,0.0,1.0,Premier League
+247,25,2026-02-08 16:30:00Z,Anfield,Liverpool,Man City,,1.0,2.0,Premier League
+253,26,2026-02-10 19:30:00Z,Stamford Bridge,Chelsea,Leeds,,2.0,2.0,Premier League
+255,26,2026-02-10 19:30:00Z,Hill Dickinson Stadium,Everton,Bournemouth,,1.0,2.0,Premier League
+259,26,2026-02-10 19:30:00Z,Tottenham Hotspur Stadium,Spurs,Newcastle,,1.0,2.0,Premier League
+260,26,2026-02-10 20:15:00Z,London Stadium,West Ham,Man Utd,,1.0,1.0,Premier League
+251,26,2026-02-11 19:30:00Z,Villa Park,Aston Villa,Brighton,,1.0,0.0,Premier League
+256,26,2026-02-11 19:30:00Z,Etihad Stadium,Man City,Fulham,,3.0,0.0,Premier League
+257,26,2026-02-11 19:30:00Z,The City Ground,Nott'm Forest,Wolves,,0.0,0.0,Premier League
+254,26,2026-02-11 19:40:00Z,Selhurst Park,Crystal Palace,Burnley,,2.0,3.0,Premier League
+258,26,2026-02-11 20:15:00Z,Stadium of Light,Sunderland,Liverpool,,0.0,1.0,Premier League
+252,26,2026-02-12 20:00:00Z,Gtech Community Stadium,Brentford,Arsenal,,1.0,1.0,Premier League
+261,27,2026-02-21 15:00:00Z,Villa Park,Aston Villa,Leeds,,1.0,1.0,Premier League
+262,27,2026-02-21 15:00:00Z,Gtech Community Stadium,Brentford,Brighton,,0.0,2.0,Premier League
+263,27,2026-02-21 15:00:00Z,Stamford Bridge,Chelsea,Burnley,,1.0,1.0,Premier League
+270,27,2026-02-21 17:30:00Z,London Stadium,West Ham,Bournemouth,,0.0,0.0,Premier League
+266,27,2026-02-21 20:00:00Z,Etihad Stadium,Man City,Newcastle,,2.0,1.0,Premier League
+264,27,2026-02-22 14:00:00Z,Selhurst Park,Crystal Palace,Wolves,,1.0,0.0,Premier League
+267,27,2026-02-22 14:00:00Z,The City Ground,Nott'm Forest,Liverpool,,0.0,1.0,Premier League
+268,27,2026-02-22 14:00:00Z,Stadium of Light,Sunderland,Fulham,,1.0,3.0,Premier League
+269,27,2026-02-22 16:30:00Z,Tottenham Hotspur Stadium,Spurs,Arsenal,,1.0,4.0,Premier League
+265,27,2026-02-23 20:00:00Z,Hill Dickinson Stadium,Everton,Man Utd,,0.0,1.0,Premier League
+280,28,2026-02-27 20:00:00Z,Molineux Stadium,Wolves,Aston Villa,,2.0,0.0,Premier League
+272,28,2026-02-28 12:30:00Z,Vitality Stadium,Bournemouth,Sunderland,,1.0,1.0,Premier League
+274,28,2026-02-28 15:00:00Z,Turf Moor,Burnley,Brentford,,3.0,4.0,Premier League
+277,28,2026-02-28 15:00:00Z,Anfield,Liverpool,West Ham,,5.0,2.0,Premier League
+279,28,2026-02-28 15:00:00Z,St. James' Park,Newcastle,Everton,,2.0,3.0,Premier League
+276,28,2026-02-28 17:30:00Z,Elland Road,Leeds,Man City,,0.0,1.0,Premier League
+273,28,2026-03-01 14:00:00Z,American Express Stadium,Brighton,Nott'm Forest,,2.0,1.0,Premier League
+275,28,2026-03-01 14:00:00Z,Craven Cottage,Fulham,Spurs,,2.0,1.0,Premier League
+278,28,2026-03-01 14:00:00Z,Old Trafford,Man Utd,Crystal Palace,,2.0,1.0,Premier League
+271,28,2026-03-01 16:30:00Z,Emirates Stadium,Arsenal,Chelsea,,2.0,1.0,Premier League
+282,29,2026-03-03 19:30:00Z,Vitality Stadium,Bournemouth,Brentford,,0.0,0.0,Premier League
+284,29,2026-03-03 19:30:00Z,Hill Dickinson Stadium,Everton,Burnley,,2.0,0.0,Premier League
+286,29,2026-03-03 19:30:00Z,Elland Road,Leeds,Sunderland,,0.0,1.0,Premier League
+290,29,2026-03-03 20:15:00Z,Molineux Stadium,Wolves,Liverpool,,2.0,1.0,Premier League
+281,29,2026-03-04 19:30:00Z,Villa Park,Aston Villa,Chelsea,,1.0,4.0,Premier League
+283,29,2026-03-04 19:30:00Z,American Express Stadium,Brighton,Arsenal,,0.0,1.0,Premier League
+285,29,2026-03-04 19:30:00Z,Craven Cottage,Fulham,West Ham,,0.0,1.0,Premier League
+287,29,2026-03-04 19:30:00Z,Etihad Stadium,Man City,Nott'm Forest,,2.0,2.0,Premier League
+288,29,2026-03-04 20:15:00Z,St. James' Park,Newcastle,Man Utd,,2.0,1.0,Premier League
+289,29,2026-03-05 20:00:00Z,Tottenham Hotspur Stadium,Spurs,Crystal Palace,,1.0,3.0,Premier League
+293,30,2026-03-14 15:00:00Z,Turf Moor,Burnley,Bournemouth,,0.0,0.0,Premier League
+299,30,2026-03-14 15:00:00Z,Stadium of Light,Sunderland,Brighton,,0.0,1.0,Premier League
+291,30,2026-03-14 17:30:00Z,Emirates Stadium,Arsenal,Everton,,2.0,0.0,Premier League
+294,30,2026-03-14 17:30:00Z,Stamford Bridge,Chelsea,Newcastle,,0.0,1.0,Premier League
+300,30,2026-03-14 20:00:00Z,London Stadium,West Ham,Man City,,1.0,1.0,Premier League
+295,30,2026-03-15 14:00:00Z,Selhurst Park,Crystal Palace,Leeds,,0.0,0.0,Premier League
+297,30,2026-03-15 14:00:00Z,Old Trafford,Man Utd,Aston Villa,,3.0,1.0,Premier League
+298,30,2026-03-15 14:00:00Z,The City Ground,Nott'm Forest,Fulham,,0.0,0.0,Premier League
+296,30,2026-03-15 16:30:00Z,Anfield,Liverpool,Spurs,,1.0,1.0,Premier League
+292,30,2026-03-16 20:00:00Z,Gtech Community Stadium,Brentford,Wolves,,2.0,2.0,Premier League
+310,31,2026-02-18 20:00:00Z,Molineux Stadium,Wolves,Arsenal,,2.0,2.0,Premier League
+302,31,2026-03-20 20:00:00Z,Vitality Stadium,Bournemouth,Man Utd,,2.0,2.0,Premier League
+303,31,2026-03-21 12:45:00Z,American Express Stadium,Brighton,Liverpool,,2.0,1.0,Premier League
+305,31,2026-03-21 15:00:00Z,Craven Cottage,Fulham,Burnley,,3.0,1.0,Premier League
+307,31,2026-03-21 15:00:00Z,Etihad Stadium,Man City,Crystal Palace,,,,Premier League
+304,31,2026-03-21 17:30:00Z,Hill Dickinson Stadium,Everton,Chelsea,,3.0,0.0,Premier League
+306,31,2026-03-21 20:00:00Z,Elland Road,Leeds,Brentford,,0.0,0.0,Premier League
+308,31,2026-03-22 12:00:00Z,St. James' Park,Newcastle,Sunderland,,1.0,2.0,Premier League
+301,31,2026-03-22 14:15:00Z,Villa Park,Aston Villa,West Ham,,2.0,0.0,Premier League
+309,31,2026-03-22 14:15:00Z,Tottenham Hotspur Stadium,Spurs,Nott'm Forest,,0.0,3.0,Premier League
+320,32,2026-04-10 19:00:00Z,London Stadium,West Ham,Wolves,,,,Premier League
+311,32,2026-04-11 11:30:00Z,Emirates Stadium,Arsenal,Bournemouth,,,,Premier League
+312,32,2026-04-11 14:00:00Z,Gtech Community Stadium,Brentford,Everton,,,,Premier League
+313,32,2026-04-11 14:00:00Z,Turf Moor,Burnley,Brighton,,,,Premier League
+316,32,2026-04-11 16:30:00Z,Anfield,Liverpool,Fulham,,,,Premier League
+315,32,2026-04-12 13:00:00Z,Selhurst Park,Crystal Palace,Newcastle,,,,Premier League
+318,32,2026-04-12 13:00:00Z,The City Ground,Nott'm Forest,Aston Villa,,,,Premier League
+319,32,2026-04-12 13:00:00Z,Stadium of Light,Sunderland,Spurs,,,,Premier League
+314,32,2026-04-12 15:30:00Z,Stamford Bridge,Chelsea,Man City,,,,Premier League
+317,32,2026-04-13 19:00:00Z,Old Trafford,Man Utd,Leeds,,,,Premier League
+322,33,2026-04-18 11:30:00Z,Gtech Community Stadium,Brentford,Fulham,,,,Premier League
+326,33,2026-04-18 14:00:00Z,Elland Road,Leeds,Wolves,,,,Premier League
+328,33,2026-04-18 14:00:00Z,St. James' Park,Newcastle,Bournemouth,,,,Premier League
+330,33,2026-04-18 16:30:00Z,Tottenham Hotspur Stadium,Spurs,Brighton,,,,Premier League
+323,33,2026-04-18 19:00:00Z,Stamford Bridge,Chelsea,Man Utd,,,,Premier League
+321,33,2026-04-19 13:00:00Z,Villa Park,Aston Villa,Sunderland,,,,Premier League
+325,33,2026-04-19 13:00:00Z,Hill Dickinson Stadium,Everton,Liverpool,,,,Premier League
+329,33,2026-04-19 13:00:00Z,The City Ground,Nott'm Forest,Burnley,,,,Premier League
+327,33,2026-04-19 15:30:00Z,Etihad Stadium,Man City,Arsenal,,,,Premier League
+324,33,2026-04-20 19:00:00Z,Selhurst Park,Crystal Palace,West Ham,,,,Premier League
+338,34,2026-04-24 19:00:00Z,Stadium of Light,Sunderland,Nott'm Forest,,,,Premier League
+335,34,2026-04-25 11:30:00Z,Craven Cottage,Fulham,Aston Villa,,,,Premier League
+332,34,2026-04-25 14:00:00Z,Vitality Stadium,Bournemouth,Leeds,,,,Premier League
+336,34,2026-04-25 14:00:00Z,Anfield,Liverpool,Crystal Palace,,,,Premier League
+339,34,2026-04-25 14:00:00Z,London Stadium,West Ham,Everton,,,,Premier League
+340,34,2026-04-25 14:00:00Z,Molineux Stadium,Wolves,Spurs,,,,Premier League
+331,34,2026-04-25 16:30:00Z,Emirates Stadium,Arsenal,Newcastle,,,,Premier League
+334,34,2026-04-26 13:00:00Z,Turf Moor,Burnley,Man City,,,,Premier League
+333,34,2026-04-26 15:30:00Z,American Express Stadium,Brighton,Chelsea,,,,Premier League
+337,34,2026-04-27 19:00:00Z,Old Trafford,Man Utd,Brentford,,,,Premier League
+347,35,2026-05-01 19:00:00Z,Elland Road,Leeds,Burnley,,,,Premier League
+342,35,2026-05-02 11:30:00Z,Villa Park,Aston Villa,Spurs,,,,Premier League
+343,35,2026-05-02 14:00:00Z,Vitality Stadium,Bournemouth,Crystal Palace,,,,Premier League
+344,35,2026-05-02 14:00:00Z,Gtech Community Stadium,Brentford,West Ham,,,,Premier League
+349,35,2026-05-02 14:00:00Z,St. James' Park,Newcastle,Brighton,,,,Premier League
+350,35,2026-05-02 14:00:00Z,Molineux Stadium,Wolves,Sunderland,,,,Premier League
+341,35,2026-05-02 16:30:00Z,Emirates Stadium,Arsenal,Fulham,,,,Premier League
+348,35,2026-05-03 14:30:00Z,Old Trafford,Man Utd,Liverpool,,,,Premier League
+345,35,2026-05-04 14:00:00Z,Stamford Bridge,Chelsea,Nott'm Forest,,,,Premier League
+346,35,2026-05-04 19:00:00Z,Hill Dickinson Stadium,Everton,Man City,,,,Premier League
+351,36,2026-05-09 14:00:00Z,American Express Stadium,Brighton,Wolves,,,,Premier League
+352,36,2026-05-09 14:00:00Z,Turf Moor,Burnley,Aston Villa,,,,Premier League
+353,36,2026-05-09 14:00:00Z,Selhurst Park,Crystal Palace,Everton,,,,Premier League
+354,36,2026-05-09 14:00:00Z,Craven Cottage,Fulham,Bournemouth,,,,Premier League
+355,36,2026-05-09 14:00:00Z,Anfield,Liverpool,Chelsea,,,,Premier League
+356,36,2026-05-09 14:00:00Z,Etihad Stadium,Man City,Brentford,,,,Premier League
+357,36,2026-05-09 14:00:00Z,The City Ground,Nott'm Forest,Newcastle,,,,Premier League
+358,36,2026-05-09 14:00:00Z,Stadium of Light,Sunderland,Man Utd,,,,Premier League
+359,36,2026-05-09 14:00:00Z,Tottenham Hotspur Stadium,Spurs,Leeds,,,,Premier League
+360,36,2026-05-09 14:00:00Z,London Stadium,West Ham,Arsenal,,,,Premier League
+361,37,2026-05-17 14:00:00Z,Emirates Stadium,Arsenal,Burnley,,,,Premier League
+362,37,2026-05-17 14:00:00Z,Villa Park,Aston Villa,Liverpool,,,,Premier League
+363,37,2026-05-17 14:00:00Z,Vitality Stadium,Bournemouth,Man City,,,,Premier League
+364,37,2026-05-17 14:00:00Z,Gtech Community Stadium,Brentford,Crystal Palace,,,,Premier League
+365,37,2026-05-17 14:00:00Z,Stamford Bridge,Chelsea,Spurs,,,,Premier League
+366,37,2026-05-17 14:00:00Z,Hill Dickinson Stadium,Everton,Sunderland,,,,Premier League
+367,37,2026-05-17 14:00:00Z,Elland Road,Leeds,Brighton,,,,Premier League
+368,37,2026-05-17 14:00:00Z,Old Trafford,Man Utd,Nott'm Forest,,,,Premier League
+369,37,2026-05-17 14:00:00Z,St. James' Park,Newcastle,West Ham,,,,Premier League
+370,37,2026-05-17 14:00:00Z,Molineux Stadium,Wolves,Fulham,,,,Premier League
+371,38,2026-05-24 15:00:00Z,American Express Stadium,Brighton,Man Utd,,,,Premier League
+372,38,2026-05-24 15:00:00Z,Turf Moor,Burnley,Wolves,,,,Premier League
+373,38,2026-05-24 15:00:00Z,Selhurst Park,Crystal Palace,Arsenal,,,,Premier League
+374,38,2026-05-24 15:00:00Z,Craven Cottage,Fulham,Newcastle,,,,Premier League
+375,38,2026-05-24 15:00:00Z,Anfield,Liverpool,Brentford,,,,Premier League
+376,38,2026-05-24 15:00:00Z,Etihad Stadium,Man City,Aston Villa,,,,Premier League
+377,38,2026-05-24 15:00:00Z,The City Ground,Nott'm Forest,Bournemouth,,,,Premier League
+378,38,2026-05-24 15:00:00Z,Stadium of Light,Sunderland,Chelsea,,,,Premier League
+379,38,2026-05-24 15:00:00Z,Tottenham Hotspur Stadium,Spurs,Everton,,,,Premier League
+380,38,2026-05-24 15:00:00Z,London Stadium,West Ham,Leeds,,,,Premier League
+1,1,2025-08-15 17:00:00Z,Estadio Municipal de Montilivi,Girona FC,Rayo Vallecano,,1.0,3.0,La Liga
+2,1,2025-08-15 19:30:00Z,Estadio de la Cerámica,Villarreal CF,Real Oviedo,,2.0,0.0,La Liga
+4,1,2025-08-16 17:30:00Z,Estadi Mallorca Son Moix,RCD Mallorca,FC Barcelona,,0.0,3.0,La Liga
+3,1,2025-08-16 19:30:00Z,Mendizorroza,Deportivo Alavés,Levante UD,,2.0,1.0,La Liga
+5,1,2025-08-16 19:30:00Z,Camp de Mestalla,Valencia CF,Real Sociedad,,1.0,1.0,La Liga
+6,1,2025-08-17 15:00:00Z,Estadio ABANCA Balaídos,Celta,Getafe CF,,0.0,2.0,La Liga
+7,1,2025-08-17 17:30:00Z,Estadio San Mamés,Athletic Club,Sevilla FC,,3.0,2.0,La Liga
+8,1,2025-08-17 19:30:00Z,RCDE Stadium,RCD Espanyol de Barcelona,Atlético de Madrid,,2.0,1.0,La Liga
+9,1,2025-08-18 19:00:00Z,Estadio Martínez Valero,Elche CF,Real Betis,,1.0,1.0,La Liga
+10,1,2025-08-19 19:00:00Z,Estadio Santiago Bernabéu,Real Madrid,CA Osasuna,,1.0,0.0,La Liga
+15,2,2025-08-22 19:30:00Z,Estadio Olímpico de La Cartuja,Real Betis,Deportivo Alavés,,1.0,0.0,La Liga
+17,2,2025-08-23 15:00:00Z,Estadi Mallorca Son Moix,RCD Mallorca,Celta,,1.0,1.0,La Liga
+12,2,2025-08-23 17:30:00Z,Riyadh Air Metropolitano,Atlético de Madrid,Elche CF,,1.0,1.0,La Liga
+16,2,2025-08-23 19:30:00Z,Estadio Ciutat de València,Levante UD,FC Barcelona,,2.0,3.0,La Liga
+13,2,2025-08-24 15:00:00Z,Estadio El Sadar,CA Osasuna,Valencia CF,,1.0,0.0,La Liga
+18,2,2025-08-24 17:30:00Z,Anoeta,Real Sociedad,RCD Espanyol de Barcelona,,2.0,2.0,La Liga
+20,2,2025-08-24 17:30:00Z,Estadio de la Cerámica,Villarreal CF,Girona FC,,5.0,0.0,La Liga
+14,2,2025-08-24 19:30:00Z,Estadio Carlos Tartiere,Real Oviedo,Real Madrid,,0.0,3.0,La Liga
+11,2,2025-08-25 17:30:00Z,Estadio San Mamés,Athletic Club,Rayo Vallecano,,1.0,0.0,La Liga
+19,2,2025-08-25 19:30:00Z,Ramón Sánchez-Pizjuán,Sevilla FC,Getafe CF,,1.0,2.0,La Liga
+23,3,2025-08-29 17:30:00Z,Estadio Martínez Valero,Elche CF,Levante UD,,2.0,0.0,La Liga
+29,3,2025-08-29 19:30:00Z,Camp de Mestalla,Valencia CF,Getafe CF,,3.0,0.0,La Liga
+21,3,2025-08-30 15:00:00Z,Mendizorroza,Deportivo Alavés,Atlético de Madrid,,1.0,1.0,La Liga
+26,3,2025-08-30 17:00:00Z,Estadio Carlos Tartiere,Real Oviedo,Real Sociedad,,1.0,0.0,La Liga
+25,3,2025-08-30 17:30:00Z,Estadio Municipal de Montilivi,Girona FC,Sevilla FC,,0.0,2.0,La Liga
+30,3,2025-08-30 19:30:00Z,Estadio Santiago Bernabéu,Real Madrid,RCD Mallorca,,2.0,1.0,La Liga
+22,3,2025-08-31 15:00:00Z,Estadio ABANCA Balaídos,Celta,Villarreal CF,,1.0,1.0,La Liga
+27,3,2025-08-31 17:00:00Z,Estadio Olímpico de La Cartuja,Real Betis,Athletic Club,,1.0,2.0,La Liga
+24,3,2025-08-31 17:30:00Z,RCDE Stadium,RCD Espanyol de Barcelona,CA Osasuna,,1.0,0.0,La Liga
+28,3,2025-08-31 19:30:00Z,Estadio de Vallecas,Rayo Vallecano,FC Barcelona,,1.0,1.0,La Liga
+39,4,2025-09-12 19:00:00Z,Ramón Sánchez-Pizjuán,Sevilla FC,Elche CF,,2.0,2.0,La Liga
+35,4,2025-09-13 12:00:00Z,Coliseum,Getafe CF,Real Oviedo,,2.0,0.0,La Liga
+40,4,2025-09-13 14:15:00Z,Anoeta,Real Sociedad,Real Madrid,,1.0,2.0,La Liga
+37,4,2025-09-13 16:30:00Z,Estadio San Mamés,Athletic Club,Deportivo Alavés,,0.0,1.0,La Liga
+31,4,2025-09-13 19:00:00Z,Riyadh Air Metropolitano,Atlético de Madrid,Villarreal CF,,2.0,0.0,La Liga
+33,4,2025-09-14 12:00:00Z,Estadio ABANCA Balaídos,Celta,Girona FC,,1.0,1.0,La Liga
+38,4,2025-09-14 14:15:00Z,Estadio Ciutat de València,Levante UD,Real Betis,,2.0,2.0,La Liga
+36,4,2025-09-14 16:30:00Z,Estadio El Sadar,CA Osasuna,Rayo Vallecano,,2.0,0.0,La Liga
+32,4,2025-09-14 19:00:00Z,Estadi Johan Cruyff,FC Barcelona,Valencia CF,,6.0,0.0,La Liga
+34,4,2025-09-15 19:00:00Z,RCDE Stadium,RCD Espanyol de Barcelona,RCD Mallorca,,3.0,2.0,La Liga
+43,5,2025-09-19 19:00:00Z,Estadio Olímpico de La Cartuja,Real Betis,Real Sociedad,,3.0,1.0,La Liga
+45,5,2025-09-20 12:00:00Z,Estadio Municipal de Montilivi,Girona FC,Levante UD,,0.0,4.0,La Liga
+49,5,2025-09-20 14:15:00Z,Estadio Santiago Bernabéu,Real Madrid,RCD Espanyol de Barcelona,,2.0,0.0,La Liga
+41,5,2025-09-20 16:30:00Z,Mendizorroza,Deportivo Alavés,Sevilla FC,,1.0,2.0,La Liga
+50,5,2025-09-20 16:30:00Z,Estadio de la Cerámica,Villarreal CF,CA Osasuna,,2.0,1.0,La Liga
+46,5,2025-09-20 19:00:00Z,Camp de Mestalla,Valencia CF,Athletic Club,,2.0,0.0,La Liga
+48,5,2025-09-21 12:00:00Z,Estadio de Vallecas,Rayo Vallecano,Celta,,1.0,1.0,La Liga
+47,5,2025-09-21 14:15:00Z,Estadi Mallorca Son Moix,RCD Mallorca,Atlético de Madrid,,1.0,1.0,La Liga
+44,5,2025-09-21 16:15:00Z,Estadio Martínez Valero,Elche CF,Real Oviedo,,1.0,0.0,La Liga
+42,5,2025-09-21 19:00:00Z,Estadi Johan Cruyff,FC Barcelona,Getafe CF,,3.0,0.0,La Liga
+58,6,2025-08-27 19:00:00Z,Estadio ABANCA Balaídos,Celta,Real Betis,,1.0,1.0,La Liga
+51,6,2025-09-23 17:00:00Z,Estadio San Mamés,Athletic Club,Girona FC,,1.0,1.0,La Liga
+53,6,2025-09-23 17:00:00Z,RCDE Stadium,RCD Espanyol de Barcelona,Valencia CF,,2.0,2.0,La Liga
+54,6,2025-09-23 19:30:00Z,Estadio Ciutat de València,Levante UD,Real Madrid,,1.0,4.0,La Liga
+55,6,2025-09-23 19:30:00Z,Ramón Sánchez-Pizjuán,Sevilla FC,Villarreal CF,,1.0,2.0,La Liga
+56,6,2025-09-24 17:00:00Z,Coliseum,Getafe CF,Deportivo Alavés,,1.0,1.0,La Liga
+52,6,2025-09-24 19:30:00Z,Riyadh Air Metropolitano,Atlético de Madrid,Rayo Vallecano,,3.0,2.0,La Liga
+60,6,2025-09-24 19:30:00Z,Anoeta,Real Sociedad,RCD Mallorca,,1.0,0.0,La Liga
+59,6,2025-09-25 17:30:00Z,Estadio El Sadar,CA Osasuna,Elche CF,,1.0,1.0,La Liga
+57,6,2025-09-25 19:30:00Z,Estadio Carlos Tartiere,Real Oviedo,FC Barcelona,,1.0,3.0,La Liga
+69,7,2025-09-26 19:00:00Z,Estadio Municipal de Montilivi,Girona FC,RCD Espanyol de Barcelona,,0.0,0.0,La Liga
+64,7,2025-09-27 12:00:00Z,Coliseum,Getafe CF,Levante UD,,1.0,1.0,La Liga
+61,7,2025-09-27 14:15:00Z,Riyadh Air Metropolitano,Atlético de Madrid,Real Madrid,,5.0,2.0,La Liga
+66,7,2025-09-27 16:30:00Z,Estadi Mallorca Son Moix,RCD Mallorca,Deportivo Alavés,,1.0,0.0,La Liga
+67,7,2025-09-27 19:00:00Z,Estadio de la Cerámica,Villarreal CF,Athletic Club,,1.0,0.0,La Liga
+65,7,2025-09-28 12:00:00Z,Estadio de Vallecas,Rayo Vallecano,Sevilla FC,,0.0,1.0,La Liga
+68,7,2025-09-28 14:15:00Z,Estadio Martínez Valero,Elche CF,Celta,,2.0,1.0,La Liga
+62,7,2025-09-28 16:30:00Z,Estadi Olímpic Lluís Companys,FC Barcelona,Real Sociedad,,2.0,1.0,La Liga
+63,7,2025-09-28 19:00:00Z,Estadio Olímpico de La Cartuja,Real Betis,CA Osasuna,,2.0,0.0,La Liga
+70,7,2025-09-30 18:00:00Z,Camp de Mestalla,Valencia CF,Real Oviedo,,1.0,2.0,La Liga
+78,8,2025-10-03 19:00:00Z,Estadio El Sadar,CA Osasuna,Getafe CF,,2.0,1.0,La Liga
+79,8,2025-10-04 12:00:00Z,Estadio Carlos Tartiere,Real Oviedo,Levante UD,,0.0,2.0,La Liga
+73,8,2025-10-04 14:15:00Z,Estadio Municipal de Montilivi,Girona FC,Valencia CF,,2.0,1.0,La Liga
+72,8,2025-10-04 16:30:00Z,Estadio San Mamés,Athletic Club,RCD Mallorca,,2.0,1.0,La Liga
+74,8,2025-10-04 19:00:00Z,Estadio Santiago Bernabéu,Real Madrid,Villarreal CF,,3.0,1.0,La Liga
+71,8,2025-10-05 12:00:00Z,Mendizorroza,Deportivo Alavés,Elche CF,,3.0,1.0,La Liga
+76,8,2025-10-05 14:15:00Z,Ramón Sánchez-Pizjuán,Sevilla FC,FC Barcelona,,4.0,1.0,La Liga
+77,8,2025-10-05 16:30:00Z,RCDE Stadium,RCD Espanyol de Barcelona,Real Betis,,1.0,2.0,La Liga
+80,8,2025-10-05 16:30:00Z,Anoeta,Real Sociedad,Rayo Vallecano,,0.0,1.0,La Liga
+75,8,2025-10-05 19:00:00Z,Estadio ABANCA Balaídos,Celta,Atlético de Madrid,,1.0,1.0,La Liga
+89,9,2025-10-17 19:00:00Z,Estadio Carlos Tartiere,Real Oviedo,RCD Espanyol de Barcelona,,0.0,2.0,La Liga
+90,9,2025-10-18 12:00:00Z,Ramón Sánchez-Pizjuán,Sevilla FC,RCD Mallorca,,1.0,3.0,La Liga
+83,9,2025-10-18 14:15:00Z,Estadi Olímpic Lluís Companys,FC Barcelona,Girona FC,,2.0,1.0,La Liga
+88,9,2025-10-18 16:30:00Z,Estadio de la Cerámica,Villarreal CF,Real Betis,,2.0,2.0,La Liga
+82,9,2025-10-18 19:00:00Z,Riyadh Air Metropolitano,Atlético de Madrid,CA Osasuna,,1.0,0.0,La Liga
+87,9,2025-10-19 12:00:00Z,Estadio Martínez Valero,Elche CF,Athletic Club,,0.0,0.0,La Liga
+84,9,2025-10-19 14:15:00Z,Estadio ABANCA Balaídos,Celta,Real Sociedad,,1.0,1.0,La Liga
+86,9,2025-10-19 16:30:00Z,Estadio Ciutat de València,Levante UD,Rayo Vallecano,,0.0,3.0,La Liga
+85,9,2025-10-19 19:00:00Z,Coliseum,Getafe CF,Real Madrid,,0.0,1.0,La Liga
+81,9,2025-10-20 19:00:00Z,Mendizorroza,Deportivo Alavés,Valencia CF,,0.0,0.0,La Liga
+93,10,2025-10-24 19:00:00Z,Anoeta,Real Sociedad,Sevilla FC,,2.0,1.0,La Liga
+92,10,2025-10-25 12:00:00Z,Estadio Municipal de Montilivi,Girona FC,Real Oviedo,,3.0,3.0,La Liga
+99,10,2025-10-25 14:15:00Z,RCDE Stadium,RCD Espanyol de Barcelona,Elche CF,,1.0,0.0,La Liga
+91,10,2025-10-25 16:30:00Z,Estadio San Mamés,Athletic Club,Getafe CF,,0.0,1.0,La Liga
+94,10,2025-10-25 19:00:00Z,Camp de Mestalla,Valencia CF,Villarreal CF,,0.0,2.0,La Liga
+100,10,2025-10-26 13:00:00Z,Estadi Mallorca Son Moix,RCD Mallorca,Levante UD,,1.0,1.0,La Liga
+97,10,2025-10-26 15:15:00Z,Estadio Santiago Bernabéu,Real Madrid,FC Barcelona,,2.0,1.0,La Liga
+98,10,2025-10-26 17:30:00Z,Estadio El Sadar,CA Osasuna,Celta,,2.0,3.0,La Liga
+95,10,2025-10-26 20:00:00Z,Estadio de Vallecas,Rayo Vallecano,Deportivo Alavés,,1.0,0.0,La Liga
+96,10,2025-10-27 20:00:00Z,Estadio Olímpico de La Cartuja,Real Betis,Atlético de Madrid,,0.0,2.0,La Liga
+105,11,2025-10-31 20:00:00Z,Coliseum,Getafe CF,Girona FC,,2.0,1.0,La Liga
+110,11,2025-11-01 13:00:00Z,Estadio de la Cerámica,Villarreal CF,Rayo Vallecano,,4.0,0.0,La Liga
+102,11,2025-11-01 15:15:00Z,Riyadh Air Metropolitano,Atlético de Madrid,Sevilla FC,,3.0,0.0,La Liga
+107,11,2025-11-01 17:30:00Z,Anoeta,Real Sociedad,Athletic Club,,3.0,2.0,La Liga
+106,11,2025-11-01 20:00:00Z,Estadio Santiago Bernabéu,Real Madrid,Valencia CF,,4.0,0.0,La Liga
+108,11,2025-11-02 13:00:00Z,Estadio Ciutat de València,Levante UD,Celta,,1.0,2.0,La Liga
+101,11,2025-11-02 15:15:00Z,Mendizorroza,Deportivo Alavés,RCD Espanyol de Barcelona,,2.0,1.0,La Liga
+103,11,2025-11-02 17:30:00Z,Estadi Olímpic Lluís Companys,FC Barcelona,Elche CF,,3.0,1.0,La Liga
+104,11,2025-11-02 20:00:00Z,Estadio Olímpico de La Cartuja,Real Betis,RCD Mallorca,,3.0,0.0,La Liga
+109,11,2025-11-03 20:00:00Z,Estadio Carlos Tartiere,Real Oviedo,CA Osasuna,,0.0,0.0,La Liga
+113,12,2025-11-07 20:00:00Z,Estadio Martínez Valero,Elche CF,Real Sociedad,,1.0,1.0,La Liga
+116,12,2025-11-08 13:00:00Z,Estadio Municipal de Montilivi,Girona FC,Deportivo Alavés,,1.0,0.0,La Liga
+120,12,2025-11-08 15:15:00Z,Ramón Sánchez-Pizjuán,Sevilla FC,CA Osasuna,,1.0,0.0,La Liga
+112,12,2025-11-08 17:30:00Z,Riyadh Air Metropolitano,Atlético de Madrid,Levante UD,,3.0,1.0,La Liga
+114,12,2025-11-08 20:00:00Z,RCDE Stadium,RCD Espanyol de Barcelona,Villarreal CF,,0.0,2.0,La Liga
+111,12,2025-11-09 13:00:00Z,Estadio San Mamés,Athletic Club,Real Oviedo,,1.0,0.0,La Liga
+115,12,2025-11-09 15:15:00Z,Estadio de Vallecas,Rayo Vallecano,Real Madrid,,0.0,0.0,La Liga
+118,12,2025-11-09 17:30:00Z,Camp de Mestalla,Valencia CF,Real Betis,,1.0,1.0,La Liga
+119,12,2025-11-09 17:30:00Z,Estadi Mallorca Son Moix,RCD Mallorca,Getafe CF,,1.0,0.0,La Liga
+117,12,2025-11-09 20:00:00Z,Estadio ABANCA Balaídos,Celta,FC Barcelona,,2.0,4.0,La Liga
+129,13,2025-11-21 20:00:00Z,Camp de Mestalla,Valencia CF,Levante UD,,1.0,0.0,La Liga
+121,13,2025-11-22 13:00:00Z,Mendizorroza,Deportivo Alavés,Celta,,0.0,1.0,La Liga
+127,13,2025-11-22 15:15:00Z,Spotify Camp Nou,FC Barcelona,Athletic Club,,4.0,0.0,La Liga
+125,13,2025-11-22 17:30:00Z,Estadio El Sadar,CA Osasuna,Real Sociedad,,1.0,3.0,La Liga
+130,13,2025-11-22 20:00:00Z,Estadio de la Cerámica,Villarreal CF,RCD Mallorca,,2.0,1.0,La Liga
+126,13,2025-11-23 13:00:00Z,Estadio Carlos Tartiere,Real Oviedo,Rayo Vallecano,,0.0,0.0,La Liga
+122,13,2025-11-23 15:15:00Z,Estadio Olímpico de La Cartuja,Real Betis,Girona FC,,1.0,1.0,La Liga
+128,13,2025-11-23 17:30:00Z,Coliseum,Getafe CF,Atlético de Madrid,,0.0,1.0,La Liga
+123,13,2025-11-23 20:00:00Z,Estadio Martínez Valero,Elche CF,Real Madrid,,2.0,2.0,La Liga
+124,13,2025-11-24 20:00:00Z,RCDE Stadium,RCD Espanyol de Barcelona,Sevilla FC,,2.0,1.0,La Liga
+140,14,2025-11-28 20:00:00Z,Coliseum,Getafe CF,Elche CF,,1.0,0.0,La Liga
+134,14,2025-11-29 13:00:00Z,Estadi Mallorca Son Moix,RCD Mallorca,CA Osasuna,,2.0,2.0,La Liga
+137,14,2025-11-29 15:15:00Z,Spotify Camp Nou,FC Barcelona,Deportivo Alavés,,3.0,1.0,La Liga
+138,14,2025-11-29 17:30:00Z,Estadio Ciutat de València,Levante UD,Athletic Club,,0.0,2.0,La Liga
+131,14,2025-11-29 20:00:00Z,Riyadh Air Metropolitano,Atlético de Madrid,Real Oviedo,,2.0,0.0,La Liga
+136,14,2025-11-30 13:00:00Z,Anoeta,Real Sociedad,Villarreal CF,,2.0,3.0,La Liga
+139,14,2025-11-30 15:15:00Z,Ramón Sánchez-Pizjuán,Sevilla FC,Real Betis,,0.0,2.0,La Liga
+132,14,2025-11-30 17:30:00Z,Estadio ABANCA Balaídos,Celta,RCD Espanyol de Barcelona,,0.0,1.0,La Liga
+133,14,2025-11-30 20:00:00Z,Estadio Municipal de Montilivi,Girona FC,Real Madrid,,1.0,1.0,La Liga
+135,14,2025-12-01 20:00:00Z,Estadio de Vallecas,Rayo Vallecano,Valencia CF,,1.0,1.0,La Liga
+149,15,2025-12-05 20:00:00Z,Estadio Carlos Tartiere,Real Oviedo,RCD Mallorca,,0.0,0.0,La Liga
+147,15,2025-12-06 13:00:00Z,Estadio de la Cerámica,Villarreal CF,Getafe CF,,2.0,0.0,La Liga
+141,15,2025-12-06 15:15:00Z,Mendizorroza,Deportivo Alavés,Real Sociedad,,1.0,0.0,La Liga
+145,15,2025-12-06 17:30:00Z,Estadio Olímpico de La Cartuja,Real Betis,FC Barcelona,,3.0,5.0,La Liga
+142,15,2025-12-06 20:00:00Z,Estadio San Mamés,Athletic Club,Atlético de Madrid,,1.0,0.0,La Liga
+143,15,2025-12-07 13:00:00Z,Estadio Martínez Valero,Elche CF,Girona FC,,3.0,0.0,La Liga
+150,15,2025-12-07 15:15:00Z,Camp de Mestalla,Valencia CF,Sevilla FC,,1.0,1.0,La Liga
+144,15,2025-12-07 17:30:00Z,RCDE Stadium,RCD Espanyol de Barcelona,Rayo Vallecano,,1.0,0.0,La Liga
+146,15,2025-12-07 20:00:00Z,Estadio Santiago Bernabéu,Real Madrid,Celta,,0.0,2.0,La Liga
+148,15,2025-12-08 20:00:00Z,Estadio El Sadar,CA Osasuna,Levante UD,,2.0,0.0,La Liga
+159,16,2025-12-12 20:00:00Z,Anoeta,Real Sociedad,Girona FC,,1.0,2.0,La Liga
+152,16,2025-12-13 13:00:00Z,Riyadh Air Metropolitano,Atlético de Madrid,Valencia CF,,2.0,1.0,La Liga
+157,16,2025-12-13 15:15:00Z,Estadi Mallorca Son Moix,RCD Mallorca,Elche CF,,3.0,1.0,La Liga
+153,16,2025-12-13 17:30:00Z,Spotify Camp Nou,FC Barcelona,CA Osasuna,,2.0,0.0,La Liga
+158,16,2025-12-13 20:00:00Z,Coliseum,Getafe CF,RCD Espanyol de Barcelona,,0.0,1.0,La Liga
+160,16,2025-12-14 13:00:00Z,Ramón Sánchez-Pizjuán,Sevilla FC,Real Oviedo,,4.0,0.0,La Liga
+155,16,2025-12-14 15:15:00Z,Estadio ABANCA Balaídos,Celta,Athletic Club,,2.0,0.0,La Liga
+151,16,2025-12-14 20:00:00Z,Mendizorroza,Deportivo Alavés,Real Madrid,,1.0,2.0,La Liga
+156,16,2025-12-15 20:00:00Z,Estadio de Vallecas,Rayo Vallecano,Real Betis,,0.0,0.0,La Liga
+154,16,2026-02-18 19:00:00Z,Estadio Ciutat de València,Levante UD,Villarreal CF,,0.0,1.0,La Liga
+170,17,2025-12-19 20:00:00Z,Camp de Mestalla,Valencia CF,RCD Mallorca,,1.0,1.0,La Liga
+169,17,2025-12-20 13:00:00Z,Estadio Carlos Tartiere,Real Oviedo,Celta,,0.0,0.0,La Liga
+164,17,2025-12-20 15:15:00Z,Estadio Ciutat de València,Levante UD,Real Sociedad,,1.0,1.0,La Liga
+166,17,2025-12-20 17:30:00Z,Estadio El Sadar,CA Osasuna,Deportivo Alavés,,3.0,0.0,La Liga
+165,17,2025-12-20 20:00:00Z,Estadio Santiago Bernabéu,Real Madrid,Sevilla FC,,2.0,0.0,La Liga
+167,17,2025-12-21 13:00:00Z,Estadio Municipal de Montilivi,Girona FC,Atlético de Madrid,,0.0,3.0,La Liga
+168,17,2025-12-21 15:15:00Z,Estadio de la Cerámica,Villarreal CF,FC Barcelona,,0.0,2.0,La Liga
+163,17,2025-12-21 17:30:00Z,Estadio Martínez Valero,Elche CF,Rayo Vallecano,,4.0,0.0,La Liga
+162,17,2025-12-21 20:00:00Z,Estadio Olímpico de La Cartuja,Real Betis,Getafe CF,,4.0,0.0,La Liga
+161,17,2025-12-22 20:00:00Z,Estadio San Mamés,Athletic Club,RCD Espanyol de Barcelona,,1.0,2.0,La Liga
+178,18,2026-01-02 20:00:00Z,Estadio de Vallecas,Rayo Vallecano,Getafe CF,,1.0,1.0,La Liga
+172,18,2026-01-03 13:00:00Z,Estadio ABANCA Balaídos,Celta,Valencia CF,,4.0,1.0,La Liga
+174,18,2026-01-03 15:15:00Z,Estadio El Sadar,CA Osasuna,Athletic Club,,1.0,1.0,La Liga
+173,18,2026-01-03 17:30:00Z,Estadio Martínez Valero,Elche CF,Villarreal CF,,1.0,3.0,La Liga
+176,18,2026-01-03 20:00:00Z,RCDE Stadium,RCD Espanyol de Barcelona,FC Barcelona,,0.0,2.0,La Liga
+180,18,2026-01-04 13:00:00Z,Ramón Sánchez-Pizjuán,Sevilla FC,Levante UD,,0.0,3.0,La Liga
+177,18,2026-01-04 15:15:00Z,Estadio Santiago Bernabéu,Real Madrid,Real Betis,,5.0,1.0,La Liga
+171,18,2026-01-04 17:30:00Z,Mendizorroza,Deportivo Alavés,Real Oviedo,,1.0,1.0,La Liga
+179,18,2026-01-04 17:30:00Z,Estadi Mallorca Son Moix,RCD Mallorca,Girona FC,,1.0,2.0,La Liga
+175,18,2026-01-04 20:00:00Z,Anoeta,Real Sociedad,Atlético de Madrid,,1.0,1.0,La Liga
+185,19,2025-12-02 20:00:00Z,Spotify Camp Nou,FC Barcelona,Atlético de Madrid,,3.0,1.0,La Liga
+181,19,2025-12-03 18:00:00Z,Estadio San Mamés,Athletic Club,Real Madrid,,0.0,3.0,La Liga
+182,19,2026-01-09 20:00:00Z,Coliseum,Getafe CF,Real Sociedad,,1.0,2.0,La Liga
+186,19,2026-01-10 13:00:00Z,Estadio Carlos Tartiere,Real Oviedo,Real Betis,,1.0,1.0,La Liga
+184,19,2026-01-10 15:15:00Z,Estadio de la Cerámica,Villarreal CF,Deportivo Alavés,,3.0,1.0,La Liga
+183,19,2026-01-10 17:30:00Z,Estadio Municipal de Montilivi,Girona FC,CA Osasuna,,1.0,0.0,La Liga
+188,19,2026-01-10 20:00:00Z,Camp de Mestalla,Valencia CF,Elche CF,,1.0,1.0,La Liga
+190,19,2026-01-11 13:00:00Z,Estadio de Vallecas,Rayo Vallecano,RCD Mallorca,,2.0,1.0,La Liga
+189,19,2026-01-11 15:15:00Z,Estadio Ciutat de València,Levante UD,RCD Espanyol de Barcelona,,1.0,1.0,La Liga
+187,19,2026-01-12 20:00:00Z,Ramón Sánchez-Pizjuán,Sevilla FC,Celta,,0.0,1.0,La Liga
+194,20,2026-01-16 20:00:00Z,RCDE Stadium,RCD Espanyol de Barcelona,Girona FC,,0.0,2.0,La Liga
+200,20,2026-01-17 13:00:00Z,Estadio Santiago Bernabéu,Real Madrid,Levante UD,,2.0,0.0,La Liga
+198,20,2026-01-17 15:15:00Z,Estadi Mallorca Son Moix,RCD Mallorca,Athletic Club,,3.0,2.0,La Liga
+196,20,2026-01-17 17:30:00Z,Estadio El Sadar,CA Osasuna,Real Oviedo,,3.0,2.0,La Liga
+191,20,2026-01-17 20:00:00Z,Estadio Olímpico de La Cartuja,Real Betis,Villarreal CF,,2.0,0.0,La Liga
+195,20,2026-01-18 13:00:00Z,Coliseum,Getafe CF,Valencia CF,,0.0,1.0,La Liga
+197,20,2026-01-18 15:15:00Z,Riyadh Air Metropolitano,Atlético de Madrid,Deportivo Alavés,,1.0,0.0,La Liga
+192,20,2026-01-18 17:30:00Z,Estadio ABANCA Balaídos,Celta,Rayo Vallecano,,3.0,0.0,La Liga
+199,20,2026-01-18 20:00:00Z,Anoeta,Real Sociedad,FC Barcelona,,2.0,1.0,La Liga
+193,20,2026-01-19 20:00:00Z,Estadio Martínez Valero,Elche CF,Sevilla FC,,2.0,2.0,La Liga
+206,21,2026-01-23 20:00:00Z,Estadio Ciutat de València,Levante UD,Elche CF,,3.0,2.0,La Liga
+209,21,2026-01-24 13:00:00Z,Estadio de Vallecas,Rayo Vallecano,CA Osasuna,,1.0,3.0,La Liga
+207,21,2026-01-24 15:15:00Z,Camp de Mestalla,Valencia CF,RCD Espanyol de Barcelona,,3.0,2.0,La Liga
+204,21,2026-01-24 17:30:00Z,Ramón Sánchez-Pizjuán,Sevilla FC,Athletic Club,,2.0,1.0,La Liga
+210,21,2026-01-24 20:00:00Z,Estadio de la Cerámica,Villarreal CF,Real Madrid,,0.0,2.0,La Liga
+202,21,2026-01-25 13:00:00Z,Riyadh Air Metropolitano,Atlético de Madrid,RCD Mallorca,,3.0,0.0,La Liga
+203,21,2026-01-25 15:15:00Z,Spotify Camp Nou,FC Barcelona,Real Oviedo,,3.0,0.0,La Liga
+205,21,2026-01-25 17:30:00Z,Anoeta,Real Sociedad,Celta,,3.0,1.0,La Liga
+201,21,2026-01-25 20:00:00Z,Mendizorroza,Deportivo Alavés,Real Betis,,2.0,1.0,La Liga
+208,21,2026-01-26 20:00:00Z,Estadio Municipal de Montilivi,Girona FC,Getafe CF,,1.0,1.0,La Liga
+215,22,2026-01-30 20:00:00Z,RCDE Stadium,RCD Espanyol de Barcelona,Deportivo Alavés,,1.0,2.0,La Liga
+219,22,2026-01-31 13:00:00Z,Estadio Carlos Tartiere,Real Oviedo,Girona FC,,1.0,0.0,La Liga
+214,22,2026-01-31 15:15:00Z,Estadio El Sadar,CA Osasuna,Villarreal CF,,2.0,2.0,La Liga
+216,22,2026-01-31 17:30:00Z,Estadio Ciutat de València,Levante UD,Atlético de Madrid,,0.0,0.0,La Liga
+217,22,2026-01-31 17:30:00Z,Estadio Martínez Valero,Elche CF,FC Barcelona,,1.0,3.0,La Liga
+220,22,2026-02-01 13:00:00Z,Estadio Santiago Bernabéu,Real Madrid,Rayo Vallecano,,2.0,1.0,La Liga
+212,22,2026-02-01 15:15:00Z,Estadio Olímpico de La Cartuja,Real Betis,Valencia CF,,2.0,1.0,La Liga
+218,22,2026-02-01 17:30:00Z,Coliseum,Getafe CF,Celta,,0.0,0.0,La Liga
+211,22,2026-02-01 20:00:00Z,Estadio San Mamés,Athletic Club,Real Sociedad,,1.0,1.0,La Liga
+213,22,2026-02-02 20:00:00Z,Estadi Mallorca Son Moix,RCD Mallorca,Sevilla FC,,4.0,1.0,La Liga
+225,23,2026-02-06 20:00:00Z,Estadio ABANCA Balaídos,Celta,CA Osasuna,,1.0,2.0,La Liga
+224,23,2026-02-07 15:15:00Z,Spotify Camp Nou,FC Barcelona,RCD Mallorca,,3.0,0.0,La Liga
+226,23,2026-02-07 20:00:00Z,Anoeta,Real Sociedad,Elche CF,,3.0,1.0,La Liga
+221,23,2026-02-08 13:00:00Z,Mendizorroza,Deportivo Alavés,Getafe CF,,0.0,2.0,La Liga
+222,23,2026-02-08 15:15:00Z,Estadio San Mamés,Athletic Club,Levante UD,,4.0,2.0,La Liga
+228,23,2026-02-08 15:15:00Z,Ramón Sánchez-Pizjuán,Sevilla FC,Girona FC,,1.0,1.0,La Liga
+223,23,2026-02-08 17:30:00Z,Riyadh Air Metropolitano,Atlético de Madrid,Real Betis,,0.0,1.0,La Liga
+229,23,2026-02-08 20:00:00Z,Camp de Mestalla,Valencia CF,Real Madrid,,0.0,2.0,La Liga
+227,23,2026-02-09 20:00:00Z,Estadio de la Cerámica,Villarreal CF,RCD Espanyol de Barcelona,,4.0,1.0,La Liga
+230,23,2026-03-04 18:00:00Z,Estadio de Vallecas,Rayo Vallecano,Real Oviedo,,3.0,0.0,La Liga
+231,24,2026-02-13 20:00:00Z,Estadio Martínez Valero,Elche CF,CA Osasuna,,0.0,0.0,La Liga
+240,24,2026-02-14 13:00:00Z,RCDE Stadium,RCD Espanyol de Barcelona,Celta,,2.0,2.0,La Liga
+232,24,2026-02-14 15:15:00Z,Coliseum,Getafe CF,Villarreal CF,,2.0,1.0,La Liga
+235,24,2026-02-14 17:30:00Z,Ramón Sánchez-Pizjuán,Sevilla FC,Deportivo Alavés,,1.0,1.0,La Liga
+234,24,2026-02-14 20:00:00Z,Estadio Santiago Bernabéu,Real Madrid,Real Sociedad,,4.0,1.0,La Liga
+236,24,2026-02-15 13:00:00Z,Estadio Carlos Tartiere,Real Oviedo,Athletic Club,,1.0,2.0,La Liga
+237,24,2026-02-15 15:15:00Z,Estadio Ontime Butarque,Rayo Vallecano,Atlético de Madrid,,3.0,0.0,La Liga
+233,24,2026-02-15 17:30:00Z,Estadio Ciutat de València,Levante UD,Valencia CF,,0.0,2.0,La Liga
+239,24,2026-02-15 20:00:00Z,Estadi Mallorca Son Moix,RCD Mallorca,Real Betis,,1.0,2.0,La Liga
+238,24,2026-02-16 20:00:00Z,Estadio Municipal de Montilivi,Girona FC,FC Barcelona,,2.0,1.0,La Liga
+242,25,2026-02-20 20:00:00Z,Estadio San Mamés,Athletic Club,Elche CF,,2.0,1.0,La Liga
+250,25,2026-02-21 13:00:00Z,Anoeta,Real Sociedad,Real Oviedo,,3.0,3.0,La Liga
+245,25,2026-02-21 15:15:00Z,Estadio Olímpico de La Cartuja,Real Betis,Rayo Vallecano,,1.0,1.0,La Liga
+248,25,2026-02-21 17:30:00Z,Estadio El Sadar,CA Osasuna,Real Madrid,,2.0,1.0,La Liga
+243,25,2026-02-21 20:00:00Z,Riyadh Air Metropolitano,Atlético de Madrid,RCD Espanyol de Barcelona,,4.0,2.0,La Liga
+247,25,2026-02-22 13:00:00Z,Coliseum,Getafe CF,Sevilla FC,,0.0,1.0,La Liga
+244,25,2026-02-22 15:15:00Z,Spotify Camp Nou,FC Barcelona,Levante UD,,3.0,0.0,La Liga
+246,25,2026-02-22 17:30:00Z,Estadio ABANCA Balaídos,Celta,RCD Mallorca,,2.0,0.0,La Liga
+249,25,2026-02-22 20:00:00Z,Estadio de la Cerámica,Villarreal CF,Valencia CF,,2.0,1.0,La Liga
+241,25,2026-02-23 20:00:00Z,Mendizorroza,Deportivo Alavés,Girona FC,,2.0,2.0,La Liga
+255,26,2026-02-27 20:00:00Z,Estadio Ciutat de València,Levante UD,Deportivo Alavés,,2.0,0.0,La Liga
+256,26,2026-02-28 13:00:00Z,Estadio de Vallecas,Rayo Vallecano,Athletic Club,,1.0,1.0,La Liga
+251,26,2026-02-28 15:15:00Z,Spotify Camp Nou,FC Barcelona,Villarreal CF,,4.0,1.0,La Liga
+254,26,2026-02-28 17:30:00Z,Estadi Mallorca Son Moix,RCD Mallorca,Real Sociedad,,0.0,1.0,La Liga
+257,26,2026-02-28 20:00:00Z,Estadio Carlos Tartiere,Real Oviedo,Atlético de Madrid,,0.0,1.0,La Liga
+253,26,2026-03-01 13:00:00Z,Estadio Martínez Valero,Elche CF,RCD Espanyol de Barcelona,,2.0,2.0,La Liga
+260,26,2026-03-01 15:15:00Z,Camp de Mestalla,Valencia CF,CA Osasuna,,1.0,0.0,La Liga
+252,26,2026-03-01 17:30:00Z,Estadio Olímpico de La Cartuja,Real Betis,Sevilla FC,,2.0,2.0,La Liga
+258,26,2026-03-01 20:00:00Z,Estadio Municipal de Montilivi,Girona FC,Celta,,1.0,2.0,La Liga
+259,26,2026-03-02 20:00:00Z,Estadio Santiago Bernabéu,Real Madrid,Getafe CF,,0.0,1.0,La Liga
+263,27,2026-03-06 20:00:00Z,Estadio ABANCA Balaídos,Celta,Real Madrid,,1.0,2.0,La Liga
+269,27,2026-03-07 13:00:00Z,Estadio El Sadar,CA Osasuna,RCD Mallorca,,2.0,2.0,La Liga
+268,27,2026-03-07 15:15:00Z,Estadio Ciutat de València,Levante UD,Girona FC,,1.0,1.0,La Liga
+262,27,2026-03-07 17:30:00Z,Riyadh Air Metropolitano,Atlético de Madrid,Real Sociedad,,3.0,2.0,La Liga
+261,27,2026-03-07 20:00:00Z,Estadio San Mamés,Athletic Club,FC Barcelona,,0.0,1.0,La Liga
+267,27,2026-03-08 13:00:00Z,Estadio de la Cerámica,Villarreal CF,Elche CF,,2.0,1.0,La Liga
+266,27,2026-03-08 15:15:00Z,Coliseum,Getafe CF,Real Betis,,2.0,0.0,La Liga
+270,27,2026-03-08 17:30:00Z,Ramón Sánchez-Pizjuán,Sevilla FC,Rayo Vallecano,,1.0,1.0,La Liga
+265,27,2026-03-08 20:00:00Z,Camp de Mestalla,Valencia CF,Deportivo Alavés,,3.0,2.0,La Liga
+264,27,2026-03-09 20:00:00Z,RCDE Stadium,RCD Espanyol de Barcelona,Real Oviedo,,1.0,1.0,La Liga
+271,28,2026-03-13 20:00:00Z,Mendizorroza,Deportivo Alavés,Villarreal CF,,1.0,1.0,La Liga
+276,28,2026-03-14 13:00:00Z,Estadio Municipal de Montilivi,Girona FC,Athletic Club,,3.0,0.0,La Liga
+272,28,2026-03-14 15:15:00Z,Riyadh Air Metropolitano,Atlético de Madrid,Getafe CF,,1.0,0.0,La Liga
+275,28,2026-03-14 17:30:00Z,Estadio Carlos Tartiere,Real Oviedo,Valencia CF,,1.0,0.0,La Liga
+277,28,2026-03-14 20:00:00Z,Estadio Santiago Bernabéu,Real Madrid,Elche CF,,4.0,1.0,La Liga
+278,28,2026-03-15 13:00:00Z,Estadi Mallorca Son Moix,RCD Mallorca,RCD Espanyol de Barcelona,,2.0,1.0,La Liga
+273,28,2026-03-15 15:15:00Z,Spotify Camp Nou,FC Barcelona,Sevilla FC,,5.0,2.0,La Liga
+274,28,2026-03-15 17:30:00Z,Estadio Olímpico de La Cartuja,Real Betis,Celta,,1.0,1.0,La Liga
+280,28,2026-03-15 20:00:00Z,Anoeta,Real Sociedad,CA Osasuna,,3.0,1.0,La Liga
+279,28,2026-03-16 20:00:00Z,Estadio de Vallecas,Rayo Vallecano,Levante UD,,1.0,1.0,La Liga
+290,29,2026-03-20 20:00:00Z,Estadio de la Cerámica,Villarreal CF,Real Sociedad,,3.0,1.0,La Liga
+283,29,2026-03-21 13:00:00Z,Estadio Martínez Valero,Elche CF,RCD Mallorca,,2.0,1.0,La Liga
+284,29,2026-03-21 15:15:00Z,RCDE Stadium,RCD Espanyol de Barcelona,Getafe CF,,1.0,2.0,La Liga
+285,29,2026-03-21 17:30:00Z,Estadio Ciutat de València,Levante UD,Real Oviedo,,4.0,2.0,La Liga
+289,29,2026-03-21 17:30:00Z,Estadio El Sadar,CA Osasuna,Girona FC,,1.0,0.0,La Liga
+286,29,2026-03-21 20:00:00Z,Ramón Sánchez-Pizjuán,Sevilla FC,Valencia CF,,0.0,2.0,La Liga
+282,29,2026-03-22 13:00:00Z,Spotify Camp Nou,FC Barcelona,Rayo Vallecano,,1.0,0.0,La Liga
+287,29,2026-03-22 15:15:00Z,Estadio ABANCA Balaídos,Celta,Deportivo Alavés,,3.0,4.0,La Liga
+281,29,2026-03-22 17:30:00Z,Estadio San Mamés,Athletic Club,Real Betis,,2.0,1.0,La Liga
+288,29,2026-03-22 20:00:00Z,Estadio Santiago Bernabéu,Real Madrid,Atlético de Madrid,,3.0,2.0,La Liga
+299,30,2026-04-03 19:00:00Z,Estadio de Vallecas,Rayo Vallecano,Elche CF,,,,La Liga
+300,30,2026-04-04 12:00:00Z,Anoeta,Real Sociedad,Levante UD,,,,La Liga
+295,30,2026-04-04 14:15:00Z,Estadi Mallorca Son Moix,RCD Mallorca,Real Madrid,,,,La Liga
+293,30,2026-04-04 16:30:00Z,Estadio Olímpico de La Cartuja,Real Betis,RCD Espanyol de Barcelona,,,,La Liga
+292,30,2026-04-04 19:00:00Z,Riyadh Air Metropolitano,Atlético de Madrid,FC Barcelona,,,,La Liga
+297,30,2026-04-05 12:00:00Z,Coliseum,Getafe CF,Athletic Club,,,,La Liga
+298,30,2026-04-05 14:15:00Z,Camp de Mestalla,Valencia CF,Celta,,,,La Liga
+296,30,2026-04-05 16:30:00Z,Estadio Carlos Tartiere,Real Oviedo,Sevilla FC,,,,La Liga
+291,30,2026-04-05 19:00:00Z,Mendizorroza,Deportivo Alavés,CA Osasuna,,,,La Liga
+294,30,2026-04-06 19:00:00Z,Estadio Municipal de Montilivi,Girona FC,Villarreal CF,,,,La Liga
+310,31,2026-04-10 19:00:00Z,Estadio Santiago Bernabéu,Real Madrid,Girona FC,,,,La Liga
+306,31,2026-04-11 12:00:00Z,Anoeta,Real Sociedad,Deportivo Alavés,,,,La Liga
+304,31,2026-04-11 14:15:00Z,Estadio Martínez Valero,Elche CF,Valencia CF,,,,La Liga
+302,31,2026-04-11 16:30:00Z,Spotify Camp Nou,FC Barcelona,RCD Espanyol de Barcelona,,,,La Liga
+307,31,2026-04-11 19:00:00Z,Ramón Sánchez-Pizjuán,Sevilla FC,Atlético de Madrid,,,,La Liga
+308,31,2026-04-12 12:00:00Z,Estadio El Sadar,CA Osasuna,Real Betis,,,,La Liga
+305,31,2026-04-12 14:15:00Z,Estadi Mallorca Son Moix,RCD Mallorca,Rayo Vallecano,,,,La Liga
+303,31,2026-04-12 16:30:00Z,Estadio ABANCA Balaídos,Celta,Real Oviedo,,,,La Liga
+301,31,2026-04-12 19:00:00Z,Estadio San Mamés,Athletic Club,Villarreal CF,,,,La Liga
+309,31,2026-04-13 19:00:00Z,Estadio Ciutat de València,Levante UD,Getafe CF,,,,La Liga
+321,33,2026-04-22 19:00:00Z,Estadio San Mamés,Athletic Club,CA Osasuna,,,,La Liga
+322,33,2026-04-22 19:00:00Z,Spotify Camp Nou,FC Barcelona,Celta,,,,La Liga
+323,33,2026-04-22 19:00:00Z,Estadio Ciutat de València,Levante UD,Sevilla FC,,,,La Liga
+324,33,2026-04-22 19:00:00Z,Estadi Mallorca Son Moix,RCD Mallorca,Valencia CF,,,,La Liga
+325,33,2026-04-22 19:00:00Z,Estadio Carlos Tartiere,Real Oviedo,Villarreal CF,,,,La Liga
+326,33,2026-04-22 19:00:00Z,Estadio Santiago Bernabéu,Real Madrid,Deportivo Alavés,,,,La Liga
+327,33,2026-04-22 19:00:00Z,Estadio Martínez Valero,Elche CF,Atlético de Madrid,,,,La Liga
+328,33,2026-04-22 19:00:00Z,Estadio Municipal de Montilivi,Girona FC,Real Betis,,,,La Liga
+329,33,2026-04-22 19:00:00Z,Estadio de Vallecas,Rayo Vallecano,RCD Espanyol de Barcelona,,,,La Liga
+330,33,2026-04-22 19:00:00Z,Anoeta,Real Sociedad,Getafe CF,,,,La Liga
+311,32,2026-04-26 00:00:00Z,Mendizorroza,Deportivo Alavés,RCD Mallorca,,,,La Liga
+312,32,2026-04-26 00:00:00Z,Estadio Olímpico de La Cartuja,Real Betis,Real Madrid,,,,La Liga
+313,32,2026-04-26 00:00:00Z,RCDE Stadium,RCD Espanyol de Barcelona,Levante UD,,,,La Liga
+314,32,2026-04-26 00:00:00Z,Estadio El Sadar,CA Osasuna,Sevilla FC,,,,La Liga
+315,32,2026-04-26 00:00:00Z,Estadio de Vallecas,Rayo Vallecano,Real Sociedad,,,,La Liga
+316,32,2026-04-26 00:00:00Z,Riyadh Air Metropolitano,Atlético de Madrid,Athletic Club,,,,La Liga
+317,32,2026-04-26 00:00:00Z,Coliseum,Getafe CF,FC Barcelona,,,,La Liga
+318,32,2026-04-26 00:00:00Z,Estadio de la Cerámica,Villarreal CF,Celta,,,,La Liga
+319,32,2026-04-26 00:00:00Z,Estadio Carlos Tartiere,Real Oviedo,Elche CF,,,,La Liga
+320,32,2026-04-26 00:00:00Z,Camp de Mestalla,Valencia CF,Girona FC,,,,La Liga
+331,34,2026-05-03 19:00:00Z,Mendizorroza,Deportivo Alavés,Athletic Club,,,,La Liga
+332,34,2026-05-03 19:00:00Z,Estadio Olímpico de La Cartuja,Real Betis,Real Oviedo,,,,La Liga
+333,34,2026-05-03 19:00:00Z,Estadio ABANCA Balaídos,Celta,Elche CF,,,,La Liga
+334,34,2026-05-03 19:00:00Z,RCDE Stadium,RCD Espanyol de Barcelona,Real Madrid,,,,La Liga
+335,34,2026-05-03 19:00:00Z,Coliseum,Getafe CF,Rayo Vallecano,,,,La Liga
+336,34,2026-05-03 19:00:00Z,Estadio Municipal de Montilivi,Girona FC,RCD Mallorca,,,,La Liga
+337,34,2026-05-03 19:00:00Z,Camp de Mestalla,Valencia CF,Atlético de Madrid,,,,La Liga
+338,34,2026-05-03 19:00:00Z,Estadio El Sadar,CA Osasuna,FC Barcelona,,,,La Liga
+339,34,2026-05-03 19:00:00Z,Estadio de la Cerámica,Villarreal CF,Levante UD,,,,La Liga
+340,34,2026-05-03 19:00:00Z,Ramón Sánchez-Pizjuán,Sevilla FC,Real Sociedad,,,,La Liga
+341,35,2026-05-10 19:00:00Z,Estadio San Mamés,Athletic Club,Valencia CF,,,,La Liga
+342,35,2026-05-10 19:00:00Z,Riyadh Air Metropolitano,Atlético de Madrid,Celta,,,,La Liga
+343,35,2026-05-10 19:00:00Z,Spotify Camp Nou,FC Barcelona,Real Madrid,,,,La Liga
+344,35,2026-05-10 19:00:00Z,Estadio Ciutat de València,Levante UD,CA Osasuna,,,,La Liga
+345,35,2026-05-10 19:00:00Z,Estadi Mallorca Son Moix,RCD Mallorca,Villarreal CF,,,,La Liga
+346,35,2026-05-10 19:00:00Z,Estadio Martínez Valero,Elche CF,Deportivo Alavés,,,,La Liga
+347,35,2026-05-10 19:00:00Z,Anoeta,Real Sociedad,Real Betis,,,,La Liga
+348,35,2026-05-10 19:00:00Z,Ramón Sánchez-Pizjuán,Sevilla FC,RCD Espanyol de Barcelona,,,,La Liga
+349,35,2026-05-10 19:00:00Z,Estadio Carlos Tartiere,Real Oviedo,Getafe CF,,,,La Liga
+350,35,2026-05-10 19:00:00Z,Estadio de Vallecas,Rayo Vallecano,Girona FC,,,,La Liga
+351,36,2026-05-13 19:00:00Z,Mendizorroza,Deportivo Alavés,FC Barcelona,,,,La Liga
+352,36,2026-05-13 19:00:00Z,Estadio Olímpico de La Cartuja,Real Betis,Elche CF,,,,La Liga
+353,36,2026-05-13 19:00:00Z,Estadio ABANCA Balaídos,Celta,Levante UD,,,,La Liga
+354,36,2026-05-13 19:00:00Z,Coliseum,Getafe CF,RCD Mallorca,,,,La Liga
+355,36,2026-05-13 19:00:00Z,Estadio Municipal de Montilivi,Girona FC,Real Sociedad,,,,La Liga
+356,36,2026-05-13 19:00:00Z,RCDE Stadium,RCD Espanyol de Barcelona,Athletic Club,,,,La Liga
+357,36,2026-05-13 19:00:00Z,Estadio El Sadar,CA Osasuna,Atlético de Madrid,,,,La Liga
+358,36,2026-05-13 19:00:00Z,Camp de Mestalla,Valencia CF,Rayo Vallecano,,,,La Liga
+359,36,2026-05-13 19:00:00Z,Estadio de la Cerámica,Villarreal CF,Sevilla FC,,,,La Liga
+360,36,2026-05-13 19:00:00Z,Estadio Santiago Bernabéu,Real Madrid,Real Oviedo,,,,La Liga
+361,37,2026-05-17 19:00:00Z,Estadio San Mamés,Athletic Club,Celta,,,,La Liga
+362,37,2026-05-17 19:00:00Z,Riyadh Air Metropolitano,Atlético de Madrid,Girona FC,,,,La Liga
+363,37,2026-05-17 19:00:00Z,Spotify Camp Nou,FC Barcelona,Real Betis,,,,La Liga
+364,37,2026-05-17 19:00:00Z,Estadio Martínez Valero,Elche CF,Getafe CF,,,,La Liga
+365,37,2026-05-17 19:00:00Z,Estadio Ciutat de València,Levante UD,RCD Mallorca,,,,La Liga
+366,37,2026-05-17 19:00:00Z,Estadio de Vallecas,Rayo Vallecano,Villarreal CF,,,,La Liga
+367,37,2026-05-17 19:00:00Z,Anoeta,Real Sociedad,Valencia CF,,,,La Liga
+368,37,2026-05-17 19:00:00Z,Estadio Carlos Tartiere,Real Oviedo,Deportivo Alavés,,,,La Liga
+369,37,2026-05-17 19:00:00Z,Estadio El Sadar,CA Osasuna,RCD Espanyol de Barcelona,,,,La Liga
+370,37,2026-05-17 19:00:00Z,Ramón Sánchez-Pizjuán,Sevilla FC,Real Madrid,,,,La Liga
+371,38,2026-05-24 19:00:00Z,Mendizorroza,Deportivo Alavés,Rayo Vallecano,,,,La Liga
+372,38,2026-05-24 19:00:00Z,Estadio Olímpico de La Cartuja,Real Betis,Levante UD,,,,La Liga
+373,38,2026-05-24 19:00:00Z,Estadio ABANCA Balaídos,Celta,Sevilla FC,,,,La Liga
+374,38,2026-05-24 19:00:00Z,RCDE Stadium,RCD Espanyol de Barcelona,Real Sociedad,,,,La Liga
+375,38,2026-05-24 19:00:00Z,Coliseum,Getafe CF,CA Osasuna,,,,La Liga
+376,38,2026-05-24 19:00:00Z,Estadi Mallorca Son Moix,RCD Mallorca,Real Oviedo,,,,La Liga
+377,38,2026-05-24 19:00:00Z,Estadio Santiago Bernabéu,Real Madrid,Athletic Club,,,,La Liga
+378,38,2026-05-24 19:00:00Z,Estadio de la Cerámica,Villarreal CF,Atlético de Madrid,,,,La Liga
+379,38,2026-05-24 19:00:00Z,Camp de Mestalla,Valencia CF,FC Barcelona,,,,La Liga
+380,38,2026-05-24 19:00:00Z,Estadio Municipal de Montilivi,Girona FC,Elche CF,,,,La Liga
+1,1,2025-08-23 16:30:00Z,Luigi Ferraris,Genoa,Lecce,,0.0,0.0,Serie A
+2,1,2025-08-23 16:30:00Z,Mapei Stadium - Città del Tricolore,Sassuolo,Napoli,,0.0,2.0,Serie A
+3,1,2025-08-23 18:45:00Z,San Siro,Milan,Cremonese,,1.0,2.0,Serie A
+4,1,2025-08-23 18:45:00Z,Olimpico,Roma,Bologna,,1.0,0.0,Serie A
+5,1,2025-08-24 16:30:00Z,Unipol Domus,Cagliari,Fiorentina,,1.0,1.0,Serie A
+6,1,2025-08-24 16:30:00Z,Giuseppe Sinigaglia,Como,Lazio,,2.0,0.0,Serie A
+7,1,2025-08-24 18:45:00Z,Atleti Azzurri d'Italia,Atalanta,Pisa,,1.0,1.0,Serie A
+8,1,2025-08-24 18:45:00Z,Juventus Stadium,Juventus,Parma,,2.0,0.0,Serie A
+9,1,2025-08-25 16:30:00Z,Friuli,Udinese,Hellas Verona,,1.0,1.0,Serie A
+10,1,2025-08-25 18:45:00Z,San Siro,Inter,Torino,,5.0,0.0,Serie A
+11,2,2025-08-29 16:30:00Z,Giovanni Zini,Cremonese,Sassuolo,,3.0,2.0,Serie A
+12,2,2025-08-29 18:45:00Z,Ettore Giardiniero - Via del mare,Lecce,Milan,,0.0,2.0,Serie A
+13,2,2025-08-30 16:30:00Z,Renato Dall'Ara,Bologna,Como,,1.0,0.0,Serie A
+14,2,2025-08-30 16:30:00Z,Ennio Tardini,Parma,Atalanta,,1.0,1.0,Serie A
+15,2,2025-08-30 18:45:00Z,Diego Armando Maradona,Napoli,Cagliari,,1.0,0.0,Serie A
+16,2,2025-08-30 18:45:00Z,Garibaldi,Pisa,Roma,,0.0,1.0,Serie A
+17,2,2025-08-31 16:30:00Z,Luigi Ferraris,Genoa,Juventus,,0.0,1.0,Serie A
+18,2,2025-08-31 16:30:00Z,Olimpico Grande Torino,Torino,Fiorentina,,0.0,0.0,Serie A
+19,2,2025-08-31 18:45:00Z,San Siro,Inter,Udinese,,1.0,2.0,Serie A
+20,2,2025-08-31 18:45:00Z,Olimpico,Lazio,Hellas Verona,,4.0,0.0,Serie A
+21,3,2025-09-13 13:00:00Z,Unipol Domus,Cagliari,Parma,,2.0,0.0,Serie A
+22,3,2025-09-13 16:00:00Z,Juventus Stadium,Juventus,Inter,,4.0,3.0,Serie A
+23,3,2025-09-13 18:45:00Z,Artemio Franchi,Fiorentina,Napoli,,1.0,3.0,Serie A
+24,3,2025-09-14 10:30:00Z,Olimpico,Roma,Torino,,0.0,1.0,Serie A
+25,3,2025-09-14 13:00:00Z,Atleti Azzurri d'Italia,Atalanta,Lecce,,4.0,1.0,Serie A
+26,3,2025-09-14 13:00:00Z,Garibaldi,Pisa,Udinese,,0.0,1.0,Serie A
+27,3,2025-09-14 16:00:00Z,Mapei Stadium - Città del Tricolore,Sassuolo,Lazio,,1.0,0.0,Serie A
+28,3,2025-09-14 18:45:00Z,San Siro,Milan,Bologna,,1.0,0.0,Serie A
+29,3,2025-09-15 16:30:00Z,Marcantonio Bentegodi,Hellas Verona,Cremonese,,0.0,0.0,Serie A
+30,3,2025-09-15 18:45:00Z,Giuseppe Sinigaglia,Como,Genoa,,1.0,1.0,Serie A
+39,4,2025-09-19 18:45:00Z,Ettore Giardiniero - Via del mare,Lecce,Cagliari,,1.0,2.0,Serie A
+34,4,2025-09-20 13:00:00Z,Renato Dall'Ara,Bologna,Genoa,,2.0,1.0,Serie A
+33,4,2025-09-20 16:00:00Z,Marcantonio Bentegodi,Hellas Verona,Juventus,,1.0,1.0,Serie A
+32,4,2025-09-20 18:45:00Z,Friuli,Udinese,Milan,,0.0,3.0,Serie A
+38,4,2025-09-21 10:30:00Z,Olimpico,Lazio,Roma,,0.0,1.0,Serie A
+31,4,2025-09-21 13:00:00Z,Olimpico Grande Torino,Torino,Atalanta,,0.0,3.0,Serie A
+35,4,2025-09-21 13:00:00Z,Giovanni Zini,Cremonese,Parma,,0.0,0.0,Serie A
+36,4,2025-09-21 16:00:00Z,Artemio Franchi,Fiorentina,Como,,1.0,2.0,Serie A
+37,4,2025-09-21 18:45:00Z,San Siro,Inter,Sassuolo,,2.0,1.0,Serie A
+40,4,2025-09-22 18:45:00Z,Diego Armando Maradona,Napoli,Pisa,,3.0,2.0,Serie A
+42,5,2025-09-27 13:00:00Z,Giuseppe Sinigaglia,Como,Cremonese,,1.0,1.0,Serie A
+44,5,2025-09-27 16:00:00Z,Juventus Stadium,Juventus,Atalanta,,1.0,1.0,Serie A
+41,5,2025-09-27 18:45:00Z,Unipol Domus,Cagliari,Inter,,0.0,2.0,Serie A
+50,5,2025-09-28 10:30:00Z,Mapei Stadium - Città del Tricolore,Sassuolo,Udinese,,3.0,1.0,Serie A
+48,5,2025-09-28 13:00:00Z,Garibaldi,Pisa,Fiorentina,,0.0,0.0,Serie A
+49,5,2025-09-28 13:00:00Z,Olimpico,Roma,Hellas Verona,,2.0,0.0,Serie A
+45,5,2025-09-28 16:00:00Z,Ettore Giardiniero - Via del mare,Lecce,Bologna,,2.0,2.0,Serie A
+46,5,2025-09-28 18:45:00Z,San Siro,Milan,Napoli,,2.0,1.0,Serie A
+47,5,2025-09-29 16:30:00Z,Ennio Tardini,Parma,Torino,,2.0,1.0,Serie A
+43,5,2025-09-29 18:45:00Z,Luigi Ferraris,Genoa,Lazio,,0.0,3.0,Serie A
+60,6,2025-10-03 18:45:00Z,Marcantonio Bentegodi,Hellas Verona,Sassuolo,,0.0,1.0,Serie A
+56,6,2025-10-04 13:00:00Z,Olimpico,Lazio,Torino,,3.0,3.0,Serie A
+58,6,2025-10-04 13:00:00Z,Ennio Tardini,Parma,Lecce,,0.0,1.0,Serie A
+54,6,2025-10-04 16:00:00Z,San Siro,Inter,Cremonese,,4.0,1.0,Serie A
+51,6,2025-10-04 18:45:00Z,Atleti Azzurri d'Italia,Atalanta,Como,,1.0,1.0,Serie A
+59,6,2025-10-05 10:30:00Z,Friuli,Udinese,Cagliari,,1.0,1.0,Serie A
+52,6,2025-10-05 13:00:00Z,Renato Dall'Ara,Bologna,Pisa,,4.0,0.0,Serie A
+53,6,2025-10-05 13:00:00Z,Artemio Franchi,Fiorentina,Roma,,1.0,2.0,Serie A
+57,6,2025-10-05 16:00:00Z,Diego Armando Maradona,Napoli,Genoa,,2.0,1.0,Serie A
+55,6,2025-10-05 18:45:00Z,Juventus Stadium,Juventus,Milan,,0.0,0.0,Serie A
+66,7,2025-10-18 13:00:00Z,Ettore Giardiniero - Via del mare,Lecce,Sassuolo,,0.0,0.0,Serie A
+68,7,2025-10-18 13:00:00Z,Garibaldi,Pisa,Hellas Verona,,0.0,0.0,Serie A
+70,7,2025-10-18 16:00:00Z,Olimpico Grande Torino,Torino,Napoli,,1.0,0.0,Serie A
+69,7,2025-10-18 18:45:00Z,Olimpico,Roma,Inter,,0.0,1.0,Serie A
+63,7,2025-10-19 10:30:00Z,Giuseppe Sinigaglia,Como,Juventus,,2.0,0.0,Serie A
+62,7,2025-10-19 13:00:00Z,Unipol Domus,Cagliari,Bologna,,0.0,2.0,Serie A
+65,7,2025-10-19 13:00:00Z,Luigi Ferraris,Genoa,Parma,,0.0,0.0,Serie A
+61,7,2025-10-19 16:00:00Z,Atleti Azzurri d'Italia,Atalanta,Lazio,,0.0,0.0,Serie A
+67,7,2025-10-19 18:45:00Z,San Siro,Milan,Fiorentina,,2.0,1.0,Serie A
+64,7,2025-10-20 18:45:00Z,Giovanni Zini,Cremonese,Udinese,,1.0,1.0,Serie A
+76,8,2025-10-24 18:45:00Z,San Siro,Milan,Pisa,,2.0,2.0,Serie A
+71,8,2025-10-25 13:00:00Z,Friuli,Udinese,Lecce,,3.0,2.0,Serie A
+78,8,2025-10-25 13:00:00Z,Ennio Tardini,Parma,Como,,0.0,0.0,Serie A
+77,8,2025-10-25 16:00:00Z,Diego Armando Maradona,Napoli,Inter,,3.0,1.0,Serie A
+73,8,2025-10-25 18:45:00Z,Giovanni Zini,Cremonese,Atalanta,,1.0,1.0,Serie A
+80,8,2025-10-26 11:30:00Z,Olimpico Grande Torino,Torino,Genoa,,2.0,1.0,Serie A
+72,8,2025-10-26 14:00:00Z,Marcantonio Bentegodi,Hellas Verona,Cagliari,,2.0,2.0,Serie A
+79,8,2025-10-26 14:00:00Z,Mapei Stadium - Città del Tricolore,Sassuolo,Roma,,0.0,1.0,Serie A
+74,8,2025-10-26 17:00:00Z,Artemio Franchi,Fiorentina,Bologna,,2.0,2.0,Serie A
+75,8,2025-10-26 19:45:00Z,Olimpico,Lazio,Juventus,,1.0,0.0,Serie A
+88,9,2025-10-28 17:30:00Z,Ettore Giardiniero - Via del mare,Lecce,Napoli,,0.0,1.0,Serie A
+81,9,2025-10-28 19:45:00Z,Atleti Azzurri d'Italia,Atalanta,Milan,,1.0,1.0,Serie A
+84,9,2025-10-29 17:30:00Z,Giuseppe Sinigaglia,Como,Hellas Verona,,3.0,1.0,Serie A
+87,9,2025-10-29 17:30:00Z,Juventus Stadium,Juventus,Udinese,,3.0,1.0,Serie A
+90,9,2025-10-29 17:30:00Z,Olimpico,Roma,Parma,,2.0,1.0,Serie A
+82,9,2025-10-29 19:45:00Z,Renato Dall'Ara,Bologna,Torino,,0.0,0.0,Serie A
+85,9,2025-10-29 19:45:00Z,Luigi Ferraris,Genoa,Cremonese,,0.0,2.0,Serie A
+86,9,2025-10-29 19:45:00Z,San Siro,Inter,Fiorentina,,3.0,0.0,Serie A
+83,9,2025-10-30 17:30:00Z,Unipol Domus,Cagliari,Sassuolo,,1.0,2.0,Serie A
+89,9,2025-10-30 19:45:00Z,Garibaldi,Pisa,Lazio,,0.0,0.0,Serie A
+99,10,2025-11-01 14:00:00Z,Friuli,Udinese,Atalanta,,1.0,0.0,Serie A
+95,10,2025-11-01 17:00:00Z,Diego Armando Maradona,Napoli,Como,,0.0,0.0,Serie A
+91,10,2025-11-01 19:45:00Z,Giovanni Zini,Cremonese,Juventus,,1.0,2.0,Serie A
+100,10,2025-11-02 11:30:00Z,Marcantonio Bentegodi,Hellas Verona,Inter,,1.0,2.0,Serie A
+92,10,2025-11-02 14:00:00Z,Artemio Franchi,Fiorentina,Lecce,,0.0,1.0,Serie A
+98,10,2025-11-02 14:00:00Z,Olimpico Grande Torino,Torino,Pisa,,2.0,2.0,Serie A
+96,10,2025-11-02 17:00:00Z,Ennio Tardini,Parma,Bologna,,1.0,3.0,Serie A
+94,10,2025-11-02 19:45:00Z,San Siro,Milan,Roma,,1.0,0.0,Serie A
+97,10,2025-11-03 17:30:00Z,Mapei Stadium - Città del Tricolore,Sassuolo,Genoa,,1.0,2.0,Serie A
+93,10,2025-11-03 19:45:00Z,Olimpico,Lazio,Cagliari,,2.0,0.0,Serie A
+109,11,2025-11-07 19:45:00Z,Garibaldi,Pisa,Cremonese,,1.0,0.0,Serie A
+103,11,2025-11-08 14:00:00Z,Giuseppe Sinigaglia,Como,Cagliari,,0.0,0.0,Serie A
+107,11,2025-11-08 14:00:00Z,Ettore Giardiniero - Via del mare,Lecce,Hellas Verona,,0.0,0.0,Serie A
+106,11,2025-11-08 17:00:00Z,Juventus Stadium,Juventus,Torino,,0.0,0.0,Serie A
+108,11,2025-11-08 19:45:00Z,Ennio Tardini,Parma,Milan,,2.0,2.0,Serie A
+101,11,2025-11-09 11:30:00Z,Atleti Azzurri d'Italia,Atalanta,Sassuolo,,0.0,3.0,Serie A
+102,11,2025-11-09 14:00:00Z,Renato Dall'Ara,Bologna,Napoli,,2.0,0.0,Serie A
+104,11,2025-11-09 14:00:00Z,Luigi Ferraris,Genoa,Fiorentina,,2.0,2.0,Serie A
+110,11,2025-11-09 17:00:00Z,Olimpico,Roma,Udinese,,2.0,0.0,Serie A
+105,11,2025-11-09 19:45:00Z,San Siro,Inter,Lazio,,2.0,0.0,Serie A
+112,12,2025-11-22 14:00:00Z,Unipol Domus,Cagliari,Genoa,,3.0,3.0,Serie A
+120,12,2025-11-22 14:00:00Z,Friuli,Udinese,Bologna,,0.0,3.0,Serie A
+114,12,2025-11-22 17:00:00Z,Artemio Franchi,Fiorentina,Juventus,,1.0,1.0,Serie A
+117,12,2025-11-22 19:45:00Z,Diego Armando Maradona,Napoli,Atalanta,,3.0,1.0,Serie A
+111,12,2025-11-23 11:30:00Z,Marcantonio Bentegodi,Hellas Verona,Parma,,1.0,2.0,Serie A
+113,12,2025-11-23 14:00:00Z,Giovanni Zini,Cremonese,Roma,,1.0,3.0,Serie A
+116,12,2025-11-23 17:00:00Z,Olimpico,Lazio,Lecce,,2.0,0.0,Serie A
+115,12,2025-11-23 19:45:00Z,San Siro,Inter,Milan,,0.0,1.0,Serie A
+119,12,2025-11-24 17:30:00Z,Olimpico Grande Torino,Torino,Como,,1.0,5.0,Serie A
+118,12,2025-11-24 19:45:00Z,Mapei Stadium - Città del Tricolore,Sassuolo,Pisa,,2.0,2.0,Serie A
+123,13,2025-11-28 19:45:00Z,Giuseppe Sinigaglia,Como,Sassuolo,,2.0,0.0,Serie A
+124,13,2025-11-29 14:00:00Z,Luigi Ferraris,Genoa,Hellas Verona,,2.0,1.0,Serie A
+128,13,2025-11-29 14:00:00Z,Ennio Tardini,Parma,Udinese,,0.0,2.0,Serie A
+125,13,2025-11-29 17:00:00Z,Juventus Stadium,Juventus,Cagliari,,2.0,1.0,Serie A
+127,13,2025-11-29 19:45:00Z,San Siro,Milan,Lazio,,1.0,0.0,Serie A
+126,13,2025-11-30 11:30:00Z,Ettore Giardiniero - Via del mare,Lecce,Torino,,2.0,1.0,Serie A
+129,13,2025-11-30 14:00:00Z,Garibaldi,Pisa,Inter,,0.0,2.0,Serie A
+121,13,2025-11-30 17:00:00Z,Atleti Azzurri d'Italia,Atalanta,Fiorentina,,2.0,0.0,Serie A
+130,13,2025-11-30 19:45:00Z,Olimpico,Roma,Napoli,,0.0,1.0,Serie A
+122,13,2025-12-01 19:45:00Z,Renato Dall'Ara,Bologna,Cremonese,,1.0,3.0,Serie A
+137,14,2025-12-06 14:00:00Z,Mapei Stadium - Città del Tricolore,Sassuolo,Fiorentina,,3.0,1.0,Serie A
+133,14,2025-12-06 17:00:00Z,San Siro,Inter,Como,,4.0,0.0,Serie A
+140,14,2025-12-06 19:45:00Z,Marcantonio Bentegodi,Hellas Verona,Atalanta,,3.0,1.0,Serie A
+132,14,2025-12-07 11:30:00Z,Giovanni Zini,Cremonese,Lecce,,2.0,0.0,Serie A
+131,14,2025-12-07 14:00:00Z,Unipol Domus,Cagliari,Roma,,1.0,0.0,Serie A
+134,14,2025-12-07 17:00:00Z,Olimpico,Lazio,Bologna,,1.0,1.0,Serie A
+135,14,2025-12-07 19:45:00Z,Diego Armando Maradona,Napoli,Juventus,,2.0,1.0,Serie A
+136,14,2025-12-08 14:00:00Z,Garibaldi,Pisa,Parma,,0.0,1.0,Serie A
+139,14,2025-12-08 17:00:00Z,Friuli,Udinese,Genoa,,1.0,2.0,Serie A
+138,14,2025-12-08 19:45:00Z,Olimpico Grande Torino,Torino,Milan,,2.0,3.0,Serie A
+145,15,2025-12-12 19:45:00Z,Ettore Giardiniero - Via del mare,Lecce,Pisa,,1.0,0.0,Serie A
+149,15,2025-12-13 14:00:00Z,Olimpico Grande Torino,Torino,Cremonese,,1.0,0.0,Serie A
+147,15,2025-12-13 17:00:00Z,Ennio Tardini,Parma,Lazio,,0.0,1.0,Serie A
+141,15,2025-12-13 19:45:00Z,Atleti Azzurri d'Italia,Atalanta,Cagliari,,2.0,1.0,Serie A
+146,15,2025-12-14 11:30:00Z,San Siro,Milan,Sassuolo,,2.0,2.0,Serie A
+143,15,2025-12-14 14:00:00Z,Artemio Franchi,Fiorentina,Hellas Verona,,1.0,2.0,Serie A
+150,15,2025-12-14 14:00:00Z,Friuli,Udinese,Napoli,,1.0,0.0,Serie A
+144,15,2025-12-14 17:00:00Z,Luigi Ferraris,Genoa,Inter,,1.0,2.0,Serie A
+142,15,2025-12-14 19:45:00Z,Renato Dall'Ara,Bologna,Juventus,,0.0,1.0,Serie A
+148,15,2025-12-15 19:45:00Z,Olimpico,Roma,Como,,1.0,0.0,Serie A
+157,16,2025-12-20 17:00:00Z,Olimpico,Lazio,Cremonese,,0.0,0.0,Serie A
+156,16,2025-12-20 19:45:00Z,Juventus Stadium,Juventus,Roma,,2.0,1.0,Serie A
+151,16,2025-12-21 11:30:00Z,Unipol Domus,Cagliari,Pisa,,2.0,2.0,Serie A
+159,16,2025-12-21 14:00:00Z,Mapei Stadium - Città del Tricolore,Sassuolo,Torino,,0.0,1.0,Serie A
+153,16,2025-12-21 17:00:00Z,Artemio Franchi,Fiorentina,Udinese,,5.0,1.0,Serie A
+154,16,2025-12-21 19:45:00Z,Luigi Ferraris,Genoa,Atalanta,,0.0,1.0,Serie A
+158,16,2026-01-14 17:30:00Z,Diego Armando Maradona,Napoli,Parma,,0.0,0.0,Serie A
+155,16,2026-01-14 19:45:00Z,San Siro,Inter,Lecce,,1.0,0.0,Serie A
+160,16,2026-01-15 17:30:00Z,Marcantonio Bentegodi,Hellas Verona,Bologna,,2.0,3.0,Serie A
+152,16,2026-01-15 19:45:00Z,Giuseppe Sinigaglia,Como,Milan,,1.0,3.0,Serie A
+165,17,2025-12-27 11:30:00Z,Ennio Tardini,Parma,Fiorentina,,1.0,0.0,Serie A
+163,17,2025-12-27 14:00:00Z,Ettore Giardiniero - Via del mare,Lecce,Como,,0.0,3.0,Serie A
+168,17,2025-12-27 14:00:00Z,Olimpico Grande Torino,Torino,Cagliari,,1.0,2.0,Serie A
+169,17,2025-12-27 17:00:00Z,Friuli,Udinese,Lazio,,1.0,1.0,Serie A
+166,17,2025-12-27 19:45:00Z,Garibaldi,Pisa,Juventus,,0.0,2.0,Serie A
+164,17,2025-12-28 11:30:00Z,San Siro,Milan,Hellas Verona,,3.0,0.0,Serie A
+162,17,2025-12-28 14:00:00Z,Giovanni Zini,Cremonese,Napoli,,0.0,2.0,Serie A
+161,17,2025-12-28 17:00:00Z,Renato Dall'Ara,Bologna,Sassuolo,,1.0,1.0,Serie A
+170,17,2025-12-28 19:45:00Z,Atleti Azzurri d'Italia,Atalanta,Inter,,0.0,1.0,Serie A
+167,17,2025-12-29 19:45:00Z,Olimpico,Roma,Genoa,,3.0,1.0,Serie A
+172,18,2026-01-02 19:45:00Z,Unipol Domus,Cagliari,Milan,,0.0,1.0,Serie A
+173,18,2026-01-03 11:30:00Z,Giuseppe Sinigaglia,Como,Udinese,,1.0,0.0,Serie A
+175,18,2026-01-03 14:00:00Z,Luigi Ferraris,Genoa,Pisa,,1.0,1.0,Serie A
+179,18,2026-01-03 14:00:00Z,Mapei Stadium - Città del Tricolore,Sassuolo,Parma,,1.0,1.0,Serie A
+177,18,2026-01-03 17:00:00Z,Juventus Stadium,Juventus,Lecce,,1.0,1.0,Serie A
+171,18,2026-01-03 19:45:00Z,Atleti Azzurri d'Italia,Atalanta,Roma,,1.0,0.0,Serie A
+178,18,2026-01-04 11:30:00Z,Olimpico,Lazio,Napoli,,0.0,2.0,Serie A
+174,18,2026-01-04 14:00:00Z,Artemio Franchi,Fiorentina,Cremonese,,1.0,0.0,Serie A
+180,18,2026-01-04 17:00:00Z,Marcantonio Bentegodi,Hellas Verona,Torino,,0.0,3.0,Serie A
+176,18,2026-01-04 19:45:00Z,San Siro,Inter,Bologna,,3.0,1.0,Serie A
+188,19,2026-01-06 14:00:00Z,Garibaldi,Pisa,Como,,0.0,3.0,Serie A
+184,19,2026-01-06 17:00:00Z,Ettore Giardiniero - Via del mare,Lecce,Roma,,0.0,2.0,Serie A
+189,19,2026-01-06 19:45:00Z,Mapei Stadium - Città del Tricolore,Sassuolo,Juventus,,0.0,3.0,Serie A
+181,19,2026-01-07 17:30:00Z,Renato Dall'Ara,Bologna,Atalanta,,0.0,2.0,Serie A
+186,19,2026-01-07 17:30:00Z,Diego Armando Maradona,Napoli,Hellas Verona,,2.0,2.0,Serie A
+183,19,2026-01-07 19:45:00Z,Olimpico,Lazio,Fiorentina,,2.0,2.0,Serie A
+187,19,2026-01-07 19:45:00Z,Ennio Tardini,Parma,Inter,,0.0,2.0,Serie A
+190,19,2026-01-07 19:45:00Z,Olimpico Grande Torino,Torino,Udinese,,1.0,2.0,Serie A
+182,19,2026-01-08 17:30:00Z,Giovanni Zini,Cremonese,Cagliari,,2.0,2.0,Serie A
+185,19,2026-01-08 19:45:00Z,San Siro,Milan,Genoa,,1.0,1.0,Serie A
+192,20,2026-01-10 14:00:00Z,Giuseppe Sinigaglia,Como,Bologna,,1.0,1.0,Serie A
+199,20,2026-01-10 14:00:00Z,Friuli,Udinese,Pisa,,2.0,2.0,Serie A
+198,20,2026-01-10 17:00:00Z,Olimpico,Roma,Sassuolo,,2.0,0.0,Serie A
+191,20,2026-01-10 19:45:00Z,Atleti Azzurri d'Italia,Atalanta,Torino,,2.0,0.0,Serie A
+197,20,2026-01-11 11:30:00Z,Ettore Giardiniero - Via del mare,Lecce,Parma,,1.0,2.0,Serie A
+193,20,2026-01-11 14:00:00Z,Artemio Franchi,Fiorentina,Milan,,1.0,1.0,Serie A
+200,20,2026-01-11 17:00:00Z,Marcantonio Bentegodi,Hellas Verona,Lazio,,0.0,1.0,Serie A
+195,20,2026-01-11 19:45:00Z,San Siro,Inter,Napoli,,2.0,2.0,Serie A
+194,20,2026-01-12 17:30:00Z,Luigi Ferraris,Genoa,Cagliari,,3.0,0.0,Serie A
+196,20,2026-01-12 19:45:00Z,Juventus Stadium,Juventus,Cremonese,,5.0,0.0,Serie A
+206,21,2026-01-16 19:45:00Z,Garibaldi,Pisa,Atalanta,,1.0,1.0,Serie A
+208,21,2026-01-17 14:00:00Z,Friuli,Udinese,Inter,,0.0,1.0,Serie A
+204,21,2026-01-17 17:00:00Z,Diego Armando Maradona,Napoli,Sassuolo,,1.0,0.0,Serie A
+210,21,2026-01-17 19:45:00Z,Unipol Domus,Cagliari,Juventus,,1.0,0.0,Serie A
+205,21,2026-01-18 11:30:00Z,Ennio Tardini,Parma,Genoa,,0.0,0.0,Serie A
+209,21,2026-01-18 14:00:00Z,Renato Dall'Ara,Bologna,Fiorentina,,1.0,2.0,Serie A
+207,21,2026-01-18 17:00:00Z,Olimpico Grande Torino,Torino,Roma,,0.0,2.0,Serie A
+203,21,2026-01-18 19:45:00Z,San Siro,Milan,Lecce,,1.0,0.0,Serie A
+201,21,2026-01-19 17:30:00Z,Giovanni Zini,Cremonese,Hellas Verona,,0.0,0.0,Serie A
+202,21,2026-01-19 19:45:00Z,Olimpico,Lazio,Como,,0.0,3.0,Serie A
+215,22,2026-01-23 19:45:00Z,San Siro,Inter,Pisa,,6.0,2.0,Serie A
+212,22,2026-01-24 14:00:00Z,Giuseppe Sinigaglia,Como,Torino,,6.0,0.0,Serie A
+213,22,2026-01-24 17:00:00Z,Artemio Franchi,Fiorentina,Cagliari,,1.0,2.0,Serie A
+217,22,2026-01-24 19:45:00Z,Ettore Giardiniero - Via del mare,Lecce,Lazio,,0.0,0.0,Serie A
+219,22,2026-01-25 11:30:00Z,Mapei Stadium - Città del Tricolore,Sassuolo,Cremonese,,1.0,0.0,Serie A
+211,22,2026-01-25 14:00:00Z,Atleti Azzurri d'Italia,Atalanta,Parma,,4.0,0.0,Serie A
+214,22,2026-01-25 14:00:00Z,Luigi Ferraris,Genoa,Bologna,,3.0,2.0,Serie A
+216,22,2026-01-25 17:00:00Z,Juventus Stadium,Juventus,Napoli,,3.0,0.0,Serie A
+218,22,2026-01-25 19:45:00Z,Olimpico,Roma,Milan,,1.0,1.0,Serie A
+220,22,2026-01-26 19:45:00Z,Marcantonio Bentegodi,Hellas Verona,Udinese,,1.0,3.0,Serie A
+225,23,2026-01-30 19:45:00Z,Olimpico,Lazio,Genoa,,3.0,2.0,Serie A
+228,23,2026-01-31 14:00:00Z,Garibaldi,Pisa,Sassuolo,,1.0,3.0,Serie A
+226,23,2026-01-31 17:00:00Z,Diego Armando Maradona,Napoli,Fiorentina,,2.0,1.0,Serie A
+222,23,2026-01-31 19:45:00Z,Unipol Domus,Cagliari,Hellas Verona,,4.0,0.0,Serie A
+229,23,2026-02-01 11:30:00Z,Olimpico Grande Torino,Torino,Lecce,,1.0,0.0,Serie A
+223,23,2026-02-01 14:00:00Z,Giuseppe Sinigaglia,Como,Atalanta,,0.0,0.0,Serie A
+224,23,2026-02-01 17:00:00Z,Giovanni Zini,Cremonese,Inter,,0.0,2.0,Serie A
+227,23,2026-02-01 19:45:00Z,Ennio Tardini,Parma,Juventus,,1.0,4.0,Serie A
+230,23,2026-02-02 19:45:00Z,Friuli,Udinese,Roma,,1.0,0.0,Serie A
+221,23,2026-02-03 19:45:00Z,Renato Dall'Ara,Bologna,Milan,,0.0,3.0,Serie A
+231,24,2026-02-06 19:45:00Z,Marcantonio Bentegodi,Hellas Verona,Pisa,,0.0,0.0,Serie A
+237,24,2026-02-07 17:00:00Z,Luigi Ferraris,Genoa,Napoli,,2.0,3.0,Serie A
+236,24,2026-02-07 19:45:00Z,Artemio Franchi,Fiorentina,Torino,,2.0,2.0,Serie A
+235,24,2026-02-08 11:30:00Z,Renato Dall'Ara,Bologna,Parma,,0.0,1.0,Serie A
+239,24,2026-02-08 14:00:00Z,Ettore Giardiniero - Via del mare,Lecce,Udinese,,2.0,1.0,Serie A
+232,24,2026-02-08 17:00:00Z,Mapei Stadium - Città del Tricolore,Sassuolo,Inter,,0.0,5.0,Serie A
+238,24,2026-02-08 19:45:00Z,Juventus Stadium,Juventus,Lazio,,2.0,2.0,Serie A
+234,24,2026-02-09 17:30:00Z,Atleti Azzurri d'Italia,Atalanta,Cremonese,,2.0,1.0,Serie A
+233,24,2026-02-09 19:45:00Z,Olimpico,Roma,Cagliari,,2.0,0.0,Serie A
+240,24,2026-02-18 19:45:00Z,San Siro,Milan,Como,,1.0,1.0,Serie A
+248,25,2026-02-13 19:45:00Z,Garibaldi,Pisa,Milan,,1.0,2.0,Serie A
+242,25,2026-02-14 14:00:00Z,Giuseppe Sinigaglia,Como,Fiorentina,,1.0,2.0,Serie A
+245,25,2026-02-14 17:00:00Z,Olimpico,Lazio,Atalanta,,0.0,2.0,Serie A
+244,25,2026-02-14 19:45:00Z,San Siro,Inter,Juventus,,3.0,2.0,Serie A
+250,25,2026-02-15 11:30:00Z,Friuli,Udinese,Sassuolo,,1.0,2.0,Serie A
+243,25,2026-02-15 14:00:00Z,Giovanni Zini,Cremonese,Genoa,,0.0,0.0,Serie A
+247,25,2026-02-15 14:00:00Z,Ennio Tardini,Parma,Hellas Verona,,2.0,1.0,Serie A
+249,25,2026-02-15 17:00:00Z,Olimpico Grande Torino,Torino,Bologna,,1.0,2.0,Serie A
+246,25,2026-02-15 19:45:00Z,Diego Armando Maradona,Napoli,Roma,,2.0,2.0,Serie A
+241,25,2026-02-16 19:45:00Z,Unipol Domus,Cagliari,Lecce,,0.0,2.0,Serie A
+260,26,2026-02-20 19:45:00Z,Mapei Stadium - Città del Tricolore,Sassuolo,Hellas Verona,,3.0,0.0,Serie A
+256,26,2026-02-21 14:00:00Z,Juventus Stadium,Juventus,Como,,0.0,2.0,Serie A
+257,26,2026-02-21 17:00:00Z,Ettore Giardiniero - Via del mare,Lecce,Inter,,0.0,2.0,Serie A
+253,26,2026-02-21 19:45:00Z,Unipol Domus,Cagliari,Lazio,,0.0,0.0,Serie A
+255,26,2026-02-22 11:30:00Z,Luigi Ferraris,Genoa,Torino,,3.0,0.0,Serie A
+251,26,2026-02-22 14:00:00Z,Atleti Azzurri d'Italia,Atalanta,Napoli,,2.0,1.0,Serie A
+258,26,2026-02-22 17:00:00Z,San Siro,Milan,Parma,,0.0,1.0,Serie A
+259,26,2026-02-22 19:45:00Z,Olimpico,Roma,Cremonese,,3.0,0.0,Serie A
+254,26,2026-02-23 17:30:00Z,Artemio Franchi,Fiorentina,Pisa,,1.0,0.0,Serie A
+252,26,2026-02-23 19:45:00Z,Renato Dall'Ara,Bologna,Udinese,,1.0,0.0,Serie A
+263,27,2026-02-27 19:45:00Z,Ennio Tardini,Parma,Cagliari,,1.0,1.0,Serie A
+270,27,2026-02-28 14:00:00Z,Giuseppe Sinigaglia,Como,Lecce,,3.0,1.0,Serie A
+266,27,2026-02-28 17:00:00Z,Marcantonio Bentegodi,Hellas Verona,Napoli,,1.0,2.0,Serie A
+262,27,2026-02-28 19:45:00Z,San Siro,Inter,Genoa,,2.0,0.0,Serie A
+261,27,2026-03-01 11:30:00Z,Giovanni Zini,Cremonese,Milan,,0.0,2.0,Serie A
+269,27,2026-03-01 14:00:00Z,Mapei Stadium - Città del Tricolore,Sassuolo,Atalanta,,2.0,1.0,Serie A
+268,27,2026-03-01 17:00:00Z,Olimpico Grande Torino,Torino,Lazio,,2.0,0.0,Serie A
+265,27,2026-03-01 19:45:00Z,Olimpico,Roma,Juventus,,3.0,3.0,Serie A
+264,27,2026-03-02 17:30:00Z,Garibaldi,Pisa,Bologna,,0.0,1.0,Serie A
+267,27,2026-03-02 19:45:00Z,Friuli,Udinese,Fiorentina,,3.0,0.0,Serie A
+271,28,2026-03-06 19:45:00Z,Diego Armando Maradona,Napoli,Torino,,2.0,1.0,Serie A
+273,28,2026-03-07 14:00:00Z,Unipol Domus,Cagliari,Como,,1.0,2.0,Serie A
+272,28,2026-03-07 17:00:00Z,Atleti Azzurri d'Italia,Atalanta,Udinese,,2.0,2.0,Serie A
+276,28,2026-03-07 19:45:00Z,Juventus Stadium,Juventus,Pisa,,4.0,0.0,Serie A
+278,28,2026-03-08 11:30:00Z,Ettore Giardiniero - Via del mare,Lecce,Cremonese,,2.0,1.0,Serie A
+274,28,2026-03-08 14:00:00Z,Artemio Franchi,Fiorentina,Parma,,0.0,0.0,Serie A
+280,28,2026-03-08 14:00:00Z,Renato Dall'Ara,Bologna,Hellas Verona,,1.0,2.0,Serie A
+275,28,2026-03-08 17:00:00Z,Luigi Ferraris,Genoa,Roma,,2.0,1.0,Serie A
+279,28,2026-03-08 19:45:00Z,San Siro,Milan,Inter,,1.0,0.0,Serie A
+277,28,2026-03-09 19:45:00Z,Olimpico,Lazio,Sassuolo,,2.0,1.0,Serie A
+288,29,2026-03-13 19:45:00Z,Olimpico Grande Torino,Torino,Parma,,4.0,1.0,Serie A
+283,29,2026-03-14 14:00:00Z,San Siro,Inter,Atalanta,,1.0,1.0,Serie A
+285,29,2026-03-14 17:00:00Z,Diego Armando Maradona,Napoli,Lecce,,2.0,1.0,Serie A
+289,29,2026-03-14 19:45:00Z,Friuli,Udinese,Juventus,,0.0,1.0,Serie A
+290,29,2026-03-15 11:30:00Z,Marcantonio Bentegodi,Hellas Verona,Genoa,,0.0,2.0,Serie A
+286,29,2026-03-15 14:00:00Z,Garibaldi,Pisa,Cagliari,,3.0,1.0,Serie A
+287,29,2026-03-15 14:00:00Z,Mapei Stadium - Città del Tricolore,Sassuolo,Bologna,,0.0,1.0,Serie A
+281,29,2026-03-15 17:00:00Z,Giuseppe Sinigaglia,Como,Roma,,2.0,1.0,Serie A
+284,29,2026-03-15 19:45:00Z,Olimpico,Lazio,Milan,,1.0,0.0,Serie A
+282,29,2026-03-16 19:45:00Z,Giovanni Zini,Cremonese,Fiorentina,,1.0,4.0,Serie A
+293,30,2026-03-20 17:30:00Z,Unipol Domus,Cagliari,Napoli,,0.0,1.0,Serie A
+296,30,2026-03-20 19:45:00Z,Luigi Ferraris,Genoa,Udinese,,0.0,2.0,Serie A
+299,30,2026-03-21 14:00:00Z,Ennio Tardini,Parma,Cremonese,,0.0,2.0,Serie A
+298,30,2026-03-21 17:00:00Z,San Siro,Milan,Torino,,3.0,2.0,Serie A
+297,30,2026-03-21 19:45:00Z,Juventus Stadium,Juventus,Sassuolo,,1.0,1.0,Serie A
+294,30,2026-03-22 11:30:00Z,Giuseppe Sinigaglia,Como,Pisa,,5.0,0.0,Serie A
+291,30,2026-03-22 14:00:00Z,Atleti Azzurri d'Italia,Atalanta,Hellas Verona,,1.0,0.0,Serie A
+292,30,2026-03-22 14:00:00Z,Renato Dall'Ara,Bologna,Lazio,,0.0,2.0,Serie A
+300,30,2026-03-22 17:00:00Z,Olimpico,Roma,Lecce,,1.0,0.0,Serie A
+295,30,2026-03-22 19:45:00Z,Artemio Franchi,Fiorentina,Inter,,1.0,1.0,Serie A
+308,31,2026-04-04 13:00:00Z,Mapei Stadium - Città del Tricolore,Sassuolo,Cagliari,,,,Serie A
+310,31,2026-04-04 16:00:00Z,Marcantonio Bentegodi,Hellas Verona,Fiorentina,,,,Serie A
+304,31,2026-04-04 18:45:00Z,Olimpico,Lazio,Parma,,,,Serie A
+301,31,2026-04-05 13:00:00Z,Giovanni Zini,Cremonese,Bologna,,,,Serie A
+307,31,2026-04-05 16:00:00Z,Garibaldi,Pisa,Torino,,,,Serie A
+302,31,2026-04-05 18:45:00Z,San Siro,Inter,Roma,,,,Serie A
+309,31,2026-04-06 10:30:00Z,Friuli,Udinese,Como,,,,Serie A
+305,31,2026-04-06 13:00:00Z,Ettore Giardiniero - Via del mare,Lecce,Atalanta,,,,Serie A
+303,31,2026-04-06 16:00:00Z,Juventus Stadium,Juventus,Genoa,,,,Serie A
+306,31,2026-04-06 18:45:00Z,Diego Armando Maradona,Napoli,Milan,,,,Serie A
+319,32,2026-04-10 18:45:00Z,Olimpico,Roma,Pisa,,,,Serie A
+313,32,2026-04-11 13:00:00Z,Unipol Domus,Cagliari,Cremonese,,,,Serie A
+320,32,2026-04-11 13:00:00Z,Olimpico Grande Torino,Torino,Hellas Verona,,,,Serie A
+317,32,2026-04-11 16:00:00Z,San Siro,Milan,Udinese,,,,Serie A
+311,32,2026-04-11 18:45:00Z,Atleti Azzurri d'Italia,Atalanta,Juventus,,,,Serie A
+316,32,2026-04-12 10:30:00Z,Luigi Ferraris,Genoa,Sassuolo,,,,Serie A
+318,32,2026-04-12 13:00:00Z,Ennio Tardini,Parma,Napoli,,,,Serie A
+312,32,2026-04-12 16:00:00Z,Renato Dall'Ara,Bologna,Lecce,,,,Serie A
+314,32,2026-04-12 18:45:00Z,Giuseppe Sinigaglia,Como,Inter,,,,Serie A
+315,32,2026-04-13 18:45:00Z,Artemio Franchi,Fiorentina,Lazio,,,,Serie A
+327,33,2026-04-17 16:30:00Z,Mapei Stadium - Città del Tricolore,Sassuolo,Como,,,,Serie A
+321,33,2026-04-17 18:45:00Z,San Siro,Inter,Cagliari,,,,Serie A
+328,33,2026-04-18 13:00:00Z,Friuli,Udinese,Parma,,,,Serie A
+324,33,2026-04-18 16:00:00Z,Diego Armando Maradona,Napoli,Lazio,,,,Serie A
+326,33,2026-04-18 18:45:00Z,Olimpico,Roma,Atalanta,,,,Serie A
+330,33,2026-04-19 10:30:00Z,Giovanni Zini,Cremonese,Torino,,,,Serie A
+329,33,2026-04-19 13:00:00Z,Marcantonio Bentegodi,Hellas Verona,Milan,,,,Serie A
+325,33,2026-04-19 16:00:00Z,Garibaldi,Pisa,Genoa,,,,Serie A
+322,33,2026-04-19 18:45:00Z,Juventus Stadium,Juventus,Bologna,,,,Serie A
+323,33,2026-04-20 18:45:00Z,Ettore Giardiniero - Via del mare,Lecce,Fiorentina,,,,Serie A
+337,34,2026-04-24 18:45:00Z,Diego Armando Maradona,Napoli,Cremonese,,,,Serie A
+338,34,2026-04-25 13:00:00Z,Ennio Tardini,Parma,Pisa,,,,Serie A
+331,34,2026-04-25 16:00:00Z,Renato Dall'Ara,Bologna,Roma,,,,Serie A
+340,34,2026-04-25 18:45:00Z,Marcantonio Bentegodi,Hellas Verona,Lecce,,,,Serie A
+333,34,2026-04-26 10:30:00Z,Artemio Franchi,Fiorentina,Sassuolo,,,,Serie A
+334,34,2026-04-26 13:00:00Z,Luigi Ferraris,Genoa,Como,,,,Serie A
+339,34,2026-04-26 16:00:00Z,Olimpico Grande Torino,Torino,Inter,,,,Serie A
+336,34,2026-04-26 18:45:00Z,San Siro,Milan,Juventus,,,,Serie A
+332,34,2026-04-27 16:30:00Z,Unipol Domus,Cagliari,Atalanta,,,,Serie A
+335,34,2026-04-27 18:45:00Z,Olimpico,Lazio,Udinese,,,,Serie A
+341,35,2026-05-03 13:00:00Z,Atleti Azzurri d'Italia,Atalanta,Genoa,,,,Serie A
+342,35,2026-05-03 13:00:00Z,Renato Dall'Ara,Bologna,Cagliari,,,,Serie A
+343,35,2026-05-03 13:00:00Z,Giuseppe Sinigaglia,Como,Napoli,,,,Serie A
+344,35,2026-05-03 13:00:00Z,Giovanni Zini,Cremonese,Lazio,,,,Serie A
+345,35,2026-05-03 13:00:00Z,San Siro,Inter,Parma,,,,Serie A
+346,35,2026-05-03 13:00:00Z,Juventus Stadium,Juventus,Hellas Verona,,,,Serie A
+347,35,2026-05-03 13:00:00Z,Garibaldi,Pisa,Lecce,,,,Serie A
+348,35,2026-05-03 13:00:00Z,Olimpico,Roma,Fiorentina,,,,Serie A
+349,35,2026-05-03 13:00:00Z,Mapei Stadium - Città del Tricolore,Sassuolo,Milan,,,,Serie A
+350,35,2026-05-03 13:00:00Z,Friuli,Udinese,Torino,,,,Serie A
+351,36,2026-05-10 13:00:00Z,Marcantonio Bentegodi,Hellas Verona,Como,,,,Serie A
+352,36,2026-05-10 13:00:00Z,Unipol Domus,Cagliari,Udinese,,,,Serie A
+353,36,2026-05-10 13:00:00Z,Giovanni Zini,Cremonese,Pisa,,,,Serie A
+354,36,2026-05-10 13:00:00Z,Artemio Franchi,Fiorentina,Genoa,,,,Serie A
+355,36,2026-05-10 13:00:00Z,Olimpico,Lazio,Inter,,,,Serie A
+356,36,2026-05-10 13:00:00Z,Ettore Giardiniero - Via del mare,Lecce,Juventus,,,,Serie A
+357,36,2026-05-10 13:00:00Z,San Siro,Milan,Atalanta,,,,Serie A
+358,36,2026-05-10 13:00:00Z,Diego Armando Maradona,Napoli,Bologna,,,,Serie A
+359,36,2026-05-10 13:00:00Z,Ennio Tardini,Parma,Roma,,,,Serie A
+360,36,2026-05-10 13:00:00Z,Olimpico Grande Torino,Torino,Sassuolo,,,,Serie A
+361,37,2026-05-17 13:00:00Z,Atleti Azzurri d'Italia,Atalanta,Bologna,,,,Serie A
+362,37,2026-05-17 13:00:00Z,Unipol Domus,Cagliari,Torino,,,,Serie A
+363,37,2026-05-17 13:00:00Z,Giuseppe Sinigaglia,Como,Parma,,,,Serie A
+364,37,2026-05-17 13:00:00Z,Luigi Ferraris,Genoa,Milan,,,,Serie A
+365,37,2026-05-17 13:00:00Z,San Siro,Inter,Hellas Verona,,,,Serie A
+366,37,2026-05-17 13:00:00Z,Juventus Stadium,Juventus,Fiorentina,,,,Serie A
+367,37,2026-05-17 13:00:00Z,Garibaldi,Pisa,Napoli,,,,Serie A
+368,37,2026-05-17 13:00:00Z,Olimpico,Roma,Lazio,,,,Serie A
+369,37,2026-05-17 13:00:00Z,Mapei Stadium - Città del Tricolore,Sassuolo,Lecce,,,,Serie A
+370,37,2026-05-17 13:00:00Z,Friuli,Udinese,Cremonese,,,,Serie A
+371,38,2026-05-24 13:00:00Z,Renato Dall'Ara,Bologna,Inter,,,,Serie A
+372,38,2026-05-24 13:00:00Z,Giovanni Zini,Cremonese,Como,,,,Serie A
+373,38,2026-05-24 13:00:00Z,Artemio Franchi,Fiorentina,Atalanta,,,,Serie A
+374,38,2026-05-24 13:00:00Z,Olimpico,Lazio,Pisa,,,,Serie A
+375,38,2026-05-24 13:00:00Z,Ettore Giardiniero - Via del mare,Lecce,Genoa,,,,Serie A
+376,38,2026-05-24 13:00:00Z,San Siro,Milan,Cagliari,,,,Serie A
+377,38,2026-05-24 13:00:00Z,Diego Armando Maradona,Napoli,Udinese,,,,Serie A
+378,38,2026-05-24 13:00:00Z,Ennio Tardini,Parma,Sassuolo,,,,Serie A
+379,38,2026-05-24 13:00:00Z,Olimpico Grande Torino,Torino,Juventus,,,,Serie A
+380,38,2026-05-24 13:00:00Z,Marcantonio Bentegodi,Hellas Verona,Roma,,,,Serie A
+1,1,2025-08-22 18:30:00Z,Allianz Arena,FC Bayern München,RB Leipzig,,6.0,0.0,Bundesliga
+2,1,2025-08-23 13:30:00Z,Voith-Arena,1. FC Heidenheim 1846,VfL Wolfsburg,,1.0,3.0,Bundesliga
+4,1,2025-08-23 13:30:00Z,An der Alten Försterei,1. FC Union Berlin,VfB Stuttgart,,2.0,1.0,Bundesliga
+7,1,2025-08-23 13:30:00Z,Europa-Park Stadion,Sport-Club Freiburg,FC Augsburg,,1.0,3.0,Bundesliga
+8,1,2025-08-23 13:30:00Z,Deutsche Bank Park,Eintracht Frankfurt,SV Werder Bremen,,4.0,1.0,Bundesliga
+9,1,2025-08-23 13:30:00Z,BayArena,Bayer 04 Leverkusen,TSG Hoffenheim,,1.0,2.0,Bundesliga
+3,1,2025-08-23 16:30:00Z,Millerntor-Stadion,FC St. Pauli,Borussia Dortmund,,3.0,3.0,Bundesliga
+6,1,2025-08-24 13:30:00Z,Mewa Arena,1. FSV Mainz 05,1. FC Köln,,0.0,1.0,Bundesliga
+5,1,2025-08-24 15:30:00Z,Borussia-Park,Borussia Mönchengladbach,Hamburger SV,,0.0,0.0,Bundesliga
+10,2,2025-08-29 18:30:00Z,Volksparkstadion,Hamburger SV,FC St. Pauli,,0.0,2.0,Bundesliga
+12,2,2025-08-30 13:30:00Z,PreZero Arena,TSG Hoffenheim,Eintracht Frankfurt,,1.0,3.0,Bundesliga
+15,2,2025-08-30 13:30:00Z,MHPArena,VfB Stuttgart,Borussia Mönchengladbach,,1.0,0.0,Bundesliga
+16,2,2025-08-30 13:30:00Z,Weserstadion,SV Werder Bremen,Bayer 04 Leverkusen,,3.0,3.0,Bundesliga
+17,2,2025-08-30 13:30:00Z,Red Bull Arena,RB Leipzig,1. FC Heidenheim 1846,,2.0,0.0,Bundesliga
+13,2,2025-08-30 16:30:00Z,WWK Arena,FC Augsburg,FC Bayern München,,2.0,3.0,Bundesliga
+14,2,2025-08-31 13:30:00Z,Volkswagen Arena,VfL Wolfsburg,1. FSV Mainz 05,,1.0,1.0,Bundesliga
+18,2,2025-08-31 15:30:00Z,Signal Iduna Park,Borussia Dortmund,1. FC Union Berlin,,3.0,0.0,Bundesliga
+11,2,2025-08-31 17:30:00Z,RheinEnergieStadion,1. FC Köln,Sport-Club Freiburg,,4.0,1.0,Bundesliga
+26,3,2025-09-12 18:30:00Z,BayArena,Bayer 04 Leverkusen,Eintracht Frankfurt,,3.0,1.0,Bundesliga
+19,3,2025-09-13 13:30:00Z,Voith-Arena,1. FC Heidenheim 1846,Borussia Dortmund,,0.0,2.0,Bundesliga
+21,3,2025-09-13 13:30:00Z,An der Alten Försterei,1. FC Union Berlin,TSG Hoffenheim,,2.0,4.0,Bundesliga
+22,3,2025-09-13 13:30:00Z,Volkswagen Arena,VfL Wolfsburg,1. FC Köln,,3.0,3.0,Bundesliga
+24,3,2025-09-13 13:30:00Z,Mewa Arena,1. FSV Mainz 05,RB Leipzig,,0.0,1.0,Bundesliga
+25,3,2025-09-13 13:30:00Z,Europa-Park Stadion,Sport-Club Freiburg,VfB Stuttgart,,3.0,1.0,Bundesliga
+27,3,2025-09-13 16:30:00Z,Allianz Arena,FC Bayern München,Hamburger SV,,5.0,0.0,Bundesliga
+20,3,2025-09-14 13:30:00Z,Millerntor-Stadion,FC St. Pauli,FC Augsburg,,2.0,1.0,Bundesliga
+23,3,2025-09-14 15:30:00Z,Borussia-Park,Borussia Mönchengladbach,SV Werder Bremen,,0.0,4.0,Bundesliga
+31,4,2025-09-19 18:30:00Z,MHPArena,VfB Stuttgart,FC St. Pauli,,2.0,0.0,Bundesliga
+28,4,2025-09-20 13:30:00Z,Volksparkstadion,Hamburger SV,1. FC Heidenheim 1846,,2.0,1.0,Bundesliga
+29,4,2025-09-20 13:30:00Z,PreZero Arena,TSG Hoffenheim,FC Bayern München,,1.0,4.0,Bundesliga
+30,4,2025-09-20 13:30:00Z,WWK Arena,FC Augsburg,1. FSV Mainz 05,,1.0,4.0,Bundesliga
+32,4,2025-09-20 13:30:00Z,Weserstadion,SV Werder Bremen,Sport-Club Freiburg,,0.0,3.0,Bundesliga
+33,4,2025-09-20 16:30:00Z,Red Bull Arena,RB Leipzig,1. FC Köln,,3.0,1.0,Bundesliga
+35,4,2025-09-21 13:30:00Z,Deutsche Bank Park,Eintracht Frankfurt,1. FC Union Berlin,,3.0,4.0,Bundesliga
+36,4,2025-09-21 15:30:00Z,BayArena,Bayer 04 Leverkusen,Borussia Mönchengladbach,,1.0,1.0,Bundesliga
+34,4,2025-09-21 17:30:00Z,Signal Iduna Park,Borussia Dortmund,VfL Wolfsburg,,1.0,0.0,Bundesliga
+45,5,2025-09-26 18:30:00Z,Allianz Arena,FC Bayern München,SV Werder Bremen,,4.0,0.0,Bundesliga
+38,5,2025-09-27 13:30:00Z,Voith-Arena,1. FC Heidenheim 1846,FC Augsburg,,2.0,1.0,Bundesliga
+39,5,2025-09-27 13:30:00Z,Millerntor-Stadion,FC St. Pauli,Bayer 04 Leverkusen,,1.0,2.0,Bundesliga
+41,5,2025-09-27 13:30:00Z,Volkswagen Arena,VfL Wolfsburg,RB Leipzig,,0.0,1.0,Bundesliga
+43,5,2025-09-27 13:30:00Z,Mewa Arena,1. FSV Mainz 05,Borussia Dortmund,,0.0,2.0,Bundesliga
+42,5,2025-09-27 16:30:00Z,Borussia-Park,Borussia Mönchengladbach,Eintracht Frankfurt,,4.0,6.0,Bundesliga
+44,5,2025-09-28 13:30:00Z,Europa-Park Stadion,Sport-Club Freiburg,TSG Hoffenheim,,1.0,1.0,Bundesliga
+37,5,2025-09-28 15:30:00Z,RheinEnergieStadion,1. FC Köln,VfB Stuttgart,,1.0,2.0,Bundesliga
+40,5,2025-09-28 17:30:00Z,An der Alten Försterei,1. FC Union Berlin,Hamburger SV,,0.0,0.0,Bundesliga
+47,6,2025-10-03 18:30:00Z,PreZero Arena,TSG Hoffenheim,1. FC Köln,,0.0,1.0,Bundesliga
+48,6,2025-10-04 13:30:00Z,WWK Arena,FC Augsburg,VfL Wolfsburg,,3.0,1.0,Bundesliga
+51,6,2025-10-04 13:30:00Z,Weserstadion,SV Werder Bremen,FC St. Pauli,,1.0,0.0,Bundesliga
+52,6,2025-10-04 13:30:00Z,Signal Iduna Park,Borussia Dortmund,RB Leipzig,,1.0,1.0,Bundesliga
+54,6,2025-10-04 13:30:00Z,BayArena,Bayer 04 Leverkusen,1. FC Union Berlin,,2.0,0.0,Bundesliga
+53,6,2025-10-04 16:30:00Z,Deutsche Bank Park,Eintracht Frankfurt,FC Bayern München,,0.0,3.0,Bundesliga
+50,6,2025-10-05 13:30:00Z,MHPArena,VfB Stuttgart,1. FC Heidenheim 1846,,1.0,0.0,Bundesliga
+46,6,2025-10-05 15:30:00Z,Volksparkstadion,Hamburger SV,1. FSV Mainz 05,,4.0,0.0,Bundesliga
+49,6,2025-10-05 17:30:00Z,Borussia-Park,Borussia Mönchengladbach,Sport-Club Freiburg,,0.0,0.0,Bundesliga
+58,7,2025-10-17 18:30:00Z,An der Alten Försterei,1. FC Union Berlin,Borussia Mönchengladbach,,3.0,1.0,Bundesliga
+55,7,2025-10-18 13:30:00Z,RheinEnergieStadion,1. FC Köln,FC Augsburg,,1.0,1.0,Bundesliga
+56,7,2025-10-18 13:30:00Z,Voith-Arena,1. FC Heidenheim 1846,SV Werder Bremen,,2.0,2.0,Bundesliga
+59,7,2025-10-18 13:30:00Z,Volkswagen Arena,VfL Wolfsburg,VfB Stuttgart,,0.0,3.0,Bundesliga
+60,7,2025-10-18 13:30:00Z,Red Bull Arena,RB Leipzig,Hamburger SV,,2.0,1.0,Bundesliga
+61,7,2025-10-18 13:30:00Z,Mewa Arena,1. FSV Mainz 05,Bayer 04 Leverkusen,,3.0,4.0,Bundesliga
+63,7,2025-10-18 16:30:00Z,Allianz Arena,FC Bayern München,Borussia Dortmund,,2.0,1.0,Bundesliga
+62,7,2025-10-19 13:30:00Z,Europa-Park Stadion,Sport-Club Freiburg,Eintracht Frankfurt,,2.0,2.0,Bundesliga
+57,7,2025-10-19 15:30:00Z,Millerntor-Stadion,FC St. Pauli,TSG Hoffenheim,,0.0,3.0,Bundesliga
+69,8,2025-10-24 18:30:00Z,Weserstadion,SV Werder Bremen,1. FC Union Berlin,,1.0,0.0,Bundesliga
+64,8,2025-10-25 13:30:00Z,Volksparkstadion,Hamburger SV,VfL Wolfsburg,,0.0,1.0,Bundesliga
+65,8,2025-10-25 13:30:00Z,PreZero Arena,TSG Hoffenheim,1. FC Heidenheim 1846,,3.0,1.0,Bundesliga
+66,8,2025-10-25 13:30:00Z,WWK Arena,FC Augsburg,RB Leipzig,,0.0,6.0,Bundesliga
+67,8,2025-10-25 13:30:00Z,Borussia-Park,Borussia Mönchengladbach,FC Bayern München,,0.0,3.0,Bundesliga
+71,8,2025-10-25 13:30:00Z,Deutsche Bank Park,Eintracht Frankfurt,FC St. Pauli,,2.0,0.0,Bundesliga
+70,8,2025-10-25 16:30:00Z,Signal Iduna Park,Borussia Dortmund,1. FC Köln,,1.0,0.0,Bundesliga
+72,8,2025-10-26 14:30:00Z,BayArena,Bayer 04 Leverkusen,Sport-Club Freiburg,,2.0,0.0,Bundesliga
+68,8,2025-10-26 16:30:00Z,MHPArena,VfB Stuttgart,1. FSV Mainz 05,,2.0,1.0,Bundesliga
+77,9,2025-10-31 19:30:00Z,WWK Arena,FC Augsburg,Borussia Dortmund,,0.0,1.0,Bundesliga
+74,9,2025-11-01 14:30:00Z,Voith-Arena,1. FC Heidenheim 1846,Eintracht Frankfurt,,1.0,1.0,Bundesliga
+75,9,2025-11-01 14:30:00Z,Millerntor-Stadion,FC St. Pauli,Borussia Mönchengladbach,,0.0,4.0,Bundesliga
+76,9,2025-11-01 14:30:00Z,An der Alten Försterei,1. FC Union Berlin,Sport-Club Freiburg,,0.0,0.0,Bundesliga
+79,9,2025-11-01 14:30:00Z,Red Bull Arena,RB Leipzig,VfB Stuttgart,,3.0,1.0,Bundesliga
+80,9,2025-11-01 14:30:00Z,Mewa Arena,1. FSV Mainz 05,SV Werder Bremen,,1.0,1.0,Bundesliga
+81,9,2025-11-01 17:30:00Z,Allianz Arena,FC Bayern München,Bayer 04 Leverkusen,,3.0,0.0,Bundesliga
+73,9,2025-11-02 14:30:00Z,RheinEnergieStadion,1. FC Köln,Hamburger SV,,4.0,1.0,Bundesliga
+78,9,2025-11-02 16:30:00Z,Volkswagen Arena,VfL Wolfsburg,TSG Hoffenheim,,2.0,3.0,Bundesliga
+87,10,2025-11-07 19:30:00Z,Weserstadion,SV Werder Bremen,VfL Wolfsburg,,2.0,1.0,Bundesliga
+82,10,2025-11-08 14:30:00Z,Volksparkstadion,Hamburger SV,Borussia Dortmund,,1.0,1.0,Bundesliga
+83,10,2025-11-08 14:30:00Z,PreZero Arena,TSG Hoffenheim,RB Leipzig,,3.0,1.0,Bundesliga
+84,10,2025-11-08 14:30:00Z,An der Alten Försterei,1. FC Union Berlin,FC Bayern München,,2.0,2.0,Bundesliga
+90,10,2025-11-08 14:30:00Z,BayArena,Bayer 04 Leverkusen,1. FC Heidenheim 1846,,6.0,0.0,Bundesliga
+85,10,2025-11-08 17:30:00Z,Borussia-Park,Borussia Mönchengladbach,1. FC Köln,,3.0,1.0,Bundesliga
+88,10,2025-11-09 14:30:00Z,Europa-Park Stadion,Sport-Club Freiburg,FC St. Pauli,,2.0,1.0,Bundesliga
+86,10,2025-11-09 16:30:00Z,MHPArena,VfB Stuttgart,FC Augsburg,,3.0,2.0,Bundesliga
+89,10,2025-11-09 18:30:00Z,Deutsche Bank Park,Eintracht Frankfurt,1. FSV Mainz 05,,1.0,0.0,Bundesliga
+97,11,2025-11-21 19:30:00Z,Mewa Arena,1. FSV Mainz 05,TSG Hoffenheim,,1.0,1.0,Bundesliga
+92,11,2025-11-22 14:30:00Z,Voith-Arena,1. FC Heidenheim 1846,Borussia Mönchengladbach,,0.0,3.0,Bundesliga
+94,11,2025-11-22 14:30:00Z,WWK Arena,FC Augsburg,Hamburger SV,,1.0,0.0,Bundesliga
+95,11,2025-11-22 14:30:00Z,Volkswagen Arena,VfL Wolfsburg,Bayer 04 Leverkusen,,1.0,3.0,Bundesliga
+98,11,2025-11-22 14:30:00Z,Signal Iduna Park,Borussia Dortmund,VfB Stuttgart,,3.0,3.0,Bundesliga
+99,11,2025-11-22 14:30:00Z,Allianz Arena,FC Bayern München,Sport-Club Freiburg,,6.0,2.0,Bundesliga
+91,11,2025-11-22 17:30:00Z,RheinEnergieStadion,1. FC Köln,Eintracht Frankfurt,,3.0,4.0,Bundesliga
+96,11,2025-11-23 14:30:00Z,Red Bull Arena,RB Leipzig,SV Werder Bremen,,2.0,0.0,Bundesliga
+93,11,2025-11-23 16:30:00Z,Millerntor-Stadion,FC St. Pauli,1. FC Union Berlin,,0.0,1.0,Bundesliga
+103,12,2025-11-28 19:30:00Z,Borussia-Park,Borussia Mönchengladbach,RB Leipzig,,0.0,0.0,Bundesliga
+101,12,2025-11-29 14:30:00Z,PreZero Arena,TSG Hoffenheim,FC Augsburg,,3.0,0.0,Bundesliga
+102,12,2025-11-29 14:30:00Z,An der Alten Försterei,1. FC Union Berlin,1. FC Heidenheim 1846,,1.0,2.0,Bundesliga
+104,12,2025-11-29 14:30:00Z,Weserstadion,SV Werder Bremen,1. FC Köln,,1.0,1.0,Bundesliga
+108,12,2025-11-29 14:30:00Z,Allianz Arena,FC Bayern München,FC St. Pauli,,3.0,1.0,Bundesliga
+107,12,2025-11-29 17:30:00Z,BayArena,Bayer 04 Leverkusen,Borussia Dortmund,,1.0,2.0,Bundesliga
+100,12,2025-11-30 14:30:00Z,Volksparkstadion,Hamburger SV,VfB Stuttgart,,2.0,1.0,Bundesliga
+106,12,2025-11-30 16:30:00Z,Deutsche Bank Park,Eintracht Frankfurt,VfL Wolfsburg,,1.0,1.0,Bundesliga
+105,12,2025-11-30 18:30:00Z,Europa-Park Stadion,Sport-Club Freiburg,1. FSV Mainz 05,,4.0,0.0,Bundesliga
+116,13,2025-12-05 19:30:00Z,Mewa Arena,1. FSV Mainz 05,Borussia Mönchengladbach,,0.0,1.0,Bundesliga
+110,13,2025-12-06 14:30:00Z,RheinEnergieStadion,1. FC Köln,FC St. Pauli,,1.0,1.0,Bundesliga
+111,13,2025-12-06 14:30:00Z,Voith-Arena,1. FC Heidenheim 1846,Sport-Club Freiburg,,2.0,1.0,Bundesliga
+112,13,2025-12-06 14:30:00Z,WWK Arena,FC Augsburg,Bayer 04 Leverkusen,,2.0,0.0,Bundesliga
+113,13,2025-12-06 14:30:00Z,Volkswagen Arena,VfL Wolfsburg,1. FC Union Berlin,,3.0,1.0,Bundesliga
+114,13,2025-12-06 14:30:00Z,MHPArena,VfB Stuttgart,FC Bayern München,,0.0,5.0,Bundesliga
+115,13,2025-12-06 17:30:00Z,Red Bull Arena,RB Leipzig,Eintracht Frankfurt,,6.0,0.0,Bundesliga
+109,13,2025-12-07 14:30:00Z,Volksparkstadion,Hamburger SV,SV Werder Bremen,,3.0,2.0,Bundesliga
+117,13,2025-12-07 16:30:00Z,Signal Iduna Park,Borussia Dortmund,TSG Hoffenheim,,2.0,0.0,Bundesliga
+120,14,2025-12-12 19:30:00Z,An der Alten Försterei,1. FC Union Berlin,RB Leipzig,,3.0,1.0,Bundesliga
+118,14,2025-12-13 14:30:00Z,PreZero Arena,TSG Hoffenheim,Hamburger SV,,4.0,1.0,Bundesliga
+119,14,2025-12-13 14:30:00Z,Millerntor-Stadion,FC St. Pauli,1. FC Heidenheim 1846,,2.0,1.0,Bundesliga
+121,14,2025-12-13 14:30:00Z,Borussia-Park,Borussia Mönchengladbach,VfL Wolfsburg,,1.0,3.0,Bundesliga
+124,14,2025-12-13 14:30:00Z,Deutsche Bank Park,Eintracht Frankfurt,FC Augsburg,,1.0,0.0,Bundesliga
+125,14,2025-12-13 17:30:00Z,BayArena,Bayer 04 Leverkusen,1. FC Köln,,2.0,0.0,Bundesliga
+123,14,2025-12-14 14:30:00Z,Europa-Park Stadion,Sport-Club Freiburg,Borussia Dortmund,,1.0,1.0,Bundesliga
+126,14,2025-12-14 16:30:00Z,Allianz Arena,FC Bayern München,1. FSV Mainz 05,,2.0,2.0,Bundesliga
+122,14,2025-12-14 18:30:00Z,Weserstadion,SV Werder Bremen,VfB Stuttgart,,0.0,4.0,Bundesliga
+135,15,2025-12-19 19:30:00Z,Signal Iduna Park,Borussia Dortmund,Borussia Mönchengladbach,,2.0,0.0,Bundesliga
+127,15,2025-12-20 14:30:00Z,Volksparkstadion,Hamburger SV,Eintracht Frankfurt,,1.0,1.0,Bundesliga
+128,15,2025-12-20 14:30:00Z,RheinEnergieStadion,1. FC Köln,1. FC Union Berlin,,0.0,1.0,Bundesliga
+130,15,2025-12-20 14:30:00Z,WWK Arena,FC Augsburg,SV Werder Bremen,,0.0,0.0,Bundesliga
+131,15,2025-12-20 14:30:00Z,Volkswagen Arena,VfL Wolfsburg,Sport-Club Freiburg,,3.0,4.0,Bundesliga
+132,15,2025-12-20 14:30:00Z,MHPArena,VfB Stuttgart,TSG Hoffenheim,,0.0,0.0,Bundesliga
+133,15,2025-12-20 17:30:00Z,Red Bull Arena,RB Leipzig,Bayer 04 Leverkusen,,1.0,3.0,Bundesliga
+134,15,2025-12-21 14:30:00Z,Mewa Arena,1. FSV Mainz 05,FC St. Pauli,,0.0,0.0,Bundesliga
+129,15,2025-12-21 16:30:00Z,Voith-Arena,1. FC Heidenheim 1846,FC Bayern München,,0.0,4.0,Bundesliga
+142,16,2026-01-09 19:30:00Z,Deutsche Bank Park,Eintracht Frankfurt,Borussia Dortmund,,3.0,3.0,Bundesliga
+136,16,2026-01-10 14:30:00Z,Voith-Arena,1. FC Heidenheim 1846,1. FC Köln,,2.0,2.0,Bundesliga
+138,16,2026-01-10 14:30:00Z,An der Alten Försterei,1. FC Union Berlin,1. FSV Mainz 05,,2.0,2.0,Bundesliga
+141,16,2026-01-10 14:30:00Z,Europa-Park Stadion,Sport-Club Freiburg,Hamburger SV,,2.0,1.0,Bundesliga
+143,16,2026-01-10 17:30:00Z,BayArena,Bayer 04 Leverkusen,VfB Stuttgart,,1.0,4.0,Bundesliga
+139,16,2026-01-11 14:30:00Z,Borussia-Park,Borussia Mönchengladbach,FC Augsburg,,4.0,0.0,Bundesliga
+144,16,2026-01-11 16:30:00Z,Allianz Arena,FC Bayern München,VfL Wolfsburg,,8.0,1.0,Bundesliga
+137,16,2026-01-27 19:30:00Z,Millerntor-Stadion,FC St. Pauli,RB Leipzig,,1.0,1.0,Bundesliga
+140,16,2026-01-27 19:30:00Z,Weserstadion,SV Werder Bremen,TSG Hoffenheim,,0.0,2.0,Bundesliga
+150,17,2026-01-13 17:30:00Z,MHPArena,VfB Stuttgart,Eintracht Frankfurt,,3.0,2.0,Bundesliga
+152,17,2026-01-13 19:30:00Z,Mewa Arena,1. FSV Mainz 05,1. FC Heidenheim 1846,,2.0,1.0,Bundesliga
+153,17,2026-01-13 19:30:00Z,Signal Iduna Park,Borussia Dortmund,SV Werder Bremen,,3.0,0.0,Bundesliga
+149,17,2026-01-14 17:30:00Z,Volkswagen Arena,VfL Wolfsburg,FC St. Pauli,,2.0,1.0,Bundesliga
+146,17,2026-01-14 19:30:00Z,RheinEnergieStadion,1. FC Köln,FC Bayern München,,1.0,3.0,Bundesliga
+147,17,2026-01-14 19:30:00Z,PreZero Arena,TSG Hoffenheim,Borussia Mönchengladbach,,5.0,1.0,Bundesliga
+151,17,2026-01-14 19:30:00Z,Red Bull Arena,RB Leipzig,Sport-Club Freiburg,,2.0,0.0,Bundesliga
+148,17,2026-01-15 19:30:00Z,WWK Arena,FC Augsburg,1. FC Union Berlin,,1.0,1.0,Bundesliga
+145,17,2026-03-04 19:30:00Z,Volksparkstadion,Hamburger SV,Bayer 04 Leverkusen,,0.0,1.0,Bundesliga
+160,18,2026-01-16 19:30:00Z,Weserstadion,SV Werder Bremen,Eintracht Frankfurt,,3.0,3.0,Bundesliga
+154,18,2026-01-17 14:30:00Z,Volksparkstadion,Hamburger SV,Borussia Mönchengladbach,,0.0,0.0,Bundesliga
+155,18,2026-01-17 14:30:00Z,RheinEnergieStadion,1. FC Köln,1. FSV Mainz 05,,2.0,1.0,Bundesliga
+156,18,2026-01-17 14:30:00Z,PreZero Arena,TSG Hoffenheim,Bayer 04 Leverkusen,,1.0,0.0,Bundesliga
+158,18,2026-01-17 14:30:00Z,Volkswagen Arena,VfL Wolfsburg,1. FC Heidenheim 1846,,1.0,1.0,Bundesliga
+162,18,2026-01-17 14:30:00Z,Signal Iduna Park,Borussia Dortmund,FC St. Pauli,,3.0,2.0,Bundesliga
+161,18,2026-01-17 17:30:00Z,Red Bull Arena,RB Leipzig,FC Bayern München,,1.0,5.0,Bundesliga
+159,18,2026-01-18 14:30:00Z,MHPArena,VfB Stuttgart,1. FC Union Berlin,,1.0,1.0,Bundesliga
+157,18,2026-01-18 16:30:00Z,WWK Arena,FC Augsburg,Sport-Club Freiburg,,2.0,2.0,Bundesliga
+164,19,2026-01-23 19:30:00Z,Millerntor-Stadion,FC St. Pauli,Hamburger SV,,0.0,0.0,Bundesliga
+163,19,2026-01-24 14:30:00Z,Voith-Arena,1. FC Heidenheim 1846,RB Leipzig,,0.0,3.0,Bundesliga
+167,19,2026-01-24 14:30:00Z,Mewa Arena,1. FSV Mainz 05,VfL Wolfsburg,,3.0,1.0,Bundesliga
+169,19,2026-01-24 14:30:00Z,Deutsche Bank Park,Eintracht Frankfurt,TSG Hoffenheim,,1.0,3.0,Bundesliga
+170,19,2026-01-24 14:30:00Z,BayArena,Bayer 04 Leverkusen,SV Werder Bremen,,1.0,0.0,Bundesliga
+171,19,2026-01-24 14:30:00Z,Allianz Arena,FC Bayern München,FC Augsburg,,1.0,2.0,Bundesliga
+165,19,2026-01-24 17:30:00Z,An der Alten Försterei,1. FC Union Berlin,Borussia Dortmund,,0.0,3.0,Bundesliga
+166,19,2026-01-25 14:30:00Z,Borussia-Park,Borussia Mönchengladbach,VfB Stuttgart,,0.0,3.0,Bundesliga
+168,19,2026-01-25 16:30:00Z,Europa-Park Stadion,Sport-Club Freiburg,1. FC Köln,,2.0,1.0,Bundesliga
+173,20,2026-01-30 19:30:00Z,RheinEnergieStadion,1. FC Köln,VfL Wolfsburg,,1.0,0.0,Bundesliga
+174,20,2026-01-31 14:30:00Z,PreZero Arena,TSG Hoffenheim,1. FC Union Berlin,,3.0,1.0,Bundesliga
+175,20,2026-01-31 14:30:00Z,WWK Arena,FC Augsburg,FC St. Pauli,,2.0,1.0,Bundesliga
+177,20,2026-01-31 14:30:00Z,Weserstadion,SV Werder Bremen,Borussia Mönchengladbach,,1.0,1.0,Bundesliga
+178,20,2026-01-31 14:30:00Z,Red Bull Arena,RB Leipzig,1. FSV Mainz 05,,1.0,2.0,Bundesliga
+180,20,2026-01-31 14:30:00Z,Deutsche Bank Park,Eintracht Frankfurt,Bayer 04 Leverkusen,,1.0,3.0,Bundesliga
+172,20,2026-01-31 17:30:00Z,Volksparkstadion,Hamburger SV,FC Bayern München,,2.0,2.0,Bundesliga
+176,20,2026-02-01 14:30:00Z,MHPArena,VfB Stuttgart,Sport-Club Freiburg,,1.0,0.0,Bundesliga
+179,20,2026-02-01 16:30:00Z,Signal Iduna Park,Borussia Dortmund,1. FC Heidenheim 1846,,3.0,2.0,Bundesliga
+184,21,2026-02-06 19:30:00Z,An der Alten Försterei,1. FC Union Berlin,Eintracht Frankfurt,,1.0,1.0,Bundesliga
+182,21,2026-02-07 14:30:00Z,Voith-Arena,1. FC Heidenheim 1846,Hamburger SV,,0.0,2.0,Bundesliga
+183,21,2026-02-07 14:30:00Z,Millerntor-Stadion,FC St. Pauli,VfB Stuttgart,,2.0,1.0,Bundesliga
+185,21,2026-02-07 14:30:00Z,Volkswagen Arena,VfL Wolfsburg,Borussia Dortmund,,1.0,2.0,Bundesliga
+187,21,2026-02-07 14:30:00Z,Mewa Arena,1. FSV Mainz 05,FC Augsburg,,2.0,0.0,Bundesliga
+188,21,2026-02-07 14:30:00Z,Europa-Park Stadion,Sport-Club Freiburg,SV Werder Bremen,,1.0,0.0,Bundesliga
+186,21,2026-02-07 17:30:00Z,Borussia-Park,Borussia Mönchengladbach,Bayer 04 Leverkusen,,1.0,1.0,Bundesliga
+181,21,2026-02-08 14:30:00Z,RheinEnergieStadion,1. FC Köln,RB Leipzig,,1.0,2.0,Bundesliga
+189,21,2026-02-08 16:30:00Z,Allianz Arena,FC Bayern München,TSG Hoffenheim,,5.0,1.0,Bundesliga
+196,22,2026-02-13 19:30:00Z,Signal Iduna Park,Borussia Dortmund,1. FSV Mainz 05,,4.0,0.0,Bundesliga
+190,22,2026-02-14 14:30:00Z,Volksparkstadion,Hamburger SV,1. FC Union Berlin,,3.0,2.0,Bundesliga
+191,22,2026-02-14 14:30:00Z,PreZero Arena,TSG Hoffenheim,Sport-Club Freiburg,,3.0,0.0,Bundesliga
+194,22,2026-02-14 14:30:00Z,Weserstadion,SV Werder Bremen,FC Bayern München,,0.0,3.0,Bundesliga
+197,22,2026-02-14 14:30:00Z,Deutsche Bank Park,Eintracht Frankfurt,Borussia Mönchengladbach,,3.0,0.0,Bundesliga
+198,22,2026-02-14 14:30:00Z,BayArena,Bayer 04 Leverkusen,FC St. Pauli,,4.0,0.0,Bundesliga
+193,22,2026-02-14 17:30:00Z,MHPArena,VfB Stuttgart,1. FC Köln,,3.0,1.0,Bundesliga
+192,22,2026-02-15 14:30:00Z,WWK Arena,FC Augsburg,1. FC Heidenheim 1846,,1.0,0.0,Bundesliga
+195,22,2026-02-15 16:30:00Z,Red Bull Arena,RB Leipzig,VfL Wolfsburg,,2.0,2.0,Bundesliga
+205,23,2026-02-20 19:30:00Z,Mewa Arena,1. FSV Mainz 05,Hamburger SV,,1.0,1.0,Bundesliga
+199,23,2026-02-21 14:30:00Z,RheinEnergieStadion,1. FC Köln,TSG Hoffenheim,,2.0,2.0,Bundesliga
+202,23,2026-02-21 14:30:00Z,An der Alten Försterei,1. FC Union Berlin,Bayer 04 Leverkusen,,1.0,0.0,Bundesliga
+203,23,2026-02-21 14:30:00Z,Volkswagen Arena,VfL Wolfsburg,FC Augsburg,,2.0,3.0,Bundesliga
+207,23,2026-02-21 14:30:00Z,Allianz Arena,FC Bayern München,Eintracht Frankfurt,,3.0,2.0,Bundesliga
+204,23,2026-02-21 17:30:00Z,Red Bull Arena,RB Leipzig,Borussia Dortmund,,2.0,2.0,Bundesliga
+206,23,2026-02-22 14:30:00Z,Europa-Park Stadion,Sport-Club Freiburg,Borussia Mönchengladbach,,2.0,1.0,Bundesliga
+201,23,2026-02-22 16:30:00Z,Millerntor-Stadion,FC St. Pauli,SV Werder Bremen,,2.0,1.0,Bundesliga
+200,23,2026-02-22 18:30:00Z,Voith-Arena,1. FC Heidenheim 1846,VfB Stuttgart,,3.0,3.0,Bundesliga
+210,24,2026-02-27 19:30:00Z,WWK Arena,FC Augsburg,1. FC Köln,,2.0,0.0,Bundesliga
+209,24,2026-02-28 14:30:00Z,PreZero Arena,TSG Hoffenheim,FC St. Pauli,,0.0,1.0,Bundesliga
+211,24,2026-02-28 14:30:00Z,Borussia-Park,Borussia Mönchengladbach,1. FC Union Berlin,,1.0,0.0,Bundesliga
+213,24,2026-02-28 14:30:00Z,Weserstadion,SV Werder Bremen,1. FC Heidenheim 1846,,2.0,0.0,Bundesliga
+216,24,2026-02-28 14:30:00Z,BayArena,Bayer 04 Leverkusen,1. FSV Mainz 05,,1.0,1.0,Bundesliga
+214,24,2026-02-28 17:30:00Z,Signal Iduna Park,Borussia Dortmund,FC Bayern München,,2.0,3.0,Bundesliga
+212,24,2026-03-01 14:30:00Z,MHPArena,VfB Stuttgart,VfL Wolfsburg,,4.0,0.0,Bundesliga
+215,24,2026-03-01 16:30:00Z,Deutsche Bank Park,Eintracht Frankfurt,Sport-Club Freiburg,,2.0,0.0,Bundesliga
+208,24,2026-03-01 18:30:00Z,Volksparkstadion,Hamburger SV,RB Leipzig,,1.0,2.0,Bundesliga
+225,25,2026-03-06 19:30:00Z,Allianz Arena,FC Bayern München,Borussia Mönchengladbach,,4.0,1.0,Bundesliga
+218,25,2026-03-07 14:30:00Z,Voith-Arena,1. FC Heidenheim 1846,TSG Hoffenheim,,2.0,4.0,Bundesliga
+221,25,2026-03-07 14:30:00Z,Volkswagen Arena,VfL Wolfsburg,Hamburger SV,,1.0,2.0,Bundesliga
+222,25,2026-03-07 14:30:00Z,Red Bull Arena,RB Leipzig,FC Augsburg,,2.0,1.0,Bundesliga
+223,25,2026-03-07 14:30:00Z,Mewa Arena,1. FSV Mainz 05,VfB Stuttgart,,2.0,2.0,Bundesliga
+224,25,2026-03-07 14:30:00Z,Europa-Park Stadion,Sport-Club Freiburg,Bayer 04 Leverkusen,,3.0,3.0,Bundesliga
+217,25,2026-03-07 17:30:00Z,RheinEnergieStadion,1. FC Köln,Borussia Dortmund,,1.0,2.0,Bundesliga
+219,25,2026-03-08 14:30:00Z,Millerntor-Stadion,FC St. Pauli,Eintracht Frankfurt,,0.0,0.0,Bundesliga
+220,25,2026-03-08 16:30:00Z,An der Alten Försterei,1. FC Union Berlin,SV Werder Bremen,,1.0,4.0,Bundesliga
+228,26,2026-03-13 19:30:00Z,Borussia-Park,Borussia Mönchengladbach,FC St. Pauli,,2.0,0.0,Bundesliga
+227,26,2026-03-14 14:30:00Z,PreZero Arena,TSG Hoffenheim,VfL Wolfsburg,,1.0,1.0,Bundesliga
+232,26,2026-03-14 14:30:00Z,Signal Iduna Park,Borussia Dortmund,FC Augsburg,,2.0,0.0,Bundesliga
+233,26,2026-03-14 14:30:00Z,Deutsche Bank Park,Eintracht Frankfurt,1. FC Heidenheim 1846,,1.0,0.0,Bundesliga
+234,26,2026-03-14 14:30:00Z,BayArena,Bayer 04 Leverkusen,FC Bayern München,,1.0,1.0,Bundesliga
+226,26,2026-03-14 17:30:00Z,Volksparkstadion,Hamburger SV,1. FC Köln,,1.0,1.0,Bundesliga
+230,26,2026-03-15 14:30:00Z,Weserstadion,SV Werder Bremen,1. FSV Mainz 05,,0.0,2.0,Bundesliga
+231,26,2026-03-15 16:30:00Z,Europa-Park Stadion,Sport-Club Freiburg,1. FC Union Berlin,,0.0,1.0,Bundesliga
+229,26,2026-03-15 18:30:00Z,MHPArena,VfB Stuttgart,RB Leipzig,,1.0,0.0,Bundesliga
+240,27,2026-03-20 19:30:00Z,Red Bull Arena,RB Leipzig,TSG Hoffenheim,,5.0,0.0,Bundesliga
+235,27,2026-03-21 14:30:00Z,RheinEnergieStadion,1. FC Köln,Borussia Mönchengladbach,,3.0,3.0,Bundesliga
+236,27,2026-03-21 14:30:00Z,Voith-Arena,1. FC Heidenheim 1846,Bayer 04 Leverkusen,,3.0,3.0,Bundesliga
+239,27,2026-03-21 14:30:00Z,Volkswagen Arena,VfL Wolfsburg,SV Werder Bremen,,0.0,1.0,Bundesliga
+243,27,2026-03-21 14:30:00Z,Allianz Arena,FC Bayern München,1. FC Union Berlin,,4.0,0.0,Bundesliga
+242,27,2026-03-21 17:30:00Z,Signal Iduna Park,Borussia Dortmund,Hamburger SV,,3.0,2.0,Bundesliga
+241,27,2026-03-22 14:30:00Z,Mewa Arena,1. FSV Mainz 05,Eintracht Frankfurt,,2.0,1.0,Bundesliga
+237,27,2026-03-22 16:30:00Z,Millerntor-Stadion,FC St. Pauli,Sport-Club Freiburg,,1.0,2.0,Bundesliga
+238,27,2026-03-22 18:30:00Z,WWK Arena,FC Augsburg,VfB Stuttgart,,2.0,5.0,Bundesliga
+244,28,2026-04-04 13:30:00Z,Volksparkstadion,Hamburger SV,FC Augsburg,,,,Bundesliga
+245,28,2026-04-04 13:30:00Z,PreZero Arena,TSG Hoffenheim,1. FSV Mainz 05,,,,Bundesliga
+247,28,2026-04-04 13:30:00Z,Borussia-Park,Borussia Mönchengladbach,1. FC Heidenheim 1846,,,,Bundesliga
+249,28,2026-04-04 13:30:00Z,Weserstadion,SV Werder Bremen,RB Leipzig,,,,Bundesliga
+250,28,2026-04-04 13:30:00Z,Europa-Park Stadion,Sport-Club Freiburg,FC Bayern München,,,,Bundesliga
+252,28,2026-04-04 13:30:00Z,BayArena,Bayer 04 Leverkusen,VfL Wolfsburg,,,,Bundesliga
+248,28,2026-04-04 16:30:00Z,MHPArena,VfB Stuttgart,Borussia Dortmund,,,,Bundesliga
+246,28,2026-04-05 13:30:00Z,An der Alten Försterei,1. FC Union Berlin,FC St. Pauli,,,,Bundesliga
+251,28,2026-04-05 15:30:00Z,Deutsche Bank Park,Eintracht Frankfurt,1. FC Köln,,,,Bundesliga
+256,29,2026-04-10 18:30:00Z,WWK Arena,FC Augsburg,TSG Hoffenheim,,,,Bundesliga
+254,29,2026-04-11 13:30:00Z,Voith-Arena,1. FC Heidenheim 1846,1. FC Union Berlin,,,,Bundesliga
+257,29,2026-04-11 13:30:00Z,Volkswagen Arena,VfL Wolfsburg,Eintracht Frankfurt,,,,Bundesliga
+259,29,2026-04-11 13:30:00Z,Red Bull Arena,RB Leipzig,Borussia Mönchengladbach,,,,Bundesliga
+261,29,2026-04-11 13:30:00Z,Signal Iduna Park,Borussia Dortmund,Bayer 04 Leverkusen,,,,Bundesliga
+255,29,2026-04-11 16:30:00Z,Millerntor-Stadion,FC St. Pauli,FC Bayern München,,,,Bundesliga
+253,29,2026-04-12 13:30:00Z,RheinEnergieStadion,1. FC Köln,SV Werder Bremen,,,,Bundesliga
+258,29,2026-04-12 15:30:00Z,MHPArena,VfB Stuttgart,Hamburger SV,,,,Bundesliga
+260,29,2026-04-12 17:30:00Z,Mewa Arena,1. FSV Mainz 05,Sport-Club Freiburg,,,,Bundesliga
+263,30,2026-04-17 18:30:00Z,Millerntor-Stadion,FC St. Pauli,1. FC Köln,,,,Bundesliga
+262,30,2026-04-18 13:30:00Z,PreZero Arena,TSG Hoffenheim,Borussia Dortmund,,,,Bundesliga
+264,30,2026-04-18 13:30:00Z,An der Alten Försterei,1. FC Union Berlin,VfL Wolfsburg,,,,Bundesliga
+266,30,2026-04-18 13:30:00Z,Weserstadion,SV Werder Bremen,Hamburger SV,,,,Bundesliga
+269,30,2026-04-18 13:30:00Z,BayArena,Bayer 04 Leverkusen,FC Augsburg,,,,Bundesliga
+268,30,2026-04-18 16:30:00Z,Deutsche Bank Park,Eintracht Frankfurt,RB Leipzig,,,,Bundesliga
+267,30,2026-04-19 13:30:00Z,Europa-Park Stadion,Sport-Club Freiburg,1. FC Heidenheim 1846,,,,Bundesliga
+270,30,2026-04-19 15:30:00Z,Allianz Arena,FC Bayern München,VfB Stuttgart,,,,Bundesliga
+265,30,2026-04-19 17:30:00Z,Borussia-Park,Borussia Mönchengladbach,1. FSV Mainz 05,,,,Bundesliga
+271,31,2026-04-25 13:30:00Z,Volksparkstadion,Hamburger SV,TSG Hoffenheim,,,,Bundesliga
+272,31,2026-04-25 13:30:00Z,RheinEnergieStadion,1. FC Köln,Bayer 04 Leverkusen,,,,Bundesliga
+273,31,2026-04-25 13:30:00Z,Voith-Arena,1. FC Heidenheim 1846,FC St. Pauli,,,,Bundesliga
+274,31,2026-04-25 13:30:00Z,WWK Arena,FC Augsburg,Eintracht Frankfurt,,,,Bundesliga
+275,31,2026-04-25 13:30:00Z,Volkswagen Arena,VfL Wolfsburg,Borussia Mönchengladbach,,,,Bundesliga
+276,31,2026-04-25 13:30:00Z,MHPArena,VfB Stuttgart,SV Werder Bremen,,,,Bundesliga
+277,31,2026-04-25 13:30:00Z,Red Bull Arena,RB Leipzig,1. FC Union Berlin,,,,Bundesliga
+278,31,2026-04-25 13:30:00Z,Mewa Arena,1. FSV Mainz 05,FC Bayern München,,,,Bundesliga
+279,31,2026-04-25 13:30:00Z,Signal Iduna Park,Borussia Dortmund,Sport-Club Freiburg,,,,Bundesliga
+280,32,2026-05-02 13:30:00Z,PreZero Arena,TSG Hoffenheim,VfB Stuttgart,,,,Bundesliga
+281,32,2026-05-02 13:30:00Z,Millerntor-Stadion,FC St. Pauli,1. FSV Mainz 05,,,,Bundesliga
+282,32,2026-05-02 13:30:00Z,An der Alten Försterei,1. FC Union Berlin,1. FC Köln,,,,Bundesliga
+283,32,2026-05-02 13:30:00Z,Borussia-Park,Borussia Mönchengladbach,Borussia Dortmund,,,,Bundesliga
+284,32,2026-05-02 13:30:00Z,Weserstadion,SV Werder Bremen,FC Augsburg,,,,Bundesliga
+285,32,2026-05-02 13:30:00Z,Europa-Park Stadion,Sport-Club Freiburg,VfL Wolfsburg,,,,Bundesliga
+286,32,2026-05-02 13:30:00Z,Deutsche Bank Park,Eintracht Frankfurt,Hamburger SV,,,,Bundesliga
+287,32,2026-05-02 13:30:00Z,BayArena,Bayer 04 Leverkusen,RB Leipzig,,,,Bundesliga
+288,32,2026-05-02 13:30:00Z,Allianz Arena,FC Bayern München,1. FC Heidenheim 1846,,,,Bundesliga
+289,33,2026-05-09 13:30:00Z,Volksparkstadion,Hamburger SV,Sport-Club Freiburg,,,,Bundesliga
+290,33,2026-05-09 13:30:00Z,RheinEnergieStadion,1. FC Köln,1. FC Heidenheim 1846,,,,Bundesliga
+291,33,2026-05-09 13:30:00Z,PreZero Arena,TSG Hoffenheim,SV Werder Bremen,,,,Bundesliga
+292,33,2026-05-09 13:30:00Z,WWK Arena,FC Augsburg,Borussia Mönchengladbach,,,,Bundesliga
+293,33,2026-05-09 13:30:00Z,Volkswagen Arena,VfL Wolfsburg,FC Bayern München,,,,Bundesliga
+294,33,2026-05-09 13:30:00Z,MHPArena,VfB Stuttgart,Bayer 04 Leverkusen,,,,Bundesliga
+295,33,2026-05-09 13:30:00Z,Red Bull Arena,RB Leipzig,FC St. Pauli,,,,Bundesliga
+296,33,2026-05-09 13:30:00Z,Mewa Arena,1. FSV Mainz 05,1. FC Union Berlin,,,,Bundesliga
+297,33,2026-05-09 13:30:00Z,Signal Iduna Park,Borussia Dortmund,Eintracht Frankfurt,,,,Bundesliga
+298,34,2026-05-16 13:30:00Z,Voith-Arena,1. FC Heidenheim 1846,1. FSV Mainz 05,,,,Bundesliga
+299,34,2026-05-16 13:30:00Z,Millerntor-Stadion,FC St. Pauli,VfL Wolfsburg,,,,Bundesliga
+300,34,2026-05-16 13:30:00Z,An der Alten Försterei,1. FC Union Berlin,FC Augsburg,,,,Bundesliga
+301,34,2026-05-16 13:30:00Z,Borussia-Park,Borussia Mönchengladbach,TSG Hoffenheim,,,,Bundesliga
+302,34,2026-05-16 13:30:00Z,Weserstadion,SV Werder Bremen,Borussia Dortmund,,,,Bundesliga
+303,34,2026-05-16 13:30:00Z,Europa-Park Stadion,Sport-Club Freiburg,RB Leipzig,,,,Bundesliga
+304,34,2026-05-16 13:30:00Z,Deutsche Bank Park,Eintracht Frankfurt,VfB Stuttgart,,,,Bundesliga
+305,34,2026-05-16 13:30:00Z,BayArena,Bayer 04 Leverkusen,Hamburger SV,,,,Bundesliga
+306,34,2026-05-16 13:30:00Z,Allianz Arena,FC Bayern München,1. FC Köln,,,,Bundesliga
+9,1,2025-08-15 18:45:00Z,Roazhon Park,Stade Rennais FC,Olympique de Marseille,,1.0,0.0,Ligue 1
+4,1,2025-08-16 15:00:00Z,Stade Bollaert-Delelis,RC Lens,Olympique Lyonnais,,0.0,1.0,Ligue 1
+6,1,2025-08-16 17:00:00Z,Stade Louis II,AS Monaco,Havre Athletic Club,,3.0,1.0,Ligue 1
+8,1,2025-08-16 19:05:00Z,Allianz Riviera,OGC Nice,Toulouse FC,,0.0,1.0,Ligue 1
+3,1,2025-08-17 13:00:00Z,Stade Francis-Le Blé,Stade Brestois 29,LOSC Lille,,3.0,3.0,Ligue 1
+1,1,2025-08-17 15:15:00Z,Stade Raymond Kopa,Angers SCO,Paris FC,,1.0,0.0,Ligue 1
+2,1,2025-08-17 15:15:00Z,Stade de l'Abbé-Deschamps,AJ Auxerre,FC Lorient,,1.0,0.0,Ligue 1
+5,1,2025-08-17 15:15:00Z,Stade Saint-Symphorien,FC Metz,RC Strasbourg Alsace,,0.0,1.0,Ligue 1
+7,1,2025-08-17 20:45:00Z,Stade de la Beaujoire,FC Nantes,Paris Saint-Germain,,0.0,1.0,Ligue 1
+16,2,2025-08-22 18:45:00Z,Parc des Princes,Paris Saint-Germain,Angers SCO,,1.0,0.0,Ligue 1
+14,2,2025-08-23 15:00:00Z,Stade Vélodrome,Olympique de Marseille,Paris FC,,5.0,2.0,Ligue 1
+15,2,2025-08-23 17:00:00Z,Allianz Riviera,OGC Nice,AJ Auxerre,,3.0,1.0,Ligue 1
+13,2,2025-08-23 19:05:00Z,Parc Olympique Lyonnais,Olympique Lyonnais,FC Metz,,3.0,0.0,Ligue 1
+12,2,2025-08-24 13:00:00Z,Stade du Moustoir,FC Lorient,Stade Rennais FC,,4.0,0.0,Ligue 1
+10,2,2025-08-24 15:15:00Z,Stade Océane,Havre Athletic Club,RC Lens,,1.0,2.0,Ligue 1
+17,2,2025-08-24 15:15:00Z,Stade de la Meinau,RC Strasbourg Alsace,FC Nantes,,1.0,0.0,Ligue 1
+18,2,2025-08-24 15:15:00Z,Stadium de Toulouse,Toulouse FC,Stade Brestois 29,,2.0,0.0,Ligue 1
+11,2,2025-08-24 18:45:00Z,Stade Pierre-Mauroy,LOSC Lille,AS Monaco,,1.0,0.0,Ligue 1
+21,3,2025-08-29 18:45:00Z,Stade Bollaert-Delelis,RC Lens,Stade Brestois 29,,3.0,1.0,Ligue 1
+22,3,2025-08-30 15:00:00Z,Stade du Moustoir,FC Lorient,LOSC Lille,,1.0,7.0,Ligue 1
+25,3,2025-08-30 17:00:00Z,Stade de la Beaujoire,FC Nantes,AJ Auxerre,,1.0,0.0,Ligue 1
+27,3,2025-08-30 19:05:00Z,Stadium de Toulouse,Toulouse FC,Paris Saint-Germain,,3.0,6.0,Ligue 1
+19,3,2025-08-31 13:00:00Z,Stade Raymond Kopa,Angers SCO,Stade Rennais FC,,1.0,1.0,Ligue 1
+20,3,2025-08-31 15:15:00Z,Stade Océane,Havre Athletic Club,OGC Nice,,3.0,1.0,Ligue 1
+24,3,2025-08-31 15:15:00Z,Stade Louis II,AS Monaco,RC Strasbourg Alsace,,3.0,2.0,Ligue 1
+26,3,2025-08-31 15:15:00Z,Stade Charléty,Paris FC,FC Metz,,3.0,2.0,Ligue 1
+23,3,2025-08-31 18:45:00Z,Parc Olympique Lyonnais,Olympique Lyonnais,Olympique de Marseille,,1.0,0.0,Ligue 1
+31,4,2025-09-12 18:45:00Z,Stade Vélodrome,Olympique de Marseille,FC Lorient,,4.0,0.0,Ligue 1
+33,4,2025-09-13 15:00:00Z,Allianz Riviera,OGC Nice,FC Nantes,,1.0,0.0,Ligue 1
+28,4,2025-09-13 19:05:00Z,Stade de l'Abbé-Deschamps,AJ Auxerre,AS Monaco,,1.0,2.0,Ligue 1
+30,4,2025-09-14 13:00:00Z,Stade Pierre-Mauroy,LOSC Lille,Toulouse FC,,2.0,1.0,Ligue 1
+29,4,2025-09-14 15:15:00Z,Stade Francis-Le Blé,Stade Brestois 29,Paris FC,,1.0,2.0,Ligue 1
+32,4,2025-09-14 15:15:00Z,Stade Saint-Symphorien,FC Metz,Angers SCO,,1.0,1.0,Ligue 1
+34,4,2025-09-14 15:15:00Z,Parc des Princes,Paris Saint-Germain,RC Lens,,2.0,0.0,Ligue 1
+36,4,2025-09-14 15:15:00Z,Stade de la Meinau,RC Strasbourg Alsace,Havre Athletic Club,,1.0,0.0,Ligue 1
+35,4,2025-09-14 18:45:00Z,Roazhon Park,Stade Rennais FC,Olympique Lyonnais,,3.0,1.0,Ligue 1
+41,5,2025-09-19 18:45:00Z,Parc Olympique Lyonnais,Olympique Lyonnais,Angers SCO,,1.0,0.0,Ligue 1
+44,5,2025-09-20 15:00:00Z,Stade de la Beaujoire,FC Nantes,Stade Rennais FC,,2.0,2.0,Ligue 1
+38,5,2025-09-20 17:00:00Z,Stade Francis-Le Blé,Stade Brestois 29,OGC Nice,,4.0,1.0,Ligue 1
+40,5,2025-09-20 19:05:00Z,Stade Bollaert-Delelis,RC Lens,LOSC Lille,,3.0,0.0,Ligue 1
+45,5,2025-09-21 13:00:00Z,Stade Charléty,Paris FC,RC Strasbourg Alsace,,2.0,3.0,Ligue 1
+37,5,2025-09-21 15:15:00Z,Stade de l'Abbé-Deschamps,AJ Auxerre,Toulouse FC,,1.0,0.0,Ligue 1
+39,5,2025-09-21 15:15:00Z,Stade Océane,Havre Athletic Club,FC Lorient,,1.0,1.0,Ligue 1
+43,5,2025-09-21 15:15:00Z,Stade Louis II,AS Monaco,FC Metz,,5.0,2.0,Ligue 1
+42,5,2025-09-22 18:00:00Z,Stade Vélodrome,Olympique de Marseille,Paris Saint-Germain,,1.0,0.0,Ligue 1
+53,6,2025-09-26 18:45:00Z,Stade de la Meinau,RC Strasbourg Alsace,Olympique de Marseille,,1.0,2.0,Ligue 1
+48,6,2025-09-27 15:00:00Z,Stade du Moustoir,FC Lorient,AS Monaco,,3.0,1.0,Ligue 1
+54,6,2025-09-27 17:00:00Z,Stadium de Toulouse,Toulouse FC,FC Nantes,,2.0,2.0,Ligue 1
+51,6,2025-09-27 19:05:00Z,Parc des Princes,Paris Saint-Germain,AJ Auxerre,,2.0,0.0,Ligue 1
+50,6,2025-09-28 13:00:00Z,Allianz Riviera,OGC Nice,Paris FC,,1.0,1.0,Ligue 1
+46,6,2025-09-28 15:15:00Z,Stade Raymond Kopa,Angers SCO,Stade Brestois 29,,0.0,2.0,Ligue 1
+47,6,2025-09-28 15:15:00Z,Stade Pierre-Mauroy,LOSC Lille,Olympique Lyonnais,,0.0,1.0,Ligue 1
+49,6,2025-09-28 15:15:00Z,Stade Saint-Symphorien,FC Metz,Havre Athletic Club,,0.0,0.0,Ligue 1
+52,6,2025-09-28 18:45:00Z,Roazhon Park,Stade Rennais FC,RC Lens,,0.0,0.0,Ligue 1
+62,7,2025-10-03 18:45:00Z,Stade Charléty,Paris FC,FC Lorient,,2.0,0.0,Ligue 1
+60,7,2025-10-04 15:00:00Z,Stade Saint-Symphorien,FC Metz,Olympique de Marseille,,0.0,3.0,Ligue 1
+56,7,2025-10-04 17:00:00Z,Stade Francis-Le Blé,Stade Brestois 29,FC Nantes,,0.0,0.0,Ligue 1
+55,7,2025-10-04 19:05:00Z,Stade de l'Abbé-Deschamps,AJ Auxerre,RC Lens,,1.0,2.0,Ligue 1
+59,7,2025-10-05 13:00:00Z,Parc Olympique Lyonnais,Olympique Lyonnais,Toulouse FC,,1.0,2.0,Ligue 1
+57,7,2025-10-05 15:15:00Z,Stade Océane,Havre Athletic Club,Stade Rennais FC,,2.0,2.0,Ligue 1
+61,7,2025-10-05 15:15:00Z,Stade Louis II,AS Monaco,OGC Nice,,2.0,2.0,Ligue 1
+63,7,2025-10-05 15:15:00Z,Stade de la Meinau,RC Strasbourg Alsace,Angers SCO,,5.0,0.0,Ligue 1
+58,7,2025-10-05 18:45:00Z,Stade Pierre-Mauroy,LOSC Lille,Paris Saint-Germain,,1.0,1.0,Ligue 1
+70,8,2025-10-17 18:45:00Z,Parc des Princes,Paris Saint-Germain,RC Strasbourg Alsace,,3.0,3.0,Ligue 1
+69,8,2025-10-18 15:00:00Z,Allianz Riviera,OGC Nice,Olympique Lyonnais,,3.0,2.0,Ligue 1
+64,8,2025-10-18 17:00:00Z,Stade Raymond Kopa,Angers SCO,AS Monaco,,1.0,1.0,Ligue 1
+67,8,2025-10-18 19:05:00Z,Stade Vélodrome,Olympique de Marseille,Havre Athletic Club,,6.0,2.0,Ligue 1
+65,8,2025-10-19 13:00:00Z,Stade Bollaert-Delelis,RC Lens,Paris FC,,2.0,1.0,Ligue 1
+66,8,2025-10-19 15:15:00Z,Stade du Moustoir,FC Lorient,Stade Brestois 29,,3.0,3.0,Ligue 1
+71,8,2025-10-19 15:15:00Z,Roazhon Park,Stade Rennais FC,AJ Auxerre,,2.0,2.0,Ligue 1
+72,8,2025-10-19 15:15:00Z,Stadium de Toulouse,Toulouse FC,FC Metz,,4.0,0.0,Ligue 1
+68,8,2025-10-19 18:45:00Z,Stade de la Beaujoire,FC Nantes,LOSC Lille,,0.0,2.0,Ligue 1
+80,9,2025-10-24 18:45:00Z,Stade Charléty,Paris FC,FC Nantes,,1.0,2.0,Ligue 1
+75,9,2025-10-25 15:00:00Z,Stade Francis-Le Blé,Stade Brestois 29,Paris Saint-Germain,,0.0,3.0,Ligue 1
+79,9,2025-10-25 17:00:00Z,Stade Louis II,AS Monaco,Toulouse FC,,1.0,0.0,Ligue 1
+76,9,2025-10-25 19:05:00Z,Stade Bollaert-Delelis,RC Lens,Olympique de Marseille,,2.0,1.0,Ligue 1
+77,9,2025-10-26 14:00:00Z,Stade Pierre-Mauroy,LOSC Lille,FC Metz,,6.0,1.0,Ligue 1
+73,9,2025-10-26 16:15:00Z,Stade Raymond Kopa,Angers SCO,FC Lorient,,2.0,0.0,Ligue 1
+74,9,2025-10-26 16:15:00Z,Stade de l'Abbé-Deschamps,AJ Auxerre,Havre Athletic Club,,0.0,1.0,Ligue 1
+81,9,2025-10-26 16:15:00Z,Roazhon Park,Stade Rennais FC,OGC Nice,,1.0,2.0,Ligue 1
+78,9,2025-10-26 19:45:00Z,Parc Olympique Lyonnais,Olympique Lyonnais,RC Strasbourg Alsace,,2.0,1.0,Ligue 1
+82,10,2025-10-29 18:00:00Z,Stade Océane,Havre Athletic Club,Stade Brestois 29,,1.0,0.0,Ligue 1
+83,10,2025-10-29 18:00:00Z,Stade du Moustoir,FC Lorient,Paris Saint-Germain,,1.0,1.0,Ligue 1
+85,10,2025-10-29 18:00:00Z,Stade Saint-Symphorien,FC Metz,RC Lens,,2.0,0.0,Ligue 1
+87,10,2025-10-29 18:00:00Z,Allianz Riviera,OGC Nice,LOSC Lille,,2.0,0.0,Ligue 1
+84,10,2025-10-29 20:05:00Z,Stade Vélodrome,Olympique de Marseille,Angers SCO,,2.0,2.0,Ligue 1
+86,10,2025-10-29 20:05:00Z,Stade de la Beaujoire,FC Nantes,AS Monaco,,3.0,5.0,Ligue 1
+88,10,2025-10-29 20:05:00Z,Stade Charléty,Paris FC,Olympique Lyonnais,,3.0,3.0,Ligue 1
+89,10,2025-10-29 20:05:00Z,Stade de la Meinau,RC Strasbourg Alsace,AJ Auxerre,,3.0,0.0,Ligue 1
+90,10,2025-10-29 20:05:00Z,Stadium de Toulouse,Toulouse FC,Stade Rennais FC,,2.0,2.0,Ligue 1
+97,11,2025-11-01 16:00:00Z,Parc des Princes,Paris Saint-Germain,OGC Nice,,1.0,0.0,Ligue 1
+95,11,2025-11-01 18:00:00Z,Stade Louis II,AS Monaco,Paris FC,,0.0,1.0,Ligue 1
+91,11,2025-11-01 20:05:00Z,Stade de l'Abbé-Deschamps,AJ Auxerre,Olympique de Marseille,,0.0,1.0,Ligue 1
+98,11,2025-11-02 14:00:00Z,Roazhon Park,Stade Rennais FC,RC Strasbourg Alsace,,4.0,1.0,Ligue 1
+93,11,2025-11-02 16:15:00Z,Stade Bollaert-Delelis,RC Lens,FC Lorient,,3.0,0.0,Ligue 1
+94,11,2025-11-02 16:15:00Z,Stade Pierre-Mauroy,LOSC Lille,Angers SCO,,1.0,0.0,Ligue 1
+96,11,2025-11-02 16:15:00Z,Stade de la Beaujoire,FC Nantes,FC Metz,,0.0,2.0,Ligue 1
+99,11,2025-11-02 16:15:00Z,Stadium de Toulouse,Toulouse FC,Havre Athletic Club,,0.0,0.0,Ligue 1
+92,11,2025-11-02 19:45:00Z,Stade Francis-Le Blé,Stade Brestois 29,Olympique Lyonnais,,0.0,0.0,Ligue 1
+107,12,2025-11-07 19:45:00Z,Stade Charléty,Paris FC,Stade Rennais FC,,0.0,1.0,Ligue 1
+104,12,2025-11-08 16:00:00Z,Stade Vélodrome,Olympique de Marseille,Stade Brestois 29,,3.0,0.0,Ligue 1
+101,12,2025-11-08 18:00:00Z,Stade Océane,Havre Athletic Club,FC Nantes,,1.0,1.0,Ligue 1
+106,12,2025-11-08 20:05:00Z,Stade Louis II,AS Monaco,RC Lens,,1.0,4.0,Ligue 1
+102,12,2025-11-09 14:00:00Z,Stade du Moustoir,FC Lorient,Toulouse FC,,1.0,1.0,Ligue 1
+100,12,2025-11-09 16:15:00Z,Stade Raymond Kopa,Angers SCO,AJ Auxerre,,2.0,0.0,Ligue 1
+105,12,2025-11-09 16:15:00Z,Stade Saint-Symphorien,FC Metz,OGC Nice,,2.0,1.0,Ligue 1
+108,12,2025-11-09 16:15:00Z,Stade de la Meinau,RC Strasbourg Alsace,LOSC Lille,,2.0,0.0,Ligue 1
+103,12,2025-11-09 19:45:00Z,Parc Olympique Lyonnais,Olympique Lyonnais,Paris Saint-Germain,,2.0,3.0,Ligue 1
+114,13,2025-11-21 19:45:00Z,Allianz Riviera,OGC Nice,Olympique de Marseille,,1.0,5.0,Ligue 1
+111,13,2025-11-22 16:00:00Z,Stade Bollaert-Delelis,RC Lens,RC Strasbourg Alsace,,1.0,0.0,Ligue 1
+116,13,2025-11-22 18:00:00Z,Roazhon Park,Stade Rennais FC,AS Monaco,,4.0,1.0,Ligue 1
+115,13,2025-11-22 20:05:00Z,Parc des Princes,Paris Saint-Germain,Havre Athletic Club,,3.0,0.0,Ligue 1
+109,13,2025-11-23 14:00:00Z,Stade de l'Abbé-Deschamps,AJ Auxerre,Olympique Lyonnais,,0.0,0.0,Ligue 1
+110,13,2025-11-23 16:15:00Z,Stade Francis-Le Blé,Stade Brestois 29,FC Metz,,3.0,2.0,Ligue 1
+113,13,2025-11-23 16:15:00Z,Stade de la Beaujoire,FC Nantes,FC Lorient,,1.0,1.0,Ligue 1
+117,13,2025-11-23 16:15:00Z,Stadium de Toulouse,Toulouse FC,Angers SCO,,0.0,1.0,Ligue 1
+112,13,2025-11-23 19:45:00Z,Stade Pierre-Mauroy,LOSC Lille,Paris FC,,4.0,2.0,Ligue 1
+123,14,2025-11-28 19:45:00Z,Stade Saint-Symphorien,FC Metz,Stade Rennais FC,,0.0,1.0,Ligue 1
+124,14,2025-11-29 16:00:00Z,Stade Louis II,AS Monaco,Paris Saint-Germain,,1.0,0.0,Ligue 1
+125,14,2025-11-29 18:00:00Z,Stade Charléty,Paris FC,AJ Auxerre,,1.0,1.0,Ligue 1
+122,14,2025-11-29 20:05:00Z,Stade Vélodrome,Olympique de Marseille,Toulouse FC,,2.0,2.0,Ligue 1
+126,14,2025-11-30 14:00:00Z,Stade de la Meinau,RC Strasbourg Alsace,Stade Brestois 29,,1.0,2.0,Ligue 1
+118,14,2025-11-30 16:15:00Z,Stade Raymond Kopa,Angers SCO,RC Lens,,1.0,2.0,Ligue 1
+119,14,2025-11-30 16:15:00Z,Stade Océane,Havre Athletic Club,LOSC Lille,,0.0,1.0,Ligue 1
+120,14,2025-11-30 16:15:00Z,Stade du Moustoir,FC Lorient,OGC Nice,,3.0,1.0,Ligue 1
+121,14,2025-11-30 19:45:00Z,Parc Olympique Lyonnais,Olympique Lyonnais,FC Nantes,,3.0,0.0,Ligue 1
+128,15,2025-12-05 18:00:00Z,Stade Francis-Le Blé,Stade Brestois 29,AS Monaco,,1.0,0.0,Ligue 1
+129,15,2025-12-05 20:00:00Z,Stade Pierre-Mauroy,LOSC Lille,Olympique de Marseille,,1.0,0.0,Ligue 1
+135,15,2025-12-06 16:00:00Z,Stade de la Beaujoire,FC Nantes,RC Lens,,1.0,2.0,Ligue 1
+132,15,2025-12-06 18:00:00Z,Stadium de Toulouse,Toulouse FC,RC Strasbourg Alsace,,1.0,0.0,Ligue 1
+131,15,2025-12-06 20:05:00Z,Parc des Princes,Paris Saint-Germain,Stade Rennais FC,,5.0,0.0,Ligue 1
+134,15,2025-12-07 14:00:00Z,Allianz Riviera,OGC Nice,Angers SCO,,0.0,1.0,Ligue 1
+127,15,2025-12-07 16:15:00Z,Stade de l'Abbé-Deschamps,AJ Auxerre,FC Metz,,3.0,1.0,Ligue 1
+133,15,2025-12-07 16:15:00Z,Stade Océane,Havre Athletic Club,Paris FC,,0.0,0.0,Ligue 1
+130,15,2025-12-07 19:45:00Z,Stade du Moustoir,FC Lorient,Olympique Lyonnais,,1.0,0.0,Ligue 1
+136,16,2025-12-12 19:45:00Z,Stade Raymond Kopa,Angers SCO,FC Nantes,,4.0,1.0,Ligue 1
+143,16,2025-12-13 16:00:00Z,Roazhon Park,Stade Rennais FC,Stade Brestois 29,,3.0,1.0,Ligue 1
+141,16,2025-12-13 18:00:00Z,Stade Saint-Symphorien,FC Metz,Paris Saint-Germain,,2.0,3.0,Ligue 1
+142,16,2025-12-13 20:05:00Z,Stade Charléty,Paris FC,Toulouse FC,,0.0,3.0,Ligue 1
+139,16,2025-12-14 14:00:00Z,Parc Olympique Lyonnais,Olympique Lyonnais,Havre Athletic Club,,1.0,0.0,Ligue 1
+137,16,2025-12-14 16:15:00Z,Stade de l'Abbé-Deschamps,AJ Auxerre,LOSC Lille,,3.0,4.0,Ligue 1
+138,16,2025-12-14 16:15:00Z,Stade Bollaert-Delelis,RC Lens,OGC Nice,,2.0,0.0,Ligue 1
+144,16,2025-12-14 16:15:00Z,Stade de la Meinau,RC Strasbourg Alsace,FC Lorient,,0.0,0.0,Ligue 1
+140,16,2025-12-14 19:45:00Z,Stade Vélodrome,Olympique de Marseille,AS Monaco,,1.0,0.0,Ligue 1
+153,17,2026-01-02 19:45:00Z,Stadium de Toulouse,Toulouse FC,RC Lens,,0.0,3.0,Ligue 1
+150,17,2026-01-03 16:00:00Z,Stade Louis II,AS Monaco,Olympique Lyonnais,,1.0,3.0,Ligue 1
+151,17,2026-01-03 18:00:00Z,Allianz Riviera,OGC Nice,RC Strasbourg Alsace,,1.0,1.0,Ligue 1
+147,17,2026-01-03 20:05:00Z,Stade Pierre-Mauroy,LOSC Lille,Stade Rennais FC,,0.0,2.0,Ligue 1
+149,17,2026-01-04 14:00:00Z,Stade Vélodrome,Olympique de Marseille,FC Nantes,,0.0,2.0,Ligue 1
+145,17,2026-01-04 16:15:00Z,Stade Francis-Le Blé,Stade Brestois 29,AJ Auxerre,,2.0,0.0,Ligue 1
+146,17,2026-01-04 16:15:00Z,Stade Océane,Havre Athletic Club,Angers SCO,,2.0,1.0,Ligue 1
+148,17,2026-01-04 16:15:00Z,Stade du Moustoir,FC Lorient,FC Metz,,1.0,1.0,Ligue 1
+152,17,2026-01-04 19:45:00Z,Parc des Princes,Paris Saint-Germain,Paris FC,,2.0,1.0,Ligue 1
+157,18,2026-01-16 18:00:00Z,Stade Louis II,AS Monaco,FC Lorient,,1.0,3.0,Ligue 1
+159,18,2026-01-16 20:00:00Z,Parc des Princes,Paris Saint-Germain,LOSC Lille,,3.0,0.0,Ligue 1
+155,18,2026-01-17 16:00:00Z,Stade Bollaert-Delelis,RC Lens,AJ Auxerre,,1.0,0.0,Ligue 1
+162,18,2026-01-17 18:00:00Z,Stadium de Toulouse,Toulouse FC,OGC Nice,,5.0,1.0,Ligue 1
+154,18,2026-01-17 20:05:00Z,Stade Raymond Kopa,Angers SCO,Olympique de Marseille,,2.0,5.0,Ligue 1
+161,18,2026-01-18 14:00:00Z,Stade de la Meinau,RC Strasbourg Alsace,FC Metz,,2.0,1.0,Ligue 1
+158,18,2026-01-18 16:15:00Z,Stade de la Beaujoire,FC Nantes,Paris FC,,1.0,2.0,Ligue 1
+160,18,2026-01-18 16:15:00Z,Roazhon Park,Stade Rennais FC,Havre Athletic Club,,1.0,1.0,Ligue 1
+156,18,2026-01-18 19:45:00Z,Parc Olympique Lyonnais,Olympique Lyonnais,Stade Brestois 29,,2.0,1.0,Ligue 1
+163,19,2026-01-23 19:00:00Z,Stade de l'Abbé-Deschamps,AJ Auxerre,Paris Saint-Germain,,0.0,1.0,Ligue 1
+171,19,2026-01-24 16:00:00Z,Roazhon Park,Stade Rennais FC,FC Lorient,,0.0,2.0,Ligue 1
+165,19,2026-01-24 18:00:00Z,Stade Océane,Havre Athletic Club,AS Monaco,,0.0,0.0,Ligue 1
+167,19,2026-01-24 20:05:00Z,Stade Vélodrome,Olympique de Marseille,RC Lens,,3.0,1.0,Ligue 1
+169,19,2026-01-25 14:00:00Z,Stade de la Beaujoire,FC Nantes,OGC Nice,,1.0,4.0,Ligue 1
+164,19,2026-01-25 16:15:00Z,Stade Francis-Le Blé,Stade Brestois 29,Toulouse FC,,0.0,2.0,Ligue 1
+168,19,2026-01-25 16:15:00Z,Stade Saint-Symphorien,FC Metz,Olympique Lyonnais,,2.0,5.0,Ligue 1
+170,19,2026-01-25 16:15:00Z,Stade Charléty,Paris FC,Angers SCO,,0.0,0.0,Ligue 1
+166,19,2026-01-25 19:45:00Z,Stade Pierre-Mauroy,LOSC Lille,RC Strasbourg Alsace,,1.0,4.0,Ligue 1
+173,20,2026-01-30 19:45:00Z,Stade Bollaert-Delelis,RC Lens,Havre Athletic Club,,1.0,0.0,Ligue 1
+178,20,2026-01-31 16:00:00Z,Stade Charléty,Paris FC,Olympique de Marseille,,2.0,2.0,Ligue 1
+174,20,2026-01-31 18:00:00Z,Stade du Moustoir,FC Lorient,FC Nantes,,2.0,1.0,Ligue 1
+176,20,2026-01-31 20:05:00Z,Stade Louis II,AS Monaco,Stade Rennais FC,,4.0,0.0,Ligue 1
+175,20,2026-02-01 14:00:00Z,Parc Olympique Lyonnais,Olympique Lyonnais,LOSC Lille,,1.0,0.0,Ligue 1
+172,20,2026-02-01 16:15:00Z,Stade Raymond Kopa,Angers SCO,FC Metz,,1.0,0.0,Ligue 1
+177,20,2026-02-01 16:15:00Z,Allianz Riviera,OGC Nice,Stade Brestois 29,,2.0,2.0,Ligue 1
+180,20,2026-02-01 16:15:00Z,Stadium de Toulouse,Toulouse FC,AJ Auxerre,,0.0,0.0,Ligue 1
+179,20,2026-02-01 19:45:00Z,Stade de la Meinau,RC Strasbourg Alsace,Paris Saint-Germain,,1.0,2.0,Ligue 1
+186,21,2026-02-06 19:45:00Z,Stade Saint-Symphorien,FC Metz,LOSC Lille,,0.0,0.0,Ligue 1
+185,21,2026-02-07 16:00:00Z,Stade Bollaert-Delelis,RC Lens,Stade Rennais FC,,3.0,1.0,Ligue 1
+183,21,2026-02-07 18:00:00Z,Stade Francis-Le Blé,Stade Brestois 29,FC Lorient,,2.0,0.0,Ligue 1
+187,21,2026-02-07 20:05:00Z,Stade de la Beaujoire,FC Nantes,Olympique Lyonnais,,0.0,1.0,Ligue 1
+188,21,2026-02-08 14:00:00Z,Allianz Riviera,OGC Nice,AS Monaco,,0.0,0.0,Ligue 1
+181,21,2026-02-08 16:15:00Z,Stade Raymond Kopa,Angers SCO,Toulouse FC,,1.0,0.0,Ligue 1
+182,21,2026-02-08 16:15:00Z,Stade de l'Abbé-Deschamps,AJ Auxerre,Paris FC,,0.0,0.0,Ligue 1
+184,21,2026-02-08 16:15:00Z,Stade Océane,Havre Athletic Club,RC Strasbourg Alsace,,2.0,1.0,Ligue 1
+189,21,2026-02-08 19:45:00Z,Parc des Princes,Paris Saint-Germain,Olympique de Marseille,,5.0,0.0,Ligue 1
+198,22,2026-02-13 18:00:00Z,Roazhon Park,Stade Rennais FC,Paris Saint-Germain,,3.0,1.0,Ligue 1
+196,22,2026-02-13 20:05:00Z,Stade Louis II,AS Monaco,FC Nantes,,3.0,1.0,Ligue 1
+194,22,2026-02-14 16:00:00Z,Stade Vélodrome,Olympique de Marseille,RC Strasbourg Alsace,,2.0,2.0,Ligue 1
+191,22,2026-02-14 18:00:00Z,Stade Pierre-Mauroy,LOSC Lille,Stade Brestois 29,,1.0,1.0,Ligue 1
+197,22,2026-02-14 20:05:00Z,Stade Charléty,Paris FC,RC Lens,,0.0,5.0,Ligue 1
+190,22,2026-02-15 14:00:00Z,Stade Océane,Havre Athletic Club,Toulouse FC,,2.0,1.0,Ligue 1
+192,22,2026-02-15 16:15:00Z,Stade du Moustoir,FC Lorient,Angers SCO,,2.0,0.0,Ligue 1
+195,22,2026-02-15 16:15:00Z,Stade Saint-Symphorien,FC Metz,AJ Auxerre,,1.0,3.0,Ligue 1
+193,22,2026-02-15 19:45:00Z,Parc Olympique Lyonnais,Olympique Lyonnais,OGC Nice,,2.0,0.0,Ligue 1
+201,23,2026-02-20 19:45:00Z,Stade Francis-Le Blé,Stade Brestois 29,Olympique de Marseille,,2.0,0.0,Ligue 1
+202,23,2026-02-21 16:00:00Z,Stade Bollaert-Delelis,RC Lens,AS Monaco,,2.0,3.0,Ligue 1
+207,23,2026-02-21 18:00:00Z,Stadium de Toulouse,Toulouse FC,Paris FC,,1.0,1.0,Ligue 1
+205,23,2026-02-21 20:05:00Z,Parc des Princes,Paris Saint-Germain,FC Metz,,3.0,0.0,Ligue 1
+200,23,2026-02-22 14:00:00Z,Stade de l'Abbé-Deschamps,AJ Auxerre,Stade Rennais FC,,0.0,3.0,Ligue 1
+199,23,2026-02-22 16:15:00Z,Stade Raymond Kopa,Angers SCO,LOSC Lille,,0.0,1.0,Ligue 1
+203,23,2026-02-22 16:15:00Z,Stade de la Beaujoire,FC Nantes,Havre Athletic Club,,2.0,0.0,Ligue 1
+204,23,2026-02-22 16:15:00Z,Allianz Riviera,OGC Nice,FC Lorient,,3.0,3.0,Ligue 1
+206,23,2026-02-22 19:45:00Z,Stade de la Meinau,RC Strasbourg Alsace,Olympique Lyonnais,,3.0,1.0,Ligue 1
+216,24,2026-02-27 19:45:00Z,Stade de la Meinau,RC Strasbourg Alsace,RC Lens,,1.0,1.0,Ligue 1
+215,24,2026-02-28 16:00:00Z,Roazhon Park,Stade Rennais FC,Toulouse FC,,1.0,0.0,Ligue 1
+213,24,2026-02-28 18:00:00Z,Stade Louis II,AS Monaco,Angers SCO,,2.0,0.0,Ligue 1
+208,24,2026-02-28 20:05:00Z,Stade Océane,Havre Athletic Club,Paris Saint-Germain,,0.0,1.0,Ligue 1
+214,24,2026-03-01 14:00:00Z,Stade Charléty,Paris FC,OGC Nice,,1.0,0.0,Ligue 1
+209,24,2026-03-01 16:15:00Z,Stade Pierre-Mauroy,LOSC Lille,FC Nantes,,1.0,0.0,Ligue 1
+210,24,2026-03-01 16:15:00Z,Stade du Moustoir,FC Lorient,AJ Auxerre,,2.0,2.0,Ligue 1
+212,24,2026-03-01 16:15:00Z,Stade Saint-Symphorien,FC Metz,Stade Brestois 29,,0.0,1.0,Ligue 1
+211,24,2026-03-01 19:45:00Z,Stade Vélodrome,Olympique de Marseille,Olympique Lyonnais,,3.0,2.0,Ligue 1
+224,25,2026-03-06 19:45:00Z,Parc des Princes,Paris Saint-Germain,AS Monaco,,1.0,3.0,Ligue 1
+222,25,2026-03-07 16:00:00Z,Stade de la Beaujoire,FC Nantes,Angers SCO,,0.0,1.0,Ligue 1
+217,25,2026-03-07 18:00:00Z,Stade de l'Abbé-Deschamps,AJ Auxerre,RC Strasbourg Alsace,,0.0,0.0,Ligue 1
+225,25,2026-03-07 20:05:00Z,Stadium de Toulouse,Toulouse FC,Olympique de Marseille,,0.0,1.0,Ligue 1
+219,25,2026-03-08 14:00:00Z,Stade Bollaert-Delelis,RC Lens,FC Metz,,3.0,0.0,Ligue 1
+218,25,2026-03-08 16:15:00Z,Stade Francis-Le Blé,Stade Brestois 29,Havre Athletic Club,,2.0,0.0,Ligue 1
+220,25,2026-03-08 16:15:00Z,Stade Pierre-Mauroy,LOSC Lille,FC Lorient,,1.0,1.0,Ligue 1
+223,25,2026-03-08 16:15:00Z,Allianz Riviera,OGC Nice,Stade Rennais FC,,0.0,4.0,Ligue 1
+221,25,2026-03-08 19:45:00Z,Parc Olympique Lyonnais,Olympique Lyonnais,Paris FC,,1.0,1.0,Ligue 1
+229,26,2026-03-13 19:45:00Z,Stade Vélodrome,Olympique de Marseille,AJ Auxerre,,1.0,0.0,Ligue 1
+228,26,2026-03-14 16:00:00Z,Stade du Moustoir,FC Lorient,RC Lens,,2.0,1.0,Ligue 1
+226,26,2026-03-14 18:00:00Z,Stade Raymond Kopa,Angers SCO,OGC Nice,,0.0,2.0,Ligue 1
+231,26,2026-03-14 20:05:00Z,Stade Louis II,AS Monaco,Stade Brestois 29,,2.0,0.0,Ligue 1
+232,26,2026-03-14 23:00:00Z,Parc des Princes,Paris Saint-Germain,FC Nantes,,,,Ligue 1
+234,26,2026-03-15 14:00:00Z,Stade de la Meinau,RC Strasbourg Alsace,Paris FC,,0.0,0.0,Ligue 1
+227,26,2026-03-15 16:15:00Z,Stade Océane,Havre Athletic Club,Olympique Lyonnais,,0.0,0.0,Ligue 1
+230,26,2026-03-15 16:15:00Z,Stade Saint-Symphorien,FC Metz,Toulouse FC,,3.0,4.0,Ligue 1
+233,26,2026-03-15 19:45:00Z,Roazhon Park,Stade Rennais FC,LOSC Lille,,1.0,2.0,Ligue 1
+236,27,2026-03-20 19:45:00Z,Stade Bollaert-Delelis,RC Lens,Angers SCO,,5.0,1.0,Ligue 1
+243,27,2026-03-21 16:00:00Z,Stadium de Toulouse,Toulouse FC,FC Lorient,,1.0,0.0,Ligue 1
+235,27,2026-03-21 18:00:00Z,Stade de l'Abbé-Deschamps,AJ Auxerre,Stade Brestois 29,,3.0,0.0,Ligue 1
+240,27,2026-03-21 20:05:00Z,Allianz Riviera,OGC Nice,Paris Saint-Germain,,0.0,4.0,Ligue 1
+237,27,2026-03-22 14:00:00Z,Parc Olympique Lyonnais,Olympique Lyonnais,AS Monaco,,1.0,2.0,Ligue 1
+238,27,2026-03-22 16:15:00Z,Stade Vélodrome,Olympique de Marseille,LOSC Lille,,1.0,2.0,Ligue 1
+241,27,2026-03-22 16:15:00Z,Stade Charléty,Paris FC,Havre Athletic Club,,3.0,2.0,Ligue 1
+242,27,2026-03-22 16:15:00Z,Roazhon Park,Stade Rennais FC,FC Metz,,0.0,0.0,Ligue 1
+239,27,2026-03-22 19:45:00Z,Stade de la Beaujoire,FC Nantes,RC Strasbourg Alsace,,2.0,3.0,Ligue 1
+251,28,2026-04-03 18:45:00Z,Parc des Princes,Paris Saint-Germain,Toulouse FC,,,,Ligue 1
+252,28,2026-04-04 15:00:00Z,Stade de la Meinau,RC Strasbourg Alsace,OGC Nice,,,,Ligue 1
+245,28,2026-04-04 17:00:00Z,Stade Francis-Le Blé,Stade Brestois 29,Stade Rennais FC,,,,Ligue 1
+247,28,2026-04-04 19:05:00Z,Stade Pierre-Mauroy,LOSC Lille,RC Lens,,,,Ligue 1
+244,28,2026-04-05 13:00:00Z,Stade Raymond Kopa,Angers SCO,Olympique Lyonnais,,,,Ligue 1
+246,28,2026-04-05 15:15:00Z,Stade Océane,Havre Athletic Club,AJ Auxerre,,,,Ligue 1
+248,28,2026-04-05 15:15:00Z,Stade du Moustoir,FC Lorient,Paris FC,,,,Ligue 1
+249,28,2026-04-05 15:15:00Z,Stade Saint-Symphorien,FC Metz,FC Nantes,,,,Ligue 1
+250,28,2026-04-05 18:45:00Z,Stade Louis II,AS Monaco,Olympique de Marseille,,,,Ligue 1
+259,29,2026-04-10 17:00:00Z,Stade Charléty,Paris FC,AS Monaco,,,,Ligue 1
+257,29,2026-04-10 18:45:00Z,Stade Vélodrome,Olympique de Marseille,FC Metz,,,,Ligue 1
+255,29,2026-04-11 15:00:00Z,Stade Bollaert-Delelis,RC Lens,Paris Saint-Germain,,,,Ligue 1
+253,29,2026-04-11 17:00:00Z,Stade de l'Abbé-Deschamps,AJ Auxerre,FC Nantes,,,,Ligue 1
+260,29,2026-04-11 19:05:00Z,Roazhon Park,Stade Rennais FC,Angers SCO,,,,Ligue 1
+254,29,2026-04-12 15:15:00Z,Stade Francis-Le Blé,Stade Brestois 29,RC Strasbourg Alsace,,,,Ligue 1
+258,29,2026-04-12 15:15:00Z,Allianz Riviera,OGC Nice,Havre Athletic Club,,,,Ligue 1
+261,29,2026-04-12 15:15:00Z,Stadium de Toulouse,Toulouse FC,LOSC Lille,,,,Ligue 1
+256,29,2026-04-12 18:45:00Z,Parc Olympique Lyonnais,Olympique Lyonnais,FC Lorient,,,,Ligue 1
+262,30,2026-04-18 22:00:00Z,Stade Raymond Kopa,Angers SCO,Havre Athletic Club,,,,Ligue 1
+263,30,2026-04-18 22:00:00Z,Stade Bollaert-Delelis,RC Lens,Toulouse FC,,,,Ligue 1
+264,30,2026-04-18 22:00:00Z,Stade Pierre-Mauroy,LOSC Lille,OGC Nice,,,,Ligue 1
+265,30,2026-04-18 22:00:00Z,Stade du Moustoir,FC Lorient,Olympique de Marseille,,,,Ligue 1
+266,30,2026-04-18 22:00:00Z,Stade Saint-Symphorien,FC Metz,Paris FC,,,,Ligue 1
+267,30,2026-04-18 22:00:00Z,Stade Louis II,AS Monaco,AJ Auxerre,,,,Ligue 1
+268,30,2026-04-18 22:00:00Z,Stade de la Beaujoire,FC Nantes,Stade Brestois 29,,,,Ligue 1
+269,30,2026-04-18 22:00:00Z,Parc des Princes,Paris Saint-Germain,Olympique Lyonnais,,,,Ligue 1
+270,30,2026-04-18 22:00:00Z,Stade de la Meinau,RC Strasbourg Alsace,Stade Rennais FC,,,,Ligue 1
+271,31,2026-04-25 22:00:00Z,Stade Raymond Kopa,Angers SCO,Paris Saint-Germain,,,,Ligue 1
+272,31,2026-04-25 22:00:00Z,Stade Francis-Le Blé,Stade Brestois 29,RC Lens,,,,Ligue 1
+273,31,2026-04-25 22:00:00Z,Stade Océane,Havre Athletic Club,FC Metz,,,,Ligue 1
+274,31,2026-04-25 22:00:00Z,Stade du Moustoir,FC Lorient,RC Strasbourg Alsace,,,,Ligue 1
+275,31,2026-04-25 22:00:00Z,Parc Olympique Lyonnais,Olympique Lyonnais,AJ Auxerre,,,,Ligue 1
+276,31,2026-04-25 22:00:00Z,Stade Vélodrome,Olympique de Marseille,OGC Nice,,,,Ligue 1
+277,31,2026-04-25 22:00:00Z,Stade Charléty,Paris FC,LOSC Lille,,,,Ligue 1
+278,31,2026-04-25 22:00:00Z,Roazhon Park,Stade Rennais FC,FC Nantes,,,,Ligue 1
+279,31,2026-04-25 22:00:00Z,Stadium de Toulouse,Toulouse FC,AS Monaco,,,,Ligue 1
+280,32,2026-05-02 22:00:00Z,Stade de l'Abbé-Deschamps,AJ Auxerre,Angers SCO,,,,Ligue 1
+281,32,2026-05-02 22:00:00Z,Stade Pierre-Mauroy,LOSC Lille,Havre Athletic Club,,,,Ligue 1
+282,32,2026-05-02 22:00:00Z,Parc Olympique Lyonnais,Olympique Lyonnais,Stade Rennais FC,,,,Ligue 1
+283,32,2026-05-02 22:00:00Z,Stade Saint-Symphorien,FC Metz,AS Monaco,,,,Ligue 1
+284,32,2026-05-02 22:00:00Z,Stade de la Beaujoire,FC Nantes,Olympique de Marseille,,,,Ligue 1
+285,32,2026-05-02 22:00:00Z,Allianz Riviera,OGC Nice,RC Lens,,,,Ligue 1
+286,32,2026-05-02 22:00:00Z,Stade Charléty,Paris FC,Stade Brestois 29,,,,Ligue 1
+287,32,2026-05-02 22:00:00Z,Parc des Princes,Paris Saint-Germain,FC Lorient,,,,Ligue 1
+288,32,2026-05-02 22:00:00Z,Stade de la Meinau,RC Strasbourg Alsace,Toulouse FC,,,,Ligue 1
+289,33,2026-05-09 19:00:00Z,Stade Raymond Kopa,Angers SCO,RC Strasbourg Alsace,,,,Ligue 1
+290,33,2026-05-09 19:00:00Z,Stade de l'Abbé-Deschamps,AJ Auxerre,OGC Nice,,,,Ligue 1
+291,33,2026-05-09 19:00:00Z,Stade Océane,Havre Athletic Club,Olympique de Marseille,,,,Ligue 1
+292,33,2026-05-09 19:00:00Z,Stade Bollaert-Delelis,RC Lens,FC Nantes,,,,Ligue 1
+293,33,2026-05-09 19:00:00Z,Stade Saint-Symphorien,FC Metz,FC Lorient,,,,Ligue 1
+294,33,2026-05-09 19:00:00Z,Stade Louis II,AS Monaco,LOSC Lille,,,,Ligue 1
+295,33,2026-05-09 19:00:00Z,Parc des Princes,Paris Saint-Germain,Stade Brestois 29,,,,Ligue 1
+296,33,2026-05-09 19:00:00Z,Roazhon Park,Stade Rennais FC,Paris FC,,,,Ligue 1
+297,33,2026-05-09 19:00:00Z,Stadium de Toulouse,Toulouse FC,Olympique Lyonnais,,,,Ligue 1
+298,34,2026-05-16 19:00:00Z,Stade Francis-Le Blé,Stade Brestois 29,Angers SCO,,,,Ligue 1
+299,34,2026-05-16 19:00:00Z,Stade Pierre-Mauroy,LOSC Lille,AJ Auxerre,,,,Ligue 1
+300,34,2026-05-16 19:00:00Z,Stade du Moustoir,FC Lorient,Havre Athletic Club,,,,Ligue 1
+301,34,2026-05-16 19:00:00Z,Parc Olympique Lyonnais,Olympique Lyonnais,RC Lens,,,,Ligue 1
+302,34,2026-05-16 19:00:00Z,Stade Vélodrome,Olympique de Marseille,Stade Rennais FC,,,,Ligue 1
+303,34,2026-05-16 19:00:00Z,Stade de la Beaujoire,FC Nantes,Toulouse FC,,,,Ligue 1
+304,34,2026-05-16 19:00:00Z,Allianz Riviera,OGC Nice,FC Metz,,,,Ligue 1
+305,34,2026-05-16 19:00:00Z,Stade Charléty,Paris FC,Paris Saint-Germain,,,,Ligue 1
+306,34,2026-05-16 19:00:00Z,Stade de la Meinau,RC Strasbourg Alsace,AS Monaco,,,,Ligue 1
