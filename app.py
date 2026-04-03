@@ -2,57 +2,81 @@ import streamlit as st
 import sqlite3
 import pandas as pd
 
+# Sayfa ayarları (Beyaz tema için varsayılan light mod)
 st.set_page_config(page_title="Analiz Botu", layout="centered")
 
-# Telegram Sistem Teması ve Tek Satır Maç Görünümü (CSS)
+# Beyaz Tema ve Kırmızı Sürpriz Vurgusu (CSS)
 st.markdown("""
     <style>
-    /* Ana Arka Plan */
-    .stApp { background-color: #17212b; }
+    /* Ana Arka Plan Beyaz */
+    .stApp { background-color: #ffffff; }
     
-    /* Seçim Kutuları Düzenleme */
+    /* Seçim Kutuları */
     .stSelectbox div, .stNumberInput div { 
-        background-color: #242f3d !important; 
-        color: white !important; 
+        background-color: #f0f2f6 !important; 
+        color: #333 !important; 
         border-radius: 10px !important;
     }
     
-    /* Tek Satır Maç Kartı */
+    /* Tek Satır Maç Kartı (Açık Renk) */
     .match-row {
-        background-color: #242f3d;
-        padding: 10px 15px;
+        background-color: #f8f9fa;
+        padding: 12px 15px;
         border-radius: 8px;
-        margin-bottom: 5px;
+        margin-bottom: 6px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-left: 4px solid #5288c1;
-        color: #f5f5f5;
-        font-family: 'Roboto', sans-serif;
+        border-left: 5px solid #dee2e6;
+        color: #212529;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
     
-    .season-tag { color: #6ab3f3; font-size: 12px; font-weight: bold; width: 60px; }
-    .teams-text { flex-grow: 1; text-align: center; font-size: 14px; }
+    .season-tag { color: #6c757d; font-size: 13px; font-weight: bold; width: 65px; }
+    .teams-text { flex-grow: 1; text-align: center; font-size: 15px; font-weight: 500; }
+    
     .score-badge { 
-        background-color: #1c2733; 
-        padding: 2px 8px; 
+        background-color: #e9ecef; 
+        padding: 2px 10px; 
         border-radius: 5px; 
         font-weight: bold; 
-        color: #ffca28;
+        color: #000;
         margin: 0 10px;
     }
-    .iyms-tag { 
-        background-color: #3d4b59; 
-        color: #e0e0e0; 
-        padding: 2px 6px; 
-        border-radius: 4px; 
-        font-size: 11px; 
-        width: 50px;
+
+    /* İY/MS Etiketleri */
+    .iyms-normal { 
+        background-color: #adb5bd; 
+        color: white; 
+        padding: 4px 8px; 
+        border-radius: 6px; 
+        font-size: 12px; 
+        font-weight: bold;
+        width: 55px;
         text-align: center;
     }
+
+    /* SÜPRİZ (1/2 - 2/1) VURGUSU */
+    .iyms-supriz { 
+        background-color: #ff0000; 
+        color: #ffffff; 
+        padding: 4px 8px; 
+        border-radius: 6px; 
+        font-size: 13px; 
+        font-weight: 900;
+        width: 55px;
+        text-align: center;
+        box-shadow: 0 0 8px rgba(255,0,0,0.5);
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
     
-    h2, h4, label { color: #5288c1 !important; }
-    hr { border-top: 1px solid #2b3948; }
+    h2, label { color: #333 !important; }
     </style>
     """, unsafe_allow_html=True)
 
@@ -88,15 +112,19 @@ sql = f"""
     FROM matches 
     WHERE (home_team = '{secilen_takim}' OR away_team = '{secilen_takim}')
     AND round = {hafta}
-    ORDER BY season DESC LIMIT 5
+    ORDER BY season DESC
 """
 df = query_db(sql)
 
 if not df.empty:
-    st.markdown(f"<p style='color:#6ab3f3; font-size:13px;'>{secilen_takim} - Son 5 Sezon ({hafta}. Hafta)</p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='color:#6c757d; font-size:14px; font-weight:bold;'>{secilen_takim} - Geçmiş {hafta}. Hafta Maçları</p>", unsafe_allow_html=True)
     
     for _, r in df.iterrows():
         iyms = get_iyms(r['ht_home_score'], r['ht_away_score'], r['home_score'], r['away_score'])
+        
+        # Sürpriz kontrolü (1/2 veya 2/1 ise kırmızı yap)
+        is_supriz = iyms in ["1/2", "2/1"]
+        badge_class = "iyms-supriz" if is_supriz else "iyms-normal"
         
         # Tek Satır Tasarımı
         st.markdown(f"""
@@ -105,8 +133,8 @@ if not df.empty:
                 <div class="teams-text">
                     {r['home_team']} <span class="score-badge">{int(r['home_score'])}-{int(r['away_score'])}</span> {r['away_team']}
                 </div>
-                <div class="iyms-tag">{iyms}</div>
+                <div class="{badge_class}">{iyms}</div>
             </div>
         """, unsafe_allow_html=True)
 else:
-    st.info("🤖 Bu kriterlere uygun geçmiş maç kaydı bulunamadı.")
+    st.info("🤖 Bu takım için geçmişte bu haftaya ait maç kaydı bulunamadı.")
