@@ -3,94 +3,69 @@ import sqlite3
 import pandas as pd
 
 # Sayfa ayarları
-st.set_page_config(page_title="Analiz Botu", layout="centered")
+st.set_page_config(page_title="Analiz Botu Pro", layout="centered")
 
-# Beyaz Tema & Net Renk Vurguları (CSS)
-st.markdown("""
+# --- TEMA SEÇİCİ (SAĞ ÜST KÖŞE) ---
+if 'theme' not in st.session_state:
+    st.session_state.theme = 'Light'
+
+with st.sidebar:
+    st.session_state.theme = st.radio("Sistem Teması", ['Light', 'Dark'])
+
+# --- DİNAMİK CSS (TEMA VE SADELEŞTİRME) ---
+if st.session_state.theme == 'Dark':
+    bg_color = "#17212b"
+    text_color = "#ffffff"
+    row_bg = "#242f3d"
+    border_color = "#2b3948"
+    sub_text = "#95a5a6"
+else:
+    bg_color = "#ffffff"
+    text_color = "#212529"
+    row_bg = "#fdfdfd"
+    border_color = "#eeeeee"
+    sub_text = "#7f8c8d"
+
+st.markdown(f"""
     <style>
-    /* Arka Planı Tekrar Beyaz Yapıyoruz */
-    .stApp { background-color: #ffffff; }
+    .stApp {{ background-color: {bg_color}; }}
     
-    /* Seçim Kutuları */
-    .stSelectbox div, .stNumberInput div { 
-        background-color: #f8f9fa !important; 
-        border: 1px solid #dee2e6 !important;
-        border-radius: 10px !important;
-    }
-    
-    /* Maç Satırı (Beyaz/Çok Açık Gri) */
-    .match-row {
-        background-color: #ffffff; 
-        padding: 12px 15px;
-        border-radius: 8px;
-        margin-bottom: 6px;
+    /* Maç Satırı: Balon etkisi kaldırıldı, düz çizgi ve sade zemin eklendi */
+    .match-row {{
+        background-color: {row_bg};
+        padding: 8px 10px;
+        margin-bottom: 2px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: 1px solid #f1f1f1;
-        border-left: 5px solid #333; /* Sol kenar çubuğu sade siyah/gri */
-        color: #212529;
-        box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-    }
+        border-bottom: 1px solid {border_color};
+        color: {text_color};
+        font-family: sans-serif;
+    }}
     
-    .season-tag { color: #6c757d; font-size: 13px; font-weight: bold; width: 65px; }
+    .season-tag {{ color: {sub_text}; font-size: 11px; font-weight: bold; width: 55px; }}
     
-    .teams-container { 
-        flex-grow: 1; 
-        text-align: center; 
-        display: flex; 
-        flex-direction: column; 
-    }
+    .teams-container {{ flex-grow: 1; text-align: center; }}
     
-    .ms-score { 
-        font-size: 18px; 
-        font-weight: bold; 
-        color: #000; 
-        margin: 0 10px;
-    }
+    .ms-score {{ font-size: 16px; font-weight: bold; margin: 0 8px; }}
     
-    .iy-score-sub { 
-        font-size: 11px; 
-        color: #888; 
-        font-weight: bold;
-        margin-top: -2px;
-    }
+    .iy-score-sub {{ font-size: 10px; color: {sub_text}; margin-top: -2px; }}
 
-    /* İY/MS BUTONLARI */
-    .iyms-base { 
-        padding: 5px 8px; 
-        border-radius: 6px; 
-        font-size: 12px; 
+    /* İY/MS ETİKETLERİ */
+    .iyms-base {{
+        padding: 3px 6px;
+        border-radius: 4px;
+        font-size: 11px;
         font-weight: bold;
-        width: 55px;
+        width: 45px;
         text-align: center;
-    }
+    }}
 
-    /* NORMAL (Gri) */
-    .iyms-normal { background-color: #e9ecef; color: #495057; }
+    .iyms-normal {{ background-color: #adb5bd; color: white; }}
+    .iyms-supriz {{ background-color: #ff0000; color: white; font-weight: 900; }}
+    .iyms-beraberlik {{ background-color: #f39c12; color: white; }}
 
-    /* SÜRPRİZ (1/2 - 2/1) - KIRMIZI */
-    .iyms-supriz { 
-        background-color: #ff0000; 
-        color: white; 
-        box-shadow: 0 0 8px rgba(255,0,0,0.3);
-        animation: pulse 1.5s infinite;
-    }
-
-    /* BERABERLİK (1/0 - 2/0) - KOYU SARI */
-    .iyms-beraberlik { 
-        background-color: #ffc107; /* Canlı Sarı */
-        color: #000; 
-        border: 1px solid #e0a800;
-    }
-
-    @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.05); }
-        100% { transform: scale(1); }
-    }
-    
-    h2, label { color: #333 !important; }
+    h2, label, p {{ color: {text_color} !important; }}
     </style>
     """, unsafe_allow_html=True)
 
@@ -105,7 +80,7 @@ def get_iyms(h1, a1, h2, a2):
     ms = "1" if h2 > a2 else ("2" if h2 < a2 else "0")
     return f"{iy}/{ms}"
 
-st.markdown("<h2 style='text-align:center;'>📊 ANALİZ BOTU</h2>", unsafe_allow_html=True)
+st.markdown(f"<h2 style='text-align:center;'>📊 ANALİZ BOTU</h2>", unsafe_allow_html=True)
 
 # --- FİLTRELER ---
 c1, c2 = st.columns(2)
@@ -120,7 +95,7 @@ hafta = st.number_input("🔢 Hafta (Round)", 1, 45, 30)
 
 st.markdown("---")
 
-# --- ANALİZ LİSTESİ ---
+# --- VERİ LİSTELEME ---
 sql = f"""
     SELECT season, home_team, away_team, home_score, away_score, ht_home_score, ht_away_score 
     FROM matches 
@@ -131,18 +106,12 @@ sql = f"""
 df = query_db(sql)
 
 if not df.empty:
-    st.markdown(f"<p style='color:#666; font-size:14px; text-align:center;'>{secilen_takim} - Geçmiş {hafta}. Hafta</p>", unsafe_allow_html=True)
-    
     for _, r in df.iterrows():
         iyms = get_iyms(r['ht_home_score'], r['ht_away_score'], r['home_score'], r['away_score'])
         
-        # Renk Kontrolü
-        if iyms in ["1/2", "2/1"]:
-            badge_class = "iyms-supriz"
-        elif iyms in ["1/0", "2/0"]:
-            badge_class = "iyms-beraberlik"
-        else:
-            badge_class = "iyms-normal"
+        if iyms in ["1/2", "2/1"]: badge_class = "iyms-supriz"
+        elif iyms in ["1/0", "2/0"]: badge_class = "iyms-beraberlik"
+        else: badge_class = "iyms-normal"
         
         st.markdown(f"""
             <div class="match-row">
