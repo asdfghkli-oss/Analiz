@@ -1,39 +1,54 @@
 import pandas as pd
 import requests
 
-def fetch_free_data():
-    # API KEY GEREKTİRMEYEN AÇIK KAYNAK (Football Data JSON)
-    # Örnek olarak İngiltere Premier Lig verisini çekiyoruz
-    url = "https://raw.githubusercontent.com/statsbomb/open-data/master/data/matches/11/90.json"
+def fetch_fbref_data():
+    # FBref Güncel Fikstür Sayfası
+    url = "https://fbref.com/en/matches/"
     
-    print("🚀 Ücretsiz açık kaynak verisi çekiliyor...")
-    
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    }
+
+    print("🚀 FBref üzerinden güncel maçlar çekiliyor...")
+
     try:
-        r = requests.get(url, timeout=20)
-        if r.status_code == 200:
-            data = r.json()
+        # Sayfayı indir
+        response = requests.get(url, headers=headers, timeout=20)
+        
+        # HTML içindeki tabloları oku
+        tables = pd.read_html(response.text)
+        
+        # Genellikle ilk tablo günün maçlarını içerir
+        if tables:
+            df_raw = tables[0]
+            
+            # Sütun isimlerini düzenleyelim (FBref standartlarına göre)
+            # Genellikle: Date, League, Home, Score, Away gibi gelir
             all_matches = []
             
-            for item in data:
+            for _, row in df_raw.iterrows():
+                # Boş satırları ve başlık tekrarlarını atla
+                if pd.isna(row.get('Home')) or row.get('Home') == 'Home':
+                    continue
+                    
                 all_matches.append({
-                    'Date': item['match_date'],
-                    'League': "Premier League",
-                    'HomeTeam': item['home_team']['home_team_name'],
-                    'AwayTeam': item['away_team']['away_team_name'],
-                    'HomeScore': item['home_score'],
-                    'AwayScore': item['away_score']
+                    'Date': row.get('Date'),
+                    'League': row.get('Competition'),
+                    'HomeTeam': row.get('Home'),
+                    'AwayTeam': row.get('Away')
                 })
-            
+
             if all_matches:
                 df = pd.DataFrame(all_matches)
                 df.to_csv("all_leagues_data.csv", index=False)
-                print(f"✅ BAŞARILI: {len(df)} maç açık kaynaktan çekildi.")
+                print(f"✅ FBref BAŞARILI: {len(df)} maç kaydedildi.")
             else:
-                print("⚠️ Veri boş döndü.")
+                print("⚠️ Tablo bulundu ama maç verisi ayıklanamadı.")
         else:
-            print(f"❌ Bağlantı Hatası: {r.status_code}")
+            print("❌ Sayfada maç tablosu bulunamadı.")
+            
     except Exception as e:
-        print(f"🛑 Hata: {e}")
+        print(f"🛑 FBref Bağlantı Hatası: {e}")
 
 if __name__ == "__main__":
-    fetch_free_data()
+    fetch_fbref_data()
