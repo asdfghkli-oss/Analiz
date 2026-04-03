@@ -3,51 +3,74 @@ import pandas as pd
 import os
 from datetime import datetime
 
-st.set_page_config(page_title="Pro Analiz", layout="centered")
+# Sayfa Genişliği ve Stil
+st.set_page_config(page_title="Akıllı Analiz", layout="centered")
+
+st.markdown("""
+    <style>
+    .stSelectbox { margin-bottom: 20px; }
+    .reportview-container { background: #f0f2f6; }
+    </style>
+    """, unsafe_allow_html=True)
 
 if not os.path.exists("all_leagues_data.csv"):
-    st.error("Veri bulunamadı. GitHub Actions çalıştırın.")
+    st.error("⚠️ Veri dosyası bulunamadı. Lütfen GitHub Actions üzerinden 'Run Workflow' yapın.")
 else:
+    # Veriyi oku ve tarih hatasını burada da engelle
     df = pd.read_csv("all_leagues_data.csv")
-    df['Date'] = pd.to_datetime(df['Date'])
+    df['Date'] = pd.to_datetime(df['Date'], errors='coerce')
+
+    st.title("🏟️ Akıllı Analiz Paneli")
 
     # --- 1. KUTUCUK: TARİH ---
-    st.subheader("📅 Analiz Tarihi")
-    secilen_tarih = st.date_input("Bülten Günü:", datetime.now().date())
+    st.info("📅 1. ADIM: TARİH SEÇİMİ")
+    # Bugünün tarihini varsayılan yap
+    secilen_tarih = st.date_input("Analiz edilecek gün:", datetime.now().date())
 
     # --- 2. KUTUCUK: LİG ---
-    st.subheader("🌍 Lig Seçimi")
+    st.info("🌍 2. ADIM: LİG SEÇİMİ")
     ligler = sorted(df['League'].unique())
-    secilen_lig = st.selectbox("Lig seçiniz:", ligler)
+    secilen_lig = st.selectbox("Lütfen bir lig seçin:", ligler)
 
     # --- 3. KUTUCUK: KARŞILAŞMA ---
-    st.subheader("🏟️ Karşılaşma")
-    # Seçilen tarihteki bülteni filtrele
-    gunun_df = df[(df['Date'].dt.date == secilen_tarih) & (df['League'] == secilen_lig)]
+    st.info("🤝 3. ADIM: KARŞILAŞMA SEÇİMİ")
+    
+    # Seçilen tarih ve ligdeki maçları filtrele
+    mask = (df['Date'].dt.date == secilen_tarih) & (df['League'] == secilen_lig)
+    gunun_df = df[mask].copy()
     
     if not gunun_df.empty:
-        gunun_df['MatchName'] = gunun_df['HomeTeam'] + " vs " + gunun_df['AwayTeam']
-        secilen_mac = st.selectbox("Günün Maçları:", gunun_df['MatchName'])
+        gunun_df['MatchName'] = gunun_df['HomeTeam'] + " - " + gunun_df['AwayTeam']
+        secilen_mac = st.selectbox("Günün Bülteni:", gunun_df['MatchName'])
         
-        ev = gunun_df[gunun_df['MatchName'] == secilen_mac]['HomeTeam'].values[0]
-        dep = gunun_df[gunun_df['MatchName'] == secilen_mac]['AwayTeam'].values[0]
+        # Seçilen maçın detaylarını al
+        mac_detay = gunun_df[gunun_df['MatchName'] == secilen_mac].iloc[0]
+        ev_takim = mac_detay['HomeTeam']
+        dep_takim = mac_detay['AwayTeam']
 
-        # --- 4. EN ALT: ALGORİTMALAR ---
+        # --- 4. EN ALT: ORAN ALGORİTMALARI ---
         st.divider()
-        st.subheader("🧠 Oran Algoritmaları")
+        st.subheader("🧠 Algoritma Analiz Sonuçları")
         
-        # Takımların geçmiş verisini bul (Arşivden)
-        gecmis = df[(df['HomeTeam'] == ev) | (df['AwayTeam'] == ev)].tail(10)
+        # Geçmiş 10 maça bakarak algoritma çalıştır (Ev sahibi için)
+        gecmis_ev = df[(df['HomeTeam'] == ev_takim) | (df['AwayTeam'] == ev_takim)].dropna(subset=['FTHG']).tail(10)
         
-        if not gecmis.dropna(subset=['FTHG']).empty:
-            ust_oran = (len(gecmis[(gecmis['FTHG'] + gecmis['FTAG']) > 2.5]) / len(gecmis)) * 100
-            iy_oran = (len(gecmis[(gecmis['FTHG'] + gecmis['FTAG']) > 0.5]) / len(gecmis)) * 100 # Basit İY tahmini
+        if len(gecmis_ev) > 0:
+            ust_sayisi = len(gecmis_ev[(gecmis_ev['FTHG'] + gecmis_ev['FTAG']) > 2.5])
+            ust_ihtimal = (ust_sayisi / len(gecmis_ev)) * 100
             
             c1, c2 = st.columns(2)
-            c1.metric("2.5 Üst Olasılığı", f"%{round(ust_oran, 1)}")
-            c2.metric("İY 0.5 Üst Olasılığı", f"%{round(iy_oran, 1)}")
-            st.success(f"💡 Algoritma Notu: {ev} takımı son maçlarında gol yeme eğiliminde.")
+            with c1:
+                st.metric("2.5 Üst Olasılığı", f"%{round(ust_ihtimal, 1)}")
+            with c2:
+                # KG Var Algoritması
+                kg_sayisi = len(gecmis_ev[(gecmis_ev['FTHG'] > 0) & (gecmis_ev['FTAG'] > 0)])
+                kg_ihtimal = (kg_sayisi / len(gecmis_ev)) * 100
+                st.metric("KG Var Olasılığı", f"%{round(kg_ihtimal, 1)}")
+            
+            st.success(f"💡 Not: {ev_takim} son 10 maçının {ust_sayisi} tanesini 2.5 Üst bitirdi.")
         else:
-            st.warning("Bu maç için yeterli geçmiş veri bulunamadı.")
+            st.warning("Bu karşılaşma için yeterli arşiv verisi bulunamadı.")
+            
     else:
-        st.warning("Bu tarihte ve ligde bülten maçı bulunamadı.")
+        st.warning(f"Seçilen tarihte ({secilen_tarih}) {secilen_lig} bülteni bulunamadı.")
