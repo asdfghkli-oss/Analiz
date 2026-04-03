@@ -1,95 +1,102 @@
 import streamlit as st
 import sqlite3
 import pandas as pd
-from collections import Counter
 
-# Bot görünümü için daraltılmış düzen
+# Bot görünümü için dar ekran ayarı
 st.set_page_config(page_title="Analiz Botu", layout="centered")
 
-# Telegram Botu CSS Tasarımı
+# Telegram Botu Tasarımı (CSS)
 st.markdown("""
     <style>
     .stApp { background-color: #1c2733; }
-    .bot-header { color: #5dade2; text-align: center; font-family: sans-serif; margin-bottom: 20px; }
-    .result-card {
+    .bot-header { color: #5dade2; text-align: center; font-weight: bold; margin-bottom: 20px; }
+    .match-card {
         background-color: #24303f;
-        padding: 15px;
-        border-radius: 15px;
-        border: 1px solid #3d4b59;
-        margin-bottom: 15px;
-    }
-    .score-pill {
-        display: inline-block;
-        width: 100%;
-        margin: 4px 0;
         padding: 12px;
         border-radius: 12px;
-        text-align: center;
-        font-weight: bold;
-        font-size: 16px;
-        color: #1a1a1a;
+        border-left: 5px solid #5dade2;
+        margin-bottom: 10px;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    .green { background-color: #a7f3d0; border-left: 5px solid #059669; }
-    .blue { background-color: #bfdbfe; border-left: 5px solid #2563eb; }
-    .purple { background-color: #ddd6fe; border-left: 5px solid #7c3aed; }
-    .yellow { background-color: #fef08a; border-left: 5px solid #ca8a04; }
-    label { color: #ffffff !important; }
+    .score-text { font-size: 18px; font-weight: bold; color: #f1c40f; }
+    .iyms-badge {
+        background-color: #34495e;
+        padding: 3px 8px;
+        border-radius: 5px;
+        font-size: 13px;
+        color: #ecf0f1;
+        float: right;
+    }
+    .date-text { color: #bdc3c7; font-size: 12px; }
+    label { color: white !important; }
     </style>
     """, unsafe_allow_html=True)
 
-def get_data(sql):
+def query_db(sql):
     try:
         with sqlite3.connect("football.db") as conn:
             return pd.read_sql_query(sql, conn)
     except: return pd.DataFrame()
 
-st.markdown("<h2 class='bot-header'>📊 SKOR ANALİZ BOTU</h2>", unsafe_allow_html=True)
+# İY/MS Hesaplama Fonksiyonu
+def get_iyms(h1, a1, h2, a2):
+    # İY sonucu
+    if h1 > a1: iy = "1"
+    elif h1 < a1: iy = "2"
+    else: iy = "0"
+    # MS sonucu
+    if h2 > a2: ms = "1"
+    elif h2 < a2: ms = "2"
+    else: ms = "0"
+    return f"{iy}/{ms}"
 
-# --- BOT GİRİŞ ALANLARI ---
+st.markdown("<h2 class='bot-header'>🤖 MAÇ GEÇMİŞİ BOTU</h2>", unsafe_allow_html=True)
+
+# --- SEÇİM ALANI ---
 col1, col2 = st.columns(2)
 with col1:
-    ligler = get_data("SELECT DISTINCT league FROM matches ORDER BY league")
+    ligler = query_db("SELECT DISTINCT league FROM matches ORDER BY league")
     secilen_lig = st.selectbox("🏆 Lig", ligler['league'].tolist() if not ligler.empty else [])
 with col2:
-    takimlar = get_data(f"SELECT DISTINCT home_team FROM matches WHERE league='{secilen_lig}'")
+    takimlar = query_db(f"SELECT DISTINCT home_team FROM matches WHERE league='{secilen_lig}'")
     secilen_takim = st.selectbox("⚽ Takım", takimlar['home_team'].tolist() if not takimlar.empty else [])
 
-hafta = st.number_input("🔢 Analiz Haftası (Round)", 1, 45, 30)
+hafta = st.number_input("🔢 Hafta (Round)", 1, 45, 30)
 
-# --- BOT HIZLI ANALİZ MOTORU ---
-# Sütun adı 'round' olarak güncellendi, son 5 sezonu kapsar.
-sql_query = f"""
-    SELECT home_score, away_score, ht_home_score, ht_away_score, season 
+st.markdown("---")
+
+# --- SON 5 SEZON SORGUSU ---
+# 'round' sütunu üzerinden o haftanın geçmiş 5-6 sezonluk maçlarını getirir
+sql = f"""
+    SELECT season, date, home_team, away_team, home_score, away_score, ht_home_score, ht_away_score 
     FROM matches 
     WHERE (home_team = '{secilen_takim}' OR away_team = '{secilen_takim}')
     AND round = {hafta}
     ORDER BY season DESC
 """
-df = get_data(sql_query)
+df = query_db(sql)
 
 if not df.empty:
-    st.markdown(f"<p style='color:gray; text-align:center;'>Son {len(df)} sezonun {hafta}. hafta verileri analiz edildi.</p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='color:#bdc3c7; text-align:center;'>{secilen_takim} - {hafta}. Hafta Geçmişi</p>", unsafe_allow_html=True)
     
-    # Veri İşleme
-    ms_skorlar = [f"{int(r['home_score'])}-{int(r['away_score'])}" for _, r in df.iterrows()]
-    iy_skorlar = [f"{int(r['ht_home_score'])}-{int(r['ht_away_score'])}" for _, r in df.iterrows()]
-    ms_goller = [f"{int(r['home_score'] + r['away_score'])} Gol" for _, r in df.iterrows()]
-    iy_goller = [f"{int(r['ht_home_score'] + r['ht_away_score'])} Gol" for _, r in df.iterrows()]
-
-    def render_bot_section(title, data_list, color_class):
-        st.markdown(f"<h4 style='color:white; margin-top:20px;'>{title}</h4>", unsafe_allow_html=True)
-        counts = Counter(data_list)
-        total = len(data_list)
-        for val, count in counts.most_common(5):
-            perc = int((count/total)*100)
-            st.markdown(f'<div class="score-pill {color_class}">{val} &nbsp; | &nbsp; %{perc} ({count} Maç)</div>', unsafe_allow_html=True)
-
-    # Bot Yanıtları (Alt alta hızlı liste)
-    render_bot_section("🏠 Maç Skoru Tahminleri", ms_skorlar, "green")
-    render_bot_section("⏱️ İlk Yarı Skoru Tahminleri", iy_skorlar, "blue")
-    render_bot_section("🌟 Maç Sonu Toplam Gol", ms_goller, "purple")
-    render_bot_section("⚽ İlk Yarı Toplam Gol", iy_goller, "yellow")
-
+    for _, r in df.iterrows():
+        iyms = get_iyms(r['ht_home_score'], r['ht_away_score'], r['home_score'], r['away_score'])
+        
+        # Telegram Mesaj Kartı Tasarımı
+        st.markdown(f"""
+            <div class="match-card">
+                <span class="date-text">{r['season']} | {r['date']}</span>
+                <span class="iyms-badge">İY/MS: {iyms}</span>
+                <div style="margin-top: 8px;">
+                    <span style="font-size:15px;">{r['home_team']}</span> 
+                    <span class="score-text"> {int(r['home_score'])} - {int(r['away_score'])} </span> 
+                    <span style="font-size:15px;">{r['away_team']}</span>
+                </div>
+                <div style="font-size:12px; color:#95a5a6; margin-top:5px;">
+                    İlk Yarı: {int(r['ht_home_score'])}-{int(r['ht_away_score'])}
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
 else:
-    st.error("🤖 Bot bu takım için o haftaya ait geçmiş veri bulamadı.")
-
+    st.warning("🤖 Bu hafta için geçmiş maç kaydı bulunamadı.")
