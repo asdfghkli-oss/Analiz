@@ -2,7 +2,6 @@ import streamlit as st
 import sqlite3
 import pandas as pd
 
-# Sayfa ayarlarını sistem temasına (Dark) göre yapılandır
 st.set_page_config(page_title="Analiz Botu", layout="centered")
 
 # Telegram Sistem Teması ve Tek Satır Maç Görünümü (CSS)
