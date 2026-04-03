@@ -2,7 +2,6 @@ import streamlit as st
 import sqlite3
 import pandas as pd
 
-# Sayfa ayarları
 st.set_page_config(page_title="Analiz Botu Pro", layout="centered")
 
 # --- VERİTABANI ---
@@ -12,32 +11,43 @@ def query_db(sql):
             return pd.read_sql_query(sql, conn)
     except: return pd.DataFrame()
 
-# --- TEMA & STİL (Kutucuk ve Oklar İçin Özel Tasarım) ---
+# --- TEMA & STİL ---
 if 'theme' not in st.session_state: st.session_state.theme = 'Light'
 
 st.markdown(f"""
     <style>
     .stApp {{ background-color: {'#ffffff' if st.session_state.theme == 'Light' else '#17212b'}; }}
     header {{visibility: hidden;}}
-    .main .block-container {{padding-top: 1.5rem;}}
+    .main .block-container {{padding-top: 1rem;}}
+
+    /* OKLARI VE KUTUCUĞU YAN YANA ZORLA */
+    [data-testid="column"] {{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }}
     
-    /* Butonları Hizala */
-    div.stButton > button {{
-        width: 100%;
-        height: 45px;
-        border-radius: 10px;
-        border: 1px solid #ddd;
-        background-color: transparent;
-        font-weight: bold;
+    /* Mobilde sütunların alt alta binmesini engelle */
+    [data-testid="stHorizontalBlock"] {{
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
     }}
 
-    /* Analiz Tablosu */
+    .stButton button {{
+        width: 100% !important;
+        padding: 0px !important;
+        height: 42px !important;
+        border-radius: 8px !important;
+    }}
+
     .analysis-container {{
         background-color: {'#ffffff' if st.session_state.theme == 'Light' else '#1e2c3a'};
         border-radius: 12px;
         padding: 5px;
         border: 1px solid {'#eeeeee' if st.session_state.theme == 'Light' else '#2b3948'};
         box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        margin-top: 10px;
     }}
     
     .match-row {{
@@ -49,15 +59,15 @@ st.markdown(f"""
         color: {'#212529' if st.session_state.theme == 'Light' else '#ffffff'};
     }}
     
-    .ms-val {{ font-size: 17px; font-weight: 800; }}
-    .iy-val {{ font-size: 11px; color: #888; display: block; margin-top: -2px; }}
+    .ms-val {{ font-size: 16px; font-weight: 800; }}
+    .iy-val {{ font-size: 10px; color: #888; display: block; }}
     
     .badge {{
         padding: 4px 8px;
         border-radius: 6px;
         font-size: 11px;
         font-weight: bold;
-        width: 50px;
+        width: 45px;
         text-align: center;
     }}
     .bg-supriz {{ background-color: #ff0000 !important; color: white !important; }}
@@ -66,43 +76,42 @@ st.markdown(f"""
     </style>
     """, unsafe_allow_html=True)
 
-with st.sidebar:
-    st.session_state.theme = st.radio("Görünüm", ['Light', 'Dark'])
-
-# --- 1. LİG VE HAFTA ---
+# --- VERİ ÇEKME ---
 ligler_df = query_db("SELECT DISTINCT league FROM matches ORDER BY league")
 ligler = ligler_df['league'].tolist() if not ligler_df.empty else []
 
-c_lig, c_hafta = st.columns([2, 1])
-with c_lig:
+# 1. LİG VE HAFTA SEÇİMİ
+c1, c2 = st.columns([2, 1])
+with c1:
     secilen_lig = st.selectbox("🏆 LİG", ligler)
-with c_hafta:
+with c2:
     hafta = st.number_input("🔢 HAFTA", 1, 45, 30)
 
-# --- 2. TAKIM SEÇİMİ (TEK SATIRDA OKLAR VE KUTUCUK) ---
+# 2. TAKIM SEÇİMİ (MOBİL UYUMLU TEK SATIR)
 takimlar_df = query_db(f"SELECT DISTINCT home_team FROM matches WHERE league='{secilen_lig}' ORDER BY home_team")
 takimlar = takimlar_df['home_team'].tolist() if not takimlar_df.empty else []
 
 if 't_idx' not in st.session_state: st.session_state.t_idx = 0
 
 st.write("⚽ **TAKIM**")
-# [Ok] [Kutucuk] [Ok] Düzeni
-col_left, col_mid, col_right = st.columns([1, 6, 1])
+# Sütunları genişliklerine göre zorla: Sol Ok (15%), Seçim (70%), Sağ Ok (15%)
+col_l, col_m, col_r = st.columns([0.15, 0.7, 0.15])
 
-with col_left:
-    if st.button("<", key="prev"):
+with col_l:
+    if st.button("<", key="b_prev"):
         st.session_state.t_idx = (st.session_state.t_idx - 1) % len(takimlar)
         st.rerun()
 
-with col_right:
-    if st.button(">", key="next"):
+with col_m:
+    # İndeksi kontrol et (Lig değişince hata vermemesi için)
+    if st.session_state.t_idx >= len(takimlar): st.session_state.t_idx = 0
+    current_takim = st.selectbox("T", takimlar, index=st.session_state.t_idx, label_visibility="collapsed")
+    st.session_state.t_idx = takimlar.index(current_takim)
+
+with col_r:
+    if st.button(">", key="b_next"):
         st.session_state.t_idx = (st.session_state.t_idx + 1) % len(takimlar)
         st.rerun()
-
-with col_mid:
-    # Kutucuk ok tuşlarıyla senkronize çalışır
-    current_takim = st.selectbox("Takim_Box", takimlar, index=st.session_state.t_idx, label_visibility="collapsed")
-    st.session_state.t_idx = takimlar.index(current_takim)
 
 # --- ANALİZ MOTORU ---
 sql = f"""
@@ -137,4 +146,4 @@ if not df.empty:
         """, unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 else:
-    st.warning(f"🤖 {current_takim} için {hafta}. haftada geçmiş veri bulunamadı.")
+    st.warning(f"🤖 {current_takim} için {hafta}. hafta verisi yok.")
