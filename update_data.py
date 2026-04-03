@@ -1,51 +1,37 @@
 import pandas as pd
 import requests
 
-def fetch_live_bulletin():
-    # Günlük bülteni en hızlı güncelleyen ligler
-    leagues = {
-        "Süper Lig": "turkey-super-lig", 
-        "Premier League": "epl",
-        "La Liga": "la-liga", 
-        "Serie A": "serie-a", 
-        "Bundesliga": "bundesliga",
-        "Ligue 1": "france-ligue-1",
-        "Eredivisie": "netherlands-eredivisie",
-        "Portekiz": "portugal-primeira-liga"
-    }
+def fetch_with_api():
+    api_key = "2fb7b594f09acd4b3521ddf50fa227e9"
+    headers = {'X-Auth-Token': api_key}
     
-    all_data = []
-    for name, code in leagues.items():
+    # Desteklenen ana ligler
+    leagues = ['PL', 'PD', 'BL1', 'SA', 'FL1'] # İngiltere, İspanya, Almanya, İtalya, Fransa
+    all_matches = []
+
+    for league in leagues:
+        url = f"https://api.football-data.org/v4/competitions/{league}/matches"
         try:
-            # 2025-2026 Güncel Sezon Bülteni
-            url = f"https://fixturedownload.com/feed/json/{code}-2025"
-            r = requests.get(url, timeout=15)
+            r = requests.get(url, headers=headers, timeout=15)
             if r.status_code == 200:
                 data = r.json()
-                if data:
-                    for m in data:
-                        all_data.append({
-                            'Date': m.get('Date'),
-                            'League': name,
-                            'HomeTeam': m.get('HomeTeam'),
-                            'AwayTeam': m.get('AwayTeam'),
-                            'FTHG': m.get('HomeTeamScore'), 
-                            'FTAG': m.get('AwayTeamScore')
-                        })
-                    print(f"✅ {name} verisi alındı.")
-        except Exception as e: 
-            print(f"❌ {name} hatası: {e}")
-            continue
+                for m in data['matches']:
+                    all_matches.append({
+                        'Date': m['utcDate'],
+                        'League': data['competition']['name'],
+                        'HomeTeam': m['homeTeam']['name'],
+                        'AwayTeam': m['awayTeam']['name'],
+                        'FTHG': m['score']['fullTime']['home'],
+                        'FTAG': m['score']['fullTime']['away']
+                    })
+        except: continue
 
-    if all_data:
-        df = pd.DataFrame(all_data)
-        # Tarih formatını temizle (ISO 8601 uyumlu)
-        df['Date'] = pd.to_datetime(df['Date'], errors='coerce', utc=True).dt.tz_localize(None)
-        df = df.dropna(subset=['Date'])
+    if all_matches:
+        df = pd.DataFrame(all_matches)
+        # Tarih hatasını (KeyError: date) burada çözüyoruz
+        df['Date'] = pd.to_datetime(df['Date']).dt.tz_localize(None)
         df.to_csv("all_leagues_data.csv", index=False)
-        print(f"🚀 Toplam {len(df)} maç kaydedildi!")
-    else:
-        print("🛑 HATA: Hiçbir veri çekilemedi!")
+        print(f"✅ {len(df)} maçlık bülten hazır!")
 
 if __name__ == "__main__":
-    fetch_live_bulletin()
+    fetch_with_api()
