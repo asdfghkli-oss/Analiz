@@ -3,63 +3,44 @@ import sqlite3
 import pandas as pd
 
 # Sayfa ayarları
-st.set_page_config(page_title="Analiz Botu Pro", layout="centered")
+st.set_page_config(page_title="Pro Analiz Botu", layout="centered")
 
-# --- TEMA SİSTEMİ ---
-if 'theme' not in st.session_state:
-    st.session_state.theme = 'Light'
-
-# --- TAKIM DEĞİŞTİRME MANTIĞI (OKLAR) ---
+# --- VERİTABANI BAĞLANTISI ---
 def query_db(sql):
     try:
         with sqlite3.connect("football.db") as conn:
             return pd.read_sql_query(sql, conn)
     except: return pd.DataFrame()
 
-# Lig ve Takım Listelerini Al
-ligler_df = query_db("SELECT DISTINCT league FROM matches ORDER BY league")
-ligler = ligler_df['league'].tolist() if not ligler_df.empty else []
+# --- TEMA & STİL ---
+if 'theme' not in st.session_state: st.session_state.theme = 'Light'
 
-# CSS ile Görsel Düzenleme (Beyaz Bar Kaldırıldı)
 st.markdown(f"""
     <style>
     .stApp {{ background-color: {'#ffffff' if st.session_state.theme == 'Light' else '#17212b'}; }}
-    
-    /* Üst Bar ve Gereksiz Boşlukları Kaldır */
     header {{visibility: hidden;}}
     .main .block-container {{padding-top: 1rem;}}
     
-    /* Takım Değiştirme Alanı */
-    .nav-container {{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: {'#f8f9fa' if st.session_state.theme == 'Light' else '#242f3d'};
-        padding: 10px;
-        border-radius: 15px;
-        margin-bottom: 10px;
-    }}
-    
-    /* Analiz Kutusu (Container) */
+    /* Analiz Kutusu */
     .analysis-container {{
         background-color: {'#ffffff' if st.session_state.theme == 'Light' else '#1e2c3a'};
         border-radius: 12px;
         padding: 5px;
         border: 1px solid {'#eeeeee' if st.session_state.theme == 'Light' else '#2b3948'};
-        margin-top: 5px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }}
     
     .match-row {{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px;
+        padding: 12px 10px;
         border-bottom: 1px solid {'#f1f1f1' if st.session_state.theme == 'Light' else '#2b3948'};
         color: {'#212529' if st.session_state.theme == 'Light' else '#ffffff'};
     }}
     
-    .ms-val {{ font-size: 16px; font-weight: 800; }}
-    .iy-val {{ font-size: 10px; color: #888; display: block; }}
+    .ms-val {{ font-size: 17px; font-weight: 800; }}
+    .iy-val {{ font-size: 11px; color: #888; display: block; margin-top: -2px; }}
     
     .badge {{
         padding: 4px 8px;
@@ -75,34 +56,40 @@ st.markdown(f"""
     </style>
     """, unsafe_allow_html=True)
 
-# Sidebar Ayarları
+# --- PANEL AYARLARI ---
 with st.sidebar:
     st.session_state.theme = st.radio("Görünüm", ['Light', 'Dark'])
-    secilen_lig = st.selectbox("🏆 Lig", ligler)
 
-# Seçilen lige göre takımları getir
+# 1. LİG SEÇİMİ
+ligler_df = query_db("SELECT DISTINCT league FROM matches ORDER BY league")
+ligler = ligler_df['league'].tolist() if not ligler_df.empty else []
+secilen_lig = st.selectbox("🏆 LİG SEÇİN", ligler)
+
+# 2. HAFTA SEÇİMİ
+hafta = st.number_input("🔢 ANALİZ HAFTASI", 1, 45, 30)
+
+# 3. TAKIM SEÇİMİ (Kutulu ve Ok Tuşlu)
 takimlar_df = query_db(f"SELECT DISTINCT home_team FROM matches WHERE league='{secilen_lig}' ORDER BY home_team")
 takimlar = takimlar_df['home_team'].tolist() if not takimlar_df.empty else []
 
 if 't_idx' not in st.session_state: st.session_state.t_idx = 0
 
-# --- HAFTA EN ÜSTE ---
-hafta = st.number_input("🔢 ANALİZ HAFTASI", 1, 45, 30)
-
-# --- OKLARLA TAKIM SEÇİMİ ---
+# Ok Tuşları ve Takım İsmi
 col1, col2, col3 = st.columns([1, 4, 1])
 
 with col1:
     if st.button(" < "):
         st.session_state.t_idx = (st.session_state.t_idx - 1) % len(takimlar)
-with col2:
-    current_takim = takimlar[st.session_state.t_idx]
-    st.markdown(f"<h3 style='text-align:center; margin:0;'>{current_takim}</h3>", unsafe_allow_html=True)
 with col3:
     if st.button(" > "):
         st.session_state.t_idx = (st.session_state.t_idx + 1) % len(takimlar)
+with col2:
+    # Hem kutucuktan seçebilmek hem de okla değiştirebilmek için:
+    current_takim = st.selectbox("⚽ TAKIM", takimlar, index=st.session_state.t_idx, key="takim_box")
+    # Kutucuktan seçim yapılırsa indeksi güncelle
+    st.session_state.t_idx = takimlar.index(current_takim)
 
-# --- VERİ SORGUSU ---
+# --- ANALİZ MOTORU ---
 sql = f"""
     SELECT season, home_team, away_team, home_score, away_score, ht_home_score, ht_away_score 
     FROM matches 
@@ -117,6 +104,8 @@ def get_iyms(h1, a1, h2, a2):
     ms = "1" if h2 > a2 else ("2" if h2 < a2 else "0")
     return f"{iy}/{ms}"
 
+st.markdown("---")
+
 if not df.empty:
     st.markdown('<div class="analysis-container">', unsafe_allow_html=True)
     for _, r in df.iterrows():
@@ -125,9 +114,9 @@ if not df.empty:
         
         st.markdown(f"""
             <div class="match-row">
-                <div style="font-size:11px; width:50px;">{r['season']}</div>
+                <div style="font-size:11px; width:55px; color:gray;">{r['season']}</div>
                 <div style="text-align:center; flex-grow:1;">
-                    <div>{r['home_team']} <span class="ms-val">{int(r['home_score'])}-{int(r['away_score'])}</span> {r['away_team']}</div>
+                    <div style="font-size:14px;">{r['home_team']} <span class="ms-val">{int(r['home_score'])}-{int(r['away_score'])}</span> {r['away_team']}</div>
                     <span class="iy-val">İY: {int(r['ht_home_score'])}-{int(r['ht_away_score'])}</span>
                 </div>
                 <div class="badge {b_class}">{iyms}</div>
@@ -135,4 +124,4 @@ if not df.empty:
         """, unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 else:
-    st.write(f"<p style='text-align:center; color:gray;'>{hafta}. haftaya ait veri bulunamadı.</p>", unsafe_allow_html=True)
+    st.warning(f"🤖 {current_takim} için {hafta}. haftada geçmiş veri bulunamadı.")
