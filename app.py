@@ -2,53 +2,60 @@ import streamlit as st
 import sqlite3
 import pandas as pd
 
-# Sayfa ayarları (Beyaz tema için varsayılan light mod)
-st.set_page_config(page_title="Analiz Botu", layout="centered")
+# Sayfa ayarları
+st.set_page_config(page_title="Analiz Botu Pro", layout="centered")
 
-# Beyaz Tema ve Kırmızı Sürpriz Vurgusu (CSS)
+# Modern Buz Mavisi Tema & Renkli İY/MS Vurguları (CSS)
 st.markdown("""
     <style>
-    /* Ana Arka Plan Beyaz */
-    .stApp { background-color: #ffffff; }
+    .stApp { background-color: #f4f7f9; }
     
-    /* Seçim Kutuları */
     .stSelectbox div, .stNumberInput div { 
-        background-color: #f0f2f6 !important; 
-        color: #333 !important; 
-        border-radius: 10px !important;
+        background-color: #ffffff !important; 
+        border: 1px solid #d1d9e0 !important;
+        border-radius: 12px !important;
     }
     
-    /* Tek Satır Maç Kartı (Açık Renk) */
     .match-row {
-        background-color: #f8f9fa;
-        padding: 12px 15px;
-        border-radius: 8px;
-        margin-bottom: 6px;
+        background-color: #eef2f7; 
+        padding: 10px 15px;
+        border-radius: 10px;
+        margin-bottom: 8px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-left: 5px solid #dee2e6;
-        color: #212529;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        border-left: 5px solid #5c7f9a;
+        color: #2c3e50;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
     
-    .season-tag { color: #6c757d; font-size: 13px; font-weight: bold; width: 65px; }
-    .teams-text { flex-grow: 1; text-align: center; font-size: 15px; font-weight: 500; }
+    .season-tag { color: #5c7f9a; font-size: 12px; font-weight: bold; width: 60px; }
     
-    .score-badge { 
-        background-color: #e9ecef; 
-        padding: 2px 10px; 
-        border-radius: 5px; 
-        font-weight: bold; 
-        color: #000;
+    .teams-container { 
+        flex-grow: 1; 
+        text-align: center; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    
+    .ms-score { 
+        font-size: 17px; 
+        font-weight: 800; 
+        color: #1a1a1a; 
         margin: 0 10px;
     }
+    
+    .iy-score-sub { 
+        font-size: 11px; 
+        color: #7f8c8d; 
+        font-weight: bold;
+        margin-top: -2px;
+    }
 
-    /* İY/MS Etiketleri */
-    .iyms-normal { 
-        background-color: #adb5bd; 
-        color: white; 
-        padding: 4px 8px; 
+    /* GENEL ETİKET STİLİ */
+    .iyms-base { 
+        padding: 5px 8px; 
         border-radius: 6px; 
         font-size: 12px; 
         font-weight: bold;
@@ -56,27 +63,35 @@ st.markdown("""
         text-align: center;
     }
 
-    /* SÜPRİZ (1/2 - 2/1) VURGUSU */
+    /* NORMAL SONUÇLAR (Gri) */
+    .iyms-normal { background-color: #95a5a6; color: white; }
+
+    /* SÜRPRİZ (1/2 - 2/1) - KIRMIZI */
     .iyms-supriz { 
-        background-color: #ff0000; 
+        background-color: #e74c3c; 
         color: #ffffff; 
-        padding: 4px 8px; 
-        border-radius: 6px; 
-        font-size: 13px; 
+        font-size: 13px;
         font-weight: 900;
-        width: 55px;
-        text-align: center;
-        box-shadow: 0 0 8px rgba(255,0,0,0.5);
-        animation: pulse 2s infinite;
+        box-shadow: 0 0 10px rgba(231,76,60,0.4);
+        animation: pulse 1.5s infinite;
+    }
+
+    /* BERABERLİK (1/0 - 2/0) - KOYU SARI */
+    .iyms-beraberlik { 
+        background-color: #f39c12; /* Koyu Sarı / Turuncu */
+        color: #ffffff; 
+        font-size: 13px;
+        font-weight: 900;
+        box-shadow: 0 0 8px rgba(243,156,18,0.4);
     }
 
     @keyframes pulse {
         0% { transform: scale(1); }
-        50% { transform: scale(1.05); }
+        50% { transform: scale(1.08); }
         100% { transform: scale(1); }
     }
     
-    h2, label { color: #333 !important; }
+    h2, label { color: #2c3e50 !important; font-family: sans-serif; }
     </style>
     """, unsafe_allow_html=True)
 
@@ -91,16 +106,16 @@ def get_iyms(h1, a1, h2, a2):
     ms = "1" if h2 > a2 else ("2" if h2 < a2 else "0")
     return f"{iy}/{ms}"
 
-st.markdown("<h2 style='text-align:center;'>📊 ANALİZ BOTU</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align:center;'>⚽ PRO ANALİZ BOTU</h2>", unsafe_allow_html=True)
 
 # --- ÜST SEÇİM ALANI ---
 c1, c2 = st.columns(2)
 with c1:
     ligler = query_db("SELECT DISTINCT league FROM matches ORDER BY league")
-    secilen_lig = st.selectbox("🏆 Lig", ligler['league'].tolist() if not ligler.empty else [])
+    secilen_lig = st.selectbox("🏆 Lig Seç", ligler['league'].tolist() if not ligler.empty else [])
 with c2:
     takimlar = query_db(f"SELECT DISTINCT home_team FROM matches WHERE league='{secilen_lig}'")
-    secilen_takim = st.selectbox("⚽ Takım", takimlar['home_team'].tolist() if not takimlar.empty else [])
+    secilen_takim = st.selectbox("⚽ Takım Seç", takimlar['home_team'].tolist() if not takimlar.empty else [])
 
 hafta = st.number_input("🔢 Hafta (Round)", 1, 45, 30)
 
@@ -117,24 +132,29 @@ sql = f"""
 df = query_db(sql)
 
 if not df.empty:
-    st.markdown(f"<p style='color:#6c757d; font-size:14px; font-weight:bold;'>{secilen_takim} - Geçmiş {hafta}. Hafta Maçları</p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='color:#5c7f9a; font-size:14px; font-weight:bold; text-align:center;'>{secilen_takim} - Geçmiş {hafta}. Hafta Analizi</p>", unsafe_allow_html=True)
     
     for _, r in df.iterrows():
         iyms = get_iyms(r['ht_home_score'], r['ht_away_score'], r['home_score'], r['away_score'])
         
-        # Sürpriz kontrolü (1/2 veya 2/1 ise kırmızı yap)
-        is_supriz = iyms in ["1/2", "2/1"]
-        badge_class = "iyms-supriz" if is_supriz else "iyms-normal"
+        # Renk Belirleme Mantığı
+        if iyms in ["1/2", "2/1"]:
+            badge_class = "iyms-supriz"
+        elif iyms in ["1/0", "2/0"]:
+            badge_class = "iyms-beraberlik"
+        else:
+            badge_class = "iyms-normal"
         
         # Tek Satır Tasarımı
         st.markdown(f"""
             <div class="match-row">
                 <div class="season-tag">{r['season']}</div>
-                <div class="teams-text">
-                    {r['home_team']} <span class="score-badge">{int(r['home_score'])}-{int(r['away_score'])}</span> {r['away_team']}
+                <div class="teams-container">
+                    <div style="font-size:14px;">{r['home_team']} <span class="ms-score">{int(r['home_score'])}-{int(r['away_score'])}</span> {r['away_team']}</div>
+                    <div class="iy-score-sub">İY: {int(r['ht_home_score'])}-{int(r['ht_away_score'])}</div>
                 </div>
-                <div class="{badge_class}">{iyms}</div>
+                <div class="iyms-base {badge_class}">{iyms}</div>
             </div>
         """, unsafe_allow_html=True)
 else:
-    st.info("🤖 Bu takım için geçmişte bu haftaya ait maç kaydı bulunamadı.")
+    st.info("🤖 Bu kriterlere uygun geçmiş maç kaydı bulunamadı.")
