@@ -3,7 +3,7 @@ import sqlite3
 import pandas as pd
 from collections import Counter
 
-st.set_page_config(page_title="AI Döngü Analizörü", layout="wide")
+st.set_page_config(page_title="AI 5 Sezon Analiz", layout="wide")
 
 # Modern Kart Tasarımı (CSS)
 st.markdown("""
@@ -26,36 +26,37 @@ def query_db(sql):
 
 st.title("🏟️ 5 Yıllık Periyot Analizörü")
 
-# --- ÜST PANEL (SEZON SİLİNDİ) ---
-row1_c1, row1_c2, row1_c3 = st.columns(3)
-with row1_c1:
+# --- ÜST PANEL ---
+c1, c2, c3 = st.columns(3)
+with c1:
     tarih = st.date_input("📅 Tarih Seç", value=pd.to_datetime("2026-04-03"))
-with row1_c2:
+with c2:
     ligler = query_db("SELECT DISTINCT league FROM matches ORDER BY league")
     secilen_lig = st.selectbox("🏆 Lig Seçin", ligler['league'].tolist() if not ligler.empty else [])
-with row1_c3:
+with c3:
     takimlar = query_db(f"SELECT DISTINCT home_team FROM matches WHERE league='{secilen_lig}'")
     secilen_takim = st.selectbox("⚽ Takım Seçin", takimlar['home_team'].tolist() if not takimlar.empty else [])
 
-row2_c1, row2_c2 = st.columns(2)
-with row2_c1:
-    hafta = st.number_input("🔢 Hafta (Döngü)", 1, 45, 30)
-with row2_c2:
+c4, c5 = st.columns(2)
+with c4:
+    # DB'de sütun adı 'round' olduğu için burada 'round' üzerinden işlem yapılır
+    hafta = st.number_input("🔢 Hafta (Tur)", 1, 45, 30)
+with c5:
     algoritma = st.selectbox("🧠 Algoritma", ["İY/MS Analizi", "ALT/ÜST Analizi", "İY/MS KG Analizi"])
 
-# --- OTOMATİK 5 SEZON ANALİZ MOTORU ---
-# Sezon seçimi olmadığı için mevcut tarihten geriye dönük tüm yılları tarar
+# --- 5 SEZON ANALİZ MOTORU ---
+# Sütun adı 'round' olarak güncellendi
 sql_query = f"""
     SELECT home_score, away_score, ht_home_score, ht_away_score 
     FROM matches 
     WHERE (home_team = '{secilen_takim}' OR away_team = '{secilen_takim}')
-    AND week = {hafta}
+    AND round = {hafta}
     ORDER BY season DESC
 """
 df_analiz = query_db(sql_query)
 
 if not df_analiz.empty:
-    # Veri Hazırlama
+    # Veri Hazırlama (Ondalık sayıları tam sayıya çeviriyoruz)
     ms_skorlar = [f"{int(r['home_score'])}-{int(r['away_score'])}" for _, r in df_analiz.iterrows()]
     iy_skorlar = [f"{int(r['ht_home_score'])}-{int(r['ht_away_score'])}" for _, r in df_analiz.iterrows()]
     ms_goller = [f"{int(r['home_score'] + r['away_score'])} Gol" for _, r in df_analiz.iterrows()]
@@ -91,4 +92,4 @@ if not df_analiz.empty:
     with r4:
         render_cards(iy_goller, "yellow", "İlk Yarı Gol Sayısı", "⚽")
 else:
-    st.info(f"💡 {secilen_takim} için {hafta}. haftaya ait geçmiş veri bulunamadı.")
+    st.info(f"💡 {secilen_takim} için {hafta}. haftaya (round) ait geçmiş veri bulunamadı.")
