@@ -1,47 +1,47 @@
 import streamlit as st
 import pandas as pd
 import os
-from datetime import datetime
 
-st.set_page_config(page_title="FBref Analiz", layout="wide")
-st.title("⚽ FBref Canlı Maç Listesi")
+st.set_page_config(page_title="Mega Döngü Analiz", layout="wide")
+st.title("🔄 5 Yıllık Hafta & Periyot Analizörü")
 
-# Dosya kontrolü
-if os.path.exists("all_leagues_data.csv"):
-    df = pd.read_csv("all_leagues_data.csv")
+@st.cache_data
+def veri_yukle():
+    if os.path.exists("all_leagues_data.csv"):
+        return pd.read_csv("all_leagues_data.csv")
+    return None
+
+df = veri_yukle()
+
+if df is not None:
+    st.sidebar.success(f"Sistemde {len(df)} maç kayıtlı.")
     
-    # Sütun isimlerini temizle (boşluk varsa siler)
-    df.columns = df.columns.str.strip()
-
-    # --- ESNEK FİLTRELEME ---
-    # Eğer lig verisi varsa göster
-    if 'League' in df.columns and not df.empty:
-        ligler = sorted(df['League'].dropna().unique().tolist())
+    # Filtreler
+    with st.sidebar:
+        st.header("🔍 Analiz Filtresi")
+        ulke_listesi = sorted(df['League'].unique())
+        secilen_lig = st.selectbox("Lig Seç:", ulke_listesi)
         
-        c1, c2 = st.columns(2)
-        with c1:
-            secilen_lig = st.selectbox("🌍 Lig Seçin:", ["Hepsi"] + ligler)
-        with c2:
-            st.info(f"📊 Toplam {len(df)} maç yüklendi.")
+        takimlar = sorted(df[df['League'] == secilen_lig]['Home'].unique())
+        secilen_takim = st.selectbox("Takım Seç:", takimlar)
+        
+        hafta = st.slider("Hangi Haftayı Analiz Edelim?", 1, 42, 30)
 
-        # Filtreleme Uygula
-        if secilen_lig != "Hepsi":
-            gunun_maclari = df[df['League'] == secilen_lig].copy()
-        else:
-            gunun_maclari = df.copy()
+    # ANALİZ MOTORU
+    # Takımın hem ev hem deplasman maçlarını, belirtilen haftada filtrele
+    analiz_df = df[
+        ((df['Home'] == secilen_takim) | (df['Away'] == secilen_takim)) & 
+        (df['Wk'].astype(str) == str(hafta))
+    ].sort_values(by="Season", ascending=False)
 
-        if not gunun_maclari.empty:
-            # Maçları birleştirip göster
-            gunun_maclari['Match'] = gunun_maclari['HomeTeam'] + " - " + gunun_maclari['AwayTeam']
-            
-            # Tablo olarak göster (Tarih hatası olsa bile burada liste çıkar)
-            st.dataframe(gunun_maclari[['Date', 'League', 'Match']], use_container_width=True)
-            
-            secilen_mac = st.selectbox("🏟️ Detaylı Analiz İçin Seç:", gunun_maclari['Match'])
-            st.success(f"🔍 {secilen_mac} seçildi. Analiz motoru çalışıyor...")
-        else:
-            st.warning("Seçilen ligde maç bulunamadı.")
+    st.subheader(f"📊 {secilen_takim} - {hafta}. Hafta Döngüsü (Son 5 Sezon)")
+    
+    if not analiz_df.empty:
+        st.dataframe(analiz_df[['Season', 'League', 'Home', 'Score', 'Away']], use_container_width=True)
+        
+        # Basit İstatistik Çıkarımı
+        st.info(f"💡 {secilen_takim} son 5 sezonda {hafta}. haftalarda toplam {len(analiz_df)} maç yaptı.")
     else:
-        st.error("Dosya bulundu ama içinde maç verisi yok.")
+        st.warning("Bu kriterlere uygun maç kaydı bulunamadı.")
 else:
-    st.error("📂 Veri dosyası (CSV) henüz oluşturulmamış.")
+    st.error("Veri dosyası bulunamadı. Lütfen GitHub Actions'ı çalıştırın.")
