@@ -1,4 +1,4 @@
-MatchNumber,RoundNumber,DateUtc,Location,HomeTeam,AwayTeam,Group,HomeTeamScore,AwayTeamScore,League
+matchnumber,roundnumber,dateutc,location,hometeam,awayteam,group,hometeamscore,awayteamscore,league
 1,1,2025-08-15 19:00:00Z,Anfield,Liverpool,Bournemouth,,4.0,2.0,Premier League
 2,1,2025-08-16 11:30:00Z,Villa Park,Aston Villa,Newcastle,,0.0,0.0,Premier League
 3,1,2025-08-16 14:00:00Z,American Express Stadium,Brighton,Fulham,,1.0,1.0,Premier League
