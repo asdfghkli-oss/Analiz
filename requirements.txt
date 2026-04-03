@@ -1,4 +1,6 @@
 pandas
 requests
 streamlit
+lxml
+html5lib
 
