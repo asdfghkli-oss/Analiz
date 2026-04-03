@@ -5,67 +5,76 @@ import pandas as pd
 # Sayfa ayarları
 st.set_page_config(page_title="Analiz Botu Pro", layout="centered")
 
-# --- TEMA SEÇİCİ (SAĞ ÜST KÖŞE) ---
+# --- TEMA SİSTEMİ ---
 if 'theme' not in st.session_state:
     st.session_state.theme = 'Light'
 
 with st.sidebar:
-    st.session_state.theme = st.radio("Sistem Teması", ['Light', 'Dark'])
+    st.markdown("### ⚙️ Ayarlar")
+    st.session_state.theme = st.radio("Görünüm Modu", ['Light', 'Dark'])
 
-# --- DİNAMİK CSS (TEMA VE SADELEŞTİRME) ---
+# --- DİNAMİK STİL (BELİRGİN TABLO ETKİSİ) ---
 if st.session_state.theme == 'Dark':
     bg_color = "#17212b"
     text_color = "#ffffff"
-    row_bg = "#242f3d"
-    border_color = "#2b3948"
+    table_bg = "#1e2c3a"  # Arka plandan biraz daha açık/belirgin dark
+    row_border = "#2b3948"
     sub_text = "#95a5a6"
+    accent = "#5288c1"
 else:
-    bg_color = "#ffffff"
+    bg_color = "#f4f7f9"  # Genel arka plan hafif gri
     text_color = "#212529"
-    row_bg = "#fdfdfd"
-    border_color = "#eeeeee"
-    sub_text = "#7f8c8d"
+    table_bg = "#ffffff"  # Tablo alanı bembeyaz parlayacak
+    row_border = "#e9ecef"
+    sub_text = "#6c757d"
+    accent = "#333333"
 
 st.markdown(f"""
     <style>
     .stApp {{ background-color: {bg_color}; }}
     
-    /* Maç Satırı: Balon etkisi kaldırıldı, düz çizgi ve sade zemin eklendi */
+    /* ANALİZ TABLO ALANI (Kapsayıcı) */
+    .analysis-container {{
+        background-color: {table_bg};
+        border-radius: 12px;
+        padding: 10px;
+        border: 1px solid {row_border};
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* "Ben buradayım" diyen hafif gölge */
+        margin-top: 20px;
+    }}
+    
+    /* Maç Satırı (Düz ve Net) */
     .match-row {{
-        background-color: {row_bg};
-        padding: 8px 10px;
-        margin-bottom: 2px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid {border_color};
+        padding: 12px 10px;
+        border-bottom: 1px solid {row_border};
         color: {text_color};
-        font-family: sans-serif;
     }}
+    .match-row:last-child {{ border-bottom: none; }}
     
-    .season-tag {{ color: {sub_text}; font-size: 11px; font-weight: bold; width: 55px; }}
+    .season-tag {{ color: {sub_text}; font-size: 12px; font-weight: bold; width: 60px; }}
     
-    .teams-container {{ flex-grow: 1; text-align: center; }}
-    
-    .ms-score {{ font-size: 16px; font-weight: bold; margin: 0 8px; }}
-    
-    .iy-score-sub {{ font-size: 10px; color: {sub_text}; margin-top: -2px; }}
+    .score-box {{ text-align: center; flex-grow: 1; }}
+    .ms-val {{ font-size: 18px; font-weight: 800; margin: 0 5px; }}
+    .iy-val {{ font-size: 11px; color: {sub_text}; font-weight: bold; display: block; margin-top: -2px; }}
 
     /* İY/MS ETİKETLERİ */
-    .iyms-base {{
-        padding: 3px 6px;
-        border-radius: 4px;
-        font-size: 11px;
-        font-weight: bold;
-        width: 45px;
+    .badge {{
+        padding: 5px 8px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 900;
+        width: 55px;
         text-align: center;
     }}
+    .bg-normal {{ background-color: #dee2e6; color: #495057; }}
+    .bg-supriz {{ background-color: #ff0000; color: white; box-shadow: 0 0 10px rgba(255,0,0,0.4); }}
+    .bg-draw {{ background-color: #f39c12; color: white; }}
 
-    .iyms-normal {{ background-color: #adb5bd; color: white; }}
-    .iyms-supriz {{ background-color: #ff0000; color: white; font-weight: 900; }}
-    .iyms-beraberlik {{ background-color: #f39c12; color: white; }}
-
-    h2, label, p {{ color: {text_color} !important; }}
+    h2, label, p {{ color: {text_color} !important; font-family: 'Segoe UI', sans-serif; }}
+    hr {{ border-top: 1px solid {row_border}; }}
     </style>
     """, unsafe_allow_html=True)
 
@@ -80,7 +89,7 @@ def get_iyms(h1, a1, h2, a2):
     ms = "1" if h2 > a2 else ("2" if h2 < a2 else "0")
     return f"{iy}/{ms}"
 
-st.markdown(f"<h2 style='text-align:center;'>📊 ANALİZ BOTU</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align:center;'>📊 İSTATİSTİK BOTU</h2>", unsafe_allow_html=True)
 
 # --- FİLTRELER ---
 c1, c2 = st.columns(2)
@@ -93,35 +102,40 @@ with c2:
 
 hafta = st.number_input("🔢 Hafta (Round)", 1, 45, 30)
 
-st.markdown("---")
-
-# --- VERİ LİSTELEME ---
+# --- VERİ ANALİZ ALANI ---
 sql = f"""
     SELECT season, home_team, away_team, home_score, away_score, ht_home_score, ht_away_score 
     FROM matches 
     WHERE (home_team = '{secilen_takim}' OR away_team = '{secilen_takim}')
     AND round = {hafta}
-    ORDER BY season DESC
+    ORDER BY season DESC LIMIT 5
 """
 df = query_db(sql)
 
 if not df.empty:
+    st.markdown("---")
+    # Tüm maçları kapsayan belirgin ana kutu (Container)
+    st.markdown('<div class="analysis-container">', unsafe_allow_html=True)
+    
     for _, r in df.iterrows():
         iyms = get_iyms(r['ht_home_score'], r['ht_away_score'], r['home_score'], r['away_score'])
         
-        if iyms in ["1/2", "2/1"]: badge_class = "iyms-supriz"
-        elif iyms in ["1/0", "2/0"]: badge_class = "iyms-beraberlik"
-        else: badge_class = "iyms-normal"
+        # Renk Belirleme
+        if iyms in ["1/2", "2/1"]: b_class = "bg-supriz"
+        elif iyms in ["1/0", "2/0"]: b_class = "bg-draw"
+        else: b_class = "bg-normal"
         
         st.markdown(f"""
             <div class="match-row">
                 <div class="season-tag">{r['season']}</div>
-                <div class="teams-container">
-                    <div>{r['home_team']} <span class="ms-score">{int(r['home_score'])}-{int(r['away_score'])}</span> {r['away_team']}</div>
-                    <div class="iy-score-sub">İY: {int(r['ht_home_score'])}-{int(r['ht_away_score'])}</div>
+                <div class="score-box">
+                    <div>{r['home_team']} <span class="ms-val">{int(r['home_score'])}-{int(r['away_score'])}</span> {r['away_team']}</div>
+                    <span class="iy-val">İY: {int(r['ht_home_score'])}-{int(r['ht_away_score'])}</span>
                 </div>
-                <div class="iyms-base {badge_class}">{iyms}</div>
+                <div class="badge {b_class}">{iyms}</div>
             </div>
         """, unsafe_allow_html=True)
+    
+    st.markdown('</div>', unsafe_allow_html=True)
 else:
     st.info("🤖 Bu kriterlere uygun maç kaydı bulunamadı.")
